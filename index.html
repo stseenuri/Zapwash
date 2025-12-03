@@ -1,99 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FSZX5XC');</script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYPST6NC81"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYPST6NC81');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZapWash - Laundry Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="your-logo.png" type="image/png">
+    <title>Thezapwash | 1-Hour Laundry & Dry Clean in Hyderabad - 20 Min Pickup</title>
+    <meta name="description" content="Hyderabad's fastest laundry service. Professional wash, iron & dry cleaning with 20-minute pickup and 1-hour express delivery. Serving Gachibowli, Madhapur, Hitech City.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thezapwash | 1-Hour Laundry Delivery in Hyderabad">
+    <meta property="og:description" content="Premium laundry & dry cleaning with lightning-fast 1-hour service. Book pickup in 20 minutes.">
+    <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg">
+    <meta property="og:url" content="https://thezapwash.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Thezapwash",
+      "description": "Premium laundry and dry cleaning service in Hyderabad",
+      "url": "https://thezapwash.com",
+      "telephone": "+918639103842",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Banjara Hills"],
+      "priceRange": "₹₹",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "5000"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- GTM Noscript -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>ZapWash</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="https://wa.me/918639103842" class="whatsapp-btn">Order Now</a>
-        </div>
-    </header>
+    <!-- Floating Action Dock -->
+    <div id="action-dock" class="action-dock">
+        <button class="dock-btn dock-btn-primary" data-action="book">
+            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Book Pickup</span>
+        </button>
+        <button class="dock-btn" data-action="track">
+            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Track Order</span>
+        </button>
+        <button class="dock-btn" data-action="prices">
+            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+            <span>View Prices</span>
+        </button>
+    </div>
 
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="hero" class="hero-section">
+        <!-- Animated Background Blobs -->
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <!-- Background Image -->
+        <div class="hero-bg"></div>
+        
+        <!-- Content Container -->
+        <div class="hero-container">
+            <!-- Left: Main Message -->
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Hyderabad's #1 Express Laundry</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Laundry & Dry Clean.</span>
+                    <span class="title-line title-gradient" id="animated-text">Reimagined.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    20-minute pickup. 60-minute delivery. Zero hassle.
+                </p>
+                
+                <div class="hero-description">
+                    <p id="intro-short">
+                        From Gachibowli to Madhapur, we compress your laundry time into one tap.
+                        <span id="intro-more" class="intro-more">
+                            Professional wash, steam iron & dry cleaning delivered to your doorstep with surgical precision. Your fresh clothes are just a WhatsApp away.
+                        </span>
+                        <button id="read-more-toggle" class="read-more-btn">Read more</button>
+                    </p>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20a%20pickup" target="_blank" class="btn btn-primary">
+                        <span>Schedule Pickup</span>
+                        <svg class="btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
+                    <button class="btn btn-secondary" data-scroll="how-it-works">
+                        <span>How It Works</span>
+                    </button>
+                </div>
+                
+                <!-- Social Proof -->
+                <div class="social-proof">
+                    <div class="proof-stars">
+                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="proof-text"><strong>5,000+</strong> happy customers in Hyderabad</p>
+                </div>
+            </div>
+            
+            <!-- Right: Live Order Card -->
+            <div class="hero-card">
+                <div class="order-card glass-card">
+                    <div class="card-header">
+                        <div class="card-logo">⚡</div>
+                        <div>
+                            <p class="card-title">Live Order</p>
+                            <p class="card-subtitle">Tracking #ZW-4782</p>
+                        </div>
+                    </div>
+                    
+                    <div class="order-timeline">
+                        <div class="timeline-step active completed">
+                            <div class="step-icon">✓</div>
+                            <div class="step-content">
+                                <p class="step-title">Pickup Confirmed</p>
+                                <p class="step-time">2 mins ago</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step active">
+                            <div class="step-icon spinner">↻</div>
+                            <div class="step-content">
+                                <p class="step-title">In Wash</p>
+                                <p class="step-time">Processing...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-icon">○</div>
+                            <div class="step-content">
+                                <p class="step-title">Ironing</p>
+                                <p class="step-time">Up next</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-step">
+                            <div class="step-icon">○</div>
+                            <div class="step-content">
+                                <p class="step-title">Out for Delivery</p>
+                                <p class="step-time">Est. 45 mins</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <p class="delivery-eta">Delivery in <strong>48 minutes</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section-how">
         <div class="container">
-            <h2>Fast, Reliable Laundry Services in Hyderabad</h2>
-            <p>Get your laundry done with ZapWash in just 20 minutes!</p>
-            <a href="https://wa.me/918639103842" class="whatsapp-btn">Order Now</a>
+            <div class="section-header">
+                <span class="section-badge">Process</span>
+                <h2 class="section-title">Three steps. Zero effort.</h2>
+                <p class="section-subtitle">From tap to delivery in under 90 minutes</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon-wrapper">
+                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="step-title">Tap to Schedule</h3>
+                    <p class="step-description">WhatsApp us. Confirm pickup time. We arrive in 20 minutes.</p>
+                    <p class="step-duration">⏱ 1–2 minutes</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon-wrapper">
+                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="step-title">We Sort & Clean</h3>
+                    <p class="step-description">Fabric-specific wash. Steam press. Quality check. All in-house.</p>
+                    <p class="step-duration">⏱ 45 minutes</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon-wrapper">
+                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                    </div>
+                    <h3 class="step-title">Express Delivery</h3>
+                    <p class="step-description">Fresh, folded, doorstep drop. Track live. Pay on delivery.</p>
+                    <p class="step-duration">⏱ 15 minutes</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="section-services">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-                <div class="service-card">
-                    <h3>Wash & Iron</h3>
-                    <p>Fresh laundry, pressed to perfection. Fast and easy service.</p>
+            <div class="section-header">
+                <span class="section-badge">Services</span>
+                <h2 class="section-title">Everything you need. Nothing you don't.</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card-new">
+                    <div class="service-tag">Daily wear</div>
+                    <div class="service-icon-box">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6H4C3.448 6 3 6.448 3 7V9C3 9.552 3.448 10 4 10H20C20.552 10 21 9.552 21 9V7C21 6.448 20.552 6 20 6Z M4 12H15C15.552 12 16 12.448 16 13V17C16 17.552 15.552 18 15 18H4C3.448 18 3 17.552 3 17V13C3 12.448 3.448 12 4 12Z"/></svg>
+                    </div>
+                    <h3 class="service-title-new">Steam Ironing</h3>
+                    <p class="service-desc">Crisp, wrinkle-free finish for shirts, trousers, and everyday wear.</p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Steam%20Ironing%20service" target="_blank" class="service-btn">
+                        <span>Book now</span>
+                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
                 </div>
-                <div class="service-card">
-                    <h3>Dry Cleaning</h3>
-                    <p>High-quality dry cleaning for your delicate garments.</p>
+                
+                <!-- Service 2 -->
+                <div class="service-card-new featured">
+                    <div class="service-badge-corner">60 MIN</div>
+                    <div class="service-tag">Most popular</div>
+                    <div class="service-icon-box">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">ircle cx="12" cy="12" r="8"/>ircle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h3 class="service-title-new">Wash & Iron</h3>
+                    <p class="service-desc">Complete clean + press. Your go-to for busy weeks.</p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Wash%20&%20Iron%20service" target="_blank" class="service-btn">
+                        <span>Book now</span>
+                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
                 </div>
-                <div class="service-card">
-                    <h3>Ironing Only</h3>
-                    <p>Quick and efficient ironing for your clothes.</p>
+                
+                <!-- Service 3 -->
+                <div class="service-card-new">
+                    <div class="service-tag">Premium care</div>
+                    <div class="service-icon-box">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
+                    </div>
+                    <h3 class="service-title-new">Dry Cleaning</h3>
+                    <p class="service-desc">Suits, sarees, blankets, wedding wear—treated with care.</p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Dry%20Cleaning%20service" target="_blank" class="service-btn">
+                        <span>Book now</span>
+                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing">
+    <!-- Footer CTA -->
+    <section class="section-cta">
         <div class="container">
-            <h2>Our Pricing</h2>
-            <div class="pricing-table">
-                <div class="pricing-item">
-                    <h3>Wash & Iron</h3>
-                    <p>₹150</p>
-                </div>
-                <div class="pricing-item">
-                    <h3>Dry Cleaning</h3>
-                    <p>₹200</p>
-                </div>
-                <div class="pricing-item">
-                    <h3>Ironing Only</h3>
-                    <p>₹100</p>
-                </div>
+            <div class="cta-content">
+                <h2 class="cta-title">Ready for fresh clothes in 60 minutes?</h2>
+                <p class="cta-subtitle">Join 5,000+ Hyderabad residents who never worry about laundry</p>
+                <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20my%20first%20pickup" target="_blank" class="btn btn-primary-large">
+                    <span>Schedule Your First Pickup</span>
+                    <svg class="btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or want to place an order, reach out to us!</p>
-            <p><a href="mailto:contact@thezapwash.com">contact@thezapwash.com</a></p>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 ZapWash | All Rights Reserved</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">⚡ Thezapwash</h3>
+                    <p class="footer-tagline">Hyderabad's fastest laundry</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://wa.me/918639103842" target="_blank">WhatsApp</a>
+                    <a href="tel:+918639103842">Call Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#how-it-works">How It Works</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Thezapwash. All rights reserved. | Hyderabad, Telangana</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
-
