@@ -19,12 +19,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thezapwash | 1-Hour Laundry & Dry Clean in Hyderabad - 20 Min Pickup</title>
-    <meta name="description" content="Hyderabad's fastest laundry service. Professional wash, iron & dry cleaning with 20-minute pickup and 1-hour express delivery. Serving Gachibowli, Madhapur, Hitech City.">
+    <title>Zapwash | Hyderabad's Premier Laundry Atelier - Where Tradition Meets Technology</title>
+    <meta name="description" content="Experience laundry reimagined. From Charminar to Hitech City, we honor every fabric with precision care rooted in Hyderabad's craftsmanship legacy.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Thezapwash | 1-Hour Laundry Delivery in Hyderabad">
-    <meta property="og:description" content="Premium laundry & dry cleaning with lightning-fast 1-hour service. Book pickup in 20 minutes.">
+    <meta property="og:title" content="Zapwash | Hyderabad's Premier Laundry Atelier">
+    <meta property="og:description" content="Where heritage meets innovation. Luxury laundry service with 1-hour delivery.">
     <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg">
     <meta property="og:url" content="https://thezapwash.com">
     <meta property="og:type" content="website">
@@ -32,15 +32,15 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Thezapwash",
-      "description": "Premium laundry and dry cleaning service in Hyderabad",
+      "name": "Zapwash",
+      "description": "Hyderabad's premier luxury laundry and dry cleaning atelier",
       "url": "https://thezapwash.com",
       "telephone": "+918639103842",
       "address": {
@@ -49,7 +49,7 @@
         "addressRegion": "Telangana",
         "addressCountry": "IN"
       },
-      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Banjara Hills"],
+      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Banjara Hills", "Jubilee Hills"],
       "priceRange": "₹₹",
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -60,9 +60,9 @@
     </script>
 
     <style>
-        /* ===========================
-           RESET & BASE
-           =========================== */
+        /* ========================================
+           RESET & FOUNDATIONAL VARIABLES
+           ======================================== */
         * {
             margin: 0;
             padding: 0;
@@ -70,33 +70,44 @@
         }
 
         :root {
-            --color-navy: #0A192F;
-            --color-navy-light: #112240;
-            --color-blue: #3b82f6;
-            --color-blue-light: #60a5fa;
-            --color-cyan: #22d3ee;
-            --color-gold: #FFD700;
-            --color-gold-dark: #E2B800;
-            --color-pink: #ec4899;
-            --color-white: #ffffff;
-            --color-gray-50: #f9fafb;
-            --color-gray-100: #f3f4f6;
-            --color-gray-200: #e5e7eb;
-            --color-gray-400: #9ca3af;
-            --color-gray-600: #4b5563;
-            --color-gray-800: #1f2937;
+            /* Heritage Color Palette - Inspired by Hyderabad's Charminar & Golconda Fort */
+            --color-pearl-white: #FFF8F0;
+            --color-sandstone: #E8DCC4;
+            --color-terracotta: #C7956D;
+            --color-royal-gold: #D4AF37;
+            --color-deep-indigo: #1A1A2E;
+            --color-midnight: #0F0F1E;
+            --color-charcoal: #2A2A3E;
+            --color-silk-gray: #B8B8C8;
             
-            --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
-            --font-display: 'Space Grotesk', sans-serif;
+            /* Accent Colors */
+            --color-electric-cyan: #00D9FF;
+            --color-mint: #E8F9F9;
+            --color-warm-amber: #FFB84D;
+            --color-rose-gold: #E6B8AF;
             
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
-            --shadow-lg: 0 16px 48px rgba(0,0,0,0.16);
-            --shadow-xl: 0 24px 64px rgba(0,0,0,0.24);
+            /* Typography */
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-elegant: 'Cormorant Garamond', Georgia, serif;
             
-            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            /* Spacing & Layout */
+            --spacing-unit: 8px;
+            --container-max: 1440px;
+            --content-max: 1200px;
+            
+            /* Shadows & Effects */
+            --shadow-subtle: 0 2px 16px rgba(0, 0, 0, 0.04);
+            --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-dramatic: 0 24px 64px rgba(0, 0, 0, 0.16);
+            --shadow-luxury: 0 32px 80px rgba(212, 175, 55, 0.15);
+            
+            /* Animations */
+            --ease-elegant: cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-fast: 0.2s var(--ease-elegant);
+            --transition-base: 0.4s var(--ease-elegant);
+            --transition-slow: 0.8s var(--ease-elegant);
         }
 
         html {
@@ -105,903 +116,237 @@
         }
 
         body {
-            font-family: var(--font-primary);
-            color: var(--color-navy);
-            background: var(--color-white);
-            line-height: 1.6;
+            font-family: var(--font-body);
+            color: var(--color-deep-indigo);
+            background: var(--color-pearl-white);
+            line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 1280px;
+            max-width: var(--container-max);
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 clamp(1.5rem, 5vw, 4rem);
         }
 
-        /* ===========================
-           FLOATING ACTION DOCK
-           =========================== */
-        .action-dock {
+        /* ========================================
+           CUSTOM CURSOR (Award-Winning Detail)
+           ======================================== */
+        .custom-cursor {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--color-royal-gold);
+            border-radius: 50%;
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            animation: slideInRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s backwards;
-        }
-
-        @media (max-width: 768px) {
-            .action-dock {
-                flex-direction: row;
-                bottom: 1rem;
-                left: 50%;
-                right: auto;
-                transform: translateX(-50%);
-                width: max-content;
-            }
-        }
-
-        .dock-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.25rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(10, 25, 47, 0.08);
-            border-radius: 9999px;
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: var(--color-navy);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            box-shadow: var(--shadow-md);
-        }
-
-        .dock-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            background: var(--color-white);
-        }
-
-        .dock-btn-primary {
-            background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
-            color: var(--color-white);
-            border: none;
-        }
-
-        .dock-btn-primary:hover {
-            background: linear-gradient(135deg, var(--color-cyan), var(--color-blue));
-        }
-
-        .dock-icon {
-            width: 1.25rem;
-            height: 1.25rem;
-            stroke-width: 2;
-        }
-
-        @media (max-width: 768px) {
-            .dock-btn span {
-                display: none;
-            }
-            .dock-btn {
-                padding: 1rem;
-            }
-        }
-
-        /* ===========================
-           HERO SECTION
-           =========================== */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0A192F 0%, #112240 100%);
-        }
-
-        /* Animated Background Blobs */
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.6;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .blob-1 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent);
-            top: -200px;
-            left: -200px;
-            animation-delay: 0s;
-        }
-
-        .blob-2 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(34, 211, 238, 0.3), transparent);
-            bottom: -150px;
-            right: -150px;
-            animation-delay: 7s;
-        }
-
-        .blob-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.25), transparent);
-            top: 50%;
-            left: 50%;
-            animation-delay: 14s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(50px, -50px) scale(1.1); }
-            50% { transform: translate(-30px, 30px) scale(0.9); }
-            75% { transform: translate(30px, 50px) scale(1.05); }
-        }
-
-        /* Background Image Overlay */
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background-image: url('https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg?v=1756434312');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.08;
-            z-index: 1;
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 10;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 6rem 1.5rem;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                padding: 4rem 1.5rem;
-            }
-        }
-
-        /* Hero Content (Left) */
-        .hero-content {
-            animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-white);
-            margin-bottom: 1.5rem;
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--color-cyan);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 6vw, 5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .title-line {
-            display: block;
-            color: var(--color-white);
-        }
-
-        .title-gradient {
-            background: linear-gradient(135deg, var(--color-gold), var(--color-cyan), var(--color-pink));
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 3s linear infinite;
-        }
-
-        @keyframes shimmer {
-            to { background-position: 200% center; }
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            font-weight: 600;
-            color: var(--color-cyan);
-            margin-bottom: 1rem;
-        }
-
-        .hero-description {
-            font-size: 1.125rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.7;
-            margin-bottom: 2.5rem;
-            max-width: 540px;
-        }
-
-        .intro-more {
-            display: inline;
-            max-height: 0;
-            overflow: hidden;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: all 0.15s ease;
+            mix-blend-mode: difference;
             opacity: 0;
-            transition: all var(--transition-slow);
         }
 
-        .intro-more.expanded {
-            max-height: 500px;
+        .custom-cursor.active {
             opacity: 1;
         }
 
-        .read-more-btn {
-            color: var(--color-gold);
-            font-weight: 700;
-            text-decoration: underline;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-left: 0.25rem;
-            transition: color var(--transition-fast);
+        .custom-cursor.clicked {
+            transform: translate(-50%, -50%) scale(0.8);
+            border-width: 3px;
         }
 
-        .read-more-btn:hover {
-            color: var(--color-white);
+        @media (pointer: coarse) {
+            .custom-cursor { display: none; }
         }
 
-        /* Hero Actions */
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 9999px;
-            border: none;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-            color: var(--color-navy);
-            box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(255, 215, 0, 0.5);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: var(--color-white);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .btn-arrow {
-            width: 1.25rem;
-            height: 1.25rem;
-            stroke-width: 2.5;
-            transition: transform var(--transition-fast);
-        }
-
-        .btn:hover .btn-arrow {
-            transform: translateX(4px);
-        }
-
-        /* Social Proof */
-        .social-proof {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .proof-stars {
-            display: flex;
-            gap: 0.25rem;
-        }
-
-        .star {
-            width: 1.25rem;
-            height: 1.25rem;
-            color: var(--color-gold);
-        }
-
-        .proof-text {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .proof-text strong {
-            color: var(--color-white);
-            font-weight: 700;
-        }
-
-        /* Hero Card (Right) */
-        .hero-card {
-            animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s backwards;
-        }
-
-        @media (max-width: 1024px) {
-            .hero-card {
-                display: flex;
-                justify-content: center;
-            }
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 1.5rem;
-            padding: 2rem;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .order-card {
-            max-width: 420px;
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .card-logo {
-            width: 3rem;
-            height: 3rem;
-            background: linear-gradient(135deg, var(--color-gold), var(--color-cyan));
-            border-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .card-title {
-            font-weight: 700;
-            font-size: 1.125rem;
-            color: var(--color-white);
-        }
-
-        .card-subtitle {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Order Timeline */
-        .order-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .timeline-step {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            opacity: 0.4;
-            transition: opacity var(--transition-base);
-        }
-
-        .timeline-step.active {
-            opacity: 1;
-        }
-
-        .step-icon {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .timeline-step.completed .step-icon {
-            background: var(--color-cyan);
-            border-color: var(--color-cyan);
-        }
-
-        .spinner {
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .step-content {
-            flex: 1;
-        }
-
-        .step-title {
-            font-weight: 600;
-            color: var(--color-white);
-            margin-bottom: 0.25rem;
-        }
-
-        .step-time {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .card-footer {
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .delivery-eta {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-        }
-
-        .delivery-eta strong {
-            color: var(--color-cyan);
-            font-weight: 700;
-        }
-
-        /* Scroll Indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        .scroll-icon {
-            width: 2rem;
-            height: 3rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 1rem;
-            position: relative;
-        }
-
-        .scroll-icon::before {
-            content: '';
-            position: absolute;
-            top: 0.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 2px;
-            animation: scroll 2s ease-in-out infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(10px); }
-        }
-
-        @keyframes scroll {
-            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
-            100% { opacity: 0; transform: translateX(-50%) translateY(12px); }
-        }
-
-        /* ===========================
-           HOW IT WORKS SECTION
-           =========================== */
-        .section-how {
-            padding: 8rem 0;
-            background: var(--color-gray-50);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--color-blue);
-            color: var(--color-white);
-            font-size: 0.875rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: var(--color-navy);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--color-gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .step-card {
-            position: relative;
-            background: var(--color-white);
-            border-radius: 1.5rem;
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            transition: all var(--transition-base);
-        }
-
-        .step-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .step-number {
-            position: absolute;
-            top: -1.5rem;
-            left: 2rem;
-            width: 3rem;
-            height: 3rem;
-            background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
-            color: var(--color-white);
-            font-weight: 900;
-            font-size: 1.25rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-md);
-        }
-
-        .step-icon-wrapper {
-            margin-bottom: 1.5rem;
-        }
-
-        .step-svg {
-            width: 4rem;
-            height: 4rem;
-            color: var(--color-blue);
-        }
-
-        .step-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            margin-bottom: 1rem;
-        }
-
-        .step-description {
-            color: var(--color-gray-600);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        .step-duration {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--color-gray-100);
-            color: var(--color-gray-800);
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 9999px;
-        }
-
-        /* ===========================
-           SERVICES SECTION
-           =========================== */
-        .section-services {
-            padding: 8rem 0;
-            background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
-            position: relative;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .service-card-new {
-            position: relative;
-            background: rgba(255, 255, 255, 0.06);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1.5rem;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: all var(--transition-base);
-            overflow: hidden;
-        }
-
-        .service-card-new::before {
-            content: '';
-            position: absolute;
+        /* ========================================
+           NAVIGATION - Floating Luxury Bar
+           ======================================== */
+        .nav-wrapper {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-blue), var(--color-cyan));
-            transform: scaleX(0);
-            transition: transform var(--transition-base);
+            z-index: 9999;
+            padding: calc(var(--spacing-unit) * 3) 0;
+            transition: all var(--transition-base);
         }
 
-        .service-card-new:hover::before {
-            transform: scaleX(1);
+        .nav-wrapper.scrolled {
+            padding: calc(var(--spacing-unit) * 2) 0;
+            background: rgba(255, 248, 240, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-subtle);
         }
 
-        .service-card-new:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .service-card-new.featured {
-            background: rgba(59, 130, 246, 0.1);
-            border-color: var(--color-blue);
-        }
-
-        .service-badge-corner {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.5rem 1rem;
-            background: var(--color-gold);
-            color: var(--color-navy);
-            font-size: 0.75rem;
-            font-weight: 900;
-            border-radius: 9999px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .service-tag {
-            display: inline-block;
-            padding: 0.375rem 0.875rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--color-cyan);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-icon-box {
-            margin: 0 auto 1.5rem;
-            width: 5rem;
-            height: 5rem;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-blue);
-        }
-
-        .service-title-new {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--color-white);
-            margin-bottom: 1rem;
-        }
-
-        .service-desc {
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .service-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.75rem;
-            background: var(--color-white);
-            color: var(--color-navy);
-            font-weight: 700;
-            border-radius: 9999px;
-            text-decoration: none;
-            transition: all var(--transition-fast);
-        }
-
-        .service-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-arrow-sm {
-            width: 1rem;
-            height: 1rem;
-            stroke-width: 3;
-            transition: transform var(--transition-fast);
-        }
-
-        .service-btn:hover .btn-arrow-sm {
-            transform: translateX(3px);
-        }
-
-        /* ===========================
-           CTA SECTION
-           =========================== */
-        .section-cta {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, var(--color-blue), var(--color-cyan));
-        }
-
-        .cta-content {
-            text-align: center;
-            max-width: 800px;
+        .nav-container {
+            max-width: var(--container-max);
             margin: 0 auto;
-        }
-
-        .cta-title {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--color-white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-subtitle {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
-        }
-
-        .btn-primary-large {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.25rem 2.5rem;
-            background: var(--color-white);
-            color: var(--color-blue);
-            font-size: 1.125rem;
-            font-weight: 700;
-            border-radius: 9999px;
-            text-decoration: none;
-            box-shadow: var(--shadow-lg);
-            transition: all var(--transition-fast);
-        }
-
-        .btn-primary-large:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        /* ===========================
-           FOOTER
-           =========================== */
-        .footer {
-            padding: 3rem 0 2rem;
-            background: var(--color-navy);
-            color: var(--color-white);
-        }
-
-        .footer-content {
+            padding: 0 clamp(1.5rem, 5vw, 4rem);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
         }
 
-        .footer-brand {
-            flex: 1;
-        }
-
-        .footer-logo {
+        .logo {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-tagline {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .footer-links {
+            color: var(--color-deep-indigo);
+            letter-spacing: -0.02em;
+            position: relative;
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 5);
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
             font-weight: 500;
+            color: var(--color-charcoal);
+            text-decoration: none;
+            position: relative;
             transition: color var(--transition-fast);
+            letter-spacing: 0.02em;
         }
 
-        .footer-links a:hover {
-            color: var(--color-cyan);
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-royal-gold);
+            transition: width var(--transition-base);
         }
 
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
+        .nav-link:hover {
+            color: var(--color-royal-gold);
         }
 
-        .footer-bottom p {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.875rem;
+        .nav-link:hover::after {
+            width: 100%;
         }
 
-        /* ===========================
-           ANIMATIONS
-           =========================== */
+        .nav-cta {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-charcoal));
+            color: var(--color-pearl-white);
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-medium);
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-dramatic);
+            background: linear-gradient(135deg, var(--color-charcoal), var(--color-deep-indigo));
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: var(--color-deep-indigo);
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                position: relative;
+            }
+            
+            .mobile-menu-btn span {
+                position: absolute;
+                width: 18px;
+                height: 2px;
+                background: var(--color-pearl-white);
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all 0.3s;
+            }
+            
+            .mobile-menu-btn span:nth-child(1) { top: 10px; }
+            .mobile-menu-btn span:nth-child(2) { top: 50%; transform: translate(-50%, -50%); }
+            .mobile-menu-btn span:nth-child(3) { bottom: 10px; }
+        }
+
+        /* ========================================
+           HERO SECTION - Cinematic Introduction
+           ======================================== */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0F0F1E 0%, #1A1A2E 50%, #2A2A3E 100%);
+        }
+
+        /* Animated Background Pattern - Inspired by Hyderabad Architecture */
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 50px, var(--color-royal-gold) 50px, var(--color-royal-gold) 51px),
+                repeating-linear-gradient(-45deg, transparent, transparent 50px, var(--color-royal-gold) 50px, var(--color-royal-gold) 51px);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: calc(var(--spacing-unit) * 8);
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            padding: calc(var(--spacing-unit) * 15) 0 calc(var(--spacing-unit) * 10);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 5);
+                padding: calc(var(--spacing-unit) * 12) 0;
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s var(--ease-elegant) 0.3s backwards;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -1009,42 +354,1151 @@
             }
         }
 
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            color: var(--color-royal-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .badge-shimmer {
+            width: 8px;
+            height: 8px;
+            background: var(--color-royal-gold);
+            border-radius: 50%;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--color-pearl-white);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+            letter-spacing: -0.02em;
+        }
+
+        .title-gradient {
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber), var(--color-electric-cyan));
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s linear infinite;
+            display: block;
+        }
+
+        @keyframes gradientShift {
+            to { background-position: 200% center; }
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-elegant);
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 400;
+            color: var(--color-silk-gray);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: rgba(255, 248, 240, 0.8);
+            line-height: 1.8;
+            max-width: 580px;
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 2);
+            flex-wrap: wrap;
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        .btn-luxury {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 36px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            color: var(--color-midnight);
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-radius: 50px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-luxury::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--color-warm-amber), var(--color-royal-gold));
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .btn-luxury:hover::before {
+            opacity: 1;
+        }
+
+        .btn-luxury:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-luxury span,
+        .btn-luxury svg {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-secondary {
+            padding: 18px 36px;
+            background: rgba(255, 248, 240, 0.08);
+            backdrop-filter: blur(10px);
+            color: var(--color-pearl-white);
+            font-weight: 600;
+            border: 1px solid rgba(255, 248, 240, 0.2);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all var(--transition-base);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 248, 240, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Social Proof - Heritage Numbers */
+        .heritage-proof {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: calc(var(--spacing-unit) * 4);
+            padding-top: calc(var(--spacing-unit) * 4);
+            border-top: 1px solid rgba(255, 248, 240, 0.1);
+        }
+
+        .proof-item {
+            text-align: left;
+        }
+
+        .proof-number {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--color-royal-gold);
+            line-height: 1;
+            margin-bottom: calc(var(--spacing-unit));
+        }
+
+        .proof-label {
+            font-size: 0.9rem;
+            color: var(--color-silk-gray);
+            font-weight: 500;
+        }
+
+        @media (max-width: 640px) {
+            .heritage-proof {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 3);
             }
         }
 
-        /* ===========================
-           RESPONSIVE
-           =========================== */
-        @media (max-width: 768px) {
-            .section-how,
-            .section-services,
-            .section-cta {
-                padding: 4rem 0;
+        /* Hero Showcase Card */
+        .hero-showcase {
+            animation: fadeInUp 1s var(--ease-elegant) 0.5s backwards;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-showcase {
+                max-width: 500px;
+                margin: 0 auto;
             }
-            
-            .steps-grid,
+        }
+
+        .showcase-card {
+            background: rgba(255, 248, 240, 0.05);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 248, 240, 0.1);
+            border-radius: 24px;
+            padding: calc(var(--spacing-unit) * 5);
+            box-shadow: var(--shadow-luxury);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: calc(var(--spacing-unit) * 4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-pearl-white);
+            line-height: 1.2;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--color-silk-gray);
+        }
+
+        /* Live Order Timeline */
+        .order-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            opacity: 0.4;
+            transition: opacity var(--transition-base);
+        }
+
+        .timeline-item.active {
+            opacity: 1;
+        }
+
+        .timeline-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 248, 240, 0.08);
+            border: 2px solid rgba(255, 248, 240, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-pearl-white);
+            font-weight: 700;
+            transition: all var(--transition-base);
+        }
+
+        .timeline-item.completed .timeline-icon {
+            background: var(--color-electric-cyan);
+            border-color: var(--color-electric-cyan);
+            color: var(--color-midnight);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--color-pearl-white);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            color: var(--color-silk-gray);
+        }
+
+        .timeline-spinner {
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ========================================
+           MANIFESTO SECTION - Brand Story
+           ======================================== */
+        .manifesto-section {
+            padding: calc(var(--spacing-unit) * 20) 0;
+            background: var(--color-pearl-white);
+            position: relative;
+        }
+
+        .manifesto-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-terracotta);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .manifesto-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .manifesto-text {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            line-height: 1.8;
+            color: var(--color-charcoal);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .manifesto-highlight {
+            font-family: var(--font-elegant);
+            font-style: italic;
+            color: var(--color-royal-gold);
+            font-size: 1.1em;
+        }
+
+        /* ========================================
+           SERVICES SHOWCASE - Immersive Cards
+           ======================================== */
+        .services-section {
+            padding: calc(var(--spacing-unit) * 20) 0;
+            background: linear-gradient(180deg, var(--color-pearl-white) 0%, var(--color-mint) 100%);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 10);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+            line-height: 1.15;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: var(--color-charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: calc(var(--spacing-unit) * 4);
+        }
+
+        @media (max-width: 640px) {
             .services-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
-            
-            .footer-content {
+        }
+
+        .service-card {
+            background: var(--color-pearl-white);
+            border-radius: 20px;
+            padding: calc(var(--spacing-unit) * 6);
+            box-shadow: var(--shadow-subtle);
+            transition: all var(--transition-slow);
+            border: 1px solid rgba(26, 26, 46, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-royal-gold), var(--color-warm-amber));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--transition-slow);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-dramatic);
+        }
+
+        .service-card.featured {
+            background: linear-gradient(135deg, var(--color-deep-indigo) 0%, var(--color-charcoal) 100%);
+            border: none;
+        }
+
+        .service-card.featured * {
+            color: var(--color-pearl-white) !important;
+        }
+
+        .service-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(212, 175, 55, 0.12);
+            color: var(--color-royal-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .service-card.featured .service-badge {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        .service-icon-box {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(255, 180, 77, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .service-card.featured .service-icon-box {
+            background: rgba(255, 248, 240, 0.1);
+        }
+
+        .service-icon-box svg {
+            width: 40px;
+            height: 40px;
+            color: var(--color-royal-gold);
+        }
+
+        .service-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .service-description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-deep-indigo);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .service-card.featured .service-link {
+            color: var(--color-royal-gold);
+        }
+
+        .service-link:hover {
+            gap: 12px;
+        }
+
+        .service-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ========================================
+           PRICING SECTION - Integrated from Shopify
+           ======================================== */
+        #pricing {
+            padding: calc(var(--spacing-unit) * 20) 0;
+            background: var(--color-pearl-white);
+            position: relative;
+        }
+
+        #pricing::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg?v=1756434312');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.03;
+            z-index: 0;
+        }
+
+        #pricing .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 10);
+        }
+
+        .pricing-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .pricing-header p {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: var(--color-charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .pricing-cards-container {
+            display: flex;
+            overflow-x: auto;
+            gap: calc(var(--spacing-unit) * 4);
+            padding-bottom: calc(var(--spacing-unit) * 2);
+            margin-bottom: calc(var(--spacing-unit) * 10);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .pricing-cards-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-cards-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                overflow-x: visible;
+            }
+        }
+
+        .pricing-card {
+            min-width: 320px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            flex-direction: column;
+            transition: all var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(26, 26, 46, 0.08);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-dramatic);
+        }
+
+        .pricing-card.popular-card {
+            border: 3px solid var(--color-royal-gold);
+            transform: scale(1.03);
+            box-shadow: var(--shadow-luxury);
+        }
+
+        .pricing-card.popular-card:hover {
+            transform: scale(1.06) translateY(-12px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: calc(var(--spacing-unit) * 2);
+            right: calc(var(--spacing-unit) * 2);
+            padding: 8px 20px;
+            background: var(--color-royal-gold);
+            color: var(--color-midnight);
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            z-index: 2;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .pricing-card-header {
+            padding: calc(var(--spacing-unit) * 5);
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.02), rgba(26, 26, 46, 0.06));
+        }
+
+        .pricing-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit));
+        }
+
+        .pricing-card.popular-card h3 {
+            color: var(--color-royal-gold);
+        }
+
+        .pricing-card-subtitle {
+            color: var(--color-charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .pricing-list {
+            padding: calc(var(--spacing-unit) * 5);
+            flex-grow: 1;
+        }
+
+        .price-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: calc(var(--spacing-unit) * 2) 0;
+            border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+        }
+
+        .price-list-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+        }
+
+        .item-price-controls {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit) * 2);
+        }
+
+        .item-price {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-deep-indigo);
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: calc(var(--spacing-unit));
+        }
+
+        .quantity-controls button {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(26, 26, 46, 0.08);
+            color: var(--color-deep-indigo);
+            border: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-controls button:hover {
+            background: var(--color-royal-gold);
+            color: var(--color-midnight);
+            transform: scale(1.1);
+        }
+
+        .quantity-controls span {
+            min-width: 32px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+        }
+
+        .pricing-card-footer {
+            padding: calc(var(--spacing-unit) * 4);
+            border-top: 1px solid rgba(26, 26, 46, 0.08);
+            background: rgba(26, 26, 46, 0.02);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .subtotal-label {
+            font-weight: 600;
+            color: var(--color-charcoal);
+        }
+
+        .subtotal-value {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+        }
+
+        /* Delivery & Total Section */
+        .pricing-bottom {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 4);
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .pricing-bottom {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .delivery-options-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            padding: calc(var(--spacing-unit) * 5);
+            border: 2px solid rgba(26, 26, 46, 0.08);
+        }
+
+        .delivery-options-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .delivery-option {
+            display: flex;
+            align-items: center;
+            padding: calc(var(--spacing-unit) * 2);
+            border: 2px solid rgba(26, 26, 46, 0.08);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .delivery-option:hover {
+            border-color: var(--color-royal-gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .delivery-option input[type="radio"] {
+            display: none;
+        }
+
+        .delivery-option input[type="radio"]:checked + .radio-circle {
+            border-color: var(--color-royal-gold);
+        }
+
+        .delivery-option input[type="radio"]:checked + .radio-circle::after {
+            transform: scale(1);
+        }
+
+        .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(26, 26, 46, 0.2);
+            border-radius: 50%;
+            margin-right: calc(var(--spacing-unit) * 2);
+            flex-shrink: 0;
+            position: relative;
+            transition: all var(--transition-base);
+        }
+
+        .radio-circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 12px;
+            height: 12px;
+            background: var(--color-royal-gold);
+            border-radius: 50%;
+            transition: transform var(--transition-base);
+        }
+
+        .delivery-text {
+            flex-grow: 1;
+        }
+
+        .delivery-title {
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            margin-bottom: 4px;
+        }
+
+        .delivery-description {
+            font-size: 0.9rem;
+            color: var(--color-charcoal);
+        }
+
+        .grand-total-card {
+            background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-charcoal));
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: var(--shadow-luxury);
+            padding: calc(var(--spacing-unit) * 5);
+            position: sticky;
+            top: calc(var(--spacing-unit) * 12);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .grand-total-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--color-silk-gray);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .grand-total-amount {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 4.5rem);
+            font-weight: 800;
+            color: var(--color-royal-gold);
+            line-height: 1;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .pickup-charge-note {
+            font-size: 0.9rem;
+            color: var(--color-silk-gray);
+            margin-bottom: calc(var(--spacing-unit) * 4);
+            padding: calc(var(--spacing-unit) * 2);
+            background: rgba(255, 248, 240, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid var(--color-royal-gold);
+        }
+
+        .pickup-charge-note.hidden {
+            display: none;
+        }
+
+        .schedule-pickup-btn {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            color: var(--color-midnight);
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .schedule-pickup-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.6);
+        }
+
+        .reset-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            color: var(--color-silk-gray);
+            font-weight: 600;
+            text-align: center;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 248, 240, 0.2);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .reset-btn:hover {
+            background: rgba(255, 248, 240, 0.05);
+            color: var(--color-pearl-white);
+        }
+
+        /* ========================================
+           CALL TO ACTION - Final Push
+           ======================================== */
+        .cta-section {
+            padding: calc(var(--spacing-unit) * 20) 0;
+            background: linear-gradient(135deg, var(--color-deep-indigo) 0%, var(--color-charcoal) 50%, var(--color-midnight) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(212, 175, 55, 0.02) 100px, rgba(212, 175, 55, 0.02) 101px);
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            color: var(--color-pearl-white);
+            line-height: 1.2;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .cta-subtitle {
+            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+            color: var(--color-silk-gray);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        .cta-button-large {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 24px 48px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            color: var(--color-midnight);
+            font-weight: 800;
+            font-size: 1.25rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.5);
+            transition: all var(--transition-slow);
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 24px 64px rgba(212, 175, 55, 0.6);
+        }
+
+        /* ========================================
+           FOOTER - Elegant Closure
+           ======================================== */
+        .footer {
+            padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 4);
+            background: var(--color-midnight);
+            color: var(--color-silk-gray);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 8);
+            margin-bottom: calc(var(--spacing-unit) * 6);
+        }
+
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: calc(var(--spacing-unit) * 6);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: calc(var(--spacing-unit) * 5);
+            }
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-pearl-white);
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .footer-tagline {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-pearl-white);
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 2);
+        }
+
+        .footer-link {
+            color: var(--color-silk-gray);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-link:hover {
+            color: var(--color-royal-gold);
+            padding-left: 8px;
+        }
+
+        .footer-bottom {
+            padding-top: calc(var(--spacing-unit) * 4);
+            border-top: 1px solid rgba(255, 248, 240, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        @media (max-width: 640px) {
+            .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .footer-links {
-                flex-wrap: wrap;
-                justify-content: center;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+        }
+
+        .footer-made-with {
+            font-size: 0.9rem;
+            color: var(--color-royal-gold);
+        }
+
+        /* ========================================
+           FLOATING ACTION BUTTON
+           ======================================== */
+        .fab-container {
+            position: fixed;
+            bottom: calc(var(--spacing-unit) * 4);
+            right: calc(var(--spacing-unit) * 4);
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 2);
+        }
+
+        @media (max-width: 768px) {
+            .fab-container {
+                bottom: calc(var(--spacing-unit) * 2);
+                right: calc(var(--spacing-unit) * 2);
             }
+        }
+
+        .fab {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.5);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            border: none;
+        }
+
+        .fab:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.6);
+        }
+
+        .fab svg {
+            width: 28px;
+            height: 28px;
+            color: var(--color-midnight);
+        }
+
+        /* ========================================
+           ANIMATIONS & UTILITIES
+           ======================================== */
+        .highlight {
+            animation: highlightPulse 0.6s ease-out;
+        }
+
+        @keyframes highlightPulse {
+            0% { background: transparent; }
+            30% { background: rgba(212, 175, 55, 0.2); }
+            100% { background: transparent; }
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-royal-gold), var(--color-warm-amber));
+            z-index: 10001;
+            transition: width 0.1s ease-out;
         }
     </style>
 </head>
@@ -1052,248 +1506,295 @@
     <!-- GTM Noscript -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Floating Action Dock -->
-    <div id="action-dock" class="action-dock">
-        <button class="dock-btn dock-btn-primary" data-action="book">
-            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            <span>Book Pickup</span>
-        </button>
-        <button class="dock-btn" data-action="track">
-            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <span>Track Order</span>
-        </button>
-        <button class="dock-btn" data-action="prices">
-            <svg class="dock-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
-            <span>View Prices</span>
-        </button>
-    </div>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-wrapper">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span>Zapwash</span>
+            </div>
+            <div class="nav-links">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Schedule Pickup</a>
+            </div>
+            <button class="mobile-menu-btn" style="display: none;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <!-- Animated Background Blobs -->
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-        
-        <!-- Background Image -->
-        <div class="hero-bg"></div>
-        
-        <!-- Content Container -->
-        <div class="hero-container">
-            <!-- Left: Main Message -->
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>Hyderabad's #1 Express Laundry</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    <span class="title-line">Laundry & Dry Clean.</span>
-                    <span class="title-line title-gradient" id="animated-text">Reimagined.</span>
-                </h1>
-                
-                <p class="hero-subtitle">
-                    20-minute pickup. 60-minute delivery. Zero hassle.
-                </p>
-                
-                <div class="hero-description">
-                    <p id="intro-short">
-                        From Gachibowli to Madhapur, we compress your laundry time into one tap.
-                        <span id="intro-more" class="intro-more">
-                            Professional wash, steam iron & dry cleaning delivered to your doorstep with surgical precision. Your fresh clothes are just a WhatsApp away.
-                        </span>
-                        <button id="read-more-toggle" class="read-more-btn">Read more</button>
+    <section class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-shimmer"></span>
+                        <span>Hyderabad's Premier Laundry Atelier</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Where Every Fabric
+                        <span class="title-gradient">Tells a Story</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        From Charminar's heritage to Hitech City's future, we honor tradition while embracing tomorrow.
                     </p>
-                </div>
-                
-                <div class="hero-actions">
-                    <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20a%20pickup" target="_blank" class="btn btn-primary">
-                        <span>Schedule Pickup</span>
-                        <svg class="btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                    </a>
-                    <button class="btn btn-secondary" data-scroll="how-it-works">
-                        <span>How It Works</span>
-                    </button>
-                </div>
-                
-                <!-- Social Proof -->
-                <div class="social-proof">
-                    <div class="proof-stars">
-                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                        <svg class="star" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                    </div>
-                    <p class="proof-text"><strong>5,000+</strong> happy customers in Hyderabad</p>
-                </div>
-            </div>
-            
-            <!-- Right: Live Order Card -->
-            <div class="hero-card">
-                <div class="order-card glass-card">
-                    <div class="card-header">
-                        <div class="card-logo">⚡</div>
-                        <div>
-                            <p class="card-title">Live Order</p>
-                            <p class="card-subtitle">Tracking #ZW-4782</p>
-                        </div>
+                    
+                    <div class="hero-description">
+                        <p>
+                            Born in the heart of Hyderabad, Zapwash blends centuries-old textile craftsmanship with cutting-edge technology. 
+                            Each garment receives the care it deserves—whether it's your daily cotton kurta or a precious Banarasi saree.
+                        </p>
                     </div>
                     
-                    <div class="order-timeline">
-                        <div class="timeline-step active completed">
-                            <div class="step-icon">✓</div>
-                            <div class="step-content">
-                                <p class="step-title">Pickup Confirmed</p>
-                                <p class="step-time">2 mins ago</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-step active">
-                            <div class="step-icon spinner">↻</div>
-                            <div class="step-content">
-                                <p class="step-title">In Wash</p>
-                                <p class="step-time">Processing...</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-step">
-                            <div class="step-icon">○</div>
-                            <div class="step-content">
-                                <p class="step-title">Ironing</p>
-                                <p class="step-time">Up next</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-step">
-                            <div class="step-icon">○</div>
-                            <div class="step-content">
-                                <p class="step-title">Out for Delivery</p>
-                                <p class="step-time">Est. 45 mins</p>
-                            </div>
-                        </div>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20a%20pickup" target="_blank" class="btn-luxury">
+                            <span>Begin Your Experience</span>
+                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </a>
+                        <a href="#pricing" class="btn-secondary">
+                            <span>View Transparent Pricing</span>
+                        </a>
                     </div>
                     
-                    <div class="card-footer">
-                        <p class="delivery-eta">Delivery in <strong>48 minutes</strong></p>
+                    <div class="heritage-proof">
+                        <div class="proof-item">
+                            <div class="proof-number">5,000+</div>
+                            <div class="proof-label">Families Trust Us</div>
+                        </div>
+                        <div class="proof-item">
+                            <div class="proof-number">60 min</div>
+                            <div class="proof-label">Express Delivery</div>
+                        </div>
+                        <div class="proof-item">
+                            <div class="proof-number">100%</div>
+                            <div class="proof-label">Eco-Friendly Process</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-showcase">
+                    <div class="showcase-card">
+                        <div class="card-header">
+                            <div class="card-icon">⚡</div>
+                            <div>
+                                <h3 class="card-title">Live Order Journey</h3>
+                                <p class="card-subtitle">Real-time tracking</p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-timeline">
+                            <div class="timeline-item active completed">
+                                <div class="timeline-icon">✓</div>
+                                <div class="timeline-content">
+                                    <h4>Picked Up</h4>
+                                    <p>3 mins ago • Jubilee Hills</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item active">
+                                <div class="timeline-icon timeline-spinner">↻</div>
+                                <div class="timeline-content">
+                                    <h4>In Our Atelier</h4>
+                                    <p>Delicate fabric care in progress</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">○</div>
+                                <div class="timeline-content">
+                                    <h4>Quality Check</h4>
+                                    <p>Up next</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">○</div>
+                                <div class="timeline-content">
+                                    <h4>En Route to You</h4>
+                                    <p>Est. 45 minutes</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-icon"></div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="section-how">
+    <!-- Manifesto Section -->
+    <section class="manifesto-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge">Process</span>
-                <h2 class="section-title">Three steps. Zero effort.</h2>
-                <p class="section-subtitle">From tap to delivery in under 90 minutes</p>
-            </div>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <div class="step-icon-wrapper">
-                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <h3 class="step-title">Tap to Schedule</h3>
-                    <p class="step-description">WhatsApp us. Confirm pickup time. We arrive in 20 minutes.</p>
-                    <p class="step-duration">⏱ 1–2 minutes</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <div class="step-icon-wrapper">
-                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                    </div>
-                    <h3 class="step-title">We Sort & Clean</h3>
-                    <p class="step-description">Fabric-specific wash. Steam press. Quality check. All in-house.</p>
-                    <p class="step-duration">⏱ 45 minutes</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <div class="step-icon-wrapper">
-                        <svg class="step-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
-                    </div>
-                    <h3 class="step-title">Express Delivery</h3>
-                    <p class="step-description">Fresh, folded, doorstep drop. Track live. Pay on delivery.</p>
-                    <p class="step-duration">⏱ 15 minutes</p>
-                </div>
+            <div class="manifesto-content">
+                <span class="section-label">Our Philosophy</span>
+                <h2 class="manifesto-title">Craftsmanship Rooted in Heritage</h2>
+                <p class="manifesto-text">
+                    In a city where the Charminar stands as a testament to timeless artistry, we bring that same reverence to every piece of clothing. 
+                    <span class="manifesto-highlight">Your fabrics aren't just cleaned—they're curated, cared for, and celebrated.</span>
+                </p>
+                <p class="manifesto-text">
+                    From Secunderabad's bustling streets to Gachibowli's tech corridors, Zapwash connects modern Hyderabad with its textile legacy. 
+                    We use eco-conscious techniques passed down through generations, enhanced by technology that ensures precision and speed.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section-services">
+    <section id="services" class="services-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Services</span>
-                <h2 class="section-title">Everything you need. Nothing you don't.</h2>
+                <span class="section-label">Our Offerings</span>
+                <h2 class="section-title">Curated Care for Every Occasion</h2>
+                <p class="section-subtitle">
+                    Whether it's daily wear or your most treasured garments, each service is designed with precision and passion.
+                </p>
             </div>
             
             <div class="services-grid">
-                <!-- Service 1 -->
-                <div class="service-card-new">
-                    <div class="service-tag">Daily wear</div>
+                <div class="service-card">
+                    <span class="service-badge">Everyday Elegance</span>
                     <div class="service-icon-box">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6H4C3.448 6 3 6.448 3 7V9C3 9.552 3.448 10 4 10H20C20.552 10 21 9.552 21 9V7C21 6.448 20.552 6 20 6Z M4 12H15C15.552 12 16 12.448 16 13V17C16 17.552 15.552 18 15 18H4C3.448 18 3 17.552 3 17V13C3 12.448 3.448 12 4 12Z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title-new">Steam Ironing</h3>
-                    <p class="service-desc">Crisp, wrinkle-free finish for shirts, trousers, and everyday wear.</p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Steam%20Ironing%20service" target="_blank" class="service-btn">
-                        <span>Book now</span>
-                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    <h3 class="service-title">Steam Ironing</h3>
+                    <p class="service-description">
+                        Crisp, professional finish for shirts, trousers, kurtas. Using traditional pressing techniques with modern steam technology.
+                    </p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Steam%20Ironing%20service" target="_blank" class="service-link">
+                        <span>Explore Service</span>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
                     </a>
                 </div>
                 
-                <!-- Service 2 -->
-                <div class="service-card-new featured">
-                    <div class="service-badge-corner">60 MIN</div>
-                    <div class="service-tag">Most popular</div>
+                <div class="service-card featured">
+                    <span class="service-badge">Most Loved</span>
                     <div class="service-icon-box">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">ircle cx="12" cy="12" r="8"/>ircle cx="12" cy="12" r="3"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title-new">Wash & Iron</h3>
-                    <p class="service-desc">Complete clean + press. Your go-to for busy weeks.</p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Wash%20&%20Iron%20service" target="_blank" class="service-btn">
-                        <span>Book now</span>
-                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    <h3 class="service-title">Wash & Iron</h3>
+                    <p class="service-description">
+                        Complete clean and press. The perfect balance of thoroughness and speed for busy professionals and families.
+                    </p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Wash%20&%20Iron%20service" target="_blank" class="service-link">
+                        <span>Explore Service</span>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
                     </a>
                 </div>
                 
-                <!-- Service 3 -->
-                <div class="service-card-new">
-                    <div class="service-tag">Premium care</div>
+                <div class="service-card">
+                    <span class="service-badge">Luxury Treatment</span>
                     <div class="service-icon-box">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
                     </div>
-                    <h3 class="service-title-new">Dry Cleaning</h3>
-                    <p class="service-desc">Suits, sarees, blankets, wedding wear—treated with care.</p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Dry%20Cleaning%20service" target="_blank" class="service-btn">
-                        <span>Book now</span>
-                        <svg class="btn-arrow-sm" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                    <h3 class="service-title">Dry Cleaning</h3>
+                    <p class="service-description">
+                        Premium care for suits, sarees, silk garments, wedding attire. Handled with the reverence they deserve.
+                    </p>
+                    <a href="https://wa.me/918639103842?text=I'd%20like%20Dry%20Cleaning%20service" target="_blank" class="service-link">
+                        <span>Explore Service</span>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer CTA -->
-    <section class="section-cta">
+    <!-- Pricing Section (Integrated) -->
+    <section id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <span class="section-label">Transparent Pricing</span>
+                <h2>Exceptional Value, No Hidden Costs</h2>
+                <p>Select your items, choose your delivery speed. Every price reflects the care and craftsmanship we invest in your garments.</p>
+            </div>
+
+            <div class="pricing-cards-container" id="pricing-cards-container">
+                <!-- Cards will be dynamically rendered by JavaScript -->
+            </div>
+
+            <div class="pricing-bottom">
+                <div class="delivery-options-card">
+                    <h3>Choose Your Delivery Speed</h3>
+                    <div id="delivery-options">
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" checked>
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Standard Delivery</p>
+                                <p class="delivery-description">Free (24-72 hrs depending on service)</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="30" data-description="Express: Wash & Iron (24 hrs)">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Wash & Iron (24 hrs)</p>
+                                <p class="delivery-description">Adds ₹30 to your order</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="50" data-description="Express: Dry Cleaning (48 hrs)">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Dry Cleaning (48 hrs)</p>
+                                <p class="delivery-description">Adds ₹50 to your order</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grand-total-card">
+                    <h3>Your Estimated Total</h3>
+                    <div class="grand-total-amount" id="grand-total-cost">₹0</div>
+                    <div class="pickup-charge-note hidden" id="pickup-charge-message"></div>
+                    <a id="schedule-pickup-btn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="schedule-pickup-btn">
+                        Schedule Your Pickup
+                    </a>
+                    <button id="reset-all-btn" class="reset-btn">Reset All</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Ready for fresh clothes in 60 minutes?</h2>
-                <p class="cta-subtitle">Join 5,000+ Hyderabad residents who never worry about laundry</p>
-                <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20my%20first%20pickup" target="_blank" class="btn btn-primary-large">
-                    <span>Schedule Your First Pickup</span>
-                    <svg class="btn-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                <h2 class="cta-title">Experience Laundry, Elevated</h2>
+                <p class="cta-subtitle">Join 5,000+ Hyderabadis who've discovered the art of fabric care.</p>
+                <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20my%20first%20pickup" target="_blank" class="cta-button-large">
+                    <span>Begin Your Journey</span>
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -1302,143 +1803,331 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3 class="footer-logo">⚡ Thezapwash</h3>
-                    <p class="footer-tagline">Hyderabad's fastest laundry</p>
+                    <h3>Zapwash</h3>
+                    <p class="footer-tagline">
+                        Where Hyderabad's heritage meets modern luxury. Every garment, every fabric, every thread—treated with the respect it deserves.
+                    </p>
                 </div>
-                <div class="footer-links">
-                    <a href="https://wa.me/918639103842" target="_blank">WhatsApp</a>
-                    <a href="tel:+918639103842">Call Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#how-it-works">How It Works</a>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Steam Ironing</a>
+                        <a href="#" class="footer-link">Wash & Iron</a>
+                        <a href="#" class="footer-link">Dry Cleaning</a>
+                        <a href="#" class="footer-link">Express Delivery</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Our Process</a>
+                        <a href="#" class="footer-link">Sustainability</a>
+                        <a href="#" class="footer-link">Careers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
+                        <a href="tel:+918639103842" class="footer-link">Call Us</a>
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">Facebook</a>
+                    </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>© 2025 Thezapwash. All rights reserved. | Hyderabad, Telangana</p>
+                <p class="footer-copyright">© 2025 Zapwash. All rights reserved. | Hyderabad, Telangana</p>
+                <p class="footer-made-with">Crafted with care in the City of Pearls ✨</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <a href="https://wa.me/918639103842" target="_blank" class="fab" title="WhatsApp Us">
+            <svg fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+    </div>
+
     <!-- JavaScript -->
     <script>
-        // Configuration
-        const config = {
-            hero: {
-                animatedTexts: ['Reimagined.', 'Delivered in 60 min.', 'Zero hassle.'],
+        // ========================================
+        // PRICING DATA & LOGIC (From Shopify Page)
+        // ========================================
+        const allItemsData = {
+            "Ironing Only": { 
+                subtitle: "Crisp, professional finish. Free delivery in 24 hrs.", 
+                items: [
+                    { id: "ironShirt", name: "Shirt / Pant / T-shirt", price: 15 },
+                    { id: "ironKurta", name: "Kurta + Pajama", price: 25 },
+                    { id: "ironPunjabi", name: "Punjabi Dress (3-pc)", price: 35 },
+                    { id: "ironSareeC", name: "Saree (Cotton)", price: 25 },
+                    { id: "ironSareeH", name: "Saree (Silk/Heavy)", price: 40 },
+                    { id: "ironKid", name: "Kid's Dress", price: 12 },
+                    { id: "ironBed", name: "Bed Sheet", price: 20 },
+                    { id: "ironTowel", name: "Towel", price: 10 }
+                ]
             },
-            whatsappNumber: '918639103842',
+            "Wash & Iron": { 
+                subtitle: "Fresh & immaculate. Free delivery in 48 hrs.", 
+                items: [
+                    { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
+                    { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
+                    { id: "wiPunjabi", name: "Punjabi Dress (3-pc)", price: 70 },
+                    { id: "wiSareeC", name: "Saree (Cotton)", price: 50 },
+                    { id: "wiSareeH", name: "Saree (Silk/Heavy)", price: 80 },
+                    { id: "wiKid", name: "Kids' Dress", price: 25 },
+                    { id: "wiBed", name: "Bed Sheet", price: 40 },
+                    { id: "wiTowel", name: "Towel", price: 25 },
+                    { id: "wiBlanket", name: "Blanket / Quilt", price: 120 }
+                ]
+            },
+            "Dry Cleaning": { 
+                subtitle: "For delicate items. Free delivery in 72 hrs.", 
+                items: [
+                    { id: "dcShirt", name: "Shirt / Pant / T-shirt", price: 80 },
+                    { id: "dcKurta", name: "Kurta + Pajama", price: 80 },
+                    { id: "dcPunjabi", name: "Punjabi Dress (3-pc)", price: 100 },
+                    { id: "dcSareeC", name: "Saree (Cotton)", price: 80 },
+                    { id: "dcSareeH", name: "Saree (Silk/Heavy)", price: 150 },
+                    { id: "dcKid", name: "Kid's Dress", price: 50 },
+                    { id: "dcBed", name: "Bed Sheet", price: 70 },
+                    { id: "dcBlanket", name: "Blanket / Quilt", price: 200 }
+                ]
+            }
         };
 
-        // Animated Text Rotation
-        function initTextRotation() {
-            const element = document.getElementById('animated-text');
-            if (!element) return;
-            
-            let index = 0;
-            const texts = config.hero.animatedTexts;
-            
-            setInterval(() => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(-10px)';
+        let itemQuantities = {};
+        let expressFee = 0;
+        let expressDescription = "Standard Delivery";
+
+        const pricingCardsContainer = document.getElementById('pricing-cards-container');
+        const grandTotalCostEl = document.getElementById('grand-total-cost');
+        const scheduleBtn = document.getElementById('schedule-pickup-btn');
+        const resetAllBtn = document.getElementById('reset-all-btn');
+        const pickupChargeMessageEl = document.getElementById('pickup-charge-message');
+        const deliveryOptions = document.getElementById('delivery-options');
+
+        // Render Pricing Cards
+        function renderCards() {
+            let cardsHtml = '';
+            for (const serviceType in allItemsData) {
+                const isPopular = serviceType === "Wash & Iron";
+                const cardData = allItemsData[serviceType];
+                let itemsHtml = '';
                 
-                setTimeout(() => {
-                    index = (index + 1) % texts.length;
-                    element.textContent = texts[index];
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }, 300);
-            }, 3500);
+                cardData.items.forEach(item => {
+                    const uniqueItemId = item.id;
+                    itemQuantities[uniqueItemId] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
+                    itemsHtml += `
+                        <li class="price-list-item" data-item-id="${uniqueItemId}">
+                            <span class="item-name">${item.name}</span>
+                            <div class="item-price-controls">
+                                <span class="item-price">₹${item.price}</span>
+                                <div class="quantity-controls">
+                                    <button data-action="decrement" data-item-id="${uniqueItemId}">−</button>
+                                    <span id="qty-${uniqueItemId}">0</span>
+                                    <button data-action="increment" data-item-id="${uniqueItemId}">+</button>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+                });
+
+                cardsHtml += `
+                    <div class="pricing-card ${isPopular ? 'popular-card' : ''}" data-service-type="${serviceType}">
+                        ${isPopular ? '<div class="popular-badge">Most Popular</div>' : ''}
+                        <div class="pricing-card-header">
+                            <h3>${serviceType}</h3>
+                            <p class="pricing-card-subtitle">${cardData.subtitle}</p>
+                        </div>
+                        <div class="pricing-list">
+                            <ul data-category="${serviceType}">${itemsHtml}</ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <span class="subtotal-label">Subtotal:</span>
+                            <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
+                        </div>
+                    </div>
+                `;
+            }
+            pricingCardsContainer.innerHTML = cardsHtml;
         }
 
-        // Read More Toggle
-        function initReadMoreToggle() {
-            const btn = document.getElementById('read-more-toggle');
-            const moreText = document.getElementById('intro-more');
-            
-            if (!btn || !moreText) return;
-            
-            btn.addEventListener('click', () => {
-                if (moreText.classList.contains('expanded')) {
-                    moreText.classList.remove('expanded');
-                    btn.textContent = 'Read more';
-                } else {
-                    moreText.classList.add('expanded');
-                    btn.textContent = 'Read less';
+        // Calculate Totals
+        function calculateTotals() {
+            let itemTotal = 0;
+            let subTotals = {};
+            let selectedItemsForWhatsApp = [];
+
+            Object.keys(allItemsData).forEach(service => subTotals[service] = 0);
+
+            for (const id in itemQuantities) {
+                const item = itemQuantities[id];
+                const itemPrice = item.quantity * item.price;
+                itemTotal += itemPrice;
+                subTotals[item.service] += itemPrice;
+
+                if (item.quantity > 0) {
+                    selectedItemsForWhatsApp.push(`- ${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price} each`);
                 }
+            }
+
+            Object.keys(subTotals).forEach(service => {
+                const el = document.querySelector(`[data-subtotal="${service}"]`);
+                if (el) el.textContent = `₹${subTotals[service]}`;
             });
+
+            let pickupCharge = 0;
+            if (itemTotal > 0 && itemTotal < 50) pickupCharge = 25;
+            else if (itemTotal >= 50 && itemTotal < 100) pickupCharge = 15;
+
+            const grandTotal = itemTotal + pickupCharge + expressFee;
+
+            grandTotalCostEl.textContent = `₹${grandTotal}`;
+            grandTotalCostEl.parentElement.classList.add('highlight');
+            setTimeout(() => grandTotalCostEl.parentElement.classList.remove('highlight'), 600);
+
+            if (pickupCharge > 0) {
+                pickupChargeMessageEl.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
+                pickupChargeMessageEl.classList.remove('hidden');
+            } else if (itemTotal >= 100) {
+                pickupChargeMessageEl.textContent = `(Free pickup on orders ₹100+)`;
+                pickupChargeMessageEl.classList.remove('hidden');
+            } else {
+                pickupChargeMessageEl.classList.add('hidden');
+            }
+
+            let whatsappMessage = "Hey Zapwash! I'd like to schedule a pickup!";
+            if (grandTotal > 0) {
+                whatsappMessage = `Hey Zapwash! I'm interested in an order for an estimated ₹${grandTotal}.\n\nMy selected items are:\n`;
+                whatsappMessage += selectedItemsForWhatsApp.join('\n');
+                if (pickupCharge > 0) whatsappMessage += `\n\n- Pickup Charge: ₹${pickupCharge}`;
+                if (expressFee > 0) whatsappMessage += `\n- Delivery: ${expressDescription} (+₹${expressFee})`;
+                
+                whatsappMessage += `\n\nLooking forward to your service!`;
+                scheduleBtn.textContent = `Schedule for ₹${grandTotal}`;
+            } else {
+                scheduleBtn.textContent = `Schedule Your Pickup`;
+            }
+            scheduleBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
         }
 
-        // Smooth Scroll
-        function initSmoothScroll() {
-            document.querySelectorAll('[data-scroll]').forEach(button => {
-                button.addEventListener('click', (e) => {
+        // Event Listeners for Pricing
+        pricingCardsContainer.addEventListener('click', function(e) {
+            const button = e.target.closest('button[data-action]');
+            if (!button) return;
+
+            const action = button.dataset.action;
+            const itemId = button.dataset.itemId;
+            if (!itemId || !itemQuantities[itemId]) return;
+
+            const qtyEl = document.getElementById(`qty-${itemId}`);
+            let currentQty = itemQuantities[itemId].quantity;
+
+            if (action === 'increment') currentQty++;
+            else if (action === 'decrement' && currentQty > 0) currentQty--;
+
+            itemQuantities[itemId].quantity = currentQty;
+            qtyEl.textContent = currentQty;
+            calculateTotals();
+        });
+
+        deliveryOptions.addEventListener('change', function(e) {
+            if (e.target.name === 'delivery_speed') {
+                expressFee = parseInt(e.target.value, 10);
+                expressDescription = e.target.dataset.description;
+                calculateTotals();
+            }
+        });
+
+        resetAllBtn.addEventListener('click', function() {
+            for (const id in itemQuantities) {
+                itemQuantities[id].quantity = 0;
+                const qtyEl = document.getElementById(`qty-${id}`);
+                if (qtyEl) qtyEl.textContent = '0';
+            }
+            const defaultDelivery = document.querySelector('input[name="delivery_speed"][value="0"]');
+            if (defaultDelivery) defaultDelivery.checked = true;
+            expressFee = 0;
+            expressDescription = "Standard Delivery";
+            calculateTotals();
+        });
+
+        // ========================================
+        // GENERAL SITE INTERACTIONS
+        // ========================================
+
+        // Custom Cursor
+        const cursor = document.querySelector('.custom-cursor');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.classList.add('active');
+        });
+
+        function animateCursor() {
+            const diffX = mouseX - cursorX;
+            const diffY = mouseY - cursorY;
+            cursorX += diffX * 0.1;
+            cursorY += diffY * 0.1;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.addEventListener('mousedown', () => cursor.classList.add('clicked'));
+        document.addEventListener('mouseup', () => cursor.classList.remove('clicked'));
+
+        // Scroll Progress
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Navbar Scroll Effect
+        const navWrapper = document.querySelector('.nav-wrapper');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navWrapper.classList.add('scrolled');
+            } else {
+                navWrapper.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scroll for Nav Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.startsWith('#')) {
                     e.preventDefault();
-                    const targetId = button.getAttribute('data-scroll');
-                    const target = document.getElementById(targetId);
+                    const target = document.querySelector(href);
                     if (target) {
                         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
-                });
+                }
             });
-        }
+        });
 
-        // Action Dock Handlers
-        function initActionDock() {
-            const bookBtn = document.querySelector('[data-action="book"]');
-            const trackBtn = document.querySelector('[data-action="track"]');
-            const pricesBtn = document.querySelector('[data-action="prices"]');
-            
-            if (bookBtn) {
-                bookBtn.addEventListener('click', () => {
-                    window.open(`https://wa.me/${config.whatsappNumber}?text=Hi!%20I'd%20like%20to%20schedule%20a%20pickup`, '_blank');
-                });
-            }
-            
-            if (trackBtn) {
-                trackBtn.addEventListener('click', () => {
-                    window.open(`https://wa.me/${config.whatsappNumber}?text=I'd%20like%20to%20track%20my%20order`, '_blank');
-                });
-            }
-            
-            if (pricesBtn) {
-                pricesBtn.addEventListener('click', () => {
-                    window.open(`https://wa.me/${config.whatsappNumber}?text=Can%20I%20get%20the%20pricing%20details?`, '_blank');
-                });
-            }
-        }
-
-        // Scroll Reveal Animation
-        function initScrollReveal() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.step-card, .service-card-new').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
-                observer.observe(el);
-            });
-        }
-
-        // Initialize All
+        // Initialize on Load
         document.addEventListener('DOMContentLoaded', () => {
-            initTextRotation();
-            initReadMoreToggle();
-            initSmoothScroll();
-            initActionDock();
-            initScrollReveal();
+            renderCards();
+            calculateTotals();
         });
     </script>
 </body>
