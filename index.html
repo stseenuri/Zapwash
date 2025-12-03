@@ -19,12 +19,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapwash | Hyderabad's Premier Laundry Atelier - Where Tradition Meets Technology</title>
-    <meta name="description" content="Experience laundry reimagined. From Charminar to Hitech City, we honor every fabric with precision care rooted in Hyderabad's craftsmanship legacy.">
+    <title>Laundry Service in Gachibowli, Madhapur | Zapwash - Best Dry Cleaning Near Hitech City</title>
+    <meta name="description" content="Best laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. Free pickup and delivery in 20 minutes. Professional wash, iron, and dry cleaning near IT offices.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Zapwash | Hyderabad's Premier Laundry Atelier">
-    <meta property="og:description" content="Where heritage meets innovation. Luxury laundry service with 1-hour delivery.">
+    <meta property="og:title" content="Laundry Service Gachibowli | Zapwash Dry Cleaning Madhapur">
+    <meta property="og:description" content="Online laundry service near Gachibowli Metro. Free pickup from IT offices in Madhapur, Hitech City. 1-hour express delivery.">
     <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg">
     <meta property="og:url" content="https://thezapwash.com">
     <meta property="og:type" content="website">
@@ -39,22 +39,22 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Zapwash",
-      "description": "Hyderabad's premier luxury laundry and dry cleaning atelier",
+      "name": "Zapwash Laundry Service",
+      "description": "Best laundry and dry cleaning service in Gachibowli, Madhapur, Hitech City Hyderabad",
       "url": "https://thezapwash.com",
       "telephone": "+918639103842",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
+        "addressLocality": "Gachibowli",
+        "addressRegion": "Hyderabad, Telangana",
         "addressCountry": "IN"
       },
-      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Banjara Hills", "Jubilee Hills"],
+      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Banjara Hills", "Jubilee Hills", "Financial District"],
       "priceRange": "₹₹",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "5000"
+        "reviewCount": "400"
       }
     }
     </script>
@@ -70,7 +70,7 @@
         }
 
         :root {
-            /* Heritage Color Palette - Inspired by Hyderabad's Charminar & Golconda Fort */
+            /* Heritage Color Palette */
             --color-pearl-white: #FFF8F0;
             --color-sandstone: #E8DCC4;
             --color-terracotta: #C7956D;
@@ -132,7 +132,7 @@
         }
 
         /* ========================================
-           CUSTOM CURSOR (Award-Winning Detail)
+           CUSTOM CURSOR
            ======================================== */
         .custom-cursor {
             width: 40px;
@@ -162,7 +162,7 @@
         }
 
         /* ========================================
-           NAVIGATION - Floating Luxury Bar
+           NAVIGATION
            ======================================== */
         .nav-wrapper {
             position: fixed;
@@ -191,27 +191,28 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            transition: transform var(--transition-base);
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .logo-text {
             font-family: var(--font-display);
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-size: 1.75rem;
             font-weight: 700;
             color: var(--color-deep-indigo);
             letter-spacing: -0.02em;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            box-shadow: var(--shadow-medium);
         }
 
         .nav-links {
@@ -300,7 +301,7 @@
         }
 
         /* ========================================
-           HERO SECTION - Cinematic Introduction
+           HERO SECTION
            ======================================== */
         .hero-section {
             min-height: 100vh;
@@ -311,7 +312,6 @@
             background: linear-gradient(135deg, #0F0F1E 0%, #1A1A2E 50%, #2A2A3E 100%);
         }
 
-        /* Animated Background Pattern - Inspired by Hyderabad Architecture */
         .hero-pattern {
             position: absolute;
             inset: 0;
@@ -492,7 +492,7 @@
             transform: translateY(-2px);
         }
 
-        /* Social Proof - Heritage Numbers */
+        /* Social Proof */
         .heritage-proof {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -527,7 +527,7 @@
             }
         }
 
-        /* Hero Showcase Card */
+        /* How It Works Card */
         .hero-showcase {
             animation: fadeInUp 1s var(--ease-elegant) 0.5s backwards;
         }
@@ -599,8 +599,8 @@
             color: var(--color-silk-gray);
         }
 
-        /* Live Order Timeline */
-        .order-timeline {
+        /* Process Steps */
+        .process-timeline {
             display: flex;
             flex-direction: column;
             gap: calc(var(--spacing-unit) * 3);
@@ -608,69 +608,75 @@
             z-index: 1;
         }
 
-        .timeline-item {
+        .process-step {
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            opacity: 0.4;
-            transition: opacity var(--transition-base);
+            position: relative;
         }
 
-        .timeline-item.active {
-            opacity: 1;
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 44px;
+            bottom: -24px;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(212, 175, 55, 0.3), transparent);
         }
 
-        .timeline-icon {
+        .process-step:last-child::before {
+            display: none;
+        }
+
+        .step-number {
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: rgba(255, 248, 240, 0.08);
-            border: 2px solid rgba(255, 248, 240, 0.15);
+            background: rgba(212, 175, 55, 0.15);
+            border: 2px solid rgba(212, 175, 55, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            color: var(--color-pearl-white);
+            color: var(--color-royal-gold);
             font-weight: 700;
+            font-size: 1.1rem;
             transition: all var(--transition-base);
+            position: relative;
+            z-index: 1;
         }
 
-        .timeline-item.completed .timeline-icon {
-            background: var(--color-electric-cyan);
-            border-color: var(--color-electric-cyan);
+        .process-step:hover .step-number {
+            background: var(--color-royal-gold);
+            border-color: var(--color-royal-gold);
             color: var(--color-midnight);
+            transform: scale(1.1);
         }
 
-        .timeline-content h4 {
+        .step-content h4 {
             font-size: 1.05rem;
             font-weight: 600;
             color: var(--color-pearl-white);
             margin-bottom: 4px;
         }
 
-        .timeline-content p {
+        .step-content p {
             font-size: 0.9rem;
             color: var(--color-silk-gray);
-        }
-
-        .timeline-spinner {
-            animation: spin 2s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+            line-height: 1.6;
         }
 
         /* ========================================
-           MANIFESTO SECTION - Brand Story
+           PHILOSOPHY SECTION
            ======================================== */
-        .manifesto-section {
+        .philosophy-section {
             padding: calc(var(--spacing-unit) * 20) 0;
             background: var(--color-pearl-white);
             position: relative;
         }
 
-        .manifesto-content {
+        .philosophy-content {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
@@ -686,7 +692,7 @@
             margin-bottom: calc(var(--spacing-unit) * 2);
         }
 
-        .manifesto-title {
+        .philosophy-title {
             font-family: var(--font-display);
             font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
@@ -695,14 +701,14 @@
             margin-bottom: calc(var(--spacing-unit) * 4);
         }
 
-        .manifesto-text {
+        .philosophy-text {
             font-size: clamp(1.125rem, 2.5vw, 1.5rem);
             line-height: 1.8;
             color: var(--color-charcoal);
             margin-bottom: calc(var(--spacing-unit) * 3);
         }
 
-        .manifesto-highlight {
+        .philosophy-highlight {
             font-family: var(--font-elegant);
             font-style: italic;
             color: var(--color-royal-gold);
@@ -710,7 +716,7 @@
         }
 
         /* ========================================
-           SERVICES SHOWCASE - Immersive Cards
+           SERVICES SHOWCASE
            ======================================== */
         .services-section {
             padding: calc(var(--spacing-unit) * 20) 0;
@@ -870,7 +876,7 @@
         }
 
         /* ========================================
-           PRICING SECTION - Integrated from Shopify
+           PRICING SECTION
            ======================================== */
         #pricing {
             padding: calc(var(--spacing-unit) * 20) 0;
@@ -1095,7 +1101,6 @@
             color: var(--color-deep-indigo);
         }
 
-        /* Delivery & Total Section */
         .pricing-bottom {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1276,7 +1281,7 @@
         }
 
         /* ========================================
-           CALL TO ACTION - Final Push
+           CALL TO ACTION
            ======================================== */
         .cta-section {
             padding: calc(var(--spacing-unit) * 20) 0;
@@ -1337,7 +1342,7 @@
         }
 
         /* ========================================
-           FOOTER - Elegant Closure
+           FOOTER
            ======================================== */
         .footer {
             padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 4);
@@ -1477,7 +1482,7 @@
         }
 
         /* ========================================
-           ANIMATIONS & UTILITIES
+           UTILITIES
            ======================================== */
         .highlight {
             animation: highlightPulse 0.6s ease-out;
@@ -1489,7 +1494,6 @@
             100% { background: transparent; }
         }
 
-        /* Scroll Progress Bar */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -1515,10 +1519,10 @@
     <!-- Navigation -->
     <nav class="nav-wrapper">
         <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon">⚡</div>
-                <span>Zapwash</span>
-            </div>
+            <a href="/" class="logo">
+                <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/logo-zapwash.png" alt="Zapwash Laundry Service Gachibowli" class="logo-img">
+                <span class="logo-text">Zapwash</span>
+            </a>
             <div class="nav-links">
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
@@ -1541,49 +1545,48 @@
                 <div class="hero-content">
                     <div class="hero-badge">
                         <span class="badge-shimmer"></span>
-                        <span>Hyderabad's Premier Laundry Atelier</span>
+                        <span>Best in Gachibowli & Madhapur</span>
                     </div>
                     
                     <h1 class="hero-title">
-                        Where Every Fabric
-                        <span class="title-gradient">Tells a Story</span>
+                        Laundry Service in
+                        <span class="title-gradient">Gachibowli, Hyderabad</span>
                     </h1>
                     
                     <p class="hero-subtitle">
-                        From Charminar's heritage to Hitech City's future, we honor tradition while embracing tomorrow.
+                        Free pickup from IT offices. Fast delivery to Madhapur, Hitech City, Kondapur.
                     </p>
                     
                     <div class="hero-description">
                         <p>
-                            Born in the heart of Hyderabad, Zapwash blends centuries-old textile craftsmanship with cutting-edge technology. 
-                            Each garment receives the care it deserves—whether it's your daily cotton kurta or a precious Banarasi saree.
+                            Best online laundry service near Gachibowli Metro and Hitech City. We work with trusted local dhobis in your area to give you fast wash, iron, and dry cleaning with free pickup and delivery in 20 minutes.
                         </p>
                     </div>
                     
                     <div class="hero-actions">
-                        <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20a%20pickup" target="_blank" class="btn-luxury">
-                            <span>Begin Your Experience</span>
+                        <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Gachibowli" target="_blank" class="btn-luxury">
+                            <span>Book Free Pickup</span>
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                             </svg>
                         </a>
                         <a href="#pricing" class="btn-secondary">
-                            <span>View Transparent Pricing</span>
+                            <span>View Prices</span>
                         </a>
                     </div>
                     
                     <div class="heritage-proof">
                         <div class="proof-item">
-                            <div class="proof-number">5,000+</div>
-                            <div class="proof-label">Families Trust Us</div>
+                            <div class="proof-number">400+</div>
+                            <div class="proof-label">Happy Customers</div>
                         </div>
                         <div class="proof-item">
-                            <div class="proof-number">60 min</div>
-                            <div class="proof-label">Express Delivery</div>
+                            <div class="proof-number">20 min</div>
+                            <div class="proof-label">Pickup Time</div>
                         </div>
                         <div class="proof-item">
-                            <div class="proof-number">100%</div>
-                            <div class="proof-label">Eco-Friendly Process</div>
+                            <div class="proof-number">Trusted</div>
+                            <div class="proof-label">Verified Service</div>
                         </div>
                     </div>
                 </div>
@@ -1593,41 +1596,49 @@
                         <div class="card-header">
                             <div class="card-icon">⚡</div>
                             <div>
-                                <h3 class="card-title">Live Order Journey</h3>
-                                <p class="card-subtitle">Real-time tracking</p>
+                                <h3 class="card-title">How Zapwash Works</h3>
+                                <p class="card-subtitle">Simple 5-step process</p>
                             </div>
                         </div>
                         
-                        <div class="order-timeline">
-                            <div class="timeline-item active completed">
-                                <div class="timeline-icon">✓</div>
-                                <div class="timeline-content">
-                                    <h4>Picked Up</h4>
-                                    <p>3 mins ago • Jubilee Hills</p>
+                        <div class="process-timeline">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>You Schedule Order</h4>
+                                    <p>WhatsApp or call us from Gachibowli, Madhapur, or nearby areas</p>
                                 </div>
                             </div>
                             
-                            <div class="timeline-item active">
-                                <div class="timeline-icon timeline-spinner">↻</div>
-                                <div class="timeline-content">
-                                    <h4>In Our Atelier</h4>
-                                    <p>Delicate fabric care in progress</p>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>We Pickup Your Clothes</h4>
+                                    <p>Our delivery person comes to your location in 20 minutes</p>
                                 </div>
                             </div>
                             
-                            <div class="timeline-item">
-                                <div class="timeline-icon">○</div>
-                                <div class="timeline-content">
-                                    <h4>Quality Check</h4>
-                                    <p>Up next</p>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Give to Local Dhobi</h4>
+                                    <p>We hand over to our trusted partner dhobi near you</p>
                                 </div>
                             </div>
                             
-                            <div class="timeline-item">
-                                <div class="timeline-icon">○</div>
-                                <div class="timeline-content">
-                                    <h4>En Route to You</h4>
-                                    <p>Est. 45 minutes</p>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Dhobi Does the Service</h4>
+                                    <p>Professional wash, iron, or dry cleaning with care</p>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">
+                                    <h4>Delivered to You</h4>
+                                    <p>We collect from dhobi and deliver fresh clothes to your door</p>
                                 </div>
                             </div>
                         </div>
@@ -1637,19 +1648,18 @@
         </div>
     </section>
 
-    <!-- Manifesto Section -->
-    <section class="manifesto-section">
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
         <div class="container">
-            <div class="manifesto-content">
-                <span class="section-label">Our Philosophy</span>
-                <h2 class="manifesto-title">Craftsmanship Rooted in Heritage</h2>
-                <p class="manifesto-text">
-                    In a city where the Charminar stands as a testament to timeless artistry, we bring that same reverence to every piece of clothing. 
-                    <span class="manifesto-highlight">Your fabrics aren't just cleaned—they're curated, cared for, and celebrated.</span>
+            <div class="philosophy-content">
+                <span class="section-label">Our Mission</span>
+                <h2 class="philosophy-title">Organizing Local Dhobis for Better Laundry</h2>
+                <p class="philosophy-text">
+                    We work with skilled local dhobis in Gachibowli, Madhapur, and Hitech City to bring you fast and reliable laundry service. 
+                    <span class="philosophy-highlight">Our goal is to organize local dhobis with better hygiene and training</span> so you get clean clothes quickly.
                 </p>
-                <p class="manifesto-text">
-                    From Secunderabad's bustling streets to Gachibowli's tech corridors, Zapwash connects modern Hyderabad with its textile legacy. 
-                    We use eco-conscious techniques passed down through generations, enhanced by technology that ensures precision and speed.
+                <p class="philosophy-text">
+                    By partnering with neighborhood dhobis, we make laundry service instant and support local workers at the same time. Every order helps improve their business and keeps your clothes in trusted hands near your home.
                 </p>
             </div>
         </div>
@@ -1659,27 +1669,27 @@
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Our Offerings</span>
-                <h2 class="section-title">Curated Care for Every Occasion</h2>
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Laundry Services in Gachibowli</h2>
                 <p class="section-subtitle">
-                    Whether it's daily wear or your most treasured garments, each service is designed with precision and passion.
+                    Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur, Financial District.
                 </p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <span class="service-badge">Everyday Elegance</span>
+                    <span class="service-badge">Daily Wear</span>
                     <div class="service-icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Steam Ironing</h3>
+                    <h3 class="service-title">Iron Service</h3>
                     <p class="service-description">
-                        Crisp, professional finish for shirts, trousers, kurtas. Using traditional pressing techniques with modern steam technology.
+                        Best ironing service in Gachibowli. Sharp press for shirts, pants, kurtas, sarees. Free delivery in 24 hours.
                     </p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Steam%20Ironing%20service" target="_blank" class="service-link">
-                        <span>Explore Service</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service%20in%20Gachibowli" target="_blank" class="service-link">
+                        <span>Book Now</span>
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
@@ -1687,7 +1697,7 @@
                 </div>
                 
                 <div class="service-card featured">
-                    <span class="service-badge">Most Loved</span>
+                    <span class="service-badge">Most Popular</span>
                     <div class="service-icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
@@ -1695,10 +1705,10 @@
                     </div>
                     <h3 class="service-title">Wash & Iron</h3>
                     <p class="service-description">
-                        Complete clean and press. The perfect balance of thoroughness and speed for busy professionals and families.
+                        Complete laundry service near Madhapur. Professional wash and press for all clothes. Fast pickup from IT offices.
                     </p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Wash%20&%20Iron%20service" target="_blank" class="service-link">
-                        <span>Explore Service</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20in%20Madhapur" target="_blank" class="service-link">
+                        <span>Book Now</span>
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
@@ -1706,7 +1716,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <span class="service-badge">Luxury Treatment</span>
+                    <span class="service-badge">Premium Care</span>
                     <div class="service-icon-box">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
@@ -1714,10 +1724,10 @@
                     </div>
                     <h3 class="service-title">Dry Cleaning</h3>
                     <p class="service-description">
-                        Premium care for suits, sarees, silk garments, wedding attire. Handled with the reverence they deserve.
+                        Best dry cleaners in Hitech City. Safe cleaning for suits, designer wear, silk sarees, wedding clothes.
                     </p>
-                    <a href="https://wa.me/918639103842?text=I'd%20like%20Dry%20Cleaning%20service" target="_blank" class="service-link">
-                        <span>Explore Service</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning%20near%20Hitech%20City" target="_blank" class="service-link">
+                        <span>Book Now</span>
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
@@ -1727,58 +1737,58 @@
         </div>
     </section>
 
-    <!-- Pricing Section (Integrated) -->
+    <!-- Pricing Section (Same as before with your integrated pricing) -->
     <section id="pricing">
         <div class="container">
             <div class="pricing-header">
-                <span class="section-label">Transparent Pricing</span>
-                <h2>Exceptional Value, No Hidden Costs</h2>
-                <p>Select your items, choose your delivery speed. Every price reflects the care and craftsmanship we invest in your garments.</p>
+                <span class="section-label">Our Rates</span>
+                <h2>Laundry Price List Gachibowli</h2>
+                <p>Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup and delivery above ₹100.</p>
             </div>
 
             <div class="pricing-cards-container" id="pricing-cards-container">
-                <!-- Cards will be dynamically rendered by JavaScript -->
+                <!-- Cards will be dynamically rendered -->
             </div>
 
             <div class="pricing-bottom">
                 <div class="delivery-options-card">
-                    <h3>Choose Your Delivery Speed</h3>
+                    <h3>Choose Delivery Speed</h3>
                     <div id="delivery-options">
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" checked>
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Standard Delivery</p>
-                                <p class="delivery-description">Free (24-72 hrs depending on service)</p>
+                                <p class="delivery-description">Free (24-72 hours)</p>
                             </div>
                         </label>
                         <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="30" data-description="Express: Wash & Iron (24 hrs)">
+                            <input type="radio" name="delivery_speed" value="30" data-description="Express Wash & Iron">
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
-                                <p class="delivery-title">Express Wash & Iron (24 hrs)</p>
-                                <p class="delivery-description">Adds ₹30 to your order</p>
+                                <p class="delivery-title">Express Wash & Iron (24 hours)</p>
+                                <p class="delivery-description">Add ₹30</p>
                             </div>
                         </label>
                         <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="50" data-description="Express: Dry Cleaning (48 hrs)">
+                            <input type="radio" name="delivery_speed" value="50" data-description="Express Dry Cleaning">
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
-                                <p class="delivery-title">Express Dry Cleaning (48 hrs)</p>
-                                <p class="delivery-description">Adds ₹50 to your order</p>
+                                <p class="delivery-title">Express Dry Cleaning (48 hours)</p>
+                                <p class="delivery-description">Add ₹50</p>
                             </div>
                         </label>
                     </div>
                 </div>
 
                 <div class="grand-total-card">
-                    <h3>Your Estimated Total</h3>
+                    <h3>Your Total Bill</h3>
                     <div class="grand-total-amount" id="grand-total-cost">₹0</div>
                     <div class="pickup-charge-note hidden" id="pickup-charge-message"></div>
                     <a id="schedule-pickup-btn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="schedule-pickup-btn">
-                        Schedule Your Pickup
+                        Schedule Pickup Now
                     </a>
-                    <button id="reset-all-btn" class="reset-btn">Reset All</button>
+                    <button id="reset-all-btn" class="reset-btn">Clear All</button>
                 </div>
             </div>
         </div>
@@ -1788,10 +1798,10 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2 class="cta-title">Experience Laundry, Elevated</h2>
-                <p class="cta-subtitle">Join 5,000+ Hyderabadis who've discovered the art of fabric care.</p>
-                <a href="https://wa.me/918639103842?text=Hi!%20I'd%20like%20to%20schedule%20my%20first%20pickup" target="_blank" class="cta-button-large">
-                    <span>Begin Your Journey</span>
+                <h2 class="cta-title">Get Laundry Done in 1 Hour</h2>
+                <p class="cta-subtitle">Best laundry service in Gachibowli, Madhapur, Hitech City. 400+ happy customers trust us.</p>
+                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fast%20laundry%20service%20in%20Gachibowli" target="_blank" class="cta-button-large">
+                    <span>WhatsApp for Pickup</span>
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                     </svg>
@@ -1807,14 +1817,14 @@
                 <div class="footer-brand">
                     <h3>Zapwash</h3>
                     <p class="footer-tagline">
-                        Where Hyderabad's heritage meets modern luxury. Every garment, every fabric, every thread—treated with the respect it deserves.
+                        Best online laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. We organize local dhobis for fast pickup and delivery.
                     </p>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Services</h4>
                     <div class="footer-links">
-                        <a href="#" class="footer-link">Steam Ironing</a>
+                        <a href="#" class="footer-link">Iron Service</a>
                         <a href="#" class="footer-link">Wash & Iron</a>
                         <a href="#" class="footer-link">Dry Cleaning</a>
                         <a href="#" class="footer-link">Express Delivery</a>
@@ -1822,50 +1832,48 @@
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>Areas</h4>
                     <div class="footer-links">
-                        <a href="#" class="footer-link">About Us</a>
-                        <a href="#" class="footer-link">Our Process</a>
-                        <a href="#" class="footer-link">Sustainability</a>
-                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Gachibowli</a>
+                        <a href="#" class="footer-link">Madhapur</a>
+                        <a href="#" class="footer-link">Hitech City</a>
+                        <a href="#" class="footer-link">Kondapur</a>
+                        <a href="#" class="footer-link">Financial District</a>
                     </div>
                 </div>
                 
                 <div class="footer-col">
-                    <h4>Connect</h4>
+                    <h4>Contact</h4>
                     <div class="footer-links">
                         <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
-                        <a href="tel:+918639103842" class="footer-link">Call Us</a>
-                        <a href="#" class="footer-link">Instagram</a>
-                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="tel:+918639103842" class="footer-link">Call: +91 86391 03842</a>
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Zapwash. All rights reserved. | Hyderabad, Telangana</p>
-                <p class="footer-made-with">Crafted with care in the City of Pearls ✨</p>
+                <p class="footer-copyright">© 2025 Zapwash Laundry Service | Gachibowli, Hyderabad</p>
+                <p class="footer-made-with">Trusted by 400+ customers ⚡</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
+    <!-- Floating WhatsApp Button -->
     <div class="fab-container">
-        <a href="https://wa.me/918639103842" target="_blank" class="fab" title="WhatsApp Us">
+        <a href="https://wa.me/918639103842" target="_blank" class="fab" title="WhatsApp Zapwash">
             <svg fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
             </svg>
         </a>
     </div>
 
-    <!-- JavaScript -->
+    <!-- JavaScript (Same pricing logic as before) -->
     <script>
-        // ========================================
-        // PRICING DATA & LOGIC (From Shopify Page)
-        // ========================================
         const allItemsData = {
             "Ironing Only": { 
-                subtitle: "Crisp, professional finish. Free delivery in 24 hrs.", 
+                subtitle: "Sharp press. Free delivery in 24 hours.", 
                 items: [
                     { id: "ironShirt", name: "Shirt / Pant / T-shirt", price: 15 },
                     { id: "ironKurta", name: "Kurta + Pajama", price: 25 },
@@ -1878,7 +1886,7 @@
                 ]
             },
             "Wash & Iron": { 
-                subtitle: "Fresh & immaculate. Free delivery in 48 hrs.", 
+                subtitle: "Complete wash and press. Free delivery in 48 hours.", 
                 items: [
                     { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
                     { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
@@ -1892,7 +1900,7 @@
                 ]
             },
             "Dry Cleaning": { 
-                subtitle: "For delicate items. Free delivery in 72 hrs.", 
+                subtitle: "Premium care. Free delivery in 72 hours.", 
                 items: [
                     { id: "dcShirt", name: "Shirt / Pant / T-shirt", price: 80 },
                     { id: "dcKurta", name: "Kurta + Pajama", price: 80 },
@@ -1917,7 +1925,6 @@
         const pickupChargeMessageEl = document.getElementById('pickup-charge-message');
         const deliveryOptions = document.getElementById('delivery-options');
 
-        // Render Pricing Cards
         function renderCards() {
             let cardsHtml = '';
             for (const serviceType in allItemsData) {
@@ -1963,7 +1970,6 @@
             pricingCardsContainer.innerHTML = cardsHtml;
         }
 
-        // Calculate Totals
         function calculateTotals() {
             let itemTotal = 0;
             let subTotals = {};
@@ -1978,7 +1984,7 @@
                 subTotals[item.service] += itemPrice;
 
                 if (item.quantity > 0) {
-                    selectedItemsForWhatsApp.push(`- ${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price} each`);
+                    selectedItemsForWhatsApp.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
                 }
             }
 
@@ -2007,22 +2013,19 @@
                 pickupChargeMessageEl.classList.add('hidden');
             }
 
-            let whatsappMessage = "Hey Zapwash! I'd like to schedule a pickup!";
+            let whatsappMessage = "Hi! I need laundry service in Gachibowli";
             if (grandTotal > 0) {
-                whatsappMessage = `Hey Zapwash! I'm interested in an order for an estimated ₹${grandTotal}.\n\nMy selected items are:\n`;
-                whatsappMessage += selectedItemsForWhatsApp.join('\n');
-                if (pickupCharge > 0) whatsappMessage += `\n\n- Pickup Charge: ₹${pickupCharge}`;
-                if (expressFee > 0) whatsappMessage += `\n- Delivery: ${expressDescription} (+₹${expressFee})`;
+                whatsappMessage = `Hi Zapwash! I want to order laundry for ₹${grandTotal}\n\nMy items:\n${selectedItemsForWhatsApp.join('\n')}`;
+                if (pickupCharge > 0) whatsappMessage += `\n\nPickup: ₹${pickupCharge}`;
+                if (expressFee > 0) whatsappMessage += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
                 
-                whatsappMessage += `\n\nLooking forward to your service!`;
-                scheduleBtn.textContent = `Schedule for ₹${grandTotal}`;
+                scheduleBtn.textContent = `Order for ₹${grandTotal}`;
             } else {
-                scheduleBtn.textContent = `Schedule Your Pickup`;
+                scheduleBtn.textContent = `Schedule Pickup Now`;
             }
             scheduleBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
         }
 
-        // Event Listeners for Pricing
         pricingCardsContainer.addEventListener('click', function(e) {
             const button = e.target.closest('button[data-action]');
             if (!button) return;
@@ -2063,10 +2066,6 @@
             calculateTotals();
         });
 
-        // ========================================
-        // GENERAL SITE INTERACTIONS
-        // ========================================
-
         // Custom Cursor
         const cursor = document.querySelector('.custom-cursor');
         let mouseX = 0, mouseY = 0;
@@ -2100,7 +2099,7 @@
             scrollProgress.style.width = scrolled + '%';
         });
 
-        // Navbar Scroll Effect
+        // Navbar Scroll
         const navWrapper = document.querySelector('.nav-wrapper');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
@@ -2110,7 +2109,7 @@
             }
         });
 
-        // Smooth Scroll for Nav Links
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -2124,7 +2123,6 @@
             });
         });
 
-        // Initialize on Load
         document.addEventListener('DOMContentLoaded', () => {
             renderCards();
             calculateTotals();
