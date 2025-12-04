@@ -20,11 +20,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laundry Service in Gachibowli, Madhapur | Zapwash - Best Dry Cleaning Near Hitech City</title>
-    <meta name="description" content="Best laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. Free pickup and delivery in 20 minutes. Professional wash, iron, and dry cleaning near IT offices.">
+    <meta name="description" content="Best laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. Free pickup and delivery in 20 minutes. Professional wash, iron, and dry cleaning near IT offices. Express iron service starting from 1 hour.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Laundry Service Gachibowli | Zapwash Dry Cleaning Madhapur">
-    <meta property="og:description" content="Online laundry service near Gachibowli Metro. Free pickup from IT offices in Madhapur, Hitech City. 1-hour express delivery.">
+    <meta property="og:description" content="Online laundry service near Gachibowli Metro. Free pickup from IT offices in Madhapur, Hitech City. 1-hour express iron service.">
     <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0951/2173/6000/files/ChatGPT_Image_Aug_29__2025__07_47_29_AM_1.jpg">
     <meta property="og:url" content="https://thezapwash.com">
     <meta property="og:type" content="website">
@@ -70,7 +70,6 @@
         }
 
         :root {
-            /* Heritage Color Palette */
             --color-pearl-white: #FFF8F0;
             --color-sandstone: #E8DCC4;
             --color-terracotta: #C7956D;
@@ -79,30 +78,25 @@
             --color-midnight: #0F0F1E;
             --color-charcoal: #2A2A3E;
             --color-silk-gray: #B8B8C8;
-            
-            /* Accent Colors */
             --color-electric-cyan: #00D9FF;
             --color-mint: #E8F9F9;
             --color-warm-amber: #FFB84D;
             --color-rose-gold: #E6B8AF;
+            --color-warning: #FF6B6B;
             
-            /* Typography */
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-elegant: 'Cormorant Garamond', Georgia, serif;
             
-            /* Spacing & Layout */
             --spacing-unit: 8px;
             --container-max: 1440px;
             --content-max: 1200px;
             
-            /* Shadows & Effects */
             --shadow-subtle: 0 2px 16px rgba(0, 0, 0, 0.04);
             --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.08);
             --shadow-dramatic: 0 24px 64px rgba(0, 0, 0, 0.16);
             --shadow-luxury: 0 32px 80px rgba(212, 175, 55, 0.15);
             
-            /* Animations */
             --ease-elegant: cubic-bezier(0.4, 0, 0.2, 1);
             --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
             --transition-fast: 0.2s var(--ease-elegant);
@@ -193,26 +187,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
             text-decoration: none;
         }
 
         .logo-img {
-            height: 48px;
+            height: 50px;
             width: auto;
             transition: transform var(--transition-base);
         }
 
         .logo:hover .logo-img {
             transform: scale(1.05);
-        }
-
-        .logo-text {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--color-deep-indigo);
-            letter-spacing: -0.02em;
         }
 
         .nav-links {
@@ -492,7 +477,6 @@
             transform: translateY(-2px);
         }
 
-        /* Social Proof */
         .heritage-proof {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -527,7 +511,6 @@
             }
         }
 
-        /* How It Works Card */
         .hero-showcase {
             animation: fadeInUp 1s var(--ease-elegant) 0.5s backwards;
         }
@@ -599,7 +582,6 @@
             color: var(--color-silk-gray);
         }
 
-        /* Process Steps */
         .process-timeline {
             display: flex;
             flex-direction: column;
@@ -747,7 +729,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: calc(var(--spacing-unit) * 4);
         }
 
@@ -938,13 +920,13 @@
         @media (min-width: 768px) {
             .pricing-cards-container {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 overflow-x: visible;
             }
         }
 
         .pricing-card {
-            min-width: 320px;
+            min-width: 300px;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-radius: 24px;
@@ -1014,6 +996,22 @@
         .pricing-list {
             padding: calc(var(--spacing-unit) * 5);
             flex-grow: 1;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .pricing-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .pricing-list::-webkit-scrollbar-track {
+            background: rgba(26, 26, 46, 0.05);
+            border-radius: 10px;
+        }
+
+        .pricing-list::-webkit-scrollbar-thumb {
+            background: var(--color-royal-gold);
+            border-radius: 10px;
         }
 
         .price-list-item {
@@ -1198,6 +1196,13 @@
             color: var(--color-charcoal);
         }
 
+        .delivery-limit {
+            font-size: 0.85rem;
+            color: var(--color-terracotta);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
         .grand-total-card {
             background: linear-gradient(135deg, var(--color-deep-indigo), var(--color-charcoal));
             backdrop-filter: blur(20px);
@@ -1280,8 +1285,116 @@
             color: var(--color-pearl-white);
         }
 
+        /* Warning Modal */
+        .warning-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .warning-modal.show {
+            display: flex;
+        }
+
+        .warning-content {
+            background: var(--color-pearl-white);
+            border-radius: 24px;
+            padding: calc(var(--spacing-unit) * 6);
+            max-width: 500px;
+            margin: 0 calc(var(--spacing-unit) * 2);
+            box-shadow: var(--shadow-dramatic);
+            animation: modalSlideIn 0.3s var(--ease-elegant);
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .warning-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 107, 107, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto calc(var(--spacing-unit) * 3);
+        }
+
+        .warning-icon svg {
+            width: 30px;
+            height: 30px;
+            color: var(--color-warning);
+        }
+
+        .warning-title {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-deep-indigo);
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .warning-message {
+            text-align: center;
+            color: var(--color-charcoal);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: calc(var(--spacing-unit) * 4);
+        }
+
+        .warning-actions {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 2);
+        }
+
+        .warning-btn {
+            flex: 1;
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            border: none;
+        }
+
+        .warning-btn-primary {
+            background: linear-gradient(135deg, var(--color-royal-gold), var(--color-warm-amber));
+            color: var(--color-midnight);
+        }
+
+        .warning-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .warning-btn-secondary {
+            background: rgba(26, 26, 46, 0.08);
+            color: var(--color-deep-indigo);
+        }
+
+        .warning-btn-secondary:hover {
+            background: rgba(26, 26, 46, 0.15);
+        }
+
         /* ========================================
-           CALL TO ACTION
+           CTA SECTION
            ======================================== */
         .cta-section {
             padding: calc(var(--spacing-unit) * 20) 0;
@@ -1516,12 +1629,28 @@
     <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
 
+    <!-- Warning Modal -->
+    <div class="warning-modal" id="warningModal">
+        <div class="warning-content">
+            <div class="warning-icon">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                </svg>
+            </div>
+            <h3 class="warning-title">Item Limit Reached</h3>
+            <p class="warning-message" id="warningMessage"></p>
+            <div class="warning-actions">
+                <button class="warning-btn warning-btn-secondary" id="warningCancel">Cancel</button>
+                <button class="warning-btn warning-btn-primary" id="warningOk">Got It</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="nav-wrapper">
         <div class="nav-container">
             <a href="/" class="logo">
-                <img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/zapwash.png" alt="Zapwash Laundry Service Gachibowli" class="logo-img">
-                <span class="logo-text">Zapwash</span>
+                <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Laundry Service Gachibowli" class="logo-img">
             </a>
             <div class="nav-links">
                 <a href="#services" class="nav-link">Services</a>
@@ -1559,7 +1688,7 @@
                     
                     <div class="hero-description">
                         <p>
-                            Best online laundry service near Gachibowli Metro and Hitech City. We work with trusted local dhobis in your area to give you fast wash, iron, and dry cleaning with free pickup and delivery in 20 minutes.
+                            Best online laundry service near Gachibowli Metro and Hitech City. We work with trusted local dhobis in your area to give you fast wash, iron, and dry cleaning with free pickup and delivery in 20 minutes. Express iron service available from 1 hour.
                         </p>
                     </div>
                     
@@ -1672,7 +1801,7 @@
                 <span class="section-label">What We Offer</span>
                 <h2 class="section-title">Laundry Services in Gachibowli</h2>
                 <p class="section-subtitle">
-                    Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur, Financial District.
+                    Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur, Financial District. Express iron service from 1 hour.
                 </p>
             </div>
             
@@ -1733,17 +1862,36 @@
                         </svg>
                     </a>
                 </div>
+                
+                <div class="service-card">
+                    <span class="service-badge">⚡ Super Fast</span>
+                    <div class="service-icon-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Express Iron</h3>
+                    <p class="service-description">
+                        Fastest iron service in Hyderabad. Get your clothes pressed in 1 hour, 3 hours, 6 hours, or 12 hours based on your need.
+                    </p>
+                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron%20service" target="_blank" class="service-link">
+                        <span>Book Now</span>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section (Same as before with your integrated pricing) -->
+    <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
             <div class="pricing-header">
                 <span class="section-label">Our Rates</span>
                 <h2>Laundry Price List Gachibowli</h2>
-                <p>Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup and delivery above ₹100.</p>
+                <p>Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup and delivery above ₹100. Express iron service from 1 hour.</p>
             </div>
 
             <div class="pricing-cards-container" id="pricing-cards-container">
@@ -1755,23 +1903,65 @@
                     <h3>Choose Delivery Speed</h3>
                     <div id="delivery-options">
                         <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" checked>
+                            <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Standard Delivery</p>
-                                <p class="delivery-description">Free (24-72 hours)</p>
+                                <p class="delivery-description">Free (24-72 hours depending on service)</p>
                             </div>
                         </label>
+                        
                         <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="30" data-description="Express Wash & Iron">
+                            <input type="radio" name="delivery_speed" value="100" data-description="Express Iron (1 Hour)" data-limit="5">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 1 Hour</p>
+                                <p class="delivery-description">Add ₹100</p>
+                                <p class="delivery-limit">⚠️ Max 5 pieces only</p>
+                            </div>
+                        </label>
+                        
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="70" data-description="Express Iron (3 Hours)" data-limit="10">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 3 Hours</p>
+                                <p class="delivery-description">Add ₹70</p>
+                                <p class="delivery-limit">⚠️ Max 10 pieces only</p>
+                            </div>
+                        </label>
+                        
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="50" data-description="Express Iron (6 Hours)" data-limit="25">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 6 Hours</p>
+                                <p class="delivery-description">Add ₹50</p>
+                                <p class="delivery-limit">⚠️ Max 25 pieces only</p>
+                            </div>
+                        </label>
+                        
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="30" data-description="Express Iron (12 Hours)" data-limit="999">
+                            <span class="radio-circle"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 12 Hours</p>
+                                <p class="delivery-description">Add ₹30</p>
+                                <p class="delivery-limit">✓ No limit</p>
+                            </div>
+                        </label>
+                        
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery_speed" value="30" data-description="Express Wash & Iron (24 hrs)" data-limit="999">
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Wash & Iron (24 hours)</p>
                                 <p class="delivery-description">Add ₹30</p>
                             </div>
                         </label>
+                        
                         <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="50" data-description="Express Dry Cleaning">
+                            <input type="radio" name="delivery_speed" value="50" data-description="Express Dry Cleaning (48 hrs)" data-limit="999">
                             <span class="radio-circle"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Dry Cleaning (48 hours)</p>
@@ -1799,7 +1989,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Get Laundry Done in 1 Hour</h2>
-                <p class="cta-subtitle">Best laundry service in Gachibowli, Madhapur, Hitech City. 400+ happy customers trust us.</p>
+                <p class="cta-subtitle">Best laundry service in Gachibowli, Madhapur, Hitech City. 400+ happy customers trust us. Express iron service from 1 hour.</p>
                 <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fast%20laundry%20service%20in%20Gachibowli" target="_blank" class="cta-button-large">
                     <span>WhatsApp for Pickup</span>
                     <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
@@ -1817,7 +2007,7 @@
                 <div class="footer-brand">
                     <h3>Zapwash</h3>
                     <p class="footer-tagline">
-                        Best online laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. We organize local dhobis for fast pickup and delivery.
+                        Best online laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. We organize local dhobis for fast pickup and delivery. Express iron service from 1 hour.
                     </p>
                 </div>
                 
@@ -1827,6 +2017,7 @@
                         <a href="#" class="footer-link">Iron Service</a>
                         <a href="#" class="footer-link">Wash & Iron</a>
                         <a href="#" class="footer-link">Dry Cleaning</a>
+                        <a href="#" class="footer-link">Express Iron 1hr</a>
                         <a href="#" class="footer-link">Express Delivery</a>
                     </div>
                 </div>
@@ -1869,7 +2060,7 @@
         </a>
     </div>
 
-    <!-- JavaScript (Same pricing logic as before) -->
+    <!-- JavaScript -->
     <script>
         const allItemsData = {
             "Ironing Only": { 
@@ -1911,12 +2102,25 @@
                     { id: "dcBed", name: "Bed Sheet", price: 70 },
                     { id: "dcBlanket", name: "Blanket / Quilt", price: 200 }
                 ]
+            },
+            "Express Iron": { 
+                subtitle: "Super fast iron service. Choose your speed.", 
+                items: [
+                    { id: "exShirt", name: "Shirt / Pant / T-shirt", price: 20 },
+                    { id: "exKurta", name: "Kurta + Pajama", price: 30 },
+                    { id: "exPunjabi", name: "Punjabi Dress (3-pc)", price: 45 },
+                    { id: "exSareeC", name: "Saree (Cotton)", price: 30 },
+                    { id: "exSareeH", name: "Saree (Silk/Heavy)", price: 50 },
+                    { id: "exKid", name: "Kid's Dress", price: 15 },
+                    { id: "exBed", name: "Bed Sheet", price: 25 }
+                ]
             }
         };
 
         let itemQuantities = {};
         let expressFee = 0;
         let expressDescription = "Standard Delivery";
+        let currentLimit = 999;
 
         const pricingCardsContainer = document.getElementById('pricing-cards-container');
         const grandTotalCostEl = document.getElementById('grand-total-cost');
@@ -1924,6 +2128,10 @@
         const resetAllBtn = document.getElementById('reset-all-btn');
         const pickupChargeMessageEl = document.getElementById('pickup-charge-message');
         const deliveryOptions = document.getElementById('delivery-options');
+        const warningModal = document.getElementById('warningModal');
+        const warningMessage = document.getElementById('warningMessage');
+        const warningCancel = document.getElementById('warningCancel');
+        const warningOk = document.getElementById('warningOk');
 
         function renderCards() {
             let cardsHtml = '';
@@ -1970,10 +2178,40 @@
             pricingCardsContainer.innerHTML = cardsHtml;
         }
 
+        function getTotalPieces() {
+            let total = 0;
+            for (const id in itemQuantities) {
+                total += itemQuantities[id].quantity;
+            }
+            return total;
+        }
+
+        function showWarning(limit) {
+            if (limit === 5) {
+                warningMessage.textContent = `Express 1 Hour service allows maximum 5 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            } else if (limit === 10) {
+                warningMessage.textContent = `Express 3 Hours service allows maximum 10 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            } else if (limit === 25) {
+                warningMessage.textContent = `Express 6 Hours service allows maximum 25 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            }
+            warningModal.classList.add('show');
+        }
+
+        function hideWarning() {
+            warningModal.classList.remove('show');
+        }
+
+        warningCancel.addEventListener('click', hideWarning);
+        warningOk.addEventListener('click', hideWarning);
+        warningModal.addEventListener('click', (e) => {
+            if (e.target === warningModal) hideWarning();
+        });
+
         function calculateTotals() {
             let itemTotal = 0;
             let subTotals = {};
             let selectedItemsForWhatsApp = [];
+            let totalPieces = 0;
 
             Object.keys(allItemsData).forEach(service => subTotals[service] = 0);
 
@@ -1982,6 +2220,7 @@
                 const itemPrice = item.quantity * item.price;
                 itemTotal += itemPrice;
                 subTotals[item.service] += itemPrice;
+                totalPieces += item.quantity;
 
                 if (item.quantity > 0) {
                     selectedItemsForWhatsApp.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
@@ -2015,7 +2254,7 @@
 
             let whatsappMessage = "Hi! I need laundry service in Gachibowli";
             if (grandTotal > 0) {
-                whatsappMessage = `Hi Zapwash! I want to order laundry for ₹${grandTotal}\n\nMy items:\n${selectedItemsForWhatsApp.join('\n')}`;
+                whatsappMessage = `Hi Zapwash! I want to order laundry for ₹${grandTotal}\n\nMy items (${totalPieces} pieces):\n${selectedItemsForWhatsApp.join('\n')}`;
                 if (pickupCharge > 0) whatsappMessage += `\n\nPickup: ₹${pickupCharge}`;
                 if (expressFee > 0) whatsappMessage += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
                 
@@ -2037,8 +2276,16 @@
             const qtyEl = document.getElementById(`qty-${itemId}`);
             let currentQty = itemQuantities[itemId].quantity;
 
-            if (action === 'increment') currentQty++;
-            else if (action === 'decrement' && currentQty > 0) currentQty--;
+            if (action === 'increment') {
+                const newTotal = getTotalPieces() + 1;
+                if (newTotal > currentLimit) {
+                    showWarning(currentLimit);
+                    return;
+                }
+                currentQty++;
+            } else if (action === 'decrement' && currentQty > 0) {
+                currentQty--;
+            }
 
             itemQuantities[itemId].quantity = currentQty;
             qtyEl.textContent = currentQty;
@@ -2047,8 +2294,19 @@
 
         deliveryOptions.addEventListener('change', function(e) {
             if (e.target.name === 'delivery_speed') {
+                const newLimit = parseInt(e.target.dataset.limit, 10);
+                const totalPieces = getTotalPieces();
+                
+                if (totalPieces > newLimit) {
+                    showWarning(newLimit);
+                    // Reset to standard delivery
+                    document.querySelector('input[name="delivery_speed"][value="0"]').checked = true;
+                    return;
+                }
+                
                 expressFee = parseInt(e.target.value, 10);
                 expressDescription = e.target.dataset.description;
+                currentLimit = newLimit;
                 calculateTotals();
             }
         });
@@ -2063,6 +2321,7 @@
             if (defaultDelivery) defaultDelivery.checked = true;
             expressFee = 0;
             expressDescription = "Standard Delivery";
+            currentLimit = 999;
             calculateTotals();
         });
 
