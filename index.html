@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapwash | Redefining Laundry in Hyderabad</title>
+    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,366 +21,648 @@
       gtag('config', 'G-JYPST6NC81');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapwash - Premium Laundry Service | Gachibowli, Hyderabad</title>
-    <meta name="description" content="Best laundry service in Gachibowli. Free pickup in 20 minutes. Express iron from 1 hour.">
-    
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --off-white: #F5F5F3;
+            --cream: #FAF8F5;
+            --gray-100: #E8E8E6;
+            --gray-200: #D1D1CF;
+            --gray-400: #8A8A88;
+            --gray-600: #5C5C5A;
+            --gray-800: #2D2D2B;
+            --accent: #0066FF;
+            --accent-light: #E6F0FF;
+            --success: #00C853;
+            --warning: #FF6B35;
+            
+            --font-display: 'Syne', sans-serif;
+            --font-serif: 'Instrument Serif', serif;
+            --font-body: 'Space Grotesk', sans-serif;
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-primary: #0F0F0F;
-            --bg-secondary: #1A1A1A;
-            --text-primary: #FFFFFF;
-            --text-secondary: #B3B3B3;
-            --accent: #00F0FF;
-            --accent-2: #7000FF;
-            --card-bg: #1E1E1E;
-            
-            --font-primary: 'Space Grotesk', sans-serif;
-            --font-secondary: 'Inter', sans-serif;
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: var(--font-secondary);
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            font-family: var(--font-body);
+            background: var(--cream);
+            color: var(--gray-800);
             line-height: 1.6;
             overflow-x: hidden;
+            cursor: none;
         }
 
-        /* ========================================
-           NAVIGATION - FLOATING PILL
-           ======================================== */
-        .nav {
+        ::selection {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* ============================================
+           MAGNETIC CURSOR
+           ============================================ */
+        .cursor-dot {
             position: fixed;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            background: rgba(30, 30, 30, 0.8);
-            backdrop-filter: blur(20px);
-            border-radius: 100px;
-            padding: 1rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background 0.3s;
+        }
+
+        .cursor-ring {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid var(--gray-800);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99998;
+            transform: translate(-50%, -50%);
+            transition: width 0.4s var(--ease-out-expo), height 0.4s var(--ease-out-expo), border-color 0.3s, opacity 0.3s;
+        }
+
+        .cursor-dot.hover {
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-ring.hover {
+            width: 80px;
+            height: 80px;
+            opacity: 0;
+        }
+
+        .cursor-text {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99999;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--white);
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s;
+        }
+
+        .cursor-text.visible {
+            opacity: 1;
+        }
+
+        @media (pointer: coarse) {
+            .cursor-dot, .cursor-ring, .cursor-text { display: none; }
+            body { cursor: auto; }
+        }
+
+        /* ============================================
+           INTRO ANIMATION
+           ============================================ */
+        .intro-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
             display: flex;
             align-items: center;
-            gap: 3rem;
-            transition: all 0.3s ease;
+            justify-content: center;
+            pointer-events: none;
         }
 
-        .nav.scrolled {
-            top: 1rem;
-            padding: 0.75rem 1.5rem;
+        .intro-slide {
+            position: absolute;
+            inset: 0;
+            background: var(--black);
+            transform-origin: top;
+        }
+
+        .intro-logo {
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .intro-logo span {
+            display: inline-block;
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 800;
+            color: var(--white);
+            transform: translateY(100%);
+            animation: revealText 0.8s var(--ease-out-expo) 0.3s forwards;
+        }
+
+        @keyframes revealText {
+            to { transform: translateY(0); }
+        }
+
+        .intro-overlay.complete .intro-slide {
+            animation: slideUp 1.2s var(--ease-out-expo) forwards;
+        }
+
+        .intro-overlay.complete .intro-logo span {
+            animation: hideText 0.5s var(--ease-out-expo) forwards;
+        }
+
+        @keyframes slideUp {
+            to { transform: scaleY(0); }
+        }
+
+        @keyframes hideText {
+            to { opacity: 0; transform: translateY(-50%); }
+        }
+
+        /* ============================================
+           NAVIGATION - SPLIT DESIGN
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            mix-blend-mode: difference;
         }
 
         .nav-logo {
-            height: 40px;
+            height: 45px;
+            filter: invert(1);
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
             align-items: center;
         }
 
         .nav-link {
-            color: var(--text-secondary);
+            color: var(--white);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: color 0.3s ease;
             position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link span {
+            display: block;
+            transition: transform 0.4s var(--ease-out-expo);
         }
 
         .nav-link::after {
-            content: '';
+            content: attr(data-text);
             position: absolute;
-            bottom: -4px;
+            top: 100%;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
+            transition: transform 0.4s var(--ease-out-expo);
         }
 
-        .nav-link:hover {
-            color: var(--text-primary);
+        .nav-link:hover span {
+            transform: translateY(-100%);
         }
 
         .nav-link:hover::after {
-            width: 100%;
+            transform: translateY(-100%);
         }
 
         .nav-cta {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: var(--text-primary);
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
+            padding: 0.75rem 1.75rem;
+            background: var(--white);
+            color: var(--black);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            transition: transform 0.3s ease;
+            font-size: 0.85rem;
+            border-radius: 100px;
+            transition: all 0.4s var(--ease-out-expo);
         }
 
         .nav-cta:hover {
+            background: var(--accent);
+            color: var(--white);
             transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
-            .nav {
-                width: 90%;
-                padding: 1rem;
-            }
-            .nav-links {
-                display: none;
-            }
+            .nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
         }
 
-        /* ========================================
-           HERO - MASSIVE TYPOGRAPHY
-           ======================================== */
+        /* ============================================
+           HERO - CINEMATIC FULL SCREEN
+           ============================================ */
         .hero {
             min-height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 3rem 4rem;
             position: relative;
             overflow: hidden;
-            padding: 8rem 2rem 4rem;
+            background: var(--black);
         }
 
-        .hero-bg {
+        .hero-video-bg {
             position: absolute;
             inset: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.1), transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(112, 0, 255, 0.1), transparent 50%);
+            overflow: hidden;
         }
 
-        .hero-grid {
+        .hero-video-bg::after {
+            content: '';
             position: absolute;
             inset: 0;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: gridMove 20s linear infinite;
+            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.5) 100%);
         }
 
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+        .hero-video-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            animation: gradientShift 10s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
             position: relative;
             z-index: 10;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
         }
 
-        .hero-badge {
+        .hero-eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(0, 240, 255, 0.1);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            border-radius: 50px;
-            color: var(--accent);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+            gap: 1rem;
             margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
+            overflow: hidden;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .hero-eyebrow-line {
+            width: 60px;
+            height: 1px;
+            background: var(--white);
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: expandLine 1s var(--ease-out-expo) 1.5s forwards;
+        }
+
+        @keyframes expandLine {
+            to { transform: scaleX(1); }
+        }
+
+        .hero-eyebrow-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--white);
+            opacity: 0;
+            animation: fadeIn 0.8s ease 1.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
         }
 
         .hero-title {
-            font-family: var(--font-primary);
-            font-size: clamp(3rem, 10vw, 8rem);
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 1.5rem;
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 12vw, 10rem);
+            font-weight: 800;
+            line-height: 0.9;
+            color: var(--white);
+            margin-bottom: 2rem;
             letter-spacing: -0.03em;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
         }
 
-        .hero-title-gradient {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .hero-title-line {
+            display: block;
+            overflow: hidden;
+        }
+
+        .hero-title-line span {
             display: inline-block;
+            transform: translateY(100%);
+            animation: revealTitle 1s var(--ease-out-expo) forwards;
         }
 
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-            line-height: 1.6;
-            animation: fadeInUp 0.8s ease 0.6s backwards;
+        .hero-title-line:nth-child(1) span { animation-delay: 1.6s; }
+        .hero-title-line:nth-child(2) span { animation-delay: 1.75s; }
+
+        @keyframes revealTitle {
+            to { transform: translateY(0); }
         }
 
-        .hero-buttons {
+        .hero-title-italic {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 4rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 2.2s forwards;
+        }
+
+        .hero-description {
+            max-width: 450px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+        }
+
+        .hero-cta-group {
             display: flex;
             gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.8s backwards;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: var(--text-primary);
-            padding: 1.25rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
+        .btn-hero {
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 30px 80px rgba(0, 240, 255, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            padding: 1.25rem 3rem;
-            border-radius: 50px;
+            padding: 1.25rem 2.5rem;
+            background: var(--white);
+            color: var(--black);
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.05rem;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            border-radius: 100px;
+            transition: all 0.4s var(--ease-out-expo);
+            overflow: hidden;
+            position: relative;
         }
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.3);
+        .btn-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s var(--ease-out-expo);
         }
 
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 6rem;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            animation: fadeInUp 0.8s ease 1s backwards;
+        .btn-hero:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
-        .stat {
-            text-align: center;
+        .btn-hero span, .btn-hero svg {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s ease;
         }
 
-        .stat-number {
-            font-family: var(--font-primary);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-            margin-bottom: 0.5rem;
+        .btn-hero:hover span, .btn-hero:hover svg {
+            color: var(--white);
         }
 
-        .stat-label {
-            color: var(--text-secondary);
-            font-size: 1rem;
+        .btn-hero-outline {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            color: var(--white);
+        }
+
+        .btn-hero-outline::before {
+            background: var(--white);
+        }
+
+        .btn-hero-outline:hover span {
+            color: var(--black);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            opacity: 0;
+            animation: fadeIn 1s ease 2.5s forwards;
+        }
+
+        .hero-scroll-text {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            writing-mode: vertical-rl;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 60px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-scroll-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: var(--accent);
+            animation: scrollIndicator 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollIndicator {
+            0% { top: -30%; }
+            100% { top: 100%; }
         }
 
         @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .hero { padding: 0 1.5rem 3rem; }
+            .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
+            .hero-cta-group { flex-direction: column; width: 100%; }
+            .btn-hero { width: 100%; justify-content: center; }
         }
 
-        /* ========================================
-           SERVICES - CARD GRID
-           ======================================== */
+        /* ============================================
+           MARQUEE SECTION
+           ============================================ */
+        .marquee-section {
+            padding: 2rem 0;
+            background: var(--black);
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .marquee-track {
+            display: flex;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .marquee-item {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 0 3rem;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .marquee-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        /* ============================================
+           SERVICES - HORIZONTAL SCROLL CARDS
+           ============================================ */
         .services {
-            padding: 8rem 2rem;
+            padding: 10rem 0;
+            background: var(--cream);
             position: relative;
         }
 
         .section-header {
-            text-align: center;
-            max-width: 800px;
+            max-width: 1400px;
             margin: 0 auto 5rem;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: end;
+        }
+
+        @media (max-width: 768px) {
+            .section-header {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1.5rem;
+            }
         }
 
         .section-label {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(0, 240, 255, 0.1);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            border-radius: 50px;
-            color: var(--accent);
-            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-label-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .section-label-text {
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.5rem;
+            letter-spacing: 0.15em;
+            color: var(--gray-600);
         }
 
         .section-title {
-            font-family: var(--font-primary);
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 7vw, 5rem);
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
+            line-height: 1;
+            color: var(--gray-800);
+            letter-spacing: -0.02em;
         }
 
-        .section-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
+        .section-title-serif {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .section-description {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .services-scroll {
+            display: flex;
             gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 0 3rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .services-scroll::-webkit-scrollbar {
+            display: none;
         }
 
         .service-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            flex: 0 0 400px;
+            scroll-snap-align: start;
+            background: var(--white);
             border-radius: 24px;
             padding: 3rem;
-            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            transition: all 0.5s var(--ease-out-expo);
+            border: 1px solid var(--gray-100);
         }
 
         .service-card::before {
@@ -384,12 +670,12 @@
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
+            width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            background: linear-gradient(90deg, var(--accent) 0%, #00C853 100%);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.4s ease;
+            transition: transform 0.5s var(--ease-out-expo);
         }
 
         .service-card:hover::before {
@@ -397,224 +683,305 @@
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(0, 240, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: block;
+        .service-number {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--gray-100);
+            line-height: 1;
+            margin-bottom: 2rem;
+            transition: color 0.4s ease;
+        }
+
+        .service-card:hover .service-number {
+            color: var(--accent-light);
         }
 
         .service-title {
-            font-family: var(--font-primary);
+            font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: var(--gray-800);
         }
 
         .service-description {
-            color: var(--text-secondary);
+            color: var(--gray-600);
             line-height: 1.7;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .service-time {
+            font-size: 0.85rem;
+            color: var(--gray-400);
         }
 
         .service-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: gap 0.3s ease;
-        }
-
-        .service-link:hover {
-            gap: 1rem;
-        }
-
-        /* ========================================
-           HOW IT WORKS - TIMELINE
-           ======================================== */
-        .how-it-works {
-            padding: 8rem 2rem;
-            background: var(--bg-secondary);
-            position: relative;
-        }
-
-        .timeline {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--accent), var(--accent-2));
-            transform: translateX(-50%);
-        }
-
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 30px;
-            }
-        }
-
-        .timeline-item {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            order: 2;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-item {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding-left: 80px;
-            }
-            .timeline-item:nth-child(even) .timeline-content {
-                order: 1;
-            }
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            transform: translateX(-50%);
+            background: var(--gray-100);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: var(--font-primary);
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .service-link svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+
+        .service-card:hover .service-link {
+            background: var(--accent);
+        }
+
+        .service-card:hover .service-link svg {
+            transform: rotate(45deg);
+            stroke: var(--white);
+        }
+
+        /* ============================================
+           HOW IT WORKS - IMMERSIVE STEPS
+           ============================================ */
+        .process {
+            padding: 10rem 0;
+            background: var(--gray-800);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-bg-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-display);
+            font-size: clamp(15rem, 40vw, 40rem);
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.02);
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .process .section-header {
+            text-align: center;
+            display: block;
+            margin-bottom: 6rem;
+        }
+
+        .process .section-title {
+            color: var(--white);
+        }
+
+        .process .section-label-text {
+            color: var(--gray-400);
+        }
+
+        .process-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .process-grid::before {
+                display: none;
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .process-step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 700;
-            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
+            color: var(--white);
+            position: relative;
+            z-index: 10;
+            transition: all 0.4s var(--ease-out-expo);
         }
 
-        @media (max-width: 768px) {
-            .timeline-dot {
-                left: 30px;
-            }
+        .process-step:hover .process-step-number {
+            transform: scale(1.1);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.4);
         }
 
-        .timeline-content {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
+        .process-step-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.75rem;
         }
 
-        .timeline-title {
-            font-family: var(--font-primary);
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .process-step-description {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.6;
         }
 
-        .timeline-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            text-align: right;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-item:nth-child(odd) .timeline-content {
-                text-align: left;
-            }
-        }
-
-        /* ========================================
-           PRICING - MODERN CARDS
-           ======================================== */
+        /* ============================================
+           PRICING - INTERACTIVE CALCULATOR
+           ============================================ */
         .pricing {
-            padding: 8rem 2rem;
+            padding: 10rem 0;
+            background: var(--cream);
         }
 
         .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
             max-width: 1400px;
-            margin: 0 auto 4rem;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
         .pricing-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--white);
             border-radius: 24px;
             padding: 2.5rem;
+            border: 1px solid var(--gray-100);
+            transition: all 0.5s var(--ease-out-expo);
             position: relative;
-            transition: all 0.4s ease;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, var(--accent), #00C853);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+        }
+
+        .pricing-card:hover::before {
+            opacity: 1;
         }
 
         .pricing-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(0, 240, 255, 0.3);
+            border-color: transparent;
         }
 
-        .pricing-card.popular {
+        .pricing-card.featured {
+            background: var(--gray-800);
+            border-color: transparent;
+        }
+
+        .pricing-card.featured * {
+            color: var(--white);
+        }
+
+        .pricing-card.featured .pricing-list {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .pricing-card.featured .price-item {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .pricing-card.featured .qty-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .pricing-card.featured .qty-btn:hover {
+            background: var(--accent);
             border-color: var(--accent);
-            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.2);
         }
 
-        .popular-badge {
+        .featured-badge {
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: var(--text-primary);
             padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 100px;
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
         }
 
         .pricing-header h3 {
-            font-family: var(--font-primary);
+            font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
         .pricing-subtitle {
-            color: var(--text-secondary);
             font-size: 0.95rem;
-            margin-bottom: 2rem;
+            color: var(--gray-400);
         }
 
         .pricing-list {
-            max-height: 400px;
+            max-height: 350px;
             overflow-y: auto;
             margin-bottom: 2rem;
+            padding-right: 0.5rem;
         }
 
         .pricing-list::-webkit-scrollbar {
-            width: 6px;
+            width: 4px;
         }
 
         .pricing-list::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
+            background: var(--gray-100);
             border-radius: 10px;
         }
 
@@ -628,12 +995,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid var(--gray-100);
         }
 
         .item-name {
-            color: var(--text-secondary);
             font-size: 0.95rem;
+            color: var(--gray-600);
         }
 
         .item-controls {
@@ -643,34 +1010,35 @@
         }
 
         .item-price {
-            color: var(--accent);
             font-weight: 700;
+            color: var(--accent);
         }
 
         .quantity-controls {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50px;
-            padding: 0.25rem;
+            gap: 0.25rem;
         }
 
         .qty-btn {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            color: var(--text-primary);
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            color: var(--gray-800);
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .qty-btn:hover {
             background: var(--accent);
-            color: var(--bg-primary);
+            border-color: var(--accent);
+            color: var(--white);
         }
 
         .qty-display {
@@ -681,30 +1049,31 @@
 
         .pricing-footer {
             padding-top: 1.5rem;
-            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-top: 2px solid var(--gray-100);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .subtotal-label {
-            color: var(--text-secondary);
             font-weight: 600;
+            color: var(--gray-400);
         }
 
         .subtotal-value {
-            font-family: var(--font-primary);
+            font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
             color: var(--accent);
         }
 
         .pricing-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         @media (max-width: 1024px) {
@@ -713,24 +1082,15 @@
             }
         }
 
-        .delivery-card,
-        .total-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .delivery-card {
+            background: var(--white);
             border-radius: 24px;
             padding: 2.5rem;
+            border: 1px solid var(--gray-100);
         }
 
-        .total-card {
-            background: linear-gradient(135deg, var(--card-bg), rgba(0, 240, 255, 0.1));
-            border-color: rgba(0, 240, 255, 0.3);
-            position: sticky;
-            top: 6rem;
-        }
-
-        .delivery-card h3,
-        .total-card h3 {
-            font-family: var(--font-primary);
+        .delivery-card h3 {
+            font-family: var(--font-display);
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
@@ -740,30 +1100,29 @@
             display: flex;
             align-items: center;
             padding: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--gray-100);
             border-radius: 16px;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .delivery-option:hover {
             border-color: var(--accent);
-            background: rgba(0, 240, 255, 0.05);
+            background: var(--accent-light);
         }
 
-        .delivery-option input {
-            display: none;
-        }
+        .delivery-option input { display: none; }
 
         .radio-custom {
             width: 24px;
             height: 24px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid var(--gray-200);
             border-radius: 50%;
             margin-right: 1rem;
             position: relative;
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .delivery-option input:checked + .radio-custom {
@@ -792,22 +1151,39 @@
         }
 
         .delivery-description {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            color: var(--gray-400);
         }
 
         .delivery-limit {
-            color: var(--accent);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            color: var(--warning);
             font-weight: 600;
             margin-top: 0.25rem;
         }
 
+        .total-card {
+            background: linear-gradient(135deg, var(--gray-800) 0%, #1a1a2e 100%);
+            border-radius: 24px;
+            padding: 2.5rem;
+            position: sticky;
+            top: 6rem;
+            color: var(--white);
+        }
+
+        .total-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+        }
+
         .grand-total {
-            font-family: var(--font-primary);
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 8vw, 5rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent) 0%, #00C853 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -816,8 +1192,8 @@
         }
 
         .pickup-note {
-            color: var(--text-secondary);
             font-size: 0.9rem;
+            color: var(--gray-400);
             margin-bottom: 2rem;
             padding: 1rem;
             background: rgba(255, 255, 255, 0.05);
@@ -825,30 +1201,28 @@
             border-left: 3px solid var(--accent);
         }
 
-        .pickup-note.hidden {
-            display: none;
-        }
+        .pickup-note.hidden { display: none; }
 
         .checkout-btn {
             display: block;
             width: 100%;
             padding: 1.25rem;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--accent), #00C853);
+            color: var(--white);
             border: none;
-            border-radius: 50px;
+            border-radius: 100px;
             font-weight: 700;
-            font-size: 1.05rem;
+            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s var(--ease-out-expo);
             text-decoration: none;
             text-align: center;
             margin-bottom: 1rem;
         }
 
         .checkout-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.4);
         }
 
         .reset-btn {
@@ -856,9 +1230,9 @@
             width: 100%;
             padding: 1rem;
             background: transparent;
-            color: var(--text-secondary);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
+            color: var(--gray-400);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -866,7 +1240,7 @@
 
         .reset-btn:hover {
             border-color: var(--accent);
-            color: var(--text-primary);
+            color: var(--white);
         }
 
         /* Warning Modal */
@@ -875,47 +1249,49 @@
             position: fixed;
             inset: 0;
             background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
             z-index: 10000;
             align-items: center;
             justify-content: center;
         }
 
-        .warning-modal.show {
-            display: flex;
-        }
+        .warning-modal.show { display: flex; }
 
         .warning-content {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 240, 255, 0.3);
+            background: var(--white);
             border-radius: 24px;
             padding: 3rem;
-            max-width: 500px;
+            max-width: 450px;
             margin: 0 2rem;
+            text-align: center;
         }
 
         .warning-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 240, 255, 0.1);
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
+            background: var(--accent-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
+        }
+
+        .warning-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--accent);
         }
 
         .warning-title {
-            font-family: var(--font-primary);
+            font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
-            text-align: center;
             margin-bottom: 1rem;
         }
 
         .warning-message {
-            text-align: center;
-            color: var(--text-secondary);
+            color: var(--gray-600);
             line-height: 1.7;
             margin-bottom: 2rem;
         }
@@ -928,7 +1304,7 @@
         .warning-btn {
             flex: 1;
             padding: 1rem;
-            border-radius: 50px;
+            border-radius: 100px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -936,61 +1312,102 @@
         }
 
         .warning-btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            color: var(--text-primary);
+            background: var(--accent);
+            color: var(--white);
         }
 
         .warning-btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: var(--gray-100);
+            color: var(--gray-800);
         }
 
-        /* ========================================
-           FOOTER
-           ======================================== */
+        /* ============================================
+           FOOTER - EDITORIAL STYLE
+           ============================================ */
         .footer {
-            padding: 5rem 2rem 2rem;
-            background: var(--bg-secondary);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8rem 3rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-cta {
+            max-width: 1400px;
+            margin: 0 auto 6rem;
+            text-align: center;
+        }
+
+        .footer-cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .footer-cta-title span {
+            font-family: var(--font-serif);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .footer-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 3rem;
+            background: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 100px;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+
+        .footer-cta-btn:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: scale(1.05);
         }
 
         .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto 3rem;
+            gap: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer { padding: 6rem 1.5rem 2rem; }
         }
 
         .footer-brand h3 {
-            font-family: var(--font-primary);
+            font-family: var(--font-display);
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         .footer-tagline {
-            color: var(--text-secondary);
+            color: var(--gray-400);
             line-height: 1.7;
         }
 
         .footer-col h4 {
-            font-family: var(--font-primary);
-            font-size: 1.125rem;
+            font-size: 0.8rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gray-400);
             margin-bottom: 1.5rem;
         }
 
@@ -1001,25 +1418,26 @@
         }
 
         .footer-link {
-            color: var(--text-secondary);
+            color: var(--white);
             text-decoration: none;
             transition: all 0.3s ease;
+            display: inline-block;
         }
 
         .footer-link:hover {
             color: var(--accent);
-            padding-left: 0.5rem;
+            transform: translateX(5px);
         }
 
         .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            color: var(--text-secondary);
+            color: var(--gray-400);
+            font-size: 0.9rem;
         }
 
         @media (max-width: 640px) {
@@ -1030,7 +1448,9 @@
             }
         }
 
-        /* FAB */
+        /* ============================================
+           FLOATING ELEMENTS
+           ============================================ */
         .fab {
             position: fixed;
             bottom: 2rem;
@@ -1042,95 +1462,60 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
+            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
+            cursor: none;
             z-index: 999;
-            transition: all 0.3s ease;
+            transition: all 0.4s var(--ease-out-expo);
         }
 
         .fab:hover {
             transform: scale(1.1);
-            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 25px 50px rgba(37, 211, 102, 0.5);
         }
 
         .fab svg {
             width: 32px;
             height: 32px;
-            fill: white;
+            fill: var(--white);
         }
 
-        /* Loader */
-        .loader {
-            position: fixed;
-            inset: 0;
-            background: var(--bg-primary);
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 0.5s ease;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader-content {
-            text-align: center;
-        }
-
-        .loader-logo {
-            font-family: var(--font-primary);
-            font-size: 4rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .scroll-indicator {
+        .scroll-progress {
             position: fixed;
             top: 0;
             left: 0;
             width: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            background: linear-gradient(90deg, var(--accent), #00C853);
             z-index: 9999;
-            transition: width 0.1s ease;
         }
     </style>
 </head>
 <body>
-    <!-- GTM -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Loader -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">Zapwash</div>
-        </div>
-    </div>
+    <!-- Magnetic Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-text">View</div>
 
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator" id="scrollIndicator"></div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Intro Animation -->
+    <div class="intro-overlay" id="introOverlay">
+        <div class="intro-slide"></div>
+        <div class="intro-logo"><span>Zapwash</span></div>
+    </div>
 
     <!-- Warning Modal -->
     <div class="warning-modal" id="warningModal">
         <div class="warning-content">
             <div class="warning-icon">
-                <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
                 </svg>
             </div>
-            <h3 class="warning-title">Item Limit Reached</h3>
+            <h3 class="warning-title">Limit Reached</h3>
             <p class="warning-message" id="warningMessage"></p>
             <div class="warning-actions">
                 <button class="warning-btn warning-btn-secondary" id="warningCancel">Cancel</button>
@@ -1140,177 +1525,208 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="nav" id="nav">
+    <nav class="nav">
         <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo">
         <div class="nav-links">
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#how-it-works" class="nav-link">How It Works</a>
-            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#services" class="nav-link" data-text="Services"><span>Services</span></a>
+            <a href="#process" class="nav-link" data-text="Process"><span>Process</span></a>
+            <a href="#pricing" class="nav-link" data-text="Pricing"><span>Pricing</span></a>
         </div>
         <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Book Pickup</a>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
+        <div class="hero-video-bg">
+            <div class="hero-video-placeholder"></div>
+        </div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span>🚀</span>
-                <span>Best in Gachibowli</span>
+            <div class="hero-eyebrow">
+                <div class="hero-eyebrow-line"></div>
+                <span class="hero-eyebrow-text">Gachibowli • Madhapur • Hitech City</span>
             </div>
             <h1 class="hero-title">
-                Laundry Done<br>
-                <span class="hero-title-gradient">In 1 Hour</span>
+                <span class="hero-title-line"><span>Fresh Clothes</span></span>
+                <span class="hero-title-line"><span><em class="hero-title-italic">In One</em> Hour</span></span>
             </h1>
-            <p class="hero-subtitle">
-                Premium laundry service in Gachibowli, Madhapur & Hitech City. Free pickup in 20 minutes. Express iron from 1 hour. Professional care for your clothes.
-            </p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="btn-primary">
-                    <span>Book Free Pickup</span>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
-                <a href="#pricing" class="btn-secondary">View Prices</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">400+</div>
-                    <div class="stat-label">Happy Customers</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">20min</div>
-                    <div class="stat-label">Pickup Time</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">1hr</div>
-                    <div class="stat-label">Express Service</div>
+            <div class="hero-bottom">
+                <p class="hero-description">
+                    Premium laundry service that respects your time. Free pickup in 20 minutes. Express iron from 1 hour. We partner with trusted local dhobis.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="btn-hero">
+                        <span>Book Free Pickup</span>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="#pricing" class="btn-hero btn-hero-outline">
+                        <span>View Prices</span>
+                    </a>
                 </div>
             </div>
         </div>
+        <div class="hero-scroll">
+            <span class="hero-scroll-text">Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
     </section>
+
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span class="marquee-text">400+ Happy Customers</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">20 Min Pickup</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">1 Hour Express</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">Free Delivery</span>
+                <span class="marquee-dot"></span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-text">400+ Happy Customers</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">20 Min Pickup</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">1 Hour Express</span>
+                <span class="marquee-dot"></span>
+                <span class="marquee-text">Free Delivery</span>
+                <span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
 
     <!-- Services -->
     <section id="services" class="services">
         <div class="section-header">
-            <span class="section-label">What We Offer</span>
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Professional wash, iron, and dry cleaning with express options</p>
+            <div>
+                <div class="section-label">
+                    <span class="section-label-dot"></span>
+                    <span class="section-label-text">What We Offer</span>
+                </div>
+                <h2 class="section-title">Our <span class="section-title-serif">Premium</span> Services</h2>
+            </div>
+            <p class="section-description">
+                Professional wash, iron, and dry cleaning with express options. We work with skilled local dhobis to deliver quality every time.
+            </p>
         </div>
-        <div class="services-grid">
+        <div class="services-scroll">
             <div class="service-card">
-                <span class="service-icon">📋</span>
+                <span class="service-number">01</span>
                 <h3 class="service-title">Iron Service</h3>
                 <p class="service-description">Sharp press for shirts, pants, kurtas, sarees. Free delivery in 24 hours.</p>
-                <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
-                    <span>Book Now</span>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
+                <div class="service-meta">
+                    <span class="service-time">24 Hours</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-icon">👔</span>
+                <span class="service-number">02</span>
                 <h3 class="service-title">Wash & Iron</h3>
                 <p class="service-description">Complete laundry service. Professional wash and press for all clothes.</p>
-                <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
-                    <span>Book Now</span>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
+                <div class="service-meta">
+                    <span class="service-time">48 Hours</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-icon">🛡️</span>
+                <span class="service-number">03</span>
                 <h3 class="service-title">Dry Cleaning</h3>
                 <p class="service-description">Safe cleaning for suits, designer wear, silk sarees, wedding clothes.</p>
-                <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
-                    <span>Book Now</span>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
+                <div class="service-meta">
+                    <span class="service-time">72 Hours</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div class="service-card">
-                <span class="service-icon">⚡</span>
+                <span class="service-number">04</span>
                 <h3 class="service-title">Express Iron</h3>
-                <p class="service-description">Get your clothes pressed in 1hr, 3hrs, 6hrs, or 12hrs based on your need.</p>
-                <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
-                    <span>Book Now</span>
-                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
+                <p class="service-description">Get clothes pressed in 1hr, 3hrs, 6hrs, or 12hrs. Super fast service.</p>
+                <div class="service-meta">
+                    <span class="service-time">From 1 Hour</span>
+                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
+    <section id="process" class="process">
+        <div class="process-bg-text">PROCESS</div>
         <div class="section-header">
-            <span class="section-label">The Process</span>
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Simple 5-step process to get your laundry done</p>
+            <div class="section-label" style="justify-content: center;">
+                <span class="section-label-dot"></span>
+                <span class="section-label-text">The Process</span>
+            </div>
+            <h2 class="section-title">How It <span class="section-title-serif">Works</span></h2>
         </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Schedule Your Order</h3>
-                    <p class="timeline-description">WhatsApp or call us from Gachibowli, Madhapur, or nearby areas</p>
-                </div>
-                <div class="timeline-dot">1</div>
-                <div></div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="process-step-number">1</div>
+                <h3 class="process-step-title">Schedule</h3>
+                <p class="process-step-description">WhatsApp or call us from Gachibowli, Madhapur area</p>
             </div>
-            <div class="timeline-item">
-                <div></div>
-                <div class="timeline-dot">2</div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">We Pickup Your Clothes</h3>
-                    <p class="timeline-description">Our delivery person comes to your location in 20 minutes</p>
-                </div>
+            <div class="process-step">
+                <div class="process-step-number">2</div>
+                <h3 class="process-step-title">We Pickup</h3>
+                <p class="process-step-description">Our delivery person arrives in 20 minutes</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Handover to Local Dhobi</h3>
-                    <p class="timeline-description">We hand over to our trusted partner dhobi near you</p>
-                </div>
-                <div class="timeline-dot">3</div>
-                <div></div>
+            <div class="process-step">
+                <div class="process-step-number">3</div>
+                <h3 class="process-step-title">Handover</h3>
+                <p class="process-step-description">Clothes go to trusted local dhobi partner</p>
             </div>
-            <div class="timeline-item">
-                <div></div>
-                <div class="timeline-dot">4</div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Professional Service</h3>
-                    <p class="timeline-description">Expert wash, iron, or dry cleaning with care</p>
-                </div>
+            <div class="process-step">
+                <div class="process-step-number">4</div>
+                <h3 class="process-step-title">Service</h3>
+                <p class="process-step-description">Professional wash, iron, or dry cleaning</p>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Delivered to You</h3>
-                    <p class="timeline-description">We collect from dhobi and deliver fresh clothes to your door</p>
-                </div>
-                <div class="timeline-dot">5</div>
-                <div></div>
+            <div class="process-step">
+                <div class="process-step-number">5</div>
+                <h3 class="process-step-title">Delivered</h3>
+                <p class="process-step-description">Fresh clothes delivered to your door</p>
             </div>
         </div>
     </section>
 
     <!-- Pricing -->
     <section id="pricing" class="pricing">
-        <div class="section-header">
-            <span class="section-label">Our Rates</span>
-            <h2 class="section-title">Transparent Pricing</h2>
-            <p class="section-subtitle">Clear pricing. No hidden charges. Free pickup above ₹100.</p>
+        <div class="section-header" style="max-width: 1400px;">
+            <div>
+                <div class="section-label">
+                    <span class="section-label-dot"></span>
+                    <span class="section-label-text">Our Rates</span>
+                </div>
+                <h2 class="section-title">Transparent <span class="section-title-serif">Pricing</span></h2>
+            </div>
+            <p class="section-description">
+                Clear pricing. No hidden charges. Free pickup above ₹100.
+            </p>
         </div>
 
         <div class="pricing-grid" id="pricingGrid"></div>
 
         <div class="pricing-bottom">
             <div class="delivery-card">
-                <h3>Choose Delivery Speed</h3>
+                <h3>Delivery Speed</h3>
                 <div id="deliveryOptions">
                     <label class="delivery-option">
                         <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
@@ -1353,18 +1769,17 @@
                         <div class="delivery-text">
                             <p class="delivery-title">Express Iron - 12 Hours</p>
                             <p class="delivery-description">Add ₹30</p>
-                            <p class="delivery-limit">✓ No limit</p>
                         </div>
                     </label>
                 </div>
             </div>
 
             <div class="total-card">
-                <h3>Your Total Bill</h3>
+                <h3>Your Total</h3>
                 <div class="grand-total" id="grandTotal">₹0</div>
                 <div class="pickup-note hidden" id="pickupNote"></div>
                 <a id="checkoutBtn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="checkout-btn">
-                    Schedule Pickup Now
+                    Schedule Pickup
                 </a>
                 <button id="resetBtn" class="reset-btn">Clear All</button>
             </div>
@@ -1373,11 +1788,20 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="footer-cta">
+            <h2 class="footer-cta-title">Ready for <span>Fresh</span> Clothes?</h2>
+            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="footer-cta-btn">
+                <span>Book Free Pickup</span>
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+            </a>
+        </div>
         <div class="footer-grid">
             <div class="footer-brand">
                 <h3>Zapwash</h3>
                 <p class="footer-tagline">
-                    Best online laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
+                    Premium laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
                 </p>
             </div>
             <div class="footer-col">
@@ -1407,8 +1831,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Zapwash | Gachibowli, Hyderabad</p>
-            <p>Trusted by 400+ customers ⚡</p>
+            <p>© 2025 Zapwash • Gachibowli, Hyderabad</p>
+            <p>Trusted by 400+ customers</p>
         </div>
     </footer>
 
@@ -1420,10 +1844,12 @@
     </a>
 
     <script>
+        // ============================================
         // PRICING DATA
+        // ============================================
         const allItemsData = {
             "Ironing Only": { 
-                subtitle: "Sharp press. Free delivery in 24 hours.", 
+                subtitle: "Sharp press. 24 hours.", 
                 items: [
                     { id: "ironShirt", name: "Shirt / Pant / T-shirt", price: 15 },
                     { id: "ironKurta", name: "Kurta + Pajama", price: 25 },
@@ -1436,7 +1862,8 @@
                 ]
             },
             "Wash & Iron": { 
-                subtitle: "Complete wash and press. 48 hours.", 
+                subtitle: "Complete wash & press. 48 hours.", 
+                featured: true,
                 items: [
                     { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
                     { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
@@ -1463,7 +1890,7 @@
                 ]
             },
             "Express Iron": { 
-                subtitle: "Super fast. Choose your speed.", 
+                subtitle: "Super fast. From 1 hour.", 
                 items: [
                     { id: "exShirt", name: "Shirt / Pant / T-shirt", price: 20 },
                     { id: "exKurta", name: "Kurta + Pajama", price: 30 },
@@ -1493,9 +1920,7 @@
         function renderCards() {
             let html = '';
             for (const [serviceType, cardData] of Object.entries(allItemsData)) {
-                const isPopular = serviceType === "Wash & Iron";
                 let itemsHtml = '';
-                
                 cardData.items.forEach(item => {
                     itemQuantities[item.id] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
                     itemsHtml += `
@@ -1514,15 +1939,15 @@
                 });
 
                 html += `
-                    <div class="pricing-card ${isPopular ? 'popular' : ''}">
-                        ${isPopular ? '<div class="popular-badge">Most Popular</div>' : ''}
+                    <div class="pricing-card ${cardData.featured ? 'featured' : ''}">
+                        ${cardData.featured ? '<div class="featured-badge">Most Popular</div>' : ''}
                         <div class="pricing-header">
                             <h3>${serviceType}</h3>
                             <p class="pricing-subtitle">${cardData.subtitle}</p>
                         </div>
                         <div class="pricing-list">${itemsHtml}</div>
                         <div class="pricing-footer">
-                            <span class="subtotal-label">Subtotal:</span>
+                            <span class="subtotal-label">Subtotal</span>
                             <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
                         </div>
                     </div>
@@ -1537,23 +1962,19 @@
 
         function showWarning(limit) {
             const msgs = {
-                5: `Express 1 Hour service allows max 5 pieces. You have ${getTotalPieces()} pieces.`,
-                10: `Express 3 Hours service allows max 10 pieces. You have ${getTotalPieces()} pieces.`,
-                25: `Express 6 Hours service allows max 25 pieces. You have ${getTotalPieces()} pieces.`
+                5: `Express 1 Hour allows max 5 pieces. You have ${getTotalPieces()} pieces.`,
+                10: `Express 3 Hours allows max 10 pieces. You have ${getTotalPieces()} pieces.`,
+                25: `Express 6 Hours allows max 25 pieces. You have ${getTotalPieces()} pieces.`
             };
             warningMessage.textContent = msgs[limit] || '';
             warningModal.classList.add('show');
         }
 
-        function hideWarning() {
-            warningModal.classList.remove('show');
-        }
+        function hideWarning() { warningModal.classList.remove('show'); }
 
         document.getElementById('warningCancel').addEventListener('click', hideWarning);
         document.getElementById('warningOk').addEventListener('click', hideWarning);
-        warningModal.addEventListener('click', (e) => {
-            if (e.target === warningModal) hideWarning();
-        });
+        warningModal.addEventListener('click', (e) => { if (e.target === warningModal) hideWarning(); });
 
         function calculateTotals() {
             let itemTotal = 0;
@@ -1584,14 +2005,13 @@
             else if (itemTotal >= 50 && itemTotal < 100) pickupCharge = 15;
 
             const total = itemTotal + pickupCharge + expressFee;
-
             grandTotal.textContent = `₹${total}`;
 
             if (pickupCharge > 0) {
-                pickupNote.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
+                pickupNote.textContent = `Includes ₹${pickupCharge} pickup charge`;
                 pickupNote.classList.remove('hidden');
             } else if (itemTotal >= 100) {
-                pickupNote.textContent = `(Free pickup on orders ₹100+)`;
+                pickupNote.textContent = `Free pickup on orders ₹100+`;
                 pickupNote.classList.remove('hidden');
             } else {
                 pickupNote.classList.add('hidden');
@@ -1599,12 +2019,12 @@
 
             let msg = "Hi! I need laundry service in Gachibowli";
             if (total > 0) {
-                msg = `Hi Zapwash! I want to order laundry for ₹${total}\n\nMy items (${totalPieces} pieces):\n${selectedItems.join('\n')}`;
+                msg = `Hi Zapwash! I want to order laundry for ₹${total}\n\nItems (${totalPieces} pieces):\n${selectedItems.join('\n')}`;
                 if (pickupCharge > 0) msg += `\n\nPickup: ₹${pickupCharge}`;
                 if (expressFee > 0) msg += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
-                checkoutBtn.textContent = `Order for ₹${total}`;
+                checkoutBtn.textContent = `Order ₹${total}`;
             } else {
-                checkoutBtn.textContent = `Schedule Pickup Now`;
+                checkoutBtn.textContent = `Schedule Pickup`;
             }
             checkoutBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
         }
@@ -1620,10 +2040,7 @@
 
             if (action === 'inc') {
                 const newTotal = getTotalPieces() + 1;
-                if (newTotal > currentLimit) {
-                    showWarning(currentLimit);
-                    return;
-                }
+                if (newTotal > currentLimit) { showWarning(currentLimit); return; }
                 qty++;
             } else if (action === 'dec' && qty > 0) {
                 qty--;
@@ -1665,45 +2082,82 @@
             calculateTotals();
         });
 
-        // Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 1500);
+        // ============================================
+        // CURSOR
+        // ============================================
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0, ringX = 0, ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         });
 
-        // Scroll Indicator
+        function animateCursor() {
+            dotX += (mouseX - dotX) * 0.2;
+            dotY += (mouseY - dotY) * 0.2;
+            ringX += (mouseX - ringX) * 0.1;
+            ringY += (mouseY - ringY) * 0.1;
+
+            cursorDot.style.left = dotX + 'px';
+            cursorDot.style.top = dotY + 'px';
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button, .service-card, .pricing-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursorDot.classList.add('hover');
+                cursorRing.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('hover');
+                cursorRing.classList.remove('hover');
+            });
+        });
+
+        // ============================================
+        // INTRO ANIMATION
+        // ============================================
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('introOverlay').classList.add('complete');
+                setTimeout(() => {
+                    document.getElementById('introOverlay').style.display = 'none';
+                }, 1500);
+            }, 1200);
+        });
+
+        // ============================================
+        // SCROLL PROGRESS
+        // ============================================
         window.addEventListener('scroll', () => {
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = (window.scrollY / scrollHeight) * 100;
-            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
         });
 
-        // Nav Scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth Scroll
+        // ============================================
+        // SMOOTH SCROLL
+        // ============================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 if (href !== '#' && href.startsWith('#')) {
                     e.preventDefault();
                     const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
-        // Initialize
+        // ============================================
+        // INITIALIZE
+        // ============================================
         document.addEventListener('DOMContentLoaded', () => {
             renderCards();
             calculateTotals();
