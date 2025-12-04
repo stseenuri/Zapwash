@@ -19,13 +19,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Service in Gachibowli, Madhapur | Zapwash - Best Dry Cleaning Near Hitech City</title>
-    <meta name="description" content="Best laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. Free pickup and delivery in 20 minutes. Professional wash, iron, and dry cleaning near IT offices. Express iron service starting from 1 hour.">
+    <title>Zapwash - Premium Laundry Experience | Gachibowli, Hyderabad</title>
+    <meta name="description" content="Award-winning laundry service in Gachibowli. Free pickup in 20 minutes. Express iron from 1 hour. Experience the future of laundry care.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -35,1039 +35,794 @@
         }
 
         :root {
-            /* Laundry-inspired Colors */
-            --color-fresh-white: #FFFFFF;
-            --color-cotton-cream: #FAF9F6;
-            --color-linen-beige: #F5F1E8;
-            --color-soap-blue: #E8F4F8;
-            --color-steam-gray: #E8EBF0;
-            --color-denim-blue: #4A90E2;
-            --color-detergent-blue: #00A8E8;
-            --color-iron-silver: #C0C0C0;
-            --color-washer-navy: #1A2B4A;
-            --color-clean-mint: #D4F1F4;
-            --color-starch-white: #FEFEFE;
-            --color-hanger-gold: #D4AF37;
+            --color-primary: #0A0E27;
+            --color-secondary: #1A1F3A;
+            --color-accent: #00FFA3;
+            --color-accent-2: #00D9FF;
+            --color-white: #FFFFFF;
+            --color-off-white: #F8F9FA;
+            --color-gray: #6B7280;
+            --color-light-gray: #E5E7EB;
+            --color-dark: #111827;
             
             --font-display: 'Playfair Display', Georgia, serif;
             --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             
-            --spacing-unit: 8px;
-            --container-max: 1440px;
-            
-            --shadow-fabric: 0 4px 20px rgba(0, 0, 0, 0.06);
-            --shadow-hanging: 0 8px 32px rgba(0, 0, 0, 0.08);
-            --shadow-steam: 0 12px 40px rgba(74, 144, 226, 0.1);
-            
-            --ease-wash: cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-spin: 0.4s var(--ease-wash);
+            --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+            --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
         }
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
             font-family: var(--font-body);
-            color: var(--color-washer-navy);
-            background: var(--color-cotton-cream);
-            line-height: 1.7;
+            color: var(--color-dark);
+            background: var(--color-white);
+            line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .container {
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 clamp(1.5rem, 5vw, 4rem);
+        ::selection {
+            background: var(--color-accent);
+            color: var(--color-primary);
         }
 
-        /* ========================================
-           WASHING MACHINE LOADER ANIMATION
-           ======================================== */
+        /* ============================================
+           CUSTOM CURSOR - AWARD WINNING DETAIL
+           ============================================ */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--color-accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transition: all 0.15s ease;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--color-accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+            opacity: 0.5;
+        }
+
+        .cursor.hover {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 255, 163, 0.1);
+        }
+
+        @media (pointer: coarse) {
+            .cursor, .cursor-follower { display: none; }
+        }
+
+        /* ============================================
+           IMMERSIVE PAGE LOADER
+           ============================================ */
         .page-loader {
             position: fixed;
             inset: 0;
-            background: var(--color-fresh-white);
+            background: var(--color-primary);
             z-index: 99999;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             gap: 2rem;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
         .page-loader.hidden {
             opacity: 0;
             visibility: hidden;
+            transition: opacity 0.8s var(--ease-out-expo), visibility 0.8s;
         }
 
-        .washing-machine {
-            width: 120px;
-            height: 120px;
-            background: var(--color-washer-navy);
-            border-radius: 12px;
+        .loader-logo {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--color-white);
             position: relative;
-            box-shadow: var(--shadow-hanging);
+            animation: fadeInScale 0.8s var(--ease-out-expo) forwards;
         }
 
-        .washer-window {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--color-soap-blue);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 6px solid var(--color-iron-silver);
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .loader-progress {
+            width: 200px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
             overflow: hidden;
         }
 
-        .washer-drum {
-            width: 100%;
+        .loader-progress-bar {
             height: 100%;
-            border-radius: 50%;
-            background: conic-gradient(from 0deg, var(--color-denim-blue) 0deg 90deg, transparent 90deg 180deg, var(--color-detergent-blue) 180deg 270deg, transparent 270deg 360deg);
-            animation: spin 2s linear infinite;
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+            width: 0;
+            animation: loadProgress 1.5s var(--ease-out-expo) forwards;
         }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        @keyframes loadProgress {
+            to { width: 100%; }
         }
 
-        .loader-text {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--color-washer-navy);
-            font-family: var(--font-display);
-        }
-
-        /* ========================================
-           CLOTHESLINE NAVIGATION
-           ======================================== */
+        /* ============================================
+           NAVIGATION - GLASSMORPHISM
+           ============================================ */
         .nav-wrapper {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 9999;
-            padding: calc(var(--spacing-unit) * 3) 0;
-            transition: all var(--transition-spin);
-            background: linear-gradient(180deg, rgba(250, 249, 246, 0.98) 0%, rgba(250, 249, 246, 0) 100%);
+            z-index: 9998;
+            padding: 1.5rem 0;
+            transition: all 0.4s var(--ease-out-expo);
         }
 
         .nav-wrapper.scrolled {
-            padding: calc(var(--spacing-unit) * 2) 0;
-            background: rgba(250, 249, 246, 0.95);
+            background: rgba(10, 14, 39, 0.8);
             backdrop-filter: blur(20px);
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-            border-bottom: 2px solid var(--color-steam-gray);
-        }
-
-        /* Clothesline effect */
-        .nav-wrapper::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: repeating-linear-gradient(
-                90deg,
-                var(--color-iron-silver) 0px,
-                var(--color-iron-silver) 10px,
-                transparent 10px,
-                transparent 20px
-            );
-            opacity: 0.3;
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
         }
 
         .nav-container {
-            max-width: var(--container-max);
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 clamp(1.5rem, 5vw, 4rem);
+            padding: 0 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            position: relative;
-        }
-
-        .logo-img {
             height: 50px;
-            width: auto;
-            transition: transform var(--transition-spin);
-            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s ease;
         }
 
-        .logo:hover .logo-img {
-            transform: scale(1.05) rotate(-2deg);
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
-            gap: calc(var(--spacing-unit) * 5);
+            gap: 3rem;
             align-items: center;
         }
 
         .nav-link {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--color-washer-navy);
+            color: var(--color-white);
             text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
             position: relative;
-            transition: color var(--transition-spin);
-            padding: 8px 16px;
-            border-radius: 8px;
+            transition: color 0.3s ease;
         }
 
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: -5px;
+            left: 0;
             width: 0;
             height: 2px;
-            background: var(--color-denim-blue);
-            transition: width var(--transition-spin);
-        }
-
-        .nav-link:hover {
-            color: var(--color-denim-blue);
-            background: var(--color-soap-blue);
+            background: var(--color-accent);
+            transition: width 0.3s var(--ease-out-expo);
         }
 
         .nav-link:hover::after {
-            width: 80%;
+            width: 100%;
         }
 
         .nav-cta {
-            padding: 12px 28px;
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            color: var(--color-fresh-white);
-            font-weight: 600;
+            padding: 0.75rem 2rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            font-weight: 700;
             border-radius: 50px;
             text-decoration: none;
-            transition: all var(--transition-spin);
-            box-shadow: var(--shadow-steam);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 255, 163, 0.3);
         }
 
         .nav-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 16px 48px rgba(74, 144, 226, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
         }
 
-        /* ========================================
-           HERO - LAUNDRY ROOM SCENE
-           ======================================== */
+        .mobile-menu-btn {
+            display: none;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid var(--color-accent);
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .mobile-menu-btn span {
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: var(--color-accent);
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn span:nth-child(1) { top: 12px; }
+        .mobile-menu-btn span:nth-child(2) { top: 19px; }
+        .mobile-menu-btn span:nth-child(3) { bottom: 12px; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+        }
+
+        /* ============================================
+           HERO - 3D PARALLAX WITH PARTICLES
+           ============================================ */
         .hero-section {
             min-height: 100vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 100%);
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--color-cotton-cream) 0%, var(--color-linen-beige) 50%, var(--color-soap-blue) 100%);
+            display: flex;
+            align-items: center;
         }
 
-        /* Floating Bubbles */
-        .bubble {
+        /* Animated Gradient Orbs */
+        .gradient-orb {
             position: absolute;
             border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(74, 144, 226, 0.2));
-            animation: float-bubble 15s ease-in-out infinite;
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 20s ease-in-out infinite;
         }
 
-        .bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; top: 20%; animation-delay: 0s; }
-        .bubble:nth-child(2) { width: 120px; height: 120px; right: 15%; top: 40%; animation-delay: 3s; }
-        .bubble:nth-child(3) { width: 60px; height: 60px; left: 20%; bottom: 30%; animation-delay: 6s; }
-        .bubble:nth-child(4) { width: 100px; height: 100px; right: 25%; bottom: 20%; animation-delay: 9s; }
-
-        @keyframes float-bubble {
-            0%, 100% { transform: translateY(0) translateX(0); }
-            25% { transform: translateY(-30px) translateX(20px); }
-            50% { transform: translateY(0) translateX(-20px); }
-            75% { transform: translateY(30px) translateX(10px); }
+        .gradient-orb-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 163, 0.4), transparent);
+            top: -200px;
+            right: -200px;
+            animation-delay: 0s;
         }
 
-        /* Steam Effect */
-        .steam {
+        .gradient-orb-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.3), transparent);
+            bottom: -150px;
+            left: -150px;
+            animation-delay: 7s;
+        }
+
+        .gradient-orb-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2), transparent);
+            top: 50%;
+            left: 50%;
+            animation-delay: 14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(100px, -100px) scale(1.1); }
+            66% { transform: translate(-50px, 100px) scale(0.9); }
+        }
+
+        /* Particle Canvas */
+        #particles-canvas {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
+            inset: 0;
             pointer-events: none;
         }
 
-        .steam-line {
-            position: absolute;
-            width: 2px;
-            height: 120px;
-            background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.6), transparent);
-            animation: rise-steam 8s ease-in-out infinite;
-            opacity: 0.7;
-        }
-
-        .steam-line:nth-child(1) { left: 20%; animation-delay: 0s; }
-        .steam-line:nth-child(2) { left: 40%; animation-delay: 2s; }
-        .steam-line:nth-child(3) { left: 60%; animation-delay: 4s; }
-        .steam-line:nth-child(4) { left: 80%; animation-delay: 6s; }
-
-        @keyframes rise-steam {
-            0% { bottom: 0; opacity: 0; }
-            50% { opacity: 0.7; }
-            100% { bottom: 100%; opacity: 0; }
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: calc(var(--spacing-unit) * 8);
-            align-items: center;
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
             position: relative;
             z-index: 10;
-            padding: calc(var(--spacing-unit) * 15) 0 calc(var(--spacing-unit) * 10);
-        }
-
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: calc(var(--spacing-unit) * 5);
-                padding: calc(var(--spacing-unit) * 12) 0;
-            }
         }
 
         .hero-content {
-            animation: fadeInUp 1s var(--ease-wash) 0.3s backwards;
+            max-width: 800px;
+            animation: fadeInUp 1s var(--ease-out-expo) 0.3s backwards;
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
+            from { opacity: 0; transform: translateY(60px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid var(--color-denim-blue);
+            gap: 0.75rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(0, 255, 163, 0.1);
+            border: 1px solid rgba(0, 255, 163, 0.3);
             border-radius: 50px;
-            color: var(--color-denim-blue);
+            color: var(--color-accent);
             font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: calc(var(--spacing-unit) * 4);
-            box-shadow: var(--shadow-fabric);
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
         }
 
-        .badge-icon {
-            font-size: 1.25rem;
-            animation: rotate-gentle 3s ease-in-out infinite;
+        .hero-badge-icon {
+            width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        @keyframes rotate-gentle {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(360deg); }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
         }
 
         .hero-title {
             font-family: var(--font-display);
-            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-size: clamp(3rem, 8vw, 7rem);
             font-weight: 800;
             line-height: 1.1;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 3);
-            letter-spacing: -0.02em;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
         }
 
-        .title-gradient {
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue), var(--color-hanger-gold));
-            background-size: 200% auto;
+        .hero-title-gradient {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: gradientShift 4s linear infinite;
             display: block;
         }
 
-        @keyframes gradientShift {
-            to { background-position: 200% center; }
-        }
-
         .hero-subtitle {
-            font-family: var(--font-body);
             font-size: clamp(1.25rem, 3vw, 1.75rem);
-            font-weight: 600;
-            color: var(--color-denim-blue);
-            margin-bottom: calc(var(--spacing-unit) * 4);
-            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+            line-height: 1.6;
         }
 
-        .hero-description {
-            font-size: 1.125rem;
-            color: var(--color-washer-navy);
-            line-height: 1.8;
-            max-width: 580px;
-            margin-bottom: calc(var(--spacing-unit) * 6);
-            opacity: 0.85;
-        }
-
-        .hero-actions {
+        .hero-cta-group {
             display: flex;
-            gap: calc(var(--spacing-unit) * 2);
+            gap: 1.5rem;
             flex-wrap: wrap;
-            margin-bottom: calc(var(--spacing-unit) * 6);
+            margin-bottom: 4rem;
         }
 
         .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            padding: 18px 36px;
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            color: var(--color-fresh-white);
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
             font-weight: 700;
             font-size: 1.05rem;
             border-radius: 50px;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all var(--transition-spin);
-            box-shadow: var(--shadow-steam);
+            transition: all 0.3s var(--ease-out-expo);
+            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--color-accent-2), var(--color-accent));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 16px 48px rgba(74, 144, 226, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 255, 163, 0.5);
+        }
+
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
         }
 
         .btn-secondary {
-            padding: 18px 36px;
-            background: var(--color-fresh-white);
-            color: var(--color-denim-blue);
+            padding: 1.25rem 2.5rem;
+            background: transparent;
+            color: var(--color-white);
             font-weight: 600;
-            border: 2px solid var(--color-denim-blue);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 50px;
             text-decoration: none;
-            transition: all var(--transition-spin);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: var(--color-soap-blue);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--color-accent);
             transform: translateY(-2px);
         }
 
-        .heritage-proof {
+        .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: calc(var(--spacing-unit) * 4);
-            padding-top: calc(var(--spacing-unit) * 4);
-            border-top: 2px dashed var(--color-steam-gray);
+            gap: 3rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .proof-item {
+        .stat-item {
             text-align: left;
-            padding: calc(var(--spacing-unit) * 2);
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 12px;
-            transition: all var(--transition-spin);
         }
 
-        .proof-item:hover {
-            background: var(--color-fresh-white);
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-fabric);
-        }
-
-        .proof-number {
+        .stat-number {
             font-family: var(--font-display);
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
-            color: var(--color-denim-blue);
+            color: var(--color-accent);
             line-height: 1;
-            margin-bottom: calc(var(--spacing-unit));
+            margin-bottom: 0.5rem;
         }
 
-        .proof-label {
-            font-size: 0.9rem;
-            color: var(--color-washer-navy);
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
             font-weight: 500;
         }
 
-        /* HANGING CLOTHES CARD */
-        .hero-showcase {
-            animation: fadeInUp 1s var(--ease-wash) 0.5s backwards;
+        @media (max-width: 768px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
-        .showcase-card {
-            background: var(--color-fresh-white);
-            border-radius: 24px;
-            padding: calc(var(--spacing-unit) * 5);
-            box-shadow: var(--shadow-hanging);
+        /* ============================================
+           SERVICES - BENTO GRID LAYOUT
+           ============================================ */
+        .services-section {
+            padding: 8rem 0;
+            background: var(--color-white);
             position: relative;
-            overflow: hidden;
-            border: 3px solid var(--color-soap-blue);
         }
 
-        /* Clothespin at top */
-        .clothespin {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 20px;
-            background: var(--color-hanger-gold);
-            border-radius: 4px;
-            box-shadow: var(--shadow-fabric);
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
         }
 
-        .clothespin::before,
-        .clothespin::after {
-            content: '';
-            position: absolute;
-            width: 8px;
-            height: 12px;
-            background: var(--color-iron-silver);
-            bottom: -8px;
-            border-radius: 2px;
-        }
-
-        .clothespin::before { left: 8px; }
-        .clothespin::after { right: 8px; }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: calc(var(--spacing-unit) * 4);
-        }
-
-        .card-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            box-shadow: var(--shadow-fabric);
-        }
-
-        .card-title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-washer-navy);
-            line-height: 1.2;
-        }
-
-        .card-subtitle {
-            font-size: 0.9rem;
-            color: var(--color-denim-blue);
-        }
-
-        .process-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: calc(var(--spacing-unit) * 3);
-        }
-
-        .process-step {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            position: relative;
-            padding: calc(var(--spacing-unit) * 2);
-            border-radius: 12px;
-            transition: all var(--transition-spin);
-        }
-
-        .process-step:hover {
-            background: var(--color-soap-blue);
-            transform: translateX(8px);
-        }
-
-        .process-step::before {
-            content: '';
-            position: absolute;
-            left: 22px;
-            top: 44px;
-            bottom: -24px;
-            width: 2px;
-            background: linear-gradient(180deg, var(--color-denim-blue), transparent);
-        }
-
-        .process-step:last-child::before {
-            display: none;
-        }
-
-        .step-number {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--color-denim-blue);
-            border: 3px solid var(--color-fresh-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: var(--color-fresh-white);
-            font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: var(--shadow-fabric);
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-content h4 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--color-washer-navy);
-            margin-bottom: 4px;
-        }
-
-        .step-content p {
-            font-size: 0.9rem;
-            color: var(--color-washer-navy);
-            line-height: 1.6;
-            opacity: 0.75;
-        }
-
-        /* ========================================
-           FABRIC TEXTURE SECTIONS
-           ======================================== */
-        .fabric-section {
-            padding: calc(var(--spacing-unit) * 20) 0;
-            position: relative;
-            background: var(--color-fresh-white);
-        }
-
-        /* Cotton texture background */
-        .fabric-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(74, 144, 226, 0.02) 2px, rgba(74, 144, 226, 0.02) 4px),
-                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(74, 144, 226, 0.02) 2px, rgba(74, 144, 226, 0.02) 4px);
-            opacity: 0.5;
-        }
-
-        .section-content {
-            position: relative;
-            z-index: 1;
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
 
         .section-label {
             display: inline-block;
-            font-size: 0.8rem;
+            padding: 0.5rem 1.25rem;
+            background: rgba(0, 255, 163, 0.1);
+            color: var(--color-accent);
+            font-size: 0.85rem;
             font-weight: 700;
-            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--color-detergent-blue);
-            margin-bottom: calc(var(--spacing-unit) * 2);
-            padding: 8px 16px;
-            background: var(--color-soap-blue);
+            letter-spacing: 0.1em;
             border-radius: 50px;
+            margin-bottom: 1.5rem;
         }
 
         .section-title {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 700;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 2);
-            line-height: 1.15;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .section-subtitle {
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            color: var(--color-washer-navy);
+            font-size: 1.25rem;
+            color: var(--color-gray);
             max-width: 700px;
-            margin: 0 auto calc(var(--spacing-unit) * 10);
-            opacity: 0.75;
-        }
-
-        .philosophy-content {
-            max-width: 900px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .philosophy-text {
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-            line-height: 1.8;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 3);
-            padding: calc(var(--spacing-unit) * 4);
-            background: var(--color-soap-blue);
-            border-radius: 16px;
-            border-left: 4px solid var(--color-denim-blue);
-        }
-
-        .philosophy-highlight {
-            color: var(--color-denim-blue);
-            font-weight: 600;
-        }
-
-        /* ========================================
-           LAUNDRY BASKET SERVICES
-           ======================================== */
-        .services-section {
-            padding: calc(var(--spacing-unit) * 20) 0;
-            background: linear-gradient(180deg, var(--color-cotton-cream) 0%, var(--color-clean-mint) 100%);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: calc(var(--spacing-unit) * 10);
-        }
-
-        .services-grid {
+        /* Bento Grid */
+        .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: calc(var(--spacing-unit) * 4);
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
         }
 
-        .service-card {
-            background: var(--color-fresh-white);
-            border-radius: 20px;
-            padding: calc(var(--spacing-unit) * 6);
-            box-shadow: var(--shadow-hanging);
-            transition: all var(--transition-spin);
-            border: 3px solid var(--color-soap-blue);
+        .bento-item {
+            background: var(--color-white);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 2px solid var(--color-light-gray);
+            transition: all 0.4s var(--ease-out-expo);
             position: relative;
             overflow: hidden;
         }
 
-        /* Hanging effect */
-        .service-card::before {
-            content: '🧷';
+        .bento-item::before {
+            content: '';
             position: absolute;
-            top: -8px;
-            right: 24px;
-            font-size: 1.5rem;
-            transform: rotate(45deg);
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0, 255, 163, 0.05), rgba(0, 217, 255, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
 
-        .service-card:hover {
-            transform: translateY(-12px) rotate(-1deg);
-            box-shadow: 0 20px 50px rgba(74, 144, 226, 0.15);
-            border-color: var(--color-denim-blue);
+        .bento-item:hover::before {
+            opacity: 1;
         }
 
-        .service-card.featured {
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            border: 3px solid var(--color-hanger-gold);
+        .bento-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-accent);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
-        .service-card.featured * {
-            color: var(--color-fresh-white) !important;
+        .bento-item-large {
+            grid-column: span 8;
         }
 
-        .service-badge {
-            display: inline-block;
-            padding: 8px 16px;
-            background: var(--color-soap-blue);
-            color: var(--color-denim-blue);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 50px;
-            margin-bottom: calc(var(--spacing-unit) * 3);
+        .bento-item-medium {
+            grid-column: span 4;
         }
 
-        .service-card.featured .service-badge {
-            background: var(--color-hanger-gold);
-            color: var(--color-washer-navy);
+        .bento-item-small {
+            grid-column: span 3;
         }
 
-        .service-icon-box {
-            width: 80px;
-            height: 80px;
-            background: var(--color-soap-blue);
-            border-radius: 20px;
+        @media (max-width: 1024px) {
+            .bento-item-large,
+            .bento-item-medium,
+            .bento-item-small {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bento-item-large,
+            .bento-item-medium,
+            .bento-item-small {
+                grid-column: span 12;
+            }
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: calc(var(--spacing-unit) * 3);
-            box-shadow: var(--shadow-fabric);
-        }
-
-        .service-card.featured .service-icon-box {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .service-icon-box svg {
-            width: 40px;
-            height: 40px;
-            color: var(--color-denim-blue);
-        }
-
-        .service-card.featured .service-icon-box svg {
-            color: var(--color-fresh-white);
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
         }
 
         .service-title {
             font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
         }
 
         .service-description {
             font-size: 1.05rem;
+            color: var(--color-gray);
             line-height: 1.7;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 4);
-            opacity: 0.85;
+            margin-bottom: 2rem;
         }
 
         .service-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            color: var(--color-denim-blue);
+            gap: 0.5rem;
+            color: var(--color-accent);
             font-weight: 600;
             text-decoration: none;
-            transition: all var(--transition-spin);
-            padding: 12px 24px;
-            background: var(--color-soap-blue);
-            border-radius: 50px;
-        }
-
-        .service-card.featured .service-link {
-            color: var(--color-fresh-white);
-            background: rgba(255, 255, 255, 0.2);
+            transition: gap 0.3s ease;
         }
 
         .service-link:hover {
-            gap: 12px;
-            transform: translateX(4px);
+            gap: 1rem;
         }
 
-        /* ========================================
-           IRONING BOARD PRICING
-           ======================================== */
-        #pricing {
-            padding: calc(var(--spacing-unit) * 20) 0;
-            background: linear-gradient(135deg, var(--color-linen-beige) 0%, var(--color-cotton-cream) 100%);
-            position: relative;
-        }
-
-        /* Iron steam lines */
-        #pricing::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 200px;
-            background: repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 50px,
-                rgba(74, 144, 226, 0.03) 50px,
-                rgba(74, 144, 226, 0.03) 52px
-            );
-        }
-
-        .pricing-header {
-            text-align: center;
-            margin-bottom: calc(var(--spacing-unit) * 10);
-            position: relative;
-            z-index: 1;
+        /* ============================================
+           PRICING - INTERACTIVE CARDS
+           ============================================ */
+        .pricing-section {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
         }
 
         .pricing-cards-container {
-            display: flex;
-            overflow-x: auto;
-            gap: calc(var(--spacing-unit) * 4);
-            padding-bottom: calc(var(--spacing-unit) * 2);
-            margin-bottom: calc(var(--spacing-unit) * 10);
-            scrollbar-width: thin;
-            scrollbar-color: var(--color-denim-blue) var(--color-soap-blue);
-        }
-
-        @media (min-width: 768px) {
-            .pricing-cards-container {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                overflow-x: visible;
-            }
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
         }
 
         .pricing-card {
-            min-width: 300px;
-            background: var(--color-fresh-white);
+            background: var(--color-white);
             border-radius: 24px;
-            box-shadow: var(--shadow-hanging);
-            display: flex;
-            flex-direction: column;
-            transition: all var(--transition-spin);
-            border: 3px solid var(--color-soap-blue);
+            padding: 2.5rem;
+            border: 2px solid var(--color-light-gray);
+            transition: all 0.4s var(--ease-out-expo);
             position: relative;
-        }
-
-        /* Price tag hanging */
-        .pricing-card::before {
-            content: '🏷️';
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            font-size: 1.5rem;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
         .pricing-card:hover {
             transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(74, 144, 226, 0.2);
-            border-color: var(--color-denim-blue);
+            border-color: var(--color-accent);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
         }
 
-        .pricing-card.popular-card {
-            border: 3px solid var(--color-hanger-gold);
-            transform: scale(1.03);
-            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.3);
-        }
-
-        .pricing-card.popular-card:hover {
-            transform: scale(1.06) translateY(-12px);
+        .pricing-card.popular {
+            border: 2px solid var(--color-accent);
+            box-shadow: 0 20px 50px rgba(0, 255, 163, 0.2);
         }
 
         .popular-badge {
             position: absolute;
-            top: calc(var(--spacing-unit) * 2);
-            right: calc(var(--spacing-unit) * 2);
-            padding: 8px 20px;
-            background: var(--color-hanger-gold);
-            color: var(--color-washer-navy);
+            top: 1.5rem;
+            right: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
             font-size: 0.75rem;
-            font-weight: 900;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             border-radius: 50px;
-            z-index: 2;
-            box-shadow: var(--shadow-fabric);
         }
 
         .pricing-card-header {
-            padding: calc(var(--spacing-unit) * 5);
-            background: var(--color-soap-blue);
-            border-radius: 20px 20px 0 0;
+            margin-bottom: 2rem;
         }
 
         .pricing-card h3 {
             font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit));
-        }
-
-        .pricing-card.popular-card h3 {
-            color: var(--color-denim-blue);
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
         }
 
         .pricing-card-subtitle {
-            color: var(--color-washer-navy);
+            color: var(--color-gray);
             font-size: 0.95rem;
-            line-height: 1.6;
-            opacity: 0.75;
         }
 
         .pricing-list {
-            padding: calc(var(--spacing-unit) * 5);
-            flex-grow: 1;
             max-height: 400px;
             overflow-y: auto;
+            margin-bottom: 2rem;
         }
 
-        .price-list-item {
+        .pricing-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .pricing-list::-webkit-scrollbar-track {
+            background: var(--color-light-gray);
+            border-radius: 10px;
+        }
+
+        .pricing-list::-webkit-scrollbar-thumb {
+            background: var(--color-accent);
+            border-radius: 10px;
+        }
+
+        .price-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: calc(var(--spacing-unit) * 2) 0;
-            border-bottom: 2px dashed var(--color-steam-gray);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-light-gray);
         }
 
-        .price-list-item:last-child {
+        .price-item:last-child {
             border-bottom: none;
         }
 
         .item-name {
             font-size: 0.95rem;
-            color: var(--color-washer-navy);
+            color: var(--color-dark);
         }
 
         .item-price-controls {
             display: flex;
             align-items: center;
-            gap: calc(var(--spacing-unit) * 2);
+            gap: 1rem;
         }
 
         .item-price {
             font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--color-denim-blue);
+            color: var(--color-accent);
         }
 
         .quantity-controls {
             display: flex;
             align-items: center;
-            gap: calc(var(--spacing-unit));
-            background: var(--color-soap-blue);
+            gap: 0.5rem;
+            background: var(--color-off-white);
             border-radius: 50px;
-            padding: 4px;
+            padding: 0.25rem;
         }
 
-        .quantity-controls button {
+        .quantity-btn {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background: var(--color-fresh-white);
-            color: var(--color-denim-blue);
-            border: 2px solid var(--color-denim-blue);
+            background: var(--color-white);
+            border: 1px solid var(--color-light-gray);
+            color: var(--color-primary);
             font-weight: 700;
             font-size: 1.1rem;
             cursor: pointer;
-            transition: all var(--transition-spin);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .quantity-controls button:hover {
-            background: var(--color-denim-blue);
-            color: var(--color-fresh-white);
-            transform: scale(1.1);
+        .quantity-btn:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            border-color: var(--color-accent);
         }
 
-        .quantity-controls span {
+        .quantity-display {
             min-width: 32px;
             text-align: center;
             font-weight: 700;
-            color: var(--color-washer-navy);
+            color: var(--color-primary);
         }
 
         .pricing-card-footer {
-            padding: calc(var(--spacing-unit) * 4);
-            border-top: 2px solid var(--color-soap-blue);
-            background: var(--color-starch-white);
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--color-light-gray);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1075,88 +830,151 @@
 
         .subtotal-label {
             font-weight: 600;
-            color: var(--color-washer-navy);
+            color: var(--color-gray);
         }
 
         .subtotal-value {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-denim-blue);
+            color: var(--color-accent);
         }
 
         .pricing-bottom {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: calc(var(--spacing-unit) * 4);
-            align-items: start;
+            gap: 2rem;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .pricing-bottom {
                 grid-template-columns: 1fr;
             }
         }
 
-        .delivery-options-card {
-            background: var(--color-fresh-white);
+        .delivery-card,
+        .total-card {
+            background: var(--color-white);
             border-radius: 24px;
-            box-shadow: var(--shadow-hanging);
-            padding: calc(var(--spacing-unit) * 5);
-            border: 3px solid var(--color-soap-blue);
+            padding: 2.5rem;
+            border: 2px solid var(--color-light-gray);
         }
 
-        .delivery-options-card h3 {
+        .total-card {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            border: none;
+            position: sticky;
+            top: 6rem;
+        }
+
+        .total-card h3 {
             font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--color-washer-navy);
-            margin-bottom: calc(var(--spacing-unit) * 4);
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .grand-total {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .pickup-note {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .pickup-note.hidden {
+            display: none;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
+        }
+
+        .reset-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--color-accent);
         }
 
         .delivery-option {
             display: flex;
             align-items: center;
-            padding: calc(var(--spacing-unit) * 2);
-            border: 2px solid var(--color-soap-blue);
+            padding: 1rem;
+            border: 2px solid var(--color-light-gray);
             border-radius: 16px;
+            margin-bottom: 1rem;
             cursor: pointer;
-            transition: all var(--transition-spin);
-            margin-bottom: calc(var(--spacing-unit) * 2);
-            background: var(--color-starch-white);
+            transition: all 0.3s ease;
         }
 
         .delivery-option:hover {
-            border-color: var(--color-denim-blue);
-            background: var(--color-soap-blue);
-            transform: translateX(8px);
+            border-color: var(--color-accent);
+            background: rgba(0, 255, 163, 0.02);
         }
 
         .delivery-option input[type="radio"] {
             display: none;
         }
 
-        .delivery-option input[type="radio"]:checked + .radio-circle {
-            border-color: var(--color-denim-blue);
-            background: var(--color-denim-blue);
+        .delivery-option input[type="radio"]:checked + .radio-custom {
+            border-color: var(--color-accent);
+            background: var(--color-accent);
         }
 
-        .delivery-option input[type="radio"]:checked + .radio-circle::after {
+        .delivery-option input[type="radio"]:checked + .radio-custom::after {
             transform: scale(1);
         }
 
-        .radio-circle {
+        .radio-custom {
             width: 24px;
             height: 24px;
-            border: 3px solid var(--color-steam-gray);
+            border: 2px solid var(--color-light-gray);
             border-radius: 50%;
-            margin-right: calc(var(--spacing-unit) * 2);
-            flex-shrink: 0;
+            margin-right: 1rem;
             position: relative;
-            transition: all var(--transition-spin);
+            transition: all 0.3s ease;
         }
 
-        .radio-circle::after {
+        .radio-custom::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -1164,126 +982,40 @@
             transform: translate(-50%, -50%) scale(0);
             width: 10px;
             height: 10px;
-            background: var(--color-fresh-white);
+            background: var(--color-primary);
             border-radius: 50%;
-            transition: transform var(--transition-spin);
+            transition: transform 0.3s ease;
         }
 
         .delivery-text {
-            flex-grow: 1;
+            flex: 1;
         }
 
         .delivery-title {
             font-weight: 700;
-            color: var(--color-washer-navy);
-            margin-bottom: 4px;
+            color: var(--color-primary);
+            margin-bottom: 0.25rem;
         }
 
         .delivery-description {
             font-size: 0.9rem;
-            color: var(--color-washer-navy);
-            opacity: 0.75;
+            color: var(--color-gray);
         }
 
         .delivery-limit {
             font-size: 0.85rem;
-            color: var(--color-denim-blue);
+            color: var(--color-accent);
             font-weight: 600;
-            margin-top: 4px;
-        }
-
-        .grand-total-card {
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            border-radius: 24px;
-            box-shadow: var(--shadow-steam);
-            padding: calc(var(--spacing-unit) * 5);
-            position: sticky;
-            top: calc(var(--spacing-unit) * 12);
-            border: 3px solid var(--color-hanger-gold);
-        }
-
-        .grand-total-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: calc(var(--spacing-unit) * 2);
-        }
-
-        .grand-total-amount {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 8vw, 4.5rem);
-            font-weight: 800;
-            color: var(--color-hanger-gold);
-            line-height: 1;
-            margin-bottom: calc(var(--spacing-unit) * 3);
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .pickup-charge-note {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: calc(var(--spacing-unit) * 4);
-            padding: calc(var(--spacing-unit) * 2);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            border-left: 3px solid var(--color-hanger-gold);
-        }
-
-        .pickup-charge-note.hidden {
-            display: none;
-        }
-
-        .schedule-pickup-btn {
-            display: block;
-            width: 100%;
-            padding: 20px;
-            background: var(--color-hanger-gold);
-            color: var(--color-washer-navy);
-            font-weight: 800;
-            font-size: 1.1rem;
-            text-align: center;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all var(--transition-spin);
-            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
-            margin-bottom: calc(var(--spacing-unit) * 2);
-        }
-
-        .schedule-pickup-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.6);
-        }
-
-        .reset-btn {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background: transparent;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
-            text-align: center;
-            border-radius: 50px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: all var(--transition-spin);
-        }
-
-        .reset-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--color-hanger-gold);
+            margin-top: 0.25rem;
         }
 
         /* Warning Modal */
         .warning-modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             z-index: 10000;
             align-items: center;
             justify-content: center;
@@ -1294,192 +1026,106 @@
         }
 
         .warning-content {
-            background: var(--color-fresh-white);
+            background: var(--color-white);
             border-radius: 24px;
-            padding: calc(var(--spacing-unit) * 6);
+            padding: 3rem;
             max-width: 500px;
-            margin: 0 calc(var(--spacing-unit) * 2);
-            box-shadow: var(--shadow-hanging);
-            border: 3px solid var(--color-denim-blue);
-            animation: modalSlideIn 0.3s var(--ease-wash);
+            margin: 0 2rem;
+            animation: modalSlide 0.4s var(--ease-out-expo);
         }
 
-        @keyframes modalSlideIn {
-            from { opacity: 0; transform: translateY(-30px); }
+        @keyframes modalSlide {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .warning-icon {
             width: 60px;
             height: 60px;
-            background: var(--color-soap-blue);
+            background: rgba(0, 255, 163, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto calc(var(--spacing-unit) * 3);
-        }
-
-        .warning-icon svg {
-            width: 30px;
-            height: 30px;
-            color: var(--color-denim-blue);
+            margin: 0 auto 1.5rem;
         }
 
         .warning-title {
             font-family: var(--font-display);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-washer-navy);
             text-align: center;
-            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
         }
 
         .warning-message {
             text-align: center;
-            color: var(--color-washer-navy);
-            font-size: 1.05rem;
+            color: var(--color-gray);
             line-height: 1.7;
-            margin-bottom: calc(var(--spacing-unit) * 4);
+            margin-bottom: 2rem;
         }
 
         .warning-actions {
             display: flex;
-            gap: calc(var(--spacing-unit) * 2);
+            gap: 1rem;
         }
 
         .warning-btn {
             flex: 1;
-            padding: 14px 24px;
+            padding: 1rem;
             border-radius: 50px;
             font-weight: 700;
-            text-align: center;
             cursor: pointer;
-            transition: all var(--transition-spin);
+            transition: all 0.3s ease;
             border: none;
         }
 
         .warning-btn-primary {
-            background: linear-gradient(135deg, var(--color-denim-blue), var(--color-detergent-blue));
-            color: var(--color-fresh-white);
+            background: var(--color-accent);
+            color: var(--color-primary);
         }
 
         .warning-btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-fabric);
+            box-shadow: 0 10px 30px rgba(0, 255, 163, 0.3);
         }
 
         .warning-btn-secondary {
-            background: var(--color-soap-blue);
-            color: var(--color-washer-navy);
+            background: var(--color-light-gray);
+            color: var(--color-primary);
         }
 
         .warning-btn-secondary:hover {
-            background: var(--color-steam-gray);
+            background: var(--color-gray);
+            color: var(--color-white);
         }
 
-        /* ========================================
-           FRESH LINEN CTA
-           ======================================== */
-        .cta-section {
-            padding: calc(var(--spacing-unit) * 20) 0;
-            background: linear-gradient(135deg, var(--color-denim-blue) 0%, var(--color-detergent-blue) 100%);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Floating fabric pieces */
-        .fabric-piece {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            animation: float-fabric 20s ease-in-out infinite;
-        }
-
-        .fabric-piece:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
-        .fabric-piece:nth-child(2) { right: 15%; top: 30%; animation-delay: 5s; }
-        .fabric-piece:nth-child(3) { left: 20%; bottom: 25%; animation-delay: 10s; }
-        .fabric-piece:nth-child(4) { right: 10%; bottom: 30%; animation-delay: 15s; }
-
-        @keyframes float-fabric {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-30px) rotate(10deg); }
-            50% { transform: translateY(0) rotate(-10deg); }
-            75% { transform: translateY(30px) rotate(5deg); }
-        }
-
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-title {
-            font-family: var(--font-display);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            color: var(--color-fresh-white);
-            line-height: 1.2;
-            margin-bottom: calc(var(--spacing-unit) * 3);
-        }
-
-        .cta-subtitle {
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: calc(var(--spacing-unit) * 6);
-        }
-
-        .cta-button-large {
-            display: inline-flex;
-            align-items: center;
-            gap: 16px;
-            padding: 24px 48px;
-            background: var(--color-hanger-gold);
-            color: var(--color-washer-navy);
-            font-weight: 800;
-            font-size: 1.25rem;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 16px 48px rgba(212, 175, 55, 0.5);
-            transition: all var(--transition-spin);
-        }
-
-        .cta-button-large:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 24px 64px rgba(212, 175, 55, 0.6);
-        }
-
-        /* ========================================
-           CLEAN FOOTER
-           ======================================== */
+        /* ============================================
+           FOOTER
+           ============================================ */
         .footer {
-            padding: calc(var(--spacing-unit) * 8) 0 calc(var(--spacing-unit) * 4);
-            background: var(--color-washer-navy);
+            padding: 5rem 0 2rem;
+            background: var(--color-primary);
             color: rgba(255, 255, 255, 0.8);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: calc(var(--spacing-unit) * 8);
-            margin-bottom: calc(var(--spacing-unit) * 6);
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: calc(var(--spacing-unit) * 6);
             }
         }
 
         @media (max-width: 640px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: calc(var(--spacing-unit) * 5);
             }
         }
 
@@ -1487,49 +1133,48 @@
             font-family: var(--font-display);
             font-size: 2rem;
             font-weight: 700;
-            color: var(--color-fresh-white);
-            margin-bottom: calc(var(--spacing-unit) * 2);
+            color: var(--color-white);
+            margin-bottom: 1rem;
         }
 
         .footer-tagline {
-            font-size: 1.05rem;
             line-height: 1.7;
-            margin-bottom: calc(var(--spacing-unit) * 3);
+            margin-bottom: 2rem;
         }
 
         .footer-col h4 {
             font-family: var(--font-display);
             font-size: 1.125rem;
             font-weight: 600;
-            color: var(--color-fresh-white);
-            margin-bottom: calc(var(--spacing-unit) * 3);
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
         }
 
         .footer-links {
             display: flex;
             flex-direction: column;
-            gap: calc(var(--spacing-unit) * 2);
+            gap: 1rem;
         }
 
         .footer-link {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
-            transition: all var(--transition-spin);
+            transition: all 0.3s ease;
         }
 
         .footer-link:hover {
-            color: var(--color-hanger-gold);
-            padding-left: 8px;
+            color: var(--color-accent);
+            padding-left: 0.5rem;
         }
 
         .footer-bottom {
-            padding-top: calc(var(--spacing-unit) * 4);
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: calc(var(--spacing-unit) * 3);
+            gap: 1rem;
         }
 
         @media (max-width: 640px) {
@@ -1539,26 +1184,13 @@
             }
         }
 
-        .footer-copyright {
-            font-size: 0.9rem;
-        }
-
-        .footer-made-with {
-            font-size: 0.9rem;
-            color: var(--color-hanger-gold);
-        }
-
-        /* ========================================
-           FLOATING WHATSAPP - WASHING MACHINE ICON
-           ======================================== */
-        .fab-container {
-            position: fixed;
-            bottom: calc(var(--spacing-unit) * 4);
-            right: calc(var(--spacing-unit) * 4);
-            z-index: 9998;
-        }
-
+        /* ============================================
+           FLOATING ACTION BUTTON
+           ============================================ */
         .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
             width: 64px;
             height: 64px;
             background: linear-gradient(135deg, #25D366, #128C7E);
@@ -1566,71 +1198,48 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
             cursor: pointer;
-            transition: all var(--transition-spin);
-            border: 3px solid var(--color-fresh-white);
+            z-index: 9997;
+            transition: all 0.3s ease;
         }
 
         .fab:hover {
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 16px 48px rgba(37, 211, 102, 0.6);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
         }
 
         .fab svg {
             width: 32px;
             height: 32px;
-            color: var(--color-fresh-white);
+            fill: var(--color-white);
         }
 
-        /* ========================================
-           SCROLL PROGRESS - CLOTHESLINE
-           ======================================== */
-        .scroll-progress {
+        /* ============================================
+           SCROLL INDICATOR
+           ============================================ */
+        .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
             width: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--color-denim-blue), var(--color-hanger-gold), var(--color-detergent-blue));
+            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
             z-index: 10001;
-            transition: width 0.1s ease-out;
+            transition: width 0.1s ease;
         }
 
-        /* Clothespins on progress bar */
-        .scroll-progress::after {
-            content: '🧷';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.25rem;
-        }
-
-        /* ========================================
+        /* ============================================
            UTILITIES
-           ======================================== */
+           ============================================ */
         .highlight {
-            animation: highlightPulse 0.6s ease-out;
+            animation: highlightPulse 0.6s ease;
         }
 
         @keyframes highlightPulse {
             0% { background: transparent; }
-            30% { background: var(--color-soap-blue); }
+            50% { background: rgba(0, 255, 163, 0.1); }
             100% { background: transparent; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn {
-                display: block;
-                width: 32px;
-                height: 32px;
-                background: var(--color-denim-blue);
-                border: none;
-                border-radius: 8px;
-                cursor: pointer;
-            }
         }
     </style>
 </head>
@@ -1638,25 +1247,27 @@
     <!-- GTM Noscript -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Page Loader - Washing Machine Animation -->
-    <div class="page-loader" id="pageLoader">
-        <div class="washing-machine">
-            <div class="washer-window">
-                <div class="washer-drum"></div>
-            </div>
-        </div>
-        <p class="loader-text">Loading Zapwash...</p>
-    </div>
+    <!-- Custom Cursors -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-    <!-- Scroll Progress -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator"></div>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo">Zapwash</div>
+        <div class="loader-progress">
+            <div class="loader-progress-bar"></div>
+        </div>
+    </div>
 
     <!-- Warning Modal -->
     <div class="warning-modal" id="warningModal">
         <div class="warning-content">
             <div class="warning-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                <svg width="30" height="30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                 </svg>
             </div>
             <h3 class="warning-title">Item Limit Reached</h3>
@@ -1668,19 +1279,17 @@
         </div>
     </div>
 
-    <!-- Navigation with Clothesline Effect -->
+    <!-- Navigation -->
     <nav class="nav-wrapper" id="mainNav">
         <div class="nav-container">
-            <a href="/" class="logo">
-                <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Laundry Service Gachibowli" class="logo-img">
-            </a>
+            <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="logo">
             <div class="nav-links">
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#how-it-works" class="nav-link">How It Works</a>
                 <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Schedule Pickup</a>
             </div>
-            <button class="mobile-menu-btn" style="display: none;">
+            <button class="mobile-menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1688,233 +1297,111 @@
         </div>
     </nav>
 
-    <!-- Hero Section - Laundry Room Scene -->
+    <!-- Hero Section -->
     <section class="hero-section">
-        <!-- Floating Bubbles -->
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+        <canvas id="particles-canvas"></canvas>
         
-        <!-- Steam Effect -->
-        <div class="steam">
-            <div class="steam-line"></div>
-            <div class="steam-line"></div>
-            <div class="steam-line"></div>
-            <div class="steam-line"></div>
-        </div>
-        
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">🧺</span>
-                        <span>Best in Gachibowli & Madhapur</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        Laundry Service in
-                        <span class="title-gradient">Gachibowli, Hyderabad</span>
-                    </h1>
-                    
-                    <p class="hero-subtitle">
-                        Free pickup from IT offices. Fast delivery to Madhapur, Hitech City, Kondapur.
-                    </p>
-                    
-                    <div class="hero-description">
-                        <p>
-                            Best online laundry service near Gachibowli Metro and Hitech City. We work with trusted local dhobis in your area to give you fast wash, iron, and dry cleaning with free pickup and delivery in 20 minutes. Express iron service available from 1 hour.
-                        </p>
-                    </div>
-                    
-                    <div class="hero-actions">
-                        <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Gachibowli" target="_blank" class="btn-primary">
-                            <span>Book Free Pickup</span>
-                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                            </svg>
-                        </a>
-                        <a href="#pricing" class="btn-secondary">
-                            <span>View Prices</span>
-                        </a>
-                    </div>
-                    
-                    <div class="heritage-proof">
-                        <div class="proof-item">
-                            <div class="proof-number">400+</div>
-                            <div class="proof-label">Happy Customers</div>
-                        </div>
-                        <div class="proof-item">
-                            <div class="proof-number">20 min</div>
-                            <div class="proof-label">Pickup Time</div>
-                        </div>
-                        <div class="proof-item">
-                            <div class="proof-number">Trusted</div>
-                            <div class="proof-label">Verified Service</div>
-                        </div>
-                    </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-icon"></span>
+                    <span>Award-Winning Laundry Experience</span>
                 </div>
                 
-                <!-- Hanging Clothes Card -->
-                <div class="hero-showcase">
-                    <div class="showcase-card">
-                        <div class="clothespin"></div>
-                        <div class="card-header">
-                            <div class="card-icon">⚡</div>
-                            <div>
-                                <h3 class="card-title">How Zapwash Works</h3>
-                                <p class="card-subtitle">Simple 5-step process</p>
-                            </div>
-                        </div>
-                        
-                        <div class="process-timeline">
-                            <div class="process-step">
-                                <div class="step-number">1</div>
-                                <div class="step-content">
-                                    <h4>You Schedule Order</h4>
-                                    <p>WhatsApp or call us from Gachibowli, Madhapur, or nearby areas</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-number">2</div>
-                                <div class="step-content">
-                                    <h4>We Pickup Your Clothes</h4>
-                                    <p>Our delivery person comes to your location in 20 minutes</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-number">3</div>
-                                <div class="step-content">
-                                    <h4>Give to Local Dhobi</h4>
-                                    <p>We hand over to our trusted partner dhobi near you</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-number">4</div>
-                                <div class="step-content">
-                                    <h4>Dhobi Does the Service</h4>
-                                    <p>Professional wash, iron, or dry cleaning with care</p>
-                                </div>
-                            </div>
-                            
-                            <div class="process-step">
-                                <div class="step-number">5</div>
-                                <div class="step-content">
-                                    <h4>Delivered to You</h4>
-                                    <p>We collect from dhobi and deliver fresh clothes to your door</p>
-                                </div>
-                            </div>
-                        </div>
+                <h1 class="hero-title">
+                    Premium Laundry
+                    <span class="hero-title-gradient">In Gachibowli</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Experience the future of laundry care. Free pickup in 20 minutes. Express iron from 1 hour. Professional service near Madhapur & Hitech City.
+                </p>
+                
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Gachibowli" target="_blank" class="btn-primary">
+                        <span>Book Free Pickup</span>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="#pricing" class="btn-secondary">View Prices</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">400+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20 min</div>
+                        <div class="stat-label">Pickup Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1 Hour</div>
+                        <div class="stat-label">Express Service</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section with Fabric Texture -->
-    <section class="fabric-section">
-        <div class="container section-content">
-            <div class="philosophy-content">
-                <span class="section-label">Our Mission</span>
-                <h2 class="section-title">Organizing Local Dhobis for Better Laundry</h2>
-                <p class="philosophy-text">
-                    We work with skilled local dhobis in Gachibowli, Madhapur, and Hitech City to bring you fast and reliable laundry service. 
-                    <span class="philosophy-highlight">Our goal is to organize local dhobis with better hygiene and training</span> so you get clean clothes quickly.
-                </p>
-                <p class="philosophy-text">
-                    By partnering with neighborhood dhobis, we make laundry service instant and support local workers at the same time. Every order helps improve their business and keeps your clothes in trusted hands near your home.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section - Laundry Baskets -->
+    <!-- Services Section -->
     <section id="services" class="services-section">
-        <div class="container">
+        <div class="section-container">
             <div class="section-header">
                 <span class="section-label">What We Offer</span>
-                <h2 class="section-title">Laundry Services in Gachibowli</h2>
-                <p class="section-subtitle">
-                    Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur, Financial District. Express iron service from 1 hour.
-                </p>
+                <h2 class="section-title">Premium Services</h2>
+                <p class="section-subtitle">Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur. Express service from 1 hour.</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <span class="service-badge">Daily Wear</span>
-                    <div class="service-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Iron Service</h3>
-                    <p class="service-description">
-                        Best ironing service in Gachibowli. Sharp press for shirts, pants, kurtas, sarees. Free delivery in 24 hours.
-                    </p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service%20in%20Gachibowli" target="_blank" class="service-link">
-                        <span>Book Now</span>
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="service-card featured">
-                    <span class="service-badge">Most Popular</span>
-                    <div class="service-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
-                        </svg>
-                    </div>
+            <div class="bento-grid">
+                <div class="bento-item bento-item-large">
+                    <div class="service-icon">👔</div>
                     <h3 class="service-title">Wash & Iron</h3>
-                    <p class="service-description">
-                        Complete laundry service near Madhapur. Professional wash and press for all clothes. Fast pickup from IT offices.
-                    </p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20in%20Madhapur" target="_blank" class="service-link">
+                    <p class="service-description">Complete laundry service near Madhapur. Professional wash and press for all clothes. Fast pickup from IT offices.</p>
+                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
                         <span>Book Now</span>
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-badge">Premium Care</span>
-                    <div class="service-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                <div class="bento-item bento-item-medium">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-title">Iron Service</h3>
+                    <p class="service-description">Best ironing service in Gachibowli. Sharp press for shirts, pants, kurtas, sarees.</p>
+                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
+                        <span>Book Now</span>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
-                    </div>
+                    </a>
+                </div>
+                
+                <div class="bento-item bento-item-medium">
+                    <div class="service-icon">🛡️</div>
                     <h3 class="service-title">Dry Cleaning</h3>
-                    <p class="service-description">
-                        Best dry cleaners in Hitech City. Safe cleaning for suits, designer wear, silk sarees, wedding clothes.
-                    </p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning%20near%20Hitech%20City" target="_blank" class="service-link">
+                    <p class="service-description">Best dry cleaners in Hitech City. Safe cleaning for suits, designer wear, silk sarees.</p>
+                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
                         <span>Book Now</span>
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
                 </div>
                 
-                <div class="service-card">
-                    <span class="service-badge">⚡ Super Fast</span>
-                    <div class="service-icon-box">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                    </div>
+                <div class="bento-item bento-item-large">
+                    <div class="service-icon">⚡</div>
                     <h3 class="service-title">Express Iron</h3>
-                    <p class="service-description">
-                        Fastest iron service in Hyderabad. Get your clothes pressed in 1 hour, 3 hours, 6 hours, or 12 hours based on your need.
-                    </p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron%20service" target="_blank" class="service-link">
+                    <p class="service-description">Fastest iron service in Hyderabad. Get your clothes pressed in 1 hour, 3 hours, 6 hours, or 12 hours based on your need.</p>
+                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
                         <span>Book Now</span>
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
                 </div>
@@ -1922,26 +1409,24 @@
         </div>
     </section>
 
-    <!-- Pricing Section - Ironing Board Style -->
-    <section id="pricing">
-        <div class="container">
-            <div class="pricing-header">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-container">
+            <div class="section-header">
                 <span class="section-label">Our Rates</span>
-                <h2 class="section-title">Laundry Price List Gachibowli</h2>
-                <p class="section-subtitle">Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup and delivery above ₹100. Express iron service from 1 hour.</p>
+                <h2 class="section-title">Transparent Pricing</h2>
+                <p class="section-subtitle">Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup above ₹100.</p>
             </div>
 
-            <div class="pricing-cards-container" id="pricing-cards-container">
-                <!-- Cards will be dynamically rendered -->
-            </div>
+            <div class="pricing-cards-container" id="pricingCardsContainer"></div>
 
             <div class="pricing-bottom">
-                <div class="delivery-options-card">
-                    <h3>Choose Delivery Speed</h3>
-                    <div id="delivery-options">
+                <div class="delivery-card">
+                    <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-primary); margin-bottom: 2rem;">Choose Delivery Speed</h3>
+                    <div id="deliveryOptions">
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
-                            <span class="radio-circle"></span>
+                            <span class="radio-custom"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Standard Delivery</p>
                                 <p class="delivery-description">Free (24-72 hours depending on service)</p>
@@ -1950,7 +1435,7 @@
                         
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="100" data-description="Express Iron (1 Hour)" data-limit="5">
-                            <span class="radio-circle"></span>
+                            <span class="radio-custom"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Iron - 1 Hour</p>
                                 <p class="delivery-description">Add ₹100</p>
@@ -1960,7 +1445,7 @@
                         
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="70" data-description="Express Iron (3 Hours)" data-limit="10">
-                            <span class="radio-circle"></span>
+                            <span class="radio-custom"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Iron - 3 Hours</p>
                                 <p class="delivery-description">Add ₹70</p>
@@ -1970,7 +1455,7 @@
                         
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="50" data-description="Express Iron (6 Hours)" data-limit="25">
-                            <span class="radio-circle"></span>
+                            <span class="radio-custom"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Iron - 6 Hours</p>
                                 <p class="delivery-description">Add ₹50</p>
@@ -1980,76 +1465,37 @@
                         
                         <label class="delivery-option">
                             <input type="radio" name="delivery_speed" value="30" data-description="Express Iron (12 Hours)" data-limit="999">
-                            <span class="radio-circle"></span>
+                            <span class="radio-custom"></span>
                             <div class="delivery-text">
                                 <p class="delivery-title">Express Iron - 12 Hours</p>
                                 <p class="delivery-description">Add ₹30</p>
                                 <p class="delivery-limit">✓ No limit</p>
                             </div>
                         </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="30" data-description="Express Wash & Iron" data-limit="999">
-                            <span class="radio-circle"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Wash & Iron (24 hours)</p>
-                                <p class="delivery-description">Add ₹30</p>
-                            </div>
-                        </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="50" data-description="Express Dry Cleaning" data-limit="999">
-                            <span class="radio-circle"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Dry Cleaning (48 hours)</p>
-                                <p class="delivery-description">Add ₹50</p>
-                            </div>
-                        </label>
                     </div>
                 </div>
 
-                <div class="grand-total-card">
+                <div class="total-card">
                     <h3>Your Total Bill</h3>
-                    <div class="grand-total-amount" id="grand-total-cost">₹0</div>
-                    <div class="pickup-charge-note hidden" id="pickup-charge-message"></div>
-                    <a id="schedule-pickup-btn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="schedule-pickup-btn">
+                    <div class="grand-total" id="grandTotal">₹0</div>
+                    <div class="pickup-note hidden" id="pickupNote"></div>
+                    <a id="checkoutBtn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="checkout-btn">
                         Schedule Pickup Now
                     </a>
-                    <button id="reset-all-btn" class="reset-btn">Clear All</button>
+                    <button id="resetBtn" class="reset-btn">Clear All</button>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section - Fresh Linen -->
-    <section class="cta-section">
-        <div class="fabric-piece"></div>
-        <div class="fabric-piece"></div>
-        <div class="fabric-piece"></div>
-        <div class="fabric-piece"></div>
-        
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Get Laundry Done in 1 Hour</h2>
-                <p class="cta-subtitle">Best laundry service in Gachibowli, Madhapur, Hitech City. 400+ happy customers trust us. Express iron service from 1 hour.</p>
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fast%20laundry%20service%20in%20Gachibowli" target="_blank" class="cta-button-large">
-                    <span>WhatsApp for Pickup</span>
-                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="section-container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>Zapwash</h3>
                     <p class="footer-tagline">
-                        Best online laundry service in Gachibowli, Madhapur, Hitech City Hyderabad. We organize local dhobis for fast pickup and delivery. Express iron service from 1 hour.
+                        Award-winning laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
                     </p>
                 </div>
                 
@@ -2083,53 +1529,23 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">© 2025 Zapwash | Gachibowli, Hyderabad</p>
-                <p class="footer-made-with">Trusted by 400+ customers 🧺</p>
+                <p>© 2025 Zapwash | Gachibowli, Hyderabad</p>
+                <p style="color: var(--color-accent);">Trusted by 400+ customers ⚡</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <div class="fab-container">
-        <a href="https://wa.me/918639103842" target="_blank" class="fab">
-            <svg fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-        </a>
-    </div>
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/918639103842" target="_blank" class="fab">
+        <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
 
     <script>
-        // Same JavaScript from previous version (pricing logic, interactions, etc.)
-        // I'll include the full JS in the next message due to length
-        
-        // Page Loader
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('pageLoader').classList.add('hidden');
-            }, 1500);
-        });
-
-        // Scroll Progress
-        window.addEventListener('scroll', () => {
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
-        });
-
-        // Navbar Scroll
-        const mainNav = document.getElementById('mainNav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                mainNav.classList.add('scrolled');
-            } else {
-                mainNav.classList.remove('scrolled');
-            }
-        });
-
-            <script>
-        // ========================================
+        // ============================================
         // PRICING CALCULATOR
-        // ========================================
+        // ============================================
         const allItemsData = {
             "Ironing Only": { 
                 subtitle: "Sharp press. Free delivery in 24 hours.", 
@@ -2190,18 +1606,17 @@
         let expressDescription = "Standard Delivery";
         let currentLimit = 999;
 
-        const pricingCardsContainer = document.getElementById('pricing-cards-container');
-        const grandTotalCostEl = document.getElementById('grand-total-cost');
-        const scheduleBtn = document.getElementById('schedule-pickup-btn');
-        const resetAllBtn = document.getElementById('reset-all-btn');
-        const pickupChargeMessageEl = document.getElementById('pickup-charge-message');
-        const deliveryOptions = document.getElementById('delivery-options');
+        const pricingCardsContainer = document.getElementById('pricingCardsContainer');
+        const grandTotalEl = document.getElementById('grandTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const pickupNoteEl = document.getElementById('pickupNote');
+        const deliveryOptions = document.getElementById('deliveryOptions');
         const warningModal = document.getElementById('warningModal');
         const warningMessage = document.getElementById('warningMessage');
         const warningCancel = document.getElementById('warningCancel');
         const warningOk = document.getElementById('warningOk');
 
-        // Render Pricing Cards
         function renderCards() {
             let cardsHtml = '';
             for (const serviceType in allItemsData) {
@@ -2213,30 +1628,28 @@
                     const uniqueItemId = item.id;
                     itemQuantities[uniqueItemId] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
                     itemsHtml += `
-                        <li class="price-list-item" data-item-id="${uniqueItemId}">
+                        <div class="price-item">
                             <span class="item-name">${item.name}</span>
                             <div class="item-price-controls">
                                 <span class="item-price">₹${item.price}</span>
                                 <div class="quantity-controls">
-                                    <button data-action="decrement" data-item-id="${uniqueItemId}">−</button>
-                                    <span id="qty-${uniqueItemId}">0</span>
-                                    <button data-action="increment" data-item-id="${uniqueItemId}">+</button>
+                                    <button class="quantity-btn" data-action="decrement" data-item-id="${uniqueItemId}">−</button>
+                                    <span class="quantity-display" id="qty-${uniqueItemId}">0</span>
+                                    <button class="quantity-btn" data-action="increment" data-item-id="${uniqueItemId}">+</button>
                                 </div>
                             </div>
-                        </li>
+                        </div>
                     `;
                 });
 
                 cardsHtml += `
-                    <div class="pricing-card ${isPopular ? 'popular-card' : ''}" data-service-type="${serviceType}">
+                    <div class="pricing-card ${isPopular ? 'popular' : ''}">
                         ${isPopular ? '<div class="popular-badge">Most Popular</div>' : ''}
                         <div class="pricing-card-header">
                             <h3>${serviceType}</h3>
                             <p class="pricing-card-subtitle">${cardData.subtitle}</p>
                         </div>
-                        <div class="pricing-list">
-                            <ul data-category="${serviceType}">${itemsHtml}</ul>
-                        </div>
+                        <div class="pricing-list">${itemsHtml}</div>
                         <div class="pricing-card-footer">
                             <span class="subtotal-label">Subtotal:</span>
                             <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
@@ -2247,7 +1660,6 @@
             pricingCardsContainer.innerHTML = cardsHtml;
         }
 
-        // Get Total Pieces
         function getTotalPieces() {
             let total = 0;
             for (const id in itemQuantities) {
@@ -2256,7 +1668,6 @@
             return total;
         }
 
-        // Show Warning Modal
         function showWarning(limit) {
             if (limit === 5) {
                 warningMessage.textContent = `Express 1 Hour service allows maximum 5 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
@@ -2268,7 +1679,6 @@
             warningModal.classList.add('show');
         }
 
-        // Hide Warning Modal
         function hideWarning() {
             warningModal.classList.remove('show');
         }
@@ -2279,7 +1689,6 @@
             if (e.target === warningModal) hideWarning();
         });
 
-        // Calculate Totals
         function calculateTotals() {
             let itemTotal = 0;
             let subTotals = {};
@@ -2311,18 +1720,18 @@
 
             const grandTotal = itemTotal + pickupCharge + expressFee;
 
-            grandTotalCostEl.textContent = `₹${grandTotal}`;
-            grandTotalCostEl.parentElement.classList.add('highlight');
-            setTimeout(() => grandTotalCostEl.parentElement.classList.remove('highlight'), 600);
+            grandTotalEl.textContent = `₹${grandTotal}`;
+            grandTotalEl.parentElement.classList.add('highlight');
+            setTimeout(() => grandTotalEl.parentElement.classList.remove('highlight'), 600);
 
             if (pickupCharge > 0) {
-                pickupChargeMessageEl.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
-                pickupChargeMessageEl.classList.remove('hidden');
+                pickupNoteEl.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
+                pickupNoteEl.classList.remove('hidden');
             } else if (itemTotal >= 100) {
-                pickupChargeMessageEl.textContent = `(Free pickup on orders ₹100+)`;
-                pickupChargeMessageEl.classList.remove('hidden');
+                pickupNoteEl.textContent = `(Free pickup on orders ₹100+)`;
+                pickupNoteEl.classList.remove('hidden');
             } else {
-                pickupChargeMessageEl.classList.add('hidden');
+                pickupNoteEl.classList.add('hidden');
             }
 
             let whatsappMessage = "Hi! I need laundry service in Gachibowli";
@@ -2331,14 +1740,13 @@
                 if (pickupCharge > 0) whatsappMessage += `\n\nPickup: ₹${pickupCharge}`;
                 if (expressFee > 0) whatsappMessage += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
                 
-                scheduleBtn.textContent = `Order for ₹${grandTotal}`;
+                checkoutBtn.textContent = `Order for ₹${grandTotal}`;
             } else {
-                scheduleBtn.textContent = `Schedule Pickup Now`;
+                checkoutBtn.textContent = `Schedule Pickup Now`;
             }
-            scheduleBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
+            checkoutBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
         }
 
-        // Handle Quantity Buttons
         pricingCardsContainer.addEventListener('click', function(e) {
             const button = e.target.closest('button[data-action]');
             if (!button) return;
@@ -2366,7 +1774,6 @@
             calculateTotals();
         });
 
-        // Handle Delivery Option Change
         deliveryOptions.addEventListener('change', function(e) {
             if (e.target.name === 'delivery_speed') {
                 const newLimit = parseInt(e.target.dataset.limit, 10);
@@ -2385,8 +1792,7 @@
             }
         });
 
-        // Reset All
-        resetAllBtn.addEventListener('click', function() {
+        resetBtn.addEventListener('click', function() {
             for (const id in itemQuantities) {
                 itemQuantities[id].quantity = 0;
                 const qtyEl = document.getElementById(`qty-${id}`);
@@ -2400,25 +1806,126 @@
             calculateTotals();
         });
 
-        // ========================================
-        // PAGE ANIMATIONS & INTERACTIONS
-        // ========================================
+        // ============================================
+        // PARTICLES ANIMATION
+        // ============================================
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
         
-        // Page Loader
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        const particleCount = 50;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = 'rgba(0, 255, 163, 0.3)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // ============================================
+        // CUSTOM CURSOR
+        // ============================================
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.2;
+            cursorY += (mouseY - cursorY) * 0.2;
+            
+            followerX += (mouseX - followerX) * 0.1;
+            followerY += (mouseY - followerY) * 0.1;
+
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+
+        // ============================================
+        // PAGE LOADER
+        // ============================================
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('pageLoader').classList.add('hidden');
-            }, 1500);
+            }, 1800);
         });
 
-        // Scroll Progress
+        // ============================================
+        // SCROLL INDICATOR
+        // ============================================
+        const scrollIndicator = document.querySelector('.scroll-indicator');
         window.addEventListener('scroll', () => {
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = (window.scrollY / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
+            scrollIndicator.style.width = scrolled + '%';
         });
 
-        // Navbar Scroll
+        // ============================================
+        // NAVBAR SCROLL
+        // ============================================
         const mainNav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
@@ -2428,7 +1935,9 @@
             }
         });
 
-        // Smooth Scroll
+        // ============================================
+        // SMOOTH SCROLL
+        // ============================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -2442,10 +1951,14 @@
             });
         });
 
-        // Initialize
+        // ============================================
+        // INITIALIZE
+        // ============================================
         document.addEventListener('DOMContentLoaded', () => {
             renderCards();
             calculateTotals();
+            initParticles();
+            animateParticles();
         });
     </script>
 </body>
