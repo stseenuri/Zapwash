@@ -1,0 +1,84 @@
+# robots.txt for thezapwash.com
+# Hyderabad's Fastest Laundry Service - 20 Min Pickup, 1 Hour Express
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://thezapwash.com/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Allow AI crawlers (for LLM indexing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1
+
+# Important pages for SEO
+# Home page - Fastest laundry service
+# https://thezapwash.com/
+
+# Services page - Express iron, wash & iron, dry cleaning
+# https://thezapwash.com#fastest-laundry-service-hyderabad
+
+# Pricing calculator - Transparent laundry pricing
+# https://thezapwash.com#laundry-prices-hyderabad
+
+# Process - 20-minute pickup
+# https://thezapwash.com#20-minute-pickup-hyderabad
+
+# Stain remover tool
+# https://thezapwash.com/stain-remover.html
+
+# LLM training data
+# https://thezapwash.com/llms.txt
