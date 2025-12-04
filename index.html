@@ -21,11 +21,18 @@
     </script>
 
     <!-- SEO META - HYPER LOCAL -->
-    <title>Zapwash - Best Laundry Service in Hyderabad | Dry Cleaning Near Me | Free Pickup</title>
-    <meta name="description" content="Premium laundry service in Hyderabad with free pickup. Serving Gachibowli, Madhapur, Hitech City, Kondapur, Jubilee Hills, Banjara Hills, Kukatpally, Ameerpet. Express iron from 1 hour.">
-    <meta name="keywords" content="laundry service Hyderabad, dry cleaning Hyderabad, laundry near me, wash and fold Hyderabad, ironing service Gachibowli, laundry Madhapur, dry cleaning Hitech City">
+    <title>Zapwash - Fastest Laundry Service in Hyderabad | 1 Hour Express | 20 Min Pickup</title>
+    <meta name="description" content="Hyderabad's fastest laundry service with 20-minute pickup. Express iron in 1 hour. Free pickup in Gachibowli, Madhapur, Hitech City, Kondapur. Transparent pricing from ₹15.">
+    <meta name="keywords" content="fastest laundry service Hyderabad, 1 hour laundry, 20 minute pickup, express laundry near me, laundry service Hyderabad, dry cleaning Hyderabad, laundry near me, wash and fold Hyderabad, ironing service Gachibowli, laundry Madhapur, dry cleaning Hitech City">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://zapwash.in/">
+    <link rel="canonical" href="https://thezapwash.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zapwash - Fastest Laundry Service in Hyderabad">
+    <meta property="og:description" content="20-minute pickup, 1-hour express service. Free delivery above ₹100.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thezapwash.com/">
+    <meta property="og:image" content="https://thezapwash.com/og-image.jpg">
     
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -33,15 +40,36 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Zapwash",
-      "description": "Premium laundry and dry cleaning service in Hyderabad",
+      "description": "Hyderabad's fastest laundry and dry cleaning service with 20-minute pickup and 1-hour express service",
       "telephone": "+918639103842",
+      "url": "https://thezapwash.com",
+      "priceRange": "₹15-₹200",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Hyderabad",
         "addressRegion": "Telangana",
         "addressCountry": "IN"
       },
-      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet"]
+      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Laundry Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Express Iron Service - 1 Hour",
+              "description": "Fastest laundry service in Hyderabad"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "400"
+      }
     }
     </script>
 
@@ -91,18 +119,13 @@
             color: var(--white);
         }
 
-        /* ============================================
-           TYPOGRAPHY - BRUTALIST PRECISION
-           ============================================ */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 600;
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
 
-        /* ============================================
-           NAVIGATION - MINIMAL BRUTALIST
-           ============================================ */
+        /* NAVIGATION */
         .nav {
             position: fixed;
             top: 0;
@@ -165,7 +188,6 @@
             color: var(--black);
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             width: 40px;
@@ -188,14 +210,8 @@
         }
 
         @media (max-width: 768px) {
-            .menu-toggle { 
-                display: flex; 
-            }
-            
-            .nav-inner { 
-                padding: 0 1rem; 
-            }
-            
+            .menu-toggle { display: flex; }
+            .nav-inner { padding: 0 1rem; }
             .nav-links {
                 display: none;
                 position: absolute;
@@ -209,25 +225,16 @@
                 gap: 0;
                 padding: 0;
             }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
+            .nav-links.active { display: flex; }
             .nav-link {
                 padding: 1rem 2rem;
                 border-bottom: 1px solid var(--gray-200);
                 width: 100%;
             }
-            
-            .nav-link:last-child {
-                border-bottom: none;
-            }
+            .nav-link:last-child { border-bottom: none; }
         }
 
-        /* ============================================
-           HERO - SWISS BRUTALISM
-           ============================================ */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -266,7 +273,6 @@
             margin-bottom: 2rem;
         }
 
-        /* SEO H1 */
         .hero-title {
             font-size: clamp(3rem, 10vw, 9rem);
             font-weight: 700;
@@ -357,9 +363,7 @@
             color: var(--gray-600);
         }
 
-        /* ============================================
-           MARQUEE - SOCIAL PROOF
-           ============================================ */
+        /* MARQUEE */
         .marquee {
             padding: 1.5rem 0;
             background: var(--black);
@@ -392,9 +396,7 @@
             letter-spacing: 0.1em;
         }
 
-        /* ============================================
-           SERVICES - MINIMALIST GRID
-           ============================================ */
+        /* SERVICES */
         .services {
             padding: 6rem 2rem;
             border-bottom: 1px solid var(--black);
@@ -418,7 +420,6 @@
             margin-bottom: 1rem;
         }
 
-        /* SEO H2 */
         .section-title {
             font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
@@ -462,7 +463,6 @@
             margin-bottom: 2rem;
         }
 
-        /* SEO H3 */
         .service-title {
             font-size: 2rem;
             font-weight: 700;
@@ -501,9 +501,7 @@
             transform: translateX(5px);
         }
 
-        /* ============================================
-           PROCESS - TIMELINE
-           ============================================ */
+        /* PROCESS */
         .process {
             padding: 6rem 2rem;
             background: var(--gray-900);
@@ -565,9 +563,7 @@
             line-height: 1.6;
         }
 
-        /* ============================================
-           PRICING - INTERACTIVE CALCULATOR
-           ============================================ */
+        /* PRICING */
         .pricing {
             padding: 6rem 2rem;
             border-bottom: 1px solid var(--black);
@@ -951,9 +947,7 @@
             color: var(--black);
         }
 
-        /* ============================================
-           FOOTER
-           ============================================ */
+        /* FOOTER */
         .footer {
             padding: 6rem 2rem 2rem;
             background: var(--black);
@@ -1087,12 +1081,11 @@
         </div>
     </div>
 
-    <!-- Nav -->
+    <!-- Nav with SEO-friendly anchor links -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Best Laundry Service in Hyderabad" class="nav-logo"></a>
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service in Hyderabad with 20 Minute Pickup" class="nav-logo"></a>
             
-            <!-- Mobile Menu Toggle Button -->
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -1100,12 +1093,12 @@
             </button>
             
             <div class="nav-links" id="navLinks">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#process" class="nav-link">Process</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#fastest-laundry-service-hyderabad" class="nav-link">Services</a>
+                <a href="#20-minute-pickup-hyderabad" class="nav-link">How It Works</a>
+                <a href="#laundry-prices-hyderabad" class="nav-link">Pricing</a>
                 <a href="stain-remover.html" class="nav-link">Stain Guide</a>
             </div>
-            <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Book Now</a>
+            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="nav-cta">Book Now</a>
         </div>
     </nav>
 
@@ -1113,38 +1106,37 @@
     <section class="hero">
         <div class="hero-grid"></div>
         <div class="hero-container">
-            <span class="hero-badge">Now Serving All Hyderabad</span>
+            <span class="hero-badge">⚡ Hyderabad's Fastest - 20 Min Pickup</span>
             
-            <!-- SEO H1 - PRIMARY KEYWORD -->
-            <h1 class="hero-title">Hyderabad's Most Trusted Laundry Service</h1>
+            <h1 class="hero-title">Hyderabad's Fastest Laundry Service</h1>
             
             <p class="hero-subtitle">
-                Premium laundry, dry cleaning & ironing with free pickup across Hyderabad. Express service from 1 hour. We partner with skilled local dhobis in Gachibowli, Madhapur, Hitech City, Kondapur & more.
+                20-minute pickup. 1-hour express iron. Free delivery above ₹100. We partner with skilled local dhobis in Gachibowli, Madhapur, Hitech City, Kondapur & across Hyderabad.
             </p>
             
             <div class="hero-cta-group">
                 <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
-                <a href="#pricing" class="btn btn-secondary">View Prices</a>
+                <a href="#laundry-prices-hyderabad" class="btn btn-secondary">View Prices</a>
             </div>
 
             <div class="hero-stats">
-                <div>
-                    <div class="stat-value">400+</div>
-                    <div class="stat-label">Customers</div>
-                </div>
                 <div>
                     <div class="stat-value">20min</div>
                     <div class="stat-label">Avg Pickup</div>
                 </div>
                 <div>
                     <div class="stat-value">1hr</div>
-                    <div class="stat-label">Express</div>
+                    <div class="stat-label">Express Iron</div>
+                </div>
+                <div>
+                    <div class="stat-value">400+</div>
+                    <div class="stat-label">Happy Customers</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marquee - SEO areas -->
+    <!-- Marquee -->
     <div class="marquee">
         <div class="marquee-track">
             <div class="marquee-content">
@@ -1170,112 +1162,105 @@
         </div>
     </div>
 
-    <!-- Services -->
-    <section id="services" class="services">
+    <!-- Services - SEO URL -->
+    <section id="fastest-laundry-service-hyderabad" class="services">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Services</p>
-                <!-- SEO H2 -->
-                <h2 class="section-title">Professional Laundry & Dry Cleaning Services in Hyderabad</h2>
-                <p class="section-subtitle">Expert wash, iron, and dry cleaning delivered across all Hyderabad areas</p>
+                <p class="section-eyebrow">Fastest Services in Hyderabad</p>
+                <h2 class="section-title">Professional Laundry & Dry Cleaning with Express Options</h2>
+                <p class="section-subtitle">Expert wash, iron, and dry cleaning delivered across all Hyderabad areas in 20 minutes pickup time</p>
             </div>
 
             <div class="services-grid">
                 <article class="service-card">
                     <div class="service-number">01</div>
-                    <!-- SEO H3 -->
                     <h3 class="service-title">Wash & Iron</h3>
                     <p class="service-description">Complete laundry service with professional wash and press. Ideal for daily wear including shirts, pants, kurtas, and more.</p>
                     <div class="service-meta">
                         <span class="service-time">48 Hours</span>
-                        <a href="https://wa.me/918639103842?text=Wash%20and%20iron%20service" target="_blank" class="service-arrow" aria-label="Book wash and iron service in Hyderabad">→</a>
+                        <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20service" target="_blank" class="service-arrow" aria-label="Book wash and iron laundry service in Hyderabad">→</a>
                     </div>
                 </article>
 
                 <article class="service-card">
                     <div class="service-number">02</div>
-                    <!-- SEO H3 -->
                     <h3 class="service-title">Iron Only</h3>
                     <p class="service-description">Sharp press for your clothes. Perfect for already clean garments that need crisp finishing.</p>
                     <div class="service-meta">
                         <span class="service-time">24 Hours</span>
-                        <a href="https://wa.me/918639103842?text=Iron%20service" target="_blank" class="service-arrow" aria-label="Book ironing service in Hyderabad">→</a>
+                        <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-arrow" aria-label="Book ironing service in Hyderabad">→</a>
                     </div>
                 </article>
 
                 <article class="service-card">
                     <div class="service-number">03</div>
-                    <!-- SEO H3 -->
                     <h3 class="service-title">Dry Cleaning</h3>
                     <p class="service-description">Safe cleaning for delicate items like suits, wedding wear, silk sarees, and designer clothes.</p>
                     <div class="service-meta">
                         <span class="service-time">72 Hours</span>
-                        <a href="https://wa.me/918639103842?text=Dry%20cleaning%20service" target="_blank" class="service-arrow" aria-label="Book dry cleaning in Hyderabad">→</a>
+                        <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning%20service" target="_blank" class="service-arrow" aria-label="Book dry cleaning in Hyderabad">→</a>
                     </div>
                 </article>
 
                 <article class="service-card">
                     <div class="service-number">04</div>
-                    <!-- SEO H3 -->
-                    <h3 class="service-title">Express Iron</h3>
-                    <p class="service-description">Super fast ironing in 1hr, 3hrs, 6hrs, or 12hrs. For urgent needs and last-minute requirements.</p>
+                    <h3 class="service-title">Express Iron - 1 Hour</h3>
+                    <p class="service-description">Hyderabad's FASTEST! Super fast ironing in 1hr, 3hrs, 6hrs, or 12hrs. For urgent meetings and last-minute needs.</p>
                     <div class="service-meta">
-                        <span class="service-time">From 1 Hour</span>
-                        <a href="https://wa.me/918639103842?text=Express%20iron%20service" target="_blank" class="service-arrow" aria-label="Book express ironing in Hyderabad">→</a>
+                        <span class="service-time">From 1 Hour ⚡</span>
+                        <a href="https://wa.me/918639103842?text=I%20need%201%20hour%20express%20iron" target="_blank" class="service-arrow" aria-label="Book 1 hour express ironing in Hyderabad">→</a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
-    <section id="process" class="process">
+    <!-- Process - SEO URL -->
+    <section id="20-minute-pickup-hyderabad" class="process">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Process</p>
-                <!-- SEO H2 -->
-                <h2 class="section-title">How Zapwash Laundry Pickup Works</h2>
-                <p class="section-subtitle">5 easy steps to get fresh clothes delivered to your home in Hyderabad</p>
+                <p class="section-eyebrow">20-Minute Pickup Process</p>
+                <h2 class="section-title">How Zapwash's Fast Pickup Works</h2>
+                <p class="section-subtitle">5 easy steps to get fresh clothes delivered with the fastest pickup in Hyderabad</p>
             </div>
 
             <div class="process-grid">
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h4 class="step-title">Schedule</h4>
-                    <p class="step-description">WhatsApp or call us from anywhere in Hyderabad</p>
+                    <p class="step-description">WhatsApp us - response in 5 minutes</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h4 class="step-title">Pickup</h4>
-                    <p class="step-description">Our team arrives in 20 minutes</p>
+                    <h4 class="step-title">Fast Pickup</h4>
+                    <p class="step-description">We arrive in 20 minutes average</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
-                    <h4 class="step-title">Handover</h4>
-                    <p class="step-description">Clothes go to trusted local dhobi</p>
+                    <h4 class="step-title">Local Dhobi</h4>
+                    <p class="step-description">Trusted expert in your area</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
-                    <h4 class="step-title">Service</h4>
-                    <p class="step-description">Professional wash, iron, or dry clean</p>
+                    <h4 class="step-title">Professional Care</h4>
+                    <p class="step-description">Wash, iron, or dry clean</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">5</div>
-                    <h4 class="step-title">Delivered</h4>
-                    <p class="step-description">Fresh clothes at your doorstep</p>
+                    <h4 class="step-title">Delivered Fresh</h4>
+                    <p class="step-description">Free delivery above ₹100</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
+    <!-- Pricing - SEO URL -->
+    <section id="laundry-prices-hyderabad" class="pricing">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Pricing</p>
-                <!-- SEO H2 -->
+                <p class="section-eyebrow">Transparent Pricing</p>
                 <h2 class="section-title">Laundry Service Prices in Hyderabad</h2>
-                <p class="section-subtitle">Transparent pricing. No hidden charges. Free pickup above ₹100.</p>
+                <p class="section-subtitle">Clear pricing from ₹15. No hidden charges. Free pickup above ₹100.</p>
             </div>
 
             <div class="pricing-cards" id="pricingCards"></div>
@@ -1296,7 +1281,7 @@
                             <input type="radio" name="speed" value="100" data-desc="Express 1hr" data-limit="5">
                             <span class="radio-box"></span>
                             <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 1 Hour</div>
+                                <div class="delivery-title">Express Iron - 1 Hour ⚡</div>
                                 <div class="delivery-desc">Add ₹100</div>
                                 <div class="delivery-limit">Max 5 pieces</div>
                             </div>
@@ -1345,22 +1330,22 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-cta">
-                <h2 class="footer-cta-title">Ready for Fresh Clothes?</h2>
-                <a href="https://wa.me/918639103842" target="_blank" class="btn btn-primary">Book Free Pickup</a>
+                <h2 class="footer-cta-title">Ready for 20-Minute Pickup?</h2>
+                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
             </div>
 
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Laundry Service Hyderabad" style="height: 32px; filter: brightness(0) invert(1);">
-                    <p>Premium laundry and dry cleaning service across Hyderabad. We organize skilled local dhobis for fast pickup and delivery.</p>
+                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service Hyderabad" style="height: 32px; filter: brightness(0) invert(1);">
+                    <p>Hyderabad's fastest laundry service with 20-minute pickup. Professional wash, iron, and dry cleaning delivered across all areas.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <div class="footer-links">
-                        <a href="#services" class="footer-link">Iron Service</a>
-                        <a href="#services" class="footer-link">Wash & Iron</a>
-                        <a href="#services" class="footer-link">Dry Cleaning</a>
-                        <a href="#services" class="footer-link">Express Iron</a>
+                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Iron Service</a>
+                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Wash & Iron</a>
+                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Dry Cleaning</a>
+                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">1 Hour Express</a>
                         <a href="stain-remover.html" class="footer-link">Stain Removal Guide</a>
                     </div>
                 </div>
@@ -1383,19 +1368,19 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2025 Zapwash • Hyderabad</p>
-                <p>Trusted by 400+ customers</p>
+                <p>© 2025 Zapwash • Hyderabad's Fastest Laundry</p>
+                <p>20-min pickup • 1-hour express • 400+ customers</p>
             </div>
         </div>
     </footer>
 
     <!-- FAB -->
-    <a href="https://wa.me/918639103842" target="_blank" class="fab" aria-label="Contact Zapwash on WhatsApp">
+    <a href="https://wa.me/918639103842" target="_blank" class="fab" aria-label="Contact Zapwash fastest laundry service on WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // PRICING DATA - COMPLETE WITH ALL PRICES
+        // PRICING DATA
         const DATA = {
             "Iron Only": {
                 sub: "Sharp press. 24 hours.",
@@ -1549,7 +1534,7 @@
                 note.classList.add('hidden');
             }
 
-            let msg = "Hi! I need laundry pickup in Hyderabad";
+            let msg = "Hi! I need fastest laundry pickup in Hyderabad";
             if (grand > 0) {
                 msg = `Hi Zapwash! Order for ₹${grand}\n\n${pc} items:\n${sel.join('\n')}`;
                 if (pickup > 0) msg += `\n\nPickup: ₹${pickup}`;
@@ -1610,7 +1595,7 @@
             calc();
         };
 
-        // Mobile Menu Toggle
+        // Mobile Menu
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1619,7 +1604,6 @@
                 navLinks.classList.toggle('active');
             });
 
-            // Close menu when clicking a link
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('active');
@@ -1638,7 +1622,6 @@
             });
         });
 
-        // Init
         init();
         calc();
     </script>
