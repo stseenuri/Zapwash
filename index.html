@@ -2126,8 +2126,327 @@
             }
         });
 
-        // [Rest of the JavaScript code for pricing - same as before]
-        // Due to character limits, refer to the previous complete version
+            <script>
+        // ========================================
+        // PRICING CALCULATOR
+        // ========================================
+        const allItemsData = {
+            "Ironing Only": { 
+                subtitle: "Sharp press. Free delivery in 24 hours.", 
+                items: [
+                    { id: "ironShirt", name: "Shirt / Pant / T-shirt", price: 15 },
+                    { id: "ironKurta", name: "Kurta + Pajama", price: 25 },
+                    { id: "ironPunjabi", name: "Punjabi Dress (3-pc)", price: 35 },
+                    { id: "ironSareeC", name: "Saree (Cotton)", price: 25 },
+                    { id: "ironSareeH", name: "Saree (Silk/Heavy)", price: 40 },
+                    { id: "ironKid", name: "Kid's Dress", price: 12 },
+                    { id: "ironBed", name: "Bed Sheet", price: 20 },
+                    { id: "ironTowel", name: "Towel", price: 10 }
+                ]
+            },
+            "Wash & Iron": { 
+                subtitle: "Complete wash and press. Free delivery in 48 hours.", 
+                items: [
+                    { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
+                    { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
+                    { id: "wiPunjabi", name: "Punjabi Dress (3-pc)", price: 70 },
+                    { id: "wiSareeC", name: "Saree (Cotton)", price: 50 },
+                    { id: "wiSareeH", name: "Saree (Silk/Heavy)", price: 80 },
+                    { id: "wiKid", name: "Kids' Dress", price: 25 },
+                    { id: "wiBed", name: "Bed Sheet", price: 40 },
+                    { id: "wiTowel", name: "Towel", price: 25 },
+                    { id: "wiBlanket", name: "Blanket / Quilt", price: 120 }
+                ]
+            },
+            "Dry Cleaning": { 
+                subtitle: "Premium care. Free delivery in 72 hours.", 
+                items: [
+                    { id: "dcShirt", name: "Shirt / Pant / T-shirt", price: 80 },
+                    { id: "dcKurta", name: "Kurta + Pajama", price: 80 },
+                    { id: "dcPunjabi", name: "Punjabi Dress (3-pc)", price: 100 },
+                    { id: "dcSareeC", name: "Saree (Cotton)", price: 80 },
+                    { id: "dcSareeH", name: "Saree (Silk/Heavy)", price: 150 },
+                    { id: "dcKid", name: "Kid's Dress", price: 50 },
+                    { id: "dcBed", name: "Bed Sheet", price: 70 },
+                    { id: "dcBlanket", name: "Blanket / Quilt", price: 200 }
+                ]
+            },
+            "Express Iron": { 
+                subtitle: "Super fast iron service. Choose your speed.", 
+                items: [
+                    { id: "exShirt", name: "Shirt / Pant / T-shirt", price: 20 },
+                    { id: "exKurta", name: "Kurta + Pajama", price: 30 },
+                    { id: "exPunjabi", name: "Punjabi Dress (3-pc)", price: 45 },
+                    { id: "exSareeC", name: "Saree (Cotton)", price: 30 },
+                    { id: "exSareeH", name: "Saree (Silk/Heavy)", price: 50 },
+                    { id: "exKid", name: "Kid's Dress", price: 15 },
+                    { id: "exBed", name: "Bed Sheet", price: 25 }
+                ]
+            }
+        };
+
+        let itemQuantities = {};
+        let expressFee = 0;
+        let expressDescription = "Standard Delivery";
+        let currentLimit = 999;
+
+        const pricingCardsContainer = document.getElementById('pricing-cards-container');
+        const grandTotalCostEl = document.getElementById('grand-total-cost');
+        const scheduleBtn = document.getElementById('schedule-pickup-btn');
+        const resetAllBtn = document.getElementById('reset-all-btn');
+        const pickupChargeMessageEl = document.getElementById('pickup-charge-message');
+        const deliveryOptions = document.getElementById('delivery-options');
+        const warningModal = document.getElementById('warningModal');
+        const warningMessage = document.getElementById('warningMessage');
+        const warningCancel = document.getElementById('warningCancel');
+        const warningOk = document.getElementById('warningOk');
+
+        // Render Pricing Cards
+        function renderCards() {
+            let cardsHtml = '';
+            for (const serviceType in allItemsData) {
+                const isPopular = serviceType === "Wash & Iron";
+                const cardData = allItemsData[serviceType];
+                let itemsHtml = '';
+                
+                cardData.items.forEach(item => {
+                    const uniqueItemId = item.id;
+                    itemQuantities[uniqueItemId] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
+                    itemsHtml += `
+                        <li class="price-list-item" data-item-id="${uniqueItemId}">
+                            <span class="item-name">${item.name}</span>
+                            <div class="item-price-controls">
+                                <span class="item-price">₹${item.price}</span>
+                                <div class="quantity-controls">
+                                    <button data-action="decrement" data-item-id="${uniqueItemId}">−</button>
+                                    <span id="qty-${uniqueItemId}">0</span>
+                                    <button data-action="increment" data-item-id="${uniqueItemId}">+</button>
+                                </div>
+                            </div>
+                        </li>
+                    `;
+                });
+
+                cardsHtml += `
+                    <div class="pricing-card ${isPopular ? 'popular-card' : ''}" data-service-type="${serviceType}">
+                        ${isPopular ? '<div class="popular-badge">Most Popular</div>' : ''}
+                        <div class="pricing-card-header">
+                            <h3>${serviceType}</h3>
+                            <p class="pricing-card-subtitle">${cardData.subtitle}</p>
+                        </div>
+                        <div class="pricing-list">
+                            <ul data-category="${serviceType}">${itemsHtml}</ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <span class="subtotal-label">Subtotal:</span>
+                            <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
+                        </div>
+                    </div>
+                `;
+            }
+            pricingCardsContainer.innerHTML = cardsHtml;
+        }
+
+        // Get Total Pieces
+        function getTotalPieces() {
+            let total = 0;
+            for (const id in itemQuantities) {
+                total += itemQuantities[id].quantity;
+            }
+            return total;
+        }
+
+        // Show Warning Modal
+        function showWarning(limit) {
+            if (limit === 5) {
+                warningMessage.textContent = `Express 1 Hour service allows maximum 5 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            } else if (limit === 10) {
+                warningMessage.textContent = `Express 3 Hours service allows maximum 10 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            } else if (limit === 25) {
+                warningMessage.textContent = `Express 6 Hours service allows maximum 25 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
+            }
+            warningModal.classList.add('show');
+        }
+
+        // Hide Warning Modal
+        function hideWarning() {
+            warningModal.classList.remove('show');
+        }
+
+        warningCancel.addEventListener('click', hideWarning);
+        warningOk.addEventListener('click', hideWarning);
+        warningModal.addEventListener('click', (e) => {
+            if (e.target === warningModal) hideWarning();
+        });
+
+        // Calculate Totals
+        function calculateTotals() {
+            let itemTotal = 0;
+            let subTotals = {};
+            let selectedItemsForWhatsApp = [];
+            let totalPieces = 0;
+
+            Object.keys(allItemsData).forEach(service => subTotals[service] = 0);
+
+            for (const id in itemQuantities) {
+                const item = itemQuantities[id];
+                const itemPrice = item.quantity * item.price;
+                itemTotal += itemPrice;
+                subTotals[item.service] += itemPrice;
+                totalPieces += item.quantity;
+
+                if (item.quantity > 0) {
+                    selectedItemsForWhatsApp.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
+                }
+            }
+
+            Object.keys(subTotals).forEach(service => {
+                const el = document.querySelector(`[data-subtotal="${service}"]`);
+                if (el) el.textContent = `₹${subTotals[service]}`;
+            });
+
+            let pickupCharge = 0;
+            if (itemTotal > 0 && itemTotal < 50) pickupCharge = 25;
+            else if (itemTotal >= 50 && itemTotal < 100) pickupCharge = 15;
+
+            const grandTotal = itemTotal + pickupCharge + expressFee;
+
+            grandTotalCostEl.textContent = `₹${grandTotal}`;
+            grandTotalCostEl.parentElement.classList.add('highlight');
+            setTimeout(() => grandTotalCostEl.parentElement.classList.remove('highlight'), 600);
+
+            if (pickupCharge > 0) {
+                pickupChargeMessageEl.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
+                pickupChargeMessageEl.classList.remove('hidden');
+            } else if (itemTotal >= 100) {
+                pickupChargeMessageEl.textContent = `(Free pickup on orders ₹100+)`;
+                pickupChargeMessageEl.classList.remove('hidden');
+            } else {
+                pickupChargeMessageEl.classList.add('hidden');
+            }
+
+            let whatsappMessage = "Hi! I need laundry service in Gachibowli";
+            if (grandTotal > 0) {
+                whatsappMessage = `Hi Zapwash! I want to order laundry for ₹${grandTotal}\n\nMy items (${totalPieces} pieces):\n${selectedItemsForWhatsApp.join('\n')}`;
+                if (pickupCharge > 0) whatsappMessage += `\n\nPickup: ₹${pickupCharge}`;
+                if (expressFee > 0) whatsappMessage += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
+                
+                scheduleBtn.textContent = `Order for ₹${grandTotal}`;
+            } else {
+                scheduleBtn.textContent = `Schedule Pickup Now`;
+            }
+            scheduleBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
+        }
+
+        // Handle Quantity Buttons
+        pricingCardsContainer.addEventListener('click', function(e) {
+            const button = e.target.closest('button[data-action]');
+            if (!button) return;
+
+            const action = button.dataset.action;
+            const itemId = button.dataset.itemId;
+            if (!itemId || !itemQuantities[itemId]) return;
+
+            const qtyEl = document.getElementById(`qty-${itemId}`);
+            let currentQty = itemQuantities[itemId].quantity;
+
+            if (action === 'increment') {
+                const newTotal = getTotalPieces() + 1;
+                if (newTotal > currentLimit) {
+                    showWarning(currentLimit);
+                    return;
+                }
+                currentQty++;
+            } else if (action === 'decrement' && currentQty > 0) {
+                currentQty--;
+            }
+
+            itemQuantities[itemId].quantity = currentQty;
+            qtyEl.textContent = currentQty;
+            calculateTotals();
+        });
+
+        // Handle Delivery Option Change
+        deliveryOptions.addEventListener('change', function(e) {
+            if (e.target.name === 'delivery_speed') {
+                const newLimit = parseInt(e.target.dataset.limit, 10);
+                const totalPieces = getTotalPieces();
+                
+                if (totalPieces > newLimit) {
+                    showWarning(newLimit);
+                    document.querySelector('input[name="delivery_speed"][value="0"]').checked = true;
+                    return;
+                }
+                
+                expressFee = parseInt(e.target.value, 10);
+                expressDescription = e.target.dataset.description;
+                currentLimit = newLimit;
+                calculateTotals();
+            }
+        });
+
+        // Reset All
+        resetAllBtn.addEventListener('click', function() {
+            for (const id in itemQuantities) {
+                itemQuantities[id].quantity = 0;
+                const qtyEl = document.getElementById(`qty-${id}`);
+                if (qtyEl) qtyEl.textContent = '0';
+            }
+            const defaultDelivery = document.querySelector('input[name="delivery_speed"][value="0"]');
+            if (defaultDelivery) defaultDelivery.checked = true;
+            expressFee = 0;
+            expressDescription = "Standard Delivery";
+            currentLimit = 999;
+            calculateTotals();
+        });
+
+        // ========================================
+        // PAGE ANIMATIONS & INTERACTIONS
+        // ========================================
+        
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+
+        // Navbar Scroll
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                mainNav.classList.add('scrolled');
+            } else {
+                mainNav.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCards();
+            calculateTotals();
+        });
     </script>
 </body>
 </html>
