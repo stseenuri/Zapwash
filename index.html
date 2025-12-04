@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapwash | Redefining Laundry in Hyderabad</title>
-    
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -21,745 +17,739 @@
       gtag('config', 'G-JYPST6NC81');
     </script>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO META TAGS - HYPER LOCAL KEYWORDS -->
+    <title>Zapwash - Best Laundry Service in Hyderabad | Dry Cleaning Near Me | Free Pickup</title>
+    <meta name="description" content="Best laundry service in Hyderabad with free pickup & delivery. Serving Gachibowli, Madhapur, Hitech City, Kondapur, Jubilee Hills, Banjara Hills, Kukatpally, Ameerpet. Express iron in 1 hour.">
+    <meta name="keywords" content="laundry service Hyderabad, dry cleaning Hyderabad, laundry near me, wash and fold Hyderabad, ironing service Gachibowli, laundry Madhapur, dry cleaning Hitech City, laundry Kondapur, wash iron Jubilee Hills, laundry Banjara Hills, dry cleaning Kukatpally, laundry pickup Ameerpet, online laundry Hyderabad">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Zapwash">
+    <link rel="canonical" href="https://zapwash.in/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zapwash - Premium Laundry Service in Hyderabad">
+    <meta property="og:description" content="Best laundry, dry cleaning & ironing service across Hyderabad. Free pickup in 20 minutes. Express service from 1 hour.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zapwash.in/">
+    <meta property="og:image" content="https://zapwash.in/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zapwash - Laundry Service Hyderabad">
+    <meta name="twitter:description" content="Premium laundry with free pickup across Hyderabad. Express iron in 1 hour.">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Zapwash",
+      "description": "Premium laundry and dry cleaning service in Hyderabad with free pickup and delivery",
+      "url": "https://zapwash.in",
+      "telephone": "+918639103842",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet", "Secunderabad", "Begumpet"],
+      "priceRange": "₹15-₹200"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --black: #000000;
-            --white: #FFFFFF;
-            --off-white: #F5F5F3;
-            --cream: #FAF8F5;
-            --gray-100: #E8E8E6;
-            --gray-200: #D1D1CF;
-            --gray-400: #8A8A88;
-            --gray-600: #5C5C5A;
-            --gray-800: #2D2D2B;
-            --accent: #0066FF;
-            --accent-light: #E6F0FF;
-            --success: #00C853;
-            --warning: #FF6B35;
-            
-            --font-display: 'Syne', sans-serif;
-            --font-serif: 'Instrument Serif', serif;
-            --font-body: 'Space Grotesk', sans-serif;
-            
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        :root {
+            --bg: #FAFAFA;
+            --bg-dark: #0A0A0A;
+            --text: #1A1A1A;
+            --text-light: #6B6B6B;
+            --text-white: #FFFFFF;
+            --accent: #2563EB;
+            --accent-light: #DBEAFE;
+            --border: #E5E5E5;
+            --card: #FFFFFF;
+            --radius: 20px;
+            --radius-lg: 32px;
+        }
+
         html {
-            font-size: 16px;
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: var(--font-body);
-            background: var(--cream);
-            color: var(--gray-800);
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            cursor: none;
         }
 
         ::selection {
             background: var(--accent);
-            color: var(--white);
+            color: var(--text-white);
         }
 
-        /* ============================================
-           MAGNETIC CURSOR
-           ============================================ */
-        .cursor-dot {
-            position: fixed;
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 99999;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s, background 0.3s;
-        }
-
-        .cursor-ring {
-            position: fixed;
-            width: 40px;
-            height: 40px;
-            border: 1.5px solid var(--gray-800);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 99998;
-            transform: translate(-50%, -50%);
-            transition: width 0.4s var(--ease-out-expo), height 0.4s var(--ease-out-expo), border-color 0.3s, opacity 0.3s;
-        }
-
-        .cursor-dot.hover {
-            width: 60px;
-            height: 60px;
-            background: transparent;
-            border: 2px solid var(--accent);
-            mix-blend-mode: difference;
-        }
-
-        .cursor-ring.hover {
-            width: 80px;
-            height: 80px;
+        /* ========================================
+           SMOOTH REVEAL ANIMATIONS
+           ======================================== */
+        .reveal {
             opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .cursor-text {
-            position: fixed;
-            pointer-events: none;
-            z-index: 99999;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--white);
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            transition: opacity 0.3s;
-        }
-
-        .cursor-text.visible {
+        .reveal.active {
             opacity: 1;
+            transform: translateY(0);
         }
 
-        @media (pointer: coarse) {
-            .cursor-dot, .cursor-ring, .cursor-text { display: none; }
-            body { cursor: auto; }
-        }
-
-        /* ============================================
-           INTRO ANIMATION
-           ============================================ */
-        .intro-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 100000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: none;
-        }
-
-        .intro-slide {
-            position: absolute;
-            inset: 0;
-            background: var(--black);
-            transform-origin: top;
-        }
-
-        .intro-logo {
-            position: relative;
-            z-index: 10;
-            overflow: hidden;
-        }
-
-        .intro-logo span {
-            display: inline-block;
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 10vw, 8rem);
-            font-weight: 800;
-            color: var(--white);
-            transform: translateY(100%);
-            animation: revealText 0.8s var(--ease-out-expo) 0.3s forwards;
-        }
-
-        @keyframes revealText {
-            to { transform: translateY(0); }
-        }
-
-        .intro-overlay.complete .intro-slide {
-            animation: slideUp 1.2s var(--ease-out-expo) forwards;
-        }
-
-        .intro-overlay.complete .intro-logo span {
-            animation: hideText 0.5s var(--ease-out-expo) forwards;
-        }
-
-        @keyframes slideUp {
-            to { transform: scaleY(0); }
-        }
-
-        @keyframes hideText {
-            to { opacity: 0; transform: translateY(-50%); }
-        }
-
-        /* ============================================
-           NAVIGATION - SPLIT DESIGN
-           ============================================ */
+        /* ========================================
+           NAVIGATION - MINIMAL FLOATING
+           ======================================== */
         .nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 1000;
-            padding: 1.5rem 3rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            mix-blend-mode: difference;
+            gap: 1rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
         }
 
         .nav-logo {
-            height: 45px;
-            filter: invert(1);
-            transition: transform 0.4s var(--ease-out-expo);
+            height: 36px;
         }
 
-        .nav-logo:hover {
-            transform: scale(1.05);
+        .nav-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border);
         }
 
         .nav-links {
             display: flex;
-            gap: 3rem;
-            align-items: center;
+            gap: 0.5rem;
         }
 
         .nav-link {
-            color: var(--white);
+            padding: 0.5rem 1rem;
+            color: var(--text-light);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            position: relative;
-            overflow: hidden;
+            border-radius: 100px;
+            transition: all 0.3s ease;
         }
 
-        .nav-link span {
-            display: block;
-            transition: transform 0.4s var(--ease-out-expo);
-        }
-
-        .nav-link::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            transition: transform 0.4s var(--ease-out-expo);
-        }
-
-        .nav-link:hover span {
-            transform: translateY(-100%);
-        }
-
-        .nav-link:hover::after {
-            transform: translateY(-100%);
+        .nav-link:hover {
+            color: var(--text);
+            background: var(--bg);
         }
 
         .nav-cta {
-            padding: 0.75rem 1.75rem;
-            background: var(--white);
-            color: var(--black);
+            padding: 0.6rem 1.25rem;
+            background: var(--accent);
+            color: var(--text-white);
             text-decoration: none;
             font-weight: 600;
             font-size: 0.85rem;
             border-radius: 100px;
-            transition: all 0.4s var(--ease-out-expo);
+            transition: all 0.3s ease;
         }
 
         .nav-cta:hover {
-            background: var(--accent);
-            color: var(--white);
-            transform: scale(1.05);
+            background: #1D4ED8;
+            transform: scale(1.02);
         }
 
         @media (max-width: 768px) {
-            .nav { padding: 1rem 1.5rem; }
             .nav-links { display: none; }
+            .nav-divider { display: none; }
         }
 
-        /* ============================================
-           HERO - CINEMATIC FULL SCREEN
-           ============================================ */
+        /* ========================================
+           HERO - CLEAN & BOLD
+           ======================================== */
         .hero {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 0 3rem 4rem;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
             position: relative;
             overflow: hidden;
-            background: var(--black);
         }
 
-        .hero-video-bg {
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, #F0F7FF 0%, var(--bg) 100%);
+        }
+
+        .hero-shapes {
             position: absolute;
             inset: 0;
             overflow: hidden;
+            pointer-events: none;
         }
 
-        .hero-video-bg::after {
-            content: '';
+        .hero-shape {
             position: absolute;
-            inset: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.5) 100%);
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
         }
 
-        .hero-video-placeholder {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            animation: gradientShift 10s ease infinite;
+        .hero-shape-1 {
+            width: 600px;
+            height: 600px;
+            background: var(--accent-light);
+            top: -200px;
+            right: -100px;
+            animation: float1 20s ease-in-out infinite;
         }
 
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+        .hero-shape-2 {
+            width: 400px;
+            height: 400px;
+            background: #FEF3C7;
+            bottom: -100px;
+            left: -100px;
+            animation: float2 25s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-50px, 50px); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(50px, -30px); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
         }
 
         .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1600px;
-            margin: 0 auto;
-            width: 100%;
+            max-width: 600px;
         }
 
-        .hero-eyebrow {
+        @media (max-width: 1024px) {
+            .hero-content {
+                margin: 0 auto;
+            }
+        }
+
+        .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            overflow: hidden;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--accent-light);
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
         }
 
-        .hero-eyebrow-line {
-            width: 60px;
-            height: 1px;
-            background: var(--white);
-            transform: scaleX(0);
-            transform-origin: left;
-            animation: expandLine 1s var(--ease-out-expo) 1.5s forwards;
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
         }
 
-        @keyframes expandLine {
-            to { transform: scaleX(1); }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
-        .hero-eyebrow-text {
+        .hero-badge-text {
             font-size: 0.85rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--white);
-            opacity: 0;
-            animation: fadeIn 0.8s ease 1.8s forwards;
+            font-weight: 600;
+            color: var(--accent);
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
+        /* SEO H1 - HYPER LOCAL */
         .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3.5rem, 12vw, 10rem);
+            font-size: clamp(2.75rem, 6vw, 4.5rem);
             font-weight: 800;
-            line-height: 0.9;
-            color: var(--white);
-            margin-bottom: 2rem;
+            line-height: 1.1;
+            color: var(--text);
+            margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
         }
 
-        .hero-title-line {
-            display: block;
-            overflow: hidden;
+        .hero-title-highlight {
+            color: var(--accent);
+            position: relative;
         }
 
-        .hero-title-line span {
-            display: inline-block;
-            transform: translateY(100%);
-            animation: revealTitle 1s var(--ease-out-expo) forwards;
-        }
-
-        .hero-title-line:nth-child(1) span { animation-delay: 1.6s; }
-        .hero-title-line:nth-child(2) span { animation-delay: 1.75s; }
-
-        @keyframes revealTitle {
-            to { transform: translateY(0); }
-        }
-
-        .hero-title-italic {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        .hero-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: 4rem;
-            opacity: 0;
-            animation: fadeIn 1s ease 2.2s forwards;
-        }
-
-        .hero-description {
-            max-width: 450px;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
             line-height: 1.7;
         }
 
         .hero-cta-group {
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .btn-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1.25rem 2.5rem;
-            background: var(--white);
-            color: var(--black);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 100px;
-            transition: all 0.4s var(--ease-out-expo);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .btn-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: var(--accent);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s var(--ease-out-expo);
-        }
-
-        .btn-hero:hover::before {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .btn-hero span, .btn-hero svg {
-            position: relative;
-            z-index: 1;
-            transition: color 0.4s ease;
-        }
-
-        .btn-hero:hover span, .btn-hero:hover svg {
-            color: var(--white);
-        }
-
-        .btn-hero-outline {
-            background: transparent;
-            border: 1.5px solid rgba(255, 255, 255, 0.3);
-            color: var(--white);
-        }
-
-        .btn-hero-outline::before {
-            background: var(--white);
-        }
-
-        .btn-hero-outline:hover span {
-            color: var(--black);
-        }
-
-        .hero-scroll {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--white);
-            opacity: 0;
-            animation: fadeIn 1s ease 2.5s forwards;
-        }
-
-        .hero-scroll-text {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            writing-mode: vertical-rl;
-        }
-
-        .hero-scroll-line {
-            width: 1px;
-            height: 60px;
-            background: var(--white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-scroll-line::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 30%;
-            background: var(--accent);
-            animation: scrollIndicator 2s ease-in-out infinite;
-        }
-
-        @keyframes scrollIndicator {
-            0% { top: -30%; }
-            100% { top: 100%; }
-        }
-
-        @media (max-width: 768px) {
-            .hero { padding: 0 1.5rem 3rem; }
-            .hero-bottom { flex-direction: column; align-items: flex-start; gap: 2rem; }
-            .hero-cta-group { flex-direction: column; width: 100%; }
-            .btn-hero { width: 100%; justify-content: center; }
-        }
-
-        /* ============================================
-           MARQUEE SECTION
-           ============================================ */
-        .marquee-section {
-            padding: 2rem 0;
-            background: var(--black);
-            overflow: hidden;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .marquee-track {
-            display: flex;
-            animation: marquee 30s linear infinite;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .marquee-item {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            padding: 0 3rem;
-            white-space: nowrap;
-        }
-
-        .marquee-text {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .marquee-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-
-        /* ============================================
-           SERVICES - HORIZONTAL SCROLL CARDS
-           ============================================ */
-        .services {
-            padding: 10rem 0;
-            background: var(--cream);
-            position: relative;
-        }
-
-        .section-header {
-            max-width: 1400px;
-            margin: 0 auto 5rem;
-            padding: 0 3rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: end;
-        }
-
-        @media (max-width: 768px) {
-            .section-header {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                padding: 0 1.5rem;
+        @media (max-width: 1024px) {
+            .hero-cta-group {
+                justify-content: center;
             }
         }
 
-        .section-label {
+        .btn {
             display: inline-flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text-white);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #1D4ED8;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg);
+            border-color: var(--accent);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-stats {
+                justify-content: center;
+            }
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        @media (max-width: 1024px) {
+            .stat {
+                text-align: center;
+            }
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.25rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card-stack {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .hero-card {
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 1.5rem;
         }
 
-        .section-label-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
+        .hero-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
         }
 
-        .section-label-text {
-            font-size: 0.8rem;
+        .hero-card-badge {
+            padding: 0.35rem 0.75rem;
+            background: #DCFCE7;
+            color: #16A34A;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 100px;
+        }
+
+        .hero-card-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .hero-card-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--bg);
+            border-radius: var(--radius);
+        }
+
+        .hero-card-item-name {
+            font-weight: 500;
+        }
+
+        .hero-card-item-price {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .hero-card-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px dashed var(--border);
+        }
+
+        .hero-card-total-label {
             font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .hero-card-total-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .hero-card-float {
+            position: absolute;
+            padding: 1rem 1.25rem;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+            animation: floatCard 4s ease-in-out infinite;
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-card-float-1 {
+            top: -20px;
+            right: -30px;
+            animation-delay: 0s;
+        }
+
+        .hero-card-float-2 {
+            bottom: 40px;
+            left: -40px;
+            animation-delay: 2s;
+        }
+
+        .float-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .float-text {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .float-subtext {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .hero-visual { display: none; }
+        }
+
+        /* ========================================
+           TRUSTED BY - SOCIAL PROOF
+           ======================================== */
+        .trust-bar {
+            padding: 3rem 2rem;
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-text {
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .trust-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .trust-area {
+            padding: 0.5rem 1rem;
+            background: var(--bg);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        /* ========================================
+           SERVICES - BENTO GRID
+           ======================================== */
+        .services {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-eyebrow {
+            font-size: 0.85rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: var(--gray-600);
+            color: var(--accent);
+            margin-bottom: 1rem;
         }
 
+        /* SEO H2 - HYPER LOCAL */
         .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 7vw, 5rem);
-            font-weight: 700;
-            line-height: 1;
-            color: var(--gray-800);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 1rem;
             letter-spacing: -0.02em;
         }
 
-        .section-title-serif {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-weight: 400;
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .section-description {
-            font-size: 1.15rem;
-            color: var(--gray-600);
-            line-height: 1.7;
-            max-width: 500px;
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
         }
 
-        .services-scroll {
-            display: flex;
-            gap: 2rem;
-            padding: 0 3rem;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        .services-scroll::-webkit-scrollbar {
-            display: none;
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
-        .service-card {
-            flex: 0 0 400px;
-            scroll-snap-align: start;
-            background: var(--white);
-            border-radius: 24px;
-            padding: 3rem;
+        .bento-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            transition: all 0.5s var(--ease-out-expo);
-            border: 1px solid var(--gray-100);
         }
 
-        .service-card::before {
+        .bento-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, #00C853 100%);
+            background: var(--accent);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.5s var(--ease-out-expo);
+            transition: transform 0.4s ease;
         }
 
-        .service-card:hover::before {
+        .bento-card:hover::before {
             transform: scaleX(1);
         }
 
-        .service-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        .bento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--accent);
         }
 
-        .service-number {
-            font-family: var(--font-display);
-            font-size: 5rem;
-            font-weight: 800;
-            color: var(--gray-100);
-            line-height: 1;
-            margin-bottom: 2rem;
-            transition: color 0.4s ease;
+        .bento-large {
+            grid-column: span 2;
         }
 
-        .service-card:hover .service-number {
-            color: var(--accent-light);
+        @media (max-width: 640px) {
+            .bento-large {
+                grid-column: span 1;
+            }
         }
 
-        .service-title {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--gray-800);
-        }
-
-        .service-description {
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .service-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gray-100);
-        }
-
-        .service-time {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-        }
-
-        .service-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gray-100);
+        .bento-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--accent-light);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.4s var(--ease-out-expo);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        .service-link svg {
-            width: 20px;
-            height: 20px;
-            transition: transform 0.4s var(--ease-out-expo);
+        .bento-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
         }
 
-        .service-card:hover .service-link {
+        .bento-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .bento-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .bento-time {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .bento-arrow {
+            width: 40px;
+            height: 40px;
+            background: var(--bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .bento-card:hover .bento-arrow {
             background: var(--accent);
+            color: var(--text-white);
         }
 
-        .service-card:hover .service-link svg {
-            transform: rotate(45deg);
-            stroke: var(--white);
-        }
-
-        /* ============================================
-           HOW IT WORKS - IMMERSIVE STEPS
-           ============================================ */
+        /* ========================================
+           HOW IT WORKS - HORIZONTAL STEPS
+           ======================================== */
         .process {
-            padding: 10rem 0;
-            background: var(--gray-800);
+            padding: 6rem 2rem;
+            background: var(--bg-dark);
+            color: var(--text-white);
             position: relative;
             overflow: hidden;
         }
@@ -769,211 +759,158 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-family: var(--font-display);
-            font-size: clamp(15rem, 40vw, 40rem);
-            font-weight: 800;
+            font-size: clamp(10rem, 30vw, 25rem);
+            font-weight: 900;
             color: rgba(255, 255, 255, 0.02);
             white-space: nowrap;
             pointer-events: none;
-            user-select: none;
         }
 
-        .process .section-header {
-            text-align: center;
-            display: block;
-            margin-bottom: 6rem;
+        .process .section-eyebrow {
+            color: var(--accent);
         }
 
         .process .section-title {
-            color: var(--white);
+            color: var(--text-white);
         }
 
-        .process .section-label-text {
-            color: var(--gray-400);
+        .process .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        .process-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
+        .process-steps {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 0;
+            gap: 1rem;
             position: relative;
+            margin-top: 4rem;
         }
 
-        .process-grid::before {
+        .process-steps::before {
             content: '';
             position: absolute;
             top: 40px;
-            left: 10%;
-            right: 10%;
+            left: 5%;
+            right: 5%;
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
         }
 
         @media (max-width: 1024px) {
-            .process-grid {
+            .process-steps {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
-            .process-grid::before {
+            .process-steps::before {
                 display: none;
             }
         }
 
         .process-step {
             text-align: center;
-            padding: 0 1rem;
             position: relative;
         }
 
-        .process-step-number {
+        .step-number {
             width: 80px;
             height: 80px;
-            border-radius: 50%;
             background: var(--accent);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-            font-family: var(--font-display);
             font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
             position: relative;
             z-index: 10;
-            transition: all 0.4s var(--ease-out-expo);
+            transition: all 0.3s ease;
         }
 
-        .process-step:hover .process-step-number {
+        .process-step:hover .step-number {
             transform: scale(1.1);
-            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.4);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
         }
 
-        .process-step-title {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--white);
-            margin-bottom: 0.75rem;
-        }
-
-        .process-step-description {
-            font-size: 0.95rem;
-            color: var(--gray-400);
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           PRICING - INTERACTIVE CALCULATOR
-           ============================================ */
-        .pricing {
-            padding: 10rem 0;
-            background: var(--cream);
-        }
-
-        .pricing-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 2.5rem;
-            border: 1px solid var(--gray-100);
-            transition: all 0.5s var(--ease-out-expo);
-            position: relative;
-        }
-
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            border-radius: 25px;
-            background: linear-gradient(135deg, var(--accent), #00C853);
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 0.4s ease;
-        }
-
-        .pricing-card:hover::before {
-            opacity: 1;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            border-color: transparent;
-        }
-
-        .pricing-card.featured {
-            background: var(--gray-800);
-            border-color: transparent;
-        }
-
-        .pricing-card.featured * {
-            color: var(--white);
-        }
-
-        .pricing-card.featured .pricing-list {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .pricing-card.featured .price-item {
-            border-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .pricing-card.featured .qty-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .pricing-card.featured .qty-btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--accent);
-            color: var(--white);
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 100px;
-        }
-
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-
-        .pricing-header h3 {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
+        .step-title {
+            font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
 
+        .step-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           PRICING - INTERACTIVE
+           ======================================== */
+        .pricing {
+            padding: 6rem 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.35rem 0.75rem;
+            background: var(--accent);
+            color: var(--text-white);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 100px;
+        }
+
+        .pricing-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
         .pricing-subtitle {
-            font-size: 0.95rem;
-            color: var(--gray-400);
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
 
         .pricing-list {
-            max-height: 350px;
+            max-height: 320px;
             overflow-y: auto;
-            margin-bottom: 2rem;
-            padding-right: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .pricing-list::-webkit-scrollbar {
@@ -981,7 +918,7 @@
         }
 
         .pricing-list::-webkit-scrollbar-track {
-            background: var(--gray-100);
+            background: var(--bg);
             border-radius: 10px;
         }
 
@@ -994,62 +931,65 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray-100);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
         }
 
         .item-name {
-            font-size: 0.95rem;
-            color: var(--gray-600);
+            font-size: 0.9rem;
+            color: var(--text);
         }
 
         .item-controls {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .item-price {
             font-weight: 700;
             color: var(--accent);
+            font-size: 0.9rem;
         }
 
-        .quantity-controls {
+        .qty-controls {
             display: flex;
             align-items: center;
             gap: 0.25rem;
         }
 
         .qty-btn {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
-            background: var(--gray-100);
-            border: 1px solid var(--gray-200);
-            color: var(--gray-800);
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text);
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1rem;
         }
 
         .qty-btn:hover {
             background: var(--accent);
             border-color: var(--accent);
-            color: var(--white);
+            color: var(--text-white);
         }
 
         .qty-display {
-            min-width: 32px;
+            min-width: 28px;
             text-align: center;
             font-weight: 700;
+            font-size: 0.9rem;
         }
 
         .pricing-footer {
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--gray-100);
+            padding-top: 1rem;
+            border-top: 2px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1057,23 +997,19 @@
 
         .subtotal-label {
             font-weight: 600;
-            color: var(--gray-400);
+            color: var(--text-light);
         }
 
         .subtotal-value {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: 800;
             color: var(--accent);
         }
 
         .pricing-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         @media (max-width: 1024px) {
@@ -1083,26 +1019,25 @@
         }
 
         .delivery-card {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 2.5rem;
-            border: 1px solid var(--gray-100);
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
         }
 
         .delivery-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .delivery-option {
             display: flex;
             align-items: center;
-            padding: 1rem;
-            border: 1px solid var(--gray-100);
-            border-radius: 16px;
-            margin-bottom: 0.75rem;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 0.5rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -1114,29 +1049,28 @@
 
         .delivery-option input { display: none; }
 
-        .radio-custom {
-            width: 24px;
-            height: 24px;
-            border: 2px solid var(--gray-200);
+        .radio-dot {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
             border-radius: 50%;
-            margin-right: 1rem;
+            margin-right: 0.75rem;
             position: relative;
-            transition: all 0.3s ease;
             flex-shrink: 0;
         }
 
-        .delivery-option input:checked + .radio-custom {
+        .delivery-option input:checked + .radio-dot {
             border-color: var(--accent);
         }
 
-        .delivery-option input:checked + .radio-custom::after {
+        .delivery-option input:checked + .radio-dot::after {
             content: '';
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background: var(--accent);
             border-radius: 50%;
         }
@@ -1146,58 +1080,53 @@
         }
 
         .delivery-title {
-            font-weight: 700;
-            margin-bottom: 0.25rem;
+            font-weight: 600;
+            font-size: 0.95rem;
         }
 
-        .delivery-description {
-            font-size: 0.85rem;
-            color: var(--gray-400);
+        .delivery-desc {
+            font-size: 0.8rem;
+            color: var(--text-light);
         }
 
         .delivery-limit {
-            font-size: 0.8rem;
-            color: var(--warning);
+            font-size: 0.75rem;
+            color: #F59E0B;
             font-weight: 600;
-            margin-top: 0.25rem;
+            margin-top: 0.15rem;
         }
 
         .total-card {
-            background: linear-gradient(135deg, var(--gray-800) 0%, #1a1a2e 100%);
-            border-radius: 24px;
-            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--bg-dark), #1E293B);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: var(--text-white);
             position: sticky;
             top: 6rem;
-            color: var(--white);
         }
 
         .total-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.5rem;
         }
 
         .grand-total {
-            font-family: var(--font-display);
-            font-size: clamp(3.5rem, 8vw, 5rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent) 0%, #00C853 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(3rem, 8vw, 4rem);
+            font-weight: 900;
+            color: var(--accent);
             line-height: 1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .pickup-note {
-            font-size: 0.9rem;
-            color: var(--gray-400);
-            margin-bottom: 2rem;
-            padding: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
+            border-radius: var(--radius);
             border-left: 3px solid var(--accent);
         }
 
@@ -1206,31 +1135,31 @@
         .checkout-btn {
             display: block;
             width: 100%;
-            padding: 1.25rem;
-            background: linear-gradient(135deg, var(--accent), #00C853);
-            color: var(--white);
+            padding: 1rem;
+            background: var(--accent);
+            color: var(--text-white);
             border: none;
             border-radius: 100px;
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
-            transition: all 0.4s var(--ease-out-expo);
+            transition: all 0.3s ease;
             text-decoration: none;
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
         .checkout-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.4);
+            background: #1D4ED8;
+            transform: translateY(-2px);
         }
 
         .reset-btn {
             display: block;
             width: 100%;
-            padding: 1rem;
+            padding: 0.75rem;
             background: transparent;
-            color: var(--gray-400);
+            color: rgba(255, 255, 255, 0.6);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 100px;
             font-weight: 600;
@@ -1240,144 +1169,98 @@
 
         .reset-btn:hover {
             border-color: var(--accent);
-            color: var(--white);
+            color: var(--text-white);
         }
 
         /* Warning Modal */
-        .warning-modal {
+        .modal {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             z-index: 10000;
             align-items: center;
             justify-content: center;
         }
 
-        .warning-modal.show { display: flex; }
+        .modal.show { display: flex; }
 
-        .warning-content {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 3rem;
-            max-width: 450px;
-            margin: 0 2rem;
+        .modal-content {
+            background: var(--card);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            max-width: 420px;
+            margin: 0 1.5rem;
             text-align: center;
         }
 
-        .warning-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        .modal-icon {
+            width: 64px;
+            height: 64px;
             background: var(--accent-light);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 2rem;
-        }
-
-        .warning-icon svg {
-            width: 40px;
-            height: 40px;
-            stroke: var(--accent);
-        }
-
-        .warning-title {
-            font-family: var(--font-display);
+            margin: 0 auto 1.5rem;
             font-size: 1.75rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
 
-        .warning-message {
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 2rem;
+        .modal-message {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
-        .warning-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .warning-btn {
-            flex: 1;
-            padding: 1rem;
+        .modal-btn {
+            padding: 0.75rem 2rem;
+            background: var(--accent);
+            color: var(--text-white);
+            border: none;
             border-radius: 100px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            border: none;
         }
 
-        .warning-btn-primary {
-            background: var(--accent);
-            color: var(--white);
+        .modal-btn:hover {
+            background: #1D4ED8;
         }
 
-        .warning-btn-secondary {
-            background: var(--gray-100);
-            color: var(--gray-800);
-        }
-
-        /* ============================================
-           FOOTER - EDITORIAL STYLE
-           ============================================ */
+        /* ========================================
+           FOOTER
+           ======================================== */
         .footer {
-            padding: 8rem 3rem 3rem;
-            background: var(--black);
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
+            padding: 5rem 2rem 2rem;
+            background: var(--bg-dark);
+            color: var(--text-white);
         }
 
         .footer-cta {
-            max-width: 1400px;
-            margin: 0 auto 6rem;
             text-align: center;
+            margin-bottom: 4rem;
         }
 
         .footer-cta-title {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 2rem;
-        }
-
-        .footer-cta-title span {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        .footer-cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem 3rem;
-            background: var(--white);
-            color: var(--black);
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 100px;
-            transition: all 0.4s var(--ease-out-expo);
-        }
-
-        .footer-cta-btn:hover {
-            background: var(--accent);
-            color: var(--white);
-            transform: scale(1.05);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
         }
 
         .footer-grid {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
-            padding-bottom: 4rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -1387,19 +1270,12 @@
 
         @media (max-width: 640px) {
             .footer-grid { grid-template-columns: 1fr; }
-            .footer { padding: 6rem 1.5rem 2rem; }
         }
 
-        .footer-brand h3 {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .footer-tagline {
-            color: var(--gray-400);
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
             line-height: 1.7;
+            margin-top: 1rem;
         }
 
         .footer-col h4 {
@@ -1407,36 +1283,31 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: var(--gray-400);
-            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.25rem;
         }
 
         .footer-links {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .footer-link {
-            color: var(--white);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: all 0.3s ease;
-            display: inline-block;
         }
 
         .footer-link:hover {
             color: var(--accent);
-            transform: translateX(5px);
         }
 
         .footer-bottom {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding-top: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: var(--gray-400);
+            color: rgba(255, 255, 255, 0.4);
             font-size: 0.9rem;
         }
 
@@ -1448,44 +1319,41 @@
             }
         }
 
-        /* ============================================
-           FLOATING ELEMENTS
-           ============================================ */
+        /* FAB */
         .fab {
             position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 64px;
-            height: 64px;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #25D366, #128C7E);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4);
-            cursor: none;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
             z-index: 999;
-            transition: all 0.4s var(--ease-out-expo);
+            transition: all 0.3s ease;
         }
 
         .fab:hover {
             transform: scale(1.1);
-            box-shadow: 0 25px 50px rgba(37, 211, 102, 0.5);
         }
 
         .fab svg {
-            width: 32px;
-            height: 32px;
-            fill: var(--white);
+            width: 28px;
+            height: 28px;
+            fill: white;
         }
 
-        .scroll-progress {
+        /* Scroll Progress */
+        .progress-bar {
             position: fixed;
             top: 0;
             left: 0;
             width: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--accent), #00C853);
+            background: var(--accent);
             z-index: 9999;
         }
     </style>
@@ -1493,177 +1361,193 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Magnetic Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-    <div class="cursor-text">View</div>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
 
-    <!-- Scroll Progress -->
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Intro Animation -->
-    <div class="intro-overlay" id="introOverlay">
-        <div class="intro-slide"></div>
-        <div class="intro-logo"><span>Zapwash</span></div>
-    </div>
-
-    <!-- Warning Modal -->
-    <div class="warning-modal" id="warningModal">
-        <div class="warning-content">
-            <div class="warning-icon">
-                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
-                </svg>
-            </div>
-            <h3 class="warning-title">Limit Reached</h3>
-            <p class="warning-message" id="warningMessage"></p>
-            <div class="warning-actions">
-                <button class="warning-btn warning-btn-secondary" id="warningCancel">Cancel</button>
-                <button class="warning-btn warning-btn-primary" id="warningOk">Got It</button>
-            </div>
+    <!-- Modal -->
+    <div class="modal" id="warningModal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h3 class="modal-title">Limit Reached</h3>
+            <p class="modal-message" id="warningMessage"></p>
+            <button class="modal-btn" id="modalClose">Got It</button>
         </div>
     </div>
 
     <!-- Navigation -->
     <nav class="nav">
-        <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo">
+        <!-- SEO: Alt text with local keyword -->
+        <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Best Laundry Service in Hyderabad" class="nav-logo">
+        <div class="nav-divider"></div>
         <div class="nav-links">
-            <a href="#services" class="nav-link" data-text="Services"><span>Services</span></a>
-            <a href="#process" class="nav-link" data-text="Process"><span>Process</span></a>
-            <a href="#pricing" class="nav-link" data-text="Pricing"><span>Pricing</span></a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#process" class="nav-link">How It Works</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
         </div>
         <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Book Pickup</a>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-video-bg">
-            <div class="hero-video-placeholder"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
         </div>
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <div class="hero-eyebrow-line"></div>
-                <span class="hero-eyebrow-text">Gachibowli • Madhapur • Hitech City</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="hero-title-line"><span>Fresh Clothes</span></span>
-                <span class="hero-title-line"><span><em class="hero-title-italic">In One</em> Hour</span></span>
-            </h1>
-            <div class="hero-bottom">
-                <p class="hero-description">
-                    Premium laundry service that respects your time. Free pickup in 20 minutes. Express iron from 1 hour. We partner with trusted local dhobis.
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span class="hero-badge-text">Now Serving All Hyderabad</span>
+                </div>
+                
+                <!-- SEO H1 - PRIMARY KEYWORD -->
+                <h1 class="hero-title">
+                    Hyderabad's Most Trusted <span class="hero-title-highlight">Laundry Service</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Premium laundry, dry cleaning & ironing with free pickup across Hyderabad. Express service from 1 hour. We partner with skilled local dhobis in your area.
                 </p>
+                
                 <div class="hero-cta-group">
-                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="btn-hero">
+                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">
                         <span>Book Free Pickup</span>
                         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
-                    <a href="#pricing" class="btn-hero btn-hero-outline">
-                        <span>View Prices</span>
-                    </a>
+                    <a href="#pricing" class="btn btn-secondary">View Prices</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">400+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">20min</div>
+                        <div class="stat-label">Avg Pickup</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">1hr</div>
+                        <div class="stat-label">Express Iron</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-scroll">
-            <span class="hero-scroll-text">Scroll</span>
-            <div class="hero-scroll-line"></div>
+
+            <div class="hero-visual reveal">
+                <div class="hero-card-stack">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <span class="hero-card-title">Your Order</span>
+                            <span class="hero-card-badge">Express</span>
+                        </div>
+                        <div class="hero-card-items">
+                            <div class="hero-card-item">
+                                <span class="hero-card-item-name">5x Shirts</span>
+                                <span class="hero-card-item-price">₹75</span>
+                            </div>
+                            <div class="hero-card-item">
+                                <span class="hero-card-item-name">3x Pants</span>
+                                <span class="hero-card-item-price">₹45</span>
+                            </div>
+                            <div class="hero-card-item">
+                                <span class="hero-card-item-name">2x Kurtas</span>
+                                <span class="hero-card-item-price">₹50</span>
+                            </div>
+                        </div>
+                        <div class="hero-card-total">
+                            <span class="hero-card-total-label">Total</span>
+                            <span class="hero-card-total-value">₹170</span>
+                        </div>
+                    </div>
+                    <div class="hero-card-float hero-card-float-1">
+                        <div class="float-icon">⚡</div>
+                        <div class="float-text">1hr Delivery</div>
+                        <div class="float-subtext">Express Iron</div>
+                    </div>
+                    <div class="hero-card-float hero-card-float-2">
+                        <div class="float-icon">🚚</div>
+                        <div class="float-text">Free Pickup</div>
+                        <div class="float-subtext">Above ₹100</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee-section">
-        <div class="marquee-track">
-            <div class="marquee-item">
-                <span class="marquee-text">400+ Happy Customers</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">20 Min Pickup</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">1 Hour Express</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">Free Delivery</span>
-                <span class="marquee-dot"></span>
-            </div>
-            <div class="marquee-item">
-                <span class="marquee-text">400+ Happy Customers</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">20 Min Pickup</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">1 Hour Express</span>
-                <span class="marquee-dot"></span>
-                <span class="marquee-text">Free Delivery</span>
-                <span class="marquee-dot"></span>
+    <!-- Trust Bar - SEO with local areas -->
+    <section class="trust-bar">
+        <div class="trust-content">
+            <span class="trust-text">Serving across:</span>
+            <div class="trust-areas">
+                <span class="trust-area">Gachibowli</span>
+                <span class="trust-area">Madhapur</span>
+                <span class="trust-area">Hitech City</span>
+                <span class="trust-area">Kondapur</span>
+                <span class="trust-area">Jubilee Hills</span>
+                <span class="trust-area">Banjara Hills</span>
+                <span class="trust-area">Kukatpally</span>
+                <span class="trust-area">Ameerpet</span>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Services -->
     <section id="services" class="services">
-        <div class="section-header">
-            <div>
-                <div class="section-label">
-                    <span class="section-label-dot"></span>
-                    <span class="section-label-text">What We Offer</span>
-                </div>
-                <h2 class="section-title">Our <span class="section-title-serif">Premium</span> Services</h2>
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">What We Offer</p>
+                <!-- SEO H2 - LOCAL KEYWORDS -->
+                <h2 class="section-title">Professional Laundry & Dry Cleaning Services in Hyderabad</h2>
+                <p class="section-subtitle">Expert wash, iron, and dry cleaning delivered to your doorstep across all Hyderabad areas</p>
             </div>
-            <p class="section-description">
-                Professional wash, iron, and dry cleaning with express options. We work with skilled local dhobis to deliver quality every time.
-            </p>
-        </div>
-        <div class="services-scroll">
-            <div class="service-card">
-                <span class="service-number">01</span>
-                <h3 class="service-title">Iron Service</h3>
-                <p class="service-description">Sharp press for shirts, pants, kurtas, sarees. Free delivery in 24 hours.</p>
-                <div class="service-meta">
-                    <span class="service-time">24 Hours</span>
-                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="service-card">
-                <span class="service-number">02</span>
-                <h3 class="service-title">Wash & Iron</h3>
-                <p class="service-description">Complete laundry service. Professional wash and press for all clothes.</p>
-                <div class="service-meta">
-                    <span class="service-time">48 Hours</span>
-                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="service-card">
-                <span class="service-number">03</span>
-                <h3 class="service-title">Dry Cleaning</h3>
-                <p class="service-description">Safe cleaning for suits, designer wear, silk sarees, wedding clothes.</p>
-                <div class="service-meta">
-                    <span class="service-time">72 Hours</span>
-                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="service-card">
-                <span class="service-number">04</span>
-                <h3 class="service-title">Express Iron</h3>
-                <p class="service-description">Get clothes pressed in 1hr, 3hrs, 6hrs, or 12hrs. Super fast service.</p>
-                <div class="service-meta">
-                    <span class="service-time">From 1 Hour</span>
-                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
-                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
+
+            <div class="bento-grid">
+                <article class="bento-card bento-large reveal">
+                    <div class="bento-icon">👔</div>
+                    <!-- SEO H3 - SERVICE + LOCATION -->
+                    <h3 class="bento-title">Wash & Iron Service</h3>
+                    <p class="bento-description">Complete laundry service with professional wash and press. Ideal for daily wear including shirts, pants, kurtas, and more. We use quality detergents for fresh, clean clothes.</p>
+                    <div class="bento-meta">
+                        <span class="bento-time">48 Hours Delivery</span>
+                        <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20service" target="_blank" class="bento-arrow" aria-label="Book wash and iron service in Hyderabad">→</a>
+                    </div>
+                </article>
+
+                <article class="bento-card reveal">
+                    <div class="bento-icon">📋</div>
+                    <!-- SEO H3 -->
+                    <h3 class="bento-title">Iron Only</h3>
+                    <p class="bento-description">Sharp press for your clothes. Perfect for already clean garments that need crisp finishing.</p>
+                    <div class="bento-meta">
+                        <span class="bento-time">24 Hours</span>
+                        <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="bento-arrow" aria-label="Book ironing service in Hyderabad">→</a>
+                    </div>
+                </article>
+
+                <article class="bento-card reveal">
+                    <div class="bento-icon">⚡</div>
+                    <!-- SEO H3 -->
+                    <h3 class="bento-title">Express Iron</h3>
+                    <p class="bento-description">Super fast ironing in 1hr, 3hrs, 6hrs, or 12hrs. For urgent needs.</p>
+                    <div class="bento-meta">
+                        <span class="bento-time">From 1 Hour</span>
+                        <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="bento-arrow" aria-label="Book express ironing in Hyderabad">→</a>
+                    </div>
+                </article>
+
+                <article class="bento-card bento-large reveal">
+                    <div class="bento-icon">🛡️</div>
+                    <!-- SEO H3 -->
+                    <h3 class="bento-title">Premium Dry Cleaning</h3>
+                    <p class="bento-description">Safe cleaning for delicate items like suits, wedding wear, silk sarees, and designer clothes. We handle your precious garments with care and expertise.</p>
+                    <div class="bento-meta">
+                        <span class="bento-time">72 Hours</span>
+                        <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="bento-arrow" aria-label="Book dry cleaning in Hyderabad">→</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -1671,497 +1555,417 @@
     <!-- How It Works -->
     <section id="process" class="process">
         <div class="process-bg-text">PROCESS</div>
-        <div class="section-header">
-            <div class="section-label" style="justify-content: center;">
-                <span class="section-label-dot"></span>
-                <span class="section-label-text">The Process</span>
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Simple Process</p>
+                <!-- SEO H2 -->
+                <h2 class="section-title">How Zapwash Laundry Pickup Works</h2>
+                <p class="section-subtitle">5 easy steps to get fresh, clean clothes delivered to your home in Hyderabad</p>
             </div>
-            <h2 class="section-title">How It <span class="section-title-serif">Works</span></h2>
-        </div>
-        <div class="process-grid">
-            <div class="process-step">
-                <div class="process-step-number">1</div>
-                <h3 class="process-step-title">Schedule</h3>
-                <p class="process-step-description">WhatsApp or call us from Gachibowli, Madhapur area</p>
-            </div>
-            <div class="process-step">
-                <div class="process-step-number">2</div>
-                <h3 class="process-step-title">We Pickup</h3>
-                <p class="process-step-description">Our delivery person arrives in 20 minutes</p>
-            </div>
-            <div class="process-step">
-                <div class="process-step-number">3</div>
-                <h3 class="process-step-title">Handover</h3>
-                <p class="process-step-description">Clothes go to trusted local dhobi partner</p>
-            </div>
-            <div class="process-step">
-                <div class="process-step-number">4</div>
-                <h3 class="process-step-title">Service</h3>
-                <p class="process-step-description">Professional wash, iron, or dry cleaning</p>
-            </div>
-            <div class="process-step">
-                <div class="process-step-number">5</div>
-                <h3 class="process-step-title">Delivered</h3>
-                <p class="process-step-description">Fresh clothes delivered to your door</p>
+
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-number">1</div>
+                    <h4 class="step-title">Schedule</h4>
+                    <p class="step-description">WhatsApp or call us from anywhere in Hyderabad</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">2</div>
+                    <h4 class="step-title">We Pickup</h4>
+                    <p class="step-description">Our delivery person arrives in 20 minutes</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">3</div>
+                    <h4 class="step-title">Handover</h4>
+                    <p class="step-description">Clothes go to trusted local dhobi partner</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">4</div>
+                    <h4 class="step-title">Service</h4>
+                    <p class="step-description">Professional wash, iron, or dry cleaning</p>
+                </div>
+                <div class="process-step reveal">
+                    <div class="step-number">5</div>
+                    <h4 class="step-title">Delivered</h4>
+                    <p class="step-description">Fresh clothes at your doorstep</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing -->
     <section id="pricing" class="pricing">
-        <div class="section-header" style="max-width: 1400px;">
-            <div>
-                <div class="section-label">
-                    <span class="section-label-dot"></span>
-                    <span class="section-label-text">Our Rates</span>
-                </div>
-                <h2 class="section-title">Transparent <span class="section-title-serif">Pricing</span></h2>
-            </div>
-            <p class="section-description">
-                Clear pricing. No hidden charges. Free pickup above ₹100.
-            </p>
-        </div>
-
-        <div class="pricing-grid" id="pricingGrid"></div>
-
-        <div class="pricing-bottom">
-            <div class="delivery-card">
-                <h3>Delivery Speed</h3>
-                <div id="deliveryOptions">
-                    <label class="delivery-option">
-                        <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
-                        <span class="radio-custom"></span>
-                        <div class="delivery-text">
-                            <p class="delivery-title">Standard Delivery</p>
-                            <p class="delivery-description">Free (24-72 hours)</p>
-                        </div>
-                    </label>
-                    <label class="delivery-option">
-                        <input type="radio" name="delivery_speed" value="100" data-description="Express Iron (1 Hour)" data-limit="5">
-                        <span class="radio-custom"></span>
-                        <div class="delivery-text">
-                            <p class="delivery-title">Express Iron - 1 Hour</p>
-                            <p class="delivery-description">Add ₹100</p>
-                            <p class="delivery-limit">⚠️ Max 5 pieces</p>
-                        </div>
-                    </label>
-                    <label class="delivery-option">
-                        <input type="radio" name="delivery_speed" value="70" data-description="Express Iron (3 Hours)" data-limit="10">
-                        <span class="radio-custom"></span>
-                        <div class="delivery-text">
-                            <p class="delivery-title">Express Iron - 3 Hours</p>
-                            <p class="delivery-description">Add ₹70</p>
-                            <p class="delivery-limit">⚠️ Max 10 pieces</p>
-                        </div>
-                    </label>
-                    <label class="delivery-option">
-                        <input type="radio" name="delivery_speed" value="50" data-description="Express Iron (6 Hours)" data-limit="25">
-                        <span class="radio-custom"></span>
-                        <div class="delivery-text">
-                            <p class="delivery-title">Express Iron - 6 Hours</p>
-                            <p class="delivery-description">Add ₹50</p>
-                            <p class="delivery-limit">⚠️ Max 25 pieces</p>
-                        </div>
-                    </label>
-                    <label class="delivery-option">
-                        <input type="radio" name="delivery_speed" value="30" data-description="Express Iron (12 Hours)" data-limit="999">
-                        <span class="radio-custom"></span>
-                        <div class="delivery-text">
-                            <p class="delivery-title">Express Iron - 12 Hours</p>
-                            <p class="delivery-description">Add ₹30</p>
-                        </div>
-                    </label>
-                </div>
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Transparent Rates</p>
+                <!-- SEO H2 -->
+                <h2 class="section-title">Laundry Service Prices in Hyderabad</h2>
+                <p class="section-subtitle">Clear pricing. No hidden charges. Free pickup above ₹100.</p>
             </div>
 
-            <div class="total-card">
-                <h3>Your Total</h3>
-                <div class="grand-total" id="grandTotal">₹0</div>
-                <div class="pickup-note hidden" id="pickupNote"></div>
-                <a id="checkoutBtn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="checkout-btn">
-                    Schedule Pickup
-                </a>
-                <button id="resetBtn" class="reset-btn">Clear All</button>
+            <div class="pricing-grid" id="pricingGrid"></div>
+
+            <div class="pricing-bottom">
+                <div class="delivery-card reveal">
+                    <h3>Choose Delivery Speed</h3>
+                    <div id="deliveryOptions">
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="0" data-desc="Standard" data-limit="999" checked>
+                            <span class="radio-dot"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Standard Delivery</p>
+                                <p class="delivery-desc">Free (24-72 hours)</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="100" data-desc="Express 1hr" data-limit="5">
+                            <span class="radio-dot"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 1 Hour</p>
+                                <p class="delivery-desc">Add ₹100</p>
+                                <p class="delivery-limit">Max 5 pieces</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="70" data-desc="Express 3hrs" data-limit="10">
+                            <span class="radio-dot"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 3 Hours</p>
+                                <p class="delivery-desc">Add ₹70</p>
+                                <p class="delivery-limit">Max 10 pieces</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="50" data-desc="Express 6hrs" data-limit="25">
+                            <span class="radio-dot"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 6 Hours</p>
+                                <p class="delivery-desc">Add ₹50</p>
+                                <p class="delivery-limit">Max 25 pieces</p>
+                            </div>
+                        </label>
+                        <label class="delivery-option">
+                            <input type="radio" name="delivery" value="30" data-desc="Express 12hrs" data-limit="999">
+                            <span class="radio-dot"></span>
+                            <div class="delivery-text">
+                                <p class="delivery-title">Express Iron - 12 Hours</p>
+                                <p class="delivery-desc">Add ₹30</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="total-card reveal">
+                    <h3>Your Total</h3>
+                    <div class="grand-total" id="grandTotal">₹0</div>
+                    <div class="pickup-note hidden" id="pickupNote"></div>
+                    <a id="checkoutBtn" href="https://wa.me/918639103842" target="_blank" class="checkout-btn">Schedule Pickup</a>
+                    <button id="resetBtn" class="reset-btn">Clear All</button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-cta">
-            <h2 class="footer-cta-title">Ready for <span>Fresh</span> Clothes?</h2>
-            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="footer-cta-btn">
-                <span>Book Free Pickup</span>
-                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-            </a>
-        </div>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <h3>Zapwash</h3>
-                <p class="footer-tagline">
-                    Premium laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
-                </p>
+        <div class="container">
+            <div class="footer-cta reveal">
+                <h2 class="footer-cta-title">Ready for Fresh Clothes?</h2>
+                <a href="https://wa.me/918639103842" target="_blank" class="btn btn-primary">Book Free Pickup</a>
             </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Iron Service</a>
-                    <a href="#" class="footer-link">Wash & Iron</a>
-                    <a href="#" class="footer-link">Dry Cleaning</a>
-                    <a href="#" class="footer-link">Express Iron</a>
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <!-- SEO: Alt text with keywords -->
+                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Laundry Service Hyderabad - Dry Cleaning Near Me" style="height: 40px; filter: brightness(0) invert(1);">
+                    <p>Premium laundry and dry cleaning service across Hyderabad. We organize skilled local dhobis for fast pickup and delivery in your area.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Iron Service</a>
+                        <a href="#" class="footer-link">Wash & Iron</a>
+                        <a href="#" class="footer-link">Dry Cleaning</a>
+                        <a href="#" class="footer-link">Express Iron</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <!-- SEO: Footer links with area names -->
+                    <h4>Service Areas</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Gachibowli</a>
+                        <a href="#" class="footer-link">Madhapur</a>
+                        <a href="#" class="footer-link">Hitech City</a>
+                        <a href="#" class="footer-link">Kondapur</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
+                        <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Areas</h4>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Gachibowli</a>
-                    <a href="#" class="footer-link">Madhapur</a>
-                    <a href="#" class="footer-link">Hitech City</a>
-                    <a href="#" class="footer-link">Kondapur</a>
-                </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Zapwash • Hyderabad, Telangana</p>
+                <p>Trusted by 400+ customers across Hyderabad</p>
             </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <div class="footer-links">
-                    <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
-                    <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Zapwash • Gachibowli, Hyderabad</p>
-            <p>Trusted by 400+ customers</p>
         </div>
     </footer>
 
     <!-- WhatsApp FAB -->
-    <a href="https://wa.me/918639103842" target="_blank" class="fab">
-        <svg viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+    <a href="https://wa.me/918639103842" target="_blank" class="fab" aria-label="Contact Zapwash Hyderabad on WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // ============================================
         // PRICING DATA
-        // ============================================
-        const allItemsData = {
-            "Ironing Only": { 
+        const pricingData = {
+            "Iron Only": { 
                 subtitle: "Sharp press. 24 hours.", 
                 items: [
-                    { id: "ironShirt", name: "Shirt / Pant / T-shirt", price: 15 },
-                    { id: "ironKurta", name: "Kurta + Pajama", price: 25 },
-                    { id: "ironPunjabi", name: "Punjabi Dress (3-pc)", price: 35 },
-                    { id: "ironSareeC", name: "Saree (Cotton)", price: 25 },
-                    { id: "ironSareeH", name: "Saree (Silk/Heavy)", price: 40 },
-                    { id: "ironKid", name: "Kid's Dress", price: 12 },
-                    { id: "ironBed", name: "Bed Sheet", price: 20 },
-                    { id: "ironTowel", name: "Towel", price: 10 }
+                    { id: "i1", name: "Shirt / Pant / T-shirt", price: 15 },
+                    { id: "i2", name: "Kurta + Pajama", price: 25 },
+                    { id: "i3", name: "Punjabi Dress (3-pc)", price: 35 },
+                    { id: "i4", name: "Saree (Cotton)", price: 25 },
+                    { id: "i5", name: "Saree (Silk/Heavy)", price: 40 },
+                    { id: "i6", name: "Kid's Dress", price: 12 },
+                    { id: "i7", name: "Bed Sheet", price: 20 },
+                    { id: "i8", name: "Towel", price: 10 }
                 ]
             },
             "Wash & Iron": { 
                 subtitle: "Complete wash & press. 48 hours.", 
                 featured: true,
                 items: [
-                    { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
-                    { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
-                    { id: "wiPunjabi", name: "Punjabi Dress (3-pc)", price: 70 },
-                    { id: "wiSareeC", name: "Saree (Cotton)", price: 50 },
-                    { id: "wiSareeH", name: "Saree (Silk/Heavy)", price: 80 },
-                    { id: "wiKid", name: "Kids' Dress", price: 25 },
-                    { id: "wiBed", name: "Bed Sheet", price: 40 },
-                    { id: "wiTowel", name: "Towel", price: 25 },
-                    { id: "wiBlanket", name: "Blanket / Quilt", price: 120 }
+                    { id: "w1", name: "Shirt / Pant / T-shirt", price: 40 },
+                    { id: "w2", name: "Kurta + Pajama", price: 60 },
+                    { id: "w3", name: "Punjabi Dress (3-pc)", price: 70 },
+                    { id: "w4", name: "Saree (Cotton)", price: 50 },
+                    { id: "w5", name: "Saree (Silk/Heavy)", price: 80 },
+                    { id: "w6", name: "Kids' Dress", price: 25 },
+                    { id: "w7", name: "Bed Sheet", price: 40 },
+                    { id: "w8", name: "Towel", price: 25 },
+                    { id: "w9", name: "Blanket / Quilt", price: 120 }
                 ]
             },
             "Dry Cleaning": { 
                 subtitle: "Premium care. 72 hours.", 
                 items: [
-                    { id: "dcShirt", name: "Shirt / Pant / T-shirt", price: 80 },
-                    { id: "dcKurta", name: "Kurta + Pajama", price: 80 },
-                    { id: "dcPunjabi", name: "Punjabi Dress (3-pc)", price: 100 },
-                    { id: "dcSareeC", name: "Saree (Cotton)", price: 80 },
-                    { id: "dcSareeH", name: "Saree (Silk/Heavy)", price: 150 },
-                    { id: "dcKid", name: "Kid's Dress", price: 50 },
-                    { id: "dcBed", name: "Bed Sheet", price: 70 },
-                    { id: "dcBlanket", name: "Blanket / Quilt", price: 200 }
+                    { id: "d1", name: "Shirt / Pant / T-shirt", price: 80 },
+                    { id: "d2", name: "Kurta + Pajama", price: 80 },
+                    { id: "d3", name: "Punjabi Dress (3-pc)", price: 100 },
+                    { id: "d4", name: "Saree (Cotton)", price: 80 },
+                    { id: "d5", name: "Saree (Silk/Heavy)", price: 150 },
+                    { id: "d6", name: "Kid's Dress", price: 50 },
+                    { id: "d7", name: "Bed Sheet", price: 70 },
+                    { id: "d8", name: "Blanket / Quilt", price: 200 }
                 ]
             },
             "Express Iron": { 
                 subtitle: "Super fast. From 1 hour.", 
                 items: [
-                    { id: "exShirt", name: "Shirt / Pant / T-shirt", price: 20 },
-                    { id: "exKurta", name: "Kurta + Pajama", price: 30 },
-                    { id: "exPunjabi", name: "Punjabi Dress (3-pc)", price: 45 },
-                    { id: "exSareeC", name: "Saree (Cotton)", price: 30 },
-                    { id: "exSareeH", name: "Saree (Silk/Heavy)", price: 50 },
-                    { id: "exKid", name: "Kid's Dress", price: 15 },
-                    { id: "exBed", name: "Bed Sheet", price: 25 }
+                    { id: "e1", name: "Shirt / Pant / T-shirt", price: 20 },
+                    { id: "e2", name: "Kurta + Pajama", price: 30 },
+                    { id: "e3", name: "Punjabi Dress (3-pc)", price: 45 },
+                    { id: "e4", name: "Saree (Cotton)", price: 30 },
+                    { id: "e5", name: "Saree (Silk/Heavy)", price: 50 },
+                    { id: "e6", name: "Kid's Dress", price: 15 },
+                    { id: "e7", name: "Bed Sheet", price: 25 }
                 ]
             }
         };
 
-        let itemQuantities = {};
+        let quantities = {};
         let expressFee = 0;
-        let expressDescription = "Standard Delivery";
-        let currentLimit = 999;
+        let expressDesc = "Standard";
+        let pieceLimit = 999;
 
-        const pricingGrid = document.getElementById('pricingGrid');
-        const grandTotal = document.getElementById('grandTotal');
-        const checkoutBtn = document.getElementById('checkoutBtn');
-        const resetBtn = document.getElementById('resetBtn');
-        const pickupNote = document.getElementById('pickupNote');
-        const deliveryOptions = document.getElementById('deliveryOptions');
-        const warningModal = document.getElementById('warningModal');
-        const warningMessage = document.getElementById('warningMessage');
+        const grid = document.getElementById('pricingGrid');
+        const total = document.getElementById('grandTotal');
+        const checkout = document.getElementById('checkoutBtn');
+        const reset = document.getElementById('resetBtn');
+        const note = document.getElementById('pickupNote');
+        const modal = document.getElementById('warningModal');
+        const modalMsg = document.getElementById('warningMessage');
+        const modalClose = document.getElementById('modalClose');
 
-        function renderCards() {
+        function render() {
             let html = '';
-            for (const [serviceType, cardData] of Object.entries(allItemsData)) {
-                let itemsHtml = '';
-                cardData.items.forEach(item => {
-                    itemQuantities[item.id] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
-                    itemsHtml += `
+            for (const [type, data] of Object.entries(pricingData)) {
+                let items = '';
+                data.items.forEach(item => {
+                    quantities[item.id] = { qty: 0, price: item.price, name: item.name, type };
+                    items += `
                         <div class="price-item">
                             <span class="item-name">${item.name}</span>
                             <div class="item-controls">
                                 <span class="item-price">₹${item.price}</span>
-                                <div class="quantity-controls">
-                                    <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
-                                    <span class="qty-display" id="qty-${item.id}">0</span>
-                                    <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
+                                <div class="qty-controls">
+                                    <button class="qty-btn" data-act="dec" data-id="${item.id}">−</button>
+                                    <span class="qty-display" id="q-${item.id}">0</span>
+                                    <button class="qty-btn" data-act="inc" data-id="${item.id}">+</button>
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
                 });
 
                 html += `
-                    <div class="pricing-card ${cardData.featured ? 'featured' : ''}">
-                        ${cardData.featured ? '<div class="featured-badge">Most Popular</div>' : ''}
+                    <div class="pricing-card ${data.featured ? 'featured' : ''} reveal">
                         <div class="pricing-header">
-                            <h3>${serviceType}</h3>
-                            <p class="pricing-subtitle">${cardData.subtitle}</p>
+                            <h3>${type}</h3>
+                            <p class="pricing-subtitle">${data.subtitle}</p>
                         </div>
-                        <div class="pricing-list">${itemsHtml}</div>
+                        <div class="pricing-list">${items}</div>
                         <div class="pricing-footer">
                             <span class="subtotal-label">Subtotal</span>
-                            <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
+                            <span class="subtotal-value" data-sub="${type}">₹0</span>
                         </div>
-                    </div>
-                `;
+                    </div>`;
             }
-            pricingGrid.innerHTML = html;
+            grid.innerHTML = html;
         }
 
-        function getTotalPieces() {
-            return Object.values(itemQuantities).reduce((sum, item) => sum + item.quantity, 0);
+        function getPieces() {
+            return Object.values(quantities).reduce((s, i) => s + i.qty, 0);
         }
 
-        function showWarning(limit) {
-            const msgs = {
-                5: `Express 1 Hour allows max 5 pieces. You have ${getTotalPieces()} pieces.`,
-                10: `Express 3 Hours allows max 10 pieces. You have ${getTotalPieces()} pieces.`,
-                25: `Express 6 Hours allows max 25 pieces. You have ${getTotalPieces()} pieces.`
-            };
-            warningMessage.textContent = msgs[limit] || '';
-            warningModal.classList.add('show');
+        function showModal(limit) {
+            modalMsg.textContent = `Express ${expressDesc} allows max ${limit} pieces. You have ${getPieces()}.`;
+            modal.classList.add('show');
         }
 
-        function hideWarning() { warningModal.classList.remove('show'); }
+        modalClose.onclick = () => modal.classList.remove('show');
+        modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('show'); };
 
-        document.getElementById('warningCancel').addEventListener('click', hideWarning);
-        document.getElementById('warningOk').addEventListener('click', hideWarning);
-        warningModal.addEventListener('click', (e) => { if (e.target === warningModal) hideWarning(); });
+        function calc() {
+            let itemTotal = 0, subs = {}, selected = [], pieces = 0;
+            Object.keys(pricingData).forEach(t => subs[t] = 0);
 
-        function calculateTotals() {
-            let itemTotal = 0;
-            let subTotals = {};
-            let selectedItems = [];
-            let totalPieces = 0;
-
-            Object.keys(allItemsData).forEach(service => subTotals[service] = 0);
-
-            for (const [id, item] of Object.entries(itemQuantities)) {
-                const itemPrice = item.quantity * item.price;
-                itemTotal += itemPrice;
-                subTotals[item.service] += itemPrice;
-                totalPieces += item.quantity;
-
-                if (item.quantity > 0) {
-                    selectedItems.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
-                }
+            for (const [id, item] of Object.entries(quantities)) {
+                const cost = item.qty * item.price;
+                itemTotal += cost;
+                subs[item.type] += cost;
+                pieces += item.qty;
+                if (item.qty > 0) selected.push(`${item.name} (${item.type}): ${item.qty} @ ₹${item.price}`);
             }
 
-            Object.keys(subTotals).forEach(service => {
-                const el = document.querySelector(`[data-subtotal="${service}"]`);
-                if (el) el.textContent = `₹${subTotals[service]}`;
+            Object.keys(subs).forEach(t => {
+                const el = document.querySelector(`[data-sub="${t}"]`);
+                if (el) el.textContent = `₹${subs[t]}`;
             });
 
-            let pickupCharge = 0;
-            if (itemTotal > 0 && itemTotal < 50) pickupCharge = 25;
-            else if (itemTotal >= 50 && itemTotal < 100) pickupCharge = 15;
+            let pickup = 0;
+            if (itemTotal > 0 && itemTotal < 50) pickup = 25;
+            else if (itemTotal >= 50 && itemTotal < 100) pickup = 15;
 
-            const total = itemTotal + pickupCharge + expressFee;
-            grandTotal.textContent = `₹${total}`;
+            const grand = itemTotal + pickup + expressFee;
+            total.textContent = `₹${grand}`;
 
-            if (pickupCharge > 0) {
-                pickupNote.textContent = `Includes ₹${pickupCharge} pickup charge`;
-                pickupNote.classList.remove('hidden');
+            if (pickup > 0) {
+                note.textContent = `Includes ₹${pickup} pickup charge`;
+                note.classList.remove('hidden');
             } else if (itemTotal >= 100) {
-                pickupNote.textContent = `Free pickup on orders ₹100+`;
-                pickupNote.classList.remove('hidden');
+                note.textContent = `Free pickup on orders ₹100+`;
+                note.classList.remove('hidden');
             } else {
-                pickupNote.classList.add('hidden');
+                note.classList.add('hidden');
             }
 
-            let msg = "Hi! I need laundry service in Gachibowli";
-            if (total > 0) {
-                msg = `Hi Zapwash! I want to order laundry for ₹${total}\n\nItems (${totalPieces} pieces):\n${selectedItems.join('\n')}`;
-                if (pickupCharge > 0) msg += `\n\nPickup: ₹${pickupCharge}`;
-                if (expressFee > 0) msg += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
-                checkoutBtn.textContent = `Order ₹${total}`;
+            let msg = "Hi! I need laundry pickup in Hyderabad";
+            if (grand > 0) {
+                msg = `Hi Zapwash! Order for ₹${grand}\n\n${pieces} items:\n${selected.join('\n')}`;
+                if (pickup > 0) msg += `\n\nPickup: ₹${pickup}`;
+                if (expressFee > 0) msg += `\nExpress: ${expressDesc} (+₹${expressFee})`;
+                checkout.textContent = `Order ₹${grand}`;
             } else {
-                checkoutBtn.textContent = `Schedule Pickup`;
+                checkout.textContent = `Schedule Pickup`;
             }
-            checkoutBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
+            checkout.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
         }
 
-        pricingGrid.addEventListener('click', function(e) {
-            const btn = e.target.closest('button[data-action]');
+        grid.addEventListener('click', (e) => {
+            const btn = e.target.closest('button[data-act]');
             if (!btn) return;
 
-            const action = btn.dataset.action;
-            const itemId = btn.dataset.id;
-            const qtyEl = document.getElementById(`qty-${itemId}`);
-            let qty = itemQuantities[itemId].quantity;
+            const act = btn.dataset.act;
+            const id = btn.dataset.id;
+            const el = document.getElementById(`q-${id}`);
+            let qty = quantities[id].qty;
 
-            if (action === 'inc') {
-                const newTotal = getTotalPieces() + 1;
-                if (newTotal > currentLimit) { showWarning(currentLimit); return; }
+            if (act === 'inc') {
+                if (getPieces() + 1 > pieceLimit) { showModal(pieceLimit); return; }
                 qty++;
-            } else if (action === 'dec' && qty > 0) {
+            } else if (act === 'dec' && qty > 0) {
                 qty--;
             }
 
-            itemQuantities[itemId].quantity = qty;
-            qtyEl.textContent = qty;
-            calculateTotals();
+            quantities[id].qty = qty;
+            el.textContent = qty;
+            calc();
         });
 
-        deliveryOptions.addEventListener('change', function(e) {
-            if (e.target.name === 'delivery_speed') {
+        document.getElementById('deliveryOptions').addEventListener('change', (e) => {
+            if (e.target.name === 'delivery') {
                 const newLimit = parseInt(e.target.dataset.limit);
-                const totalPieces = getTotalPieces();
-                
-                if (totalPieces > newLimit) {
-                    showWarning(newLimit);
-                    document.querySelector('input[name="delivery_speed"][value="0"]').checked = true;
+                if (getPieces() > newLimit) {
+                    showModal(newLimit);
+                    document.querySelector('input[name="delivery"][value="0"]').checked = true;
                     return;
                 }
-                
                 expressFee = parseInt(e.target.value);
-                expressDescription = e.target.dataset.description;
-                currentLimit = newLimit;
-                calculateTotals();
+                expressDesc = e.target.dataset.desc;
+                pieceLimit = newLimit;
+                calc();
             }
         });
 
-        resetBtn.addEventListener('click', function() {
-            for (const id in itemQuantities) {
-                itemQuantities[id].quantity = 0;
-                const qtyEl = document.getElementById(`qty-${id}`);
-                if (qtyEl) qtyEl.textContent = '0';
+        reset.onclick = () => {
+            for (const id in quantities) {
+                quantities[id].qty = 0;
+                const el = document.getElementById(`q-${id}`);
+                if (el) el.textContent = '0';
             }
-            document.querySelector('input[name="delivery_speed"][value="0"]').checked = true;
+            document.querySelector('input[name="delivery"][value="0"]').checked = true;
             expressFee = 0;
-            expressDescription = "Standard Delivery";
-            currentLimit = 999;
-            calculateTotals();
-        });
+            expressDesc = "Standard";
+            pieceLimit = 999;
+            calc();
+        };
 
-        // ============================================
-        // CURSOR
-        // ============================================
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorRing = document.querySelector('.cursor-ring');
-        let mouseX = 0, mouseY = 0, dotX = 0, dotY = 0, ringX = 0, ringY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            dotX += (mouseX - dotX) * 0.2;
-            dotY += (mouseY - dotY) * 0.2;
-            ringX += (mouseX - ringX) * 0.1;
-            ringY += (mouseY - ringY) * 0.1;
-
-            cursorDot.style.left = dotX + 'px';
-            cursorDot.style.top = dotY + 'px';
-            cursorRing.style.left = ringX + 'px';
-            cursorRing.style.top = ringY + 'px';
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        document.querySelectorAll('a, button, .service-card, .pricing-card').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorDot.classList.add('hover');
-                cursorRing.classList.add('hover');
-            });
-            el.addEventListener('mouseleave', () => {
-                cursorDot.classList.remove('hover');
-                cursorRing.classList.remove('hover');
-            });
-        });
-
-        // ============================================
-        // INTRO ANIMATION
-        // ============================================
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('introOverlay').classList.add('complete');
-                setTimeout(() => {
-                    document.getElementById('introOverlay').style.display = 'none';
-                }, 1500);
-            }, 1200);
-        });
-
-        // ============================================
-        // SCROLL PROGRESS
-        // ============================================
+        // Scroll Progress
         window.addEventListener('scroll', () => {
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('progressBar').style.width = (window.scrollY / h * 100) + '%';
         });
 
-        // ============================================
-        // SMOOTH SCROLL
-        // ============================================
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href');
                 if (href !== '#' && href.startsWith('#')) {
                     e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // ============================================
-        // INITIALIZE
-        // ============================================
-        document.addEventListener('DOMContentLoaded', () => {
-            renderCards();
-            calculateTotals();
-        });
+        // Init
+        render();
+        calc();
     </script>
 </body>
 </html>
