@@ -19,13 +19,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapwash - Premium Laundry Experience | Gachibowli, Hyderabad</title>
-    <meta name="description" content="Award-winning laundry service in Gachibowli. Free pickup in 20 minutes. Express iron from 1 hour. Experience the future of laundry care.">
+    <title>Zapwash - Premium Laundry Service | Gachibowli, Hyderabad</title>
+    <meta name="description" content="Best laundry service in Gachibowli. Free pickup in 20 minutes. Express iron from 1 hour.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -35,200 +35,83 @@
         }
 
         :root {
-            --color-primary: #0A0E27;
-            --color-secondary: #1A1F3A;
-            --color-accent: #00FFA3;
-            --color-accent-2: #00D9FF;
-            --color-white: #FFFFFF;
-            --color-off-white: #F8F9FA;
-            --color-gray: #6B7280;
-            --color-light-gray: #E5E7EB;
-            --color-dark: #111827;
+            --bg-primary: #0F0F0F;
+            --bg-secondary: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --accent: #00F0FF;
+            --accent-2: #7000FF;
+            --card-bg: #1E1E1E;
             
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            
-            --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-            --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
-        }
-
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
+            --font-primary: 'Space Grotesk', sans-serif;
+            --font-secondary: 'Inter', sans-serif;
         }
 
         body {
-            font-family: var(--font-body);
-            color: var(--color-dark);
-            background: var(--color-white);
+            font-family: var(--font-secondary);
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        ::selection {
-            background: var(--color-accent);
-            color: var(--color-primary);
-        }
-
-        /* ============================================
-           CUSTOM CURSOR - AWARD WINNING DETAIL
-           ============================================ */
-        .cursor {
+        /* ========================================
+           NAVIGATION - FLOATING PILL
+           ======================================== */
+        .nav {
             position: fixed;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--color-accent);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 10000;
-            transition: all 0.15s ease;
-            transform: translate(-50%, -50%);
-            mix-blend-mode: difference;
-        }
-
-        .cursor-follower {
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            border: 1px solid var(--color-accent);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transition: all 0.3s ease;
-            transform: translate(-50%, -50%);
-            mix-blend-mode: difference;
-            opacity: 0.5;
-        }
-
-        .cursor.hover {
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 255, 163, 0.1);
-        }
-
-        @media (pointer: coarse) {
-            .cursor, .cursor-follower { display: none; }
-        }
-
-        /* ============================================
-           IMMERSIVE PAGE LOADER
-           ============================================ */
-        .page-loader {
-            position: fixed;
-            inset: 0;
-            background: var(--color-primary);
-            z-index: 99999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .page-loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.8s var(--ease-out-expo), visibility 0.8s;
-        }
-
-        .loader-logo {
-            font-family: var(--font-display);
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--color-white);
-            position: relative;
-            animation: fadeInScale 0.8s var(--ease-out-expo) forwards;
-        }
-
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        .loader-progress {
-            width: 200px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .loader-progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
-            width: 0;
-            animation: loadProgress 1.5s var(--ease-out-expo) forwards;
-        }
-
-        @keyframes loadProgress {
-            to { width: 100%; }
-        }
-
-        /* ============================================
-           NAVIGATION - GLASSMORPHISM
-           ============================================ */
-        .nav-wrapper {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 9998;
-            padding: 1.5rem 0;
-            transition: all 0.4s var(--ease-out-expo);
-        }
-
-        .nav-wrapper.scrolled {
-            background: rgba(10, 14, 39, 0.8);
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(30, 30, 30, 0.8);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
+            border-radius: 100px;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 3rem;
+            transition: all 0.3s ease;
         }
 
-        .logo {
-            height: 50px;
-            transition: transform 0.3s ease;
+        .nav.scrolled {
+            top: 1rem;
+            padding: 0.75rem 1.5rem;
         }
 
-        .logo:hover {
-            transform: scale(1.05);
+        .nav-logo {
+            height: 40px;
         }
 
         .nav-links {
             display: flex;
-            gap: 3rem;
+            gap: 2rem;
             align-items: center;
         }
 
         .nav-link {
-            color: var(--color-white);
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.9rem;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
             transition: color 0.3s ease;
+            position: relative;
         }
 
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -4px;
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--color-accent);
-            transition: width 0.3s var(--ease-out-expo);
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
         }
 
         .nav-link:hover::after {
@@ -236,275 +119,197 @@
         }
 
         .nav-cta {
-            padding: 0.75rem 2rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--text-primary);
+            padding: 0.75rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 255, 163, 0.3);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
         }
 
         .nav-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
+            transform: scale(1.05);
         }
-
-        .mobile-menu-btn {
-            display: none;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 2px solid var(--color-accent);
-            border-radius: 8px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .mobile-menu-btn span {
-            position: absolute;
-            width: 20px;
-            height: 2px;
-            background: var(--color-accent);
-            left: 50%;
-            transform: translateX(-50%);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-menu-btn span:nth-child(1) { top: 12px; }
-        .mobile-menu-btn span:nth-child(2) { top: 19px; }
-        .mobile-menu-btn span:nth-child(3) { bottom: 12px; }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
+            .nav {
+                width: 90%;
+                padding: 1rem;
+            }
+            .nav-links {
+                display: none;
+            }
         }
 
-        /* ============================================
-           HERO - 3D PARALLAX WITH PARTICLES
-           ============================================ */
-        .hero-section {
+        /* ========================================
+           HERO - MASSIVE TYPOGRAPHY
+           ======================================== */
+        .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 100%);
-            position: relative;
-            overflow: hidden;
             display: flex;
             align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 8rem 2rem 4rem;
         }
 
-        /* Animated Gradient Orbs */
-        .gradient-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .gradient-orb-1 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 255, 163, 0.4), transparent);
-            top: -200px;
-            right: -200px;
-            animation-delay: 0s;
-        }
-
-        .gradient-orb-2 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 217, 255, 0.3), transparent);
-            bottom: -150px;
-            left: -150px;
-            animation-delay: 7s;
-        }
-
-        .gradient-orb-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(138, 43, 226, 0.2), transparent);
-            top: 50%;
-            left: 50%;
-            animation-delay: 14s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -100px) scale(1.1); }
-            66% { transform: translate(-50px, 100px) scale(0.9); }
-        }
-
-        /* Particle Canvas */
-        #particles-canvas {
+        .hero-bg {
             position: absolute;
             inset: 0;
-            pointer-events: none;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.1), transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(112, 0, 255, 0.1), transparent 50%);
         }
 
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
-            position: relative;
-            z-index: 10;
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
         }
 
         .hero-content {
-            max-width: 800px;
-            animation: fadeInUp 1s var(--ease-out-expo) 0.3s backwards;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(60px); }
-            to { opacity: 1; transform: translateY(0); }
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.5rem 1.25rem;
-            background: rgba(0, 255, 163, 0.1);
-            border: 1px solid rgba(0, 255, 163, 0.3);
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.3);
             border-radius: 50px;
-            color: var(--color-accent);
+            color: var(--accent);
             font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.1em;
             margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease 0.2s backwards;
         }
 
-        .hero-badge-icon {
-            width: 8px;
-            height: 8px;
-            background: var(--color-accent);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.8); }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 8vw, 7rem);
-            font-weight: 800;
-            line-height: 1.1;
-            color: var(--color-white);
+            font-family: var(--font-primary);
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 700;
+            line-height: 1;
             margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
         }
 
         .hero-title-gradient {
-            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: block;
+            display: inline-block;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
             line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.6s backwards;
         }
 
-        .hero-cta-group {
+        .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease 0.8s backwards;
         }
 
         .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--text-primary);
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
             display: inline-flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 1.25rem 2.5rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-weight: 700;
-            font-size: 1.05rem;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s var(--ease-out-expo);
-            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--color-accent-2), var(--color-accent));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .btn-primary:hover::before {
-            opacity: 1;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 50px rgba(0, 255, 163, 0.5);
-        }
-
-        .btn-primary span {
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 30px 80px rgba(0, 240, 255, 0.4);
         }
 
         .btn-secondary {
-            padding: 1.25rem 2.5rem;
             background: transparent;
-            color: var(--color-white);
-            font-weight: 600;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-primary);
+            padding: 1.25rem 3rem;
             border-radius: 50px;
             text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--color-accent);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
+            margin-top: 6rem;
             padding-top: 3rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 0.8s ease 1s backwards;
         }
 
-        .stat-item {
-            text-align: left;
+        .stat {
+            text-align: center;
         }
 
         .stat-number {
-            font-family: var(--font-display);
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-family: var(--font-primary);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            color: var(--color-accent);
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
         .stat-label {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -514,153 +319,115 @@
             }
         }
 
-        /* ============================================
-           SERVICES - BENTO GRID LAYOUT
-           ============================================ */
-        .services-section {
-            padding: 8rem 0;
-            background: var(--color-white);
+        /* ========================================
+           SERVICES - CARD GRID
+           ======================================== */
+        .services {
+            padding: 8rem 2rem;
             position: relative;
-        }
-
-        .section-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 3rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 5rem;
+            max-width: 800px;
+            margin: 0 auto 5rem;
         }
 
         .section-label {
             display: inline-block;
-            padding: 0.5rem 1.25rem;
-            background: rgba(0, 255, 163, 0.1);
-            color: var(--color-accent);
+            padding: 0.5rem 1rem;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 50px;
+            color: var(--accent);
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            border-radius: 50px;
             margin-bottom: 1.5rem;
         }
 
         .section-title {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: clamp(2.5rem, 5vw, 4.5rem);
             font-weight: 700;
-            color: var(--color-primary);
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            line-height: 1.1;
         }
 
         .section-subtitle {
             font-size: 1.25rem;
-            color: var(--color-gray);
-            max-width: 700px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
-        /* Bento Grid */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2rem;
-        }
-
-        .bento-item {
-            background: var(--color-white);
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 3rem;
-            border: 2px solid var(--color-light-gray);
-            transition: all 0.4s var(--ease-out-expo);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .bento-item::before {
+        .service-card::before {
             content: '';
             position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0, 255, 163, 0.05), rgba(0, 217, 255, 0.05));
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
         }
 
-        .bento-item:hover::before {
-            opacity: 1;
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
-        .bento-item:hover {
+        .service-card:hover {
             transform: translateY(-8px);
-            border-color: var(--color-accent);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        }
-
-        .bento-item-large {
-            grid-column: span 8;
-        }
-
-        .bento-item-medium {
-            grid-column: span 4;
-        }
-
-        .bento-item-small {
-            grid-column: span 3;
-        }
-
-        @media (max-width: 1024px) {
-            .bento-item-large,
-            .bento-item-medium,
-            .bento-item-small {
-                grid-column: span 6;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .bento-item-large,
-            .bento-item-medium,
-            .bento-item-small {
-                grid-column: span 12;
-            }
+            border-color: rgba(0, 240, 255, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            font-size: 1.75rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
 
         .service-title {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-primary);
             margin-bottom: 1rem;
         }
 
         .service-description {
-            font-size: 1.05rem;
-            color: var(--color-gray);
+            color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--color-accent);
-            font-weight: 600;
-            text-decoration: none;
             transition: gap 0.3s ease;
         }
 
@@ -668,70 +435,172 @@
             gap: 1rem;
         }
 
-        /* ============================================
-           PRICING - INTERACTIVE CARDS
-           ============================================ */
-        .pricing-section {
-            padding: 8rem 0;
-            background: linear-gradient(180deg, var(--color-off-white) 0%, var(--color-white) 100%);
-        }
-
-        .pricing-cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .pricing-card {
-            background: var(--color-white);
-            border-radius: 24px;
-            padding: 2.5rem;
-            border: 2px solid var(--color-light-gray);
-            transition: all 0.4s var(--ease-out-expo);
+        /* ========================================
+           HOW IT WORKS - TIMELINE
+           ======================================== */
+        .how-it-works {
+            padding: 8rem 2rem;
+            background: var(--bg-secondary);
             position: relative;
         }
 
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent), var(--accent-2));
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            order: 2;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding-left: 80px;
+            }
+            .timeline-item:nth-child(even) .timeline-content {
+                order: 1;
+            }
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-primary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-dot {
+                left: 30px;
+            }
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+
+        .timeline-title {
+            font-family: var(--font-primary);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-item:nth-child(odd) .timeline-content {
+                text-align: left;
+            }
+        }
+
+        /* ========================================
+           PRICING - MODERN CARDS
+           ======================================== */
+        .pricing {
+            padding: 8rem 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto 4rem;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
         .pricing-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--color-accent);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            border-color: rgba(0, 240, 255, 0.3);
         }
 
         .pricing-card.popular {
-            border: 2px solid var(--color-accent);
-            box-shadow: 0 20px 50px rgba(0, 255, 163, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.2);
         }
 
         .popular-badge {
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--text-primary);
             padding: 0.5rem 1rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
             border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
 
-        .pricing-card-header {
-            margin-bottom: 2rem;
-        }
-
-        .pricing-card h3 {
-            font-family: var(--font-display);
+        .pricing-header h3 {
+            font-family: var(--font-primary);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
 
-        .pricing-card-subtitle {
-            color: var(--color-gray);
+        .pricing-subtitle {
+            color: var(--text-secondary);
             font-size: 0.95rem;
+            margin-bottom: 2rem;
         }
 
         .pricing-list {
@@ -745,12 +614,12 @@
         }
 
         .pricing-list::-webkit-scrollbar-track {
-            background: var(--color-light-gray);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
         }
 
         .pricing-list::-webkit-scrollbar-thumb {
-            background: var(--color-accent);
+            background: var(--accent);
             border-radius: 10px;
         }
 
@@ -759,91 +628,83 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
-            border-bottom: 1px solid var(--color-light-gray);
-        }
-
-        .price-item:last-child {
-            border-bottom: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .item-name {
+            color: var(--text-secondary);
             font-size: 0.95rem;
-            color: var(--color-dark);
         }
 
-        .item-price-controls {
+        .item-controls {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
         .item-price {
+            color: var(--accent);
             font-weight: 700;
-            color: var(--color-accent);
         }
 
         .quantity-controls {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--color-off-white);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50px;
             padding: 0.25rem;
         }
 
-        .quantity-btn {
+        .qty-btn {
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background: var(--color-white);
-            border: 1px solid var(--color-light-gray);
-            color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--text-primary);
             font-weight: 700;
-            font-size: 1.1rem;
             cursor: pointer;
             transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .quantity-btn:hover {
-            background: var(--color-accent);
-            color: var(--color-primary);
-            border-color: var(--color-accent);
+        .qty-btn:hover {
+            background: var(--accent);
+            color: var(--bg-primary);
         }
 
-        .quantity-display {
+        .qty-display {
             min-width: 32px;
             text-align: center;
             font-weight: 700;
-            color: var(--color-primary);
         }
 
-        .pricing-card-footer {
+        .pricing-footer {
             padding-top: 1.5rem;
-            border-top: 2px solid var(--color-light-gray);
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .subtotal-label {
+            color: var(--text-secondary);
             font-weight: 600;
-            color: var(--color-gray);
         }
 
         .subtotal-value {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 1.75rem;
             font-weight: 700;
-            color: var(--color-accent);
+            color: var(--accent);
         }
 
         .pricing-bottom {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         @media (max-width: 1024px) {
@@ -854,43 +715,114 @@
 
         .delivery-card,
         .total-card {
-            background: var(--color-white);
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 2.5rem;
-            border: 2px solid var(--color-light-gray);
         }
 
         .total-card {
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-            border: none;
+            background: linear-gradient(135deg, var(--card-bg), rgba(0, 240, 255, 0.1));
+            border-color: rgba(0, 240, 255, 0.3);
             position: sticky;
             top: 6rem;
         }
 
+        .delivery-card h3,
         .total-card h3 {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .delivery-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .delivery-option:hover {
+            border-color: var(--accent);
+            background: rgba(0, 240, 255, 0.05);
+        }
+
+        .delivery-option input {
+            display: none;
+        }
+
+        .radio-custom {
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin-right: 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .delivery-option input:checked + .radio-custom {
+            border-color: var(--accent);
+        }
+
+        .delivery-option input:checked + .radio-custom::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .delivery-text {
+            flex: 1;
+        }
+
+        .delivery-title {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .delivery-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .delivery-limit {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
         }
 
         .grand-total {
-            font-family: var(--font-display);
-            font-size: clamp(3rem, 6vw, 4.5rem);
-            font-weight: 800;
-            color: var(--color-accent);
+            font-family: var(--font-primary);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             line-height: 1;
             margin-bottom: 2rem;
         }
 
         .pickup-note {
+            color: var(--text-secondary);
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
             padding: 1rem;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            border-left: 3px solid var(--color-accent);
+            border-left: 3px solid var(--accent);
         }
 
         .pickup-note.hidden {
@@ -901,20 +833,22 @@
             display: block;
             width: 100%;
             padding: 1.25rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-weight: 800;
-            font-size: 1.1rem;
-            text-align: center;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--text-primary);
+            border: none;
             border-radius: 50px;
-            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
             transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
             margin-bottom: 1rem;
         }
 
         .checkout-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(0, 255, 163, 0.4);
+            box-shadow: 0 20px 60px rgba(0, 240, 255, 0.4);
         }
 
         .reset-btn {
@@ -922,91 +856,17 @@
             width: 100%;
             padding: 1rem;
             background: transparent;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 600;
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-secondary);
+            border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 50px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .reset-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--color-accent);
-        }
-
-        .delivery-option {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            border: 2px solid var(--color-light-gray);
-            border-radius: 16px;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .delivery-option:hover {
-            border-color: var(--color-accent);
-            background: rgba(0, 255, 163, 0.02);
-        }
-
-        .delivery-option input[type="radio"] {
-            display: none;
-        }
-
-        .delivery-option input[type="radio"]:checked + .radio-custom {
-            border-color: var(--color-accent);
-            background: var(--color-accent);
-        }
-
-        .delivery-option input[type="radio"]:checked + .radio-custom::after {
-            transform: scale(1);
-        }
-
-        .radio-custom {
-            width: 24px;
-            height: 24px;
-            border: 2px solid var(--color-light-gray);
-            border-radius: 50%;
-            margin-right: 1rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .radio-custom::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            width: 10px;
-            height: 10px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .delivery-text {
-            flex: 1;
-        }
-
-        .delivery-title {
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .delivery-description {
-            font-size: 0.9rem;
-            color: var(--color-gray);
-        }
-
-        .delivery-limit {
-            font-size: 0.85rem;
-            color: var(--color-accent);
-            font-weight: 600;
-            margin-top: 0.25rem;
+            border-color: var(--accent);
+            color: var(--text-primary);
         }
 
         /* Warning Modal */
@@ -1014,7 +874,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(10px);
             z-index: 10000;
             align-items: center;
@@ -1026,23 +886,18 @@
         }
 
         .warning-content {
-            background: var(--color-white);
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 240, 255, 0.3);
             border-radius: 24px;
             padding: 3rem;
             max-width: 500px;
             margin: 0 2rem;
-            animation: modalSlide 0.4s var(--ease-out-expo);
-        }
-
-        @keyframes modalSlide {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         .warning-icon {
             width: 60px;
             height: 60px;
-            background: rgba(0, 255, 163, 0.1);
+            background: rgba(0, 240, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1051,17 +906,16 @@
         }
 
         .warning-title {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 1.75rem;
             font-weight: 700;
             text-align: center;
-            color: var(--color-primary);
             margin-bottom: 1rem;
         }
 
         .warning-message {
             text-align: center;
-            color: var(--color-gray);
+            color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 2rem;
         }
@@ -1082,39 +936,31 @@
         }
 
         .warning-btn-primary {
-            background: var(--color-accent);
-            color: var(--color-primary);
-        }
-
-        .warning-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 255, 163, 0.3);
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: var(--text-primary);
         }
 
         .warning-btn-secondary {
-            background: var(--color-light-gray);
-            color: var(--color-primary);
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
-        .warning-btn-secondary:hover {
-            background: var(--color-gray);
-            color: var(--color-white);
-        }
-
-        /* ============================================
+        /* ========================================
            FOOTER
-           ============================================ */
+           ======================================== */
         .footer {
-            padding: 5rem 0 2rem;
-            background: var(--color-primary);
-            color: rgba(255, 255, 255, 0.8);
+            padding: 5rem 2rem 2rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 3rem;
-            margin-bottom: 3rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
         }
 
         @media (max-width: 1024px) {
@@ -1130,23 +976,21 @@
         }
 
         .footer-brand h3 {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 2rem;
             font-weight: 700;
-            color: var(--color-white);
             margin-bottom: 1rem;
         }
 
         .footer-tagline {
+            color: var(--text-secondary);
             line-height: 1.7;
-            margin-bottom: 2rem;
         }
 
         .footer-col h4 {
-            font-family: var(--font-display);
+            font-family: var(--font-primary);
             font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--color-white);
+            font-weight: 700;
             margin-bottom: 1.5rem;
         }
 
@@ -1157,13 +1001,13 @@
         }
 
         .footer-link {
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-secondary);
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .footer-link:hover {
-            color: var(--color-accent);
+            color: var(--accent);
             padding-left: 0.5rem;
         }
 
@@ -1173,20 +1017,20 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            color: var(--text-secondary);
         }
 
         @media (max-width: 640px) {
             .footer-bottom {
                 flex-direction: column;
+                gap: 1rem;
                 text-align: center;
             }
         }
 
-        /* ============================================
-           FLOATING ACTION BUTTON
-           ============================================ */
+        /* FAB */
         .fab {
             position: fixed;
             bottom: 2rem;
@@ -1200,67 +1044,83 @@
             justify-content: center;
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
             cursor: pointer;
-            z-index: 9997;
+            z-index: 999;
             transition: all 0.3s ease;
         }
 
         .fab:hover {
-            transform: translateY(-5px) scale(1.1);
+            transform: scale(1.1);
             box-shadow: 0 20px 50px rgba(37, 211, 102, 0.5);
         }
 
         .fab svg {
             width: 32px;
             height: 32px;
-            fill: var(--color-white);
+            fill: white;
         }
 
-        /* ============================================
-           SCROLL INDICATOR
-           ============================================ */
+        /* Loader */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--bg-primary);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-logo {
+            font-family: var(--font-primary);
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
             width: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
-            z-index: 10001;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            z-index: 9999;
             transition: width 0.1s ease;
-        }
-
-        /* ============================================
-           UTILITIES
-           ============================================ */
-        .highlight {
-            animation: highlightPulse 0.6s ease;
-        }
-
-        @keyframes highlightPulse {
-            0% { background: transparent; }
-            50% { background: rgba(0, 255, 163, 0.1); }
-            100% { background: transparent; }
         }
     </style>
 </head>
 <body>
-    <!-- GTM Noscript -->
+    <!-- GTM -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Custom Cursors -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator"></div>
-
-    <!-- Page Loader -->
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-logo">Zapwash</div>
-        <div class="loader-progress">
-            <div class="loader-progress-bar"></div>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Zapwash</div>
         </div>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
 
     <!-- Warning Modal -->
     <div class="warning-modal" id="warningModal">
@@ -1280,258 +1140,275 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="nav-wrapper" id="mainNav">
-        <div class="nav-container">
-            <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="logo">
-            <div class="nav-links">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Schedule Pickup</a>
-            </div>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <nav class="nav" id="nav">
+        <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo">
+        <div class="nav-links">
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
         </div>
+        <a href="https://wa.me/918639103842" target="_blank" class="nav-cta">Book Pickup</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="gradient-orb gradient-orb-1"></div>
-        <div class="gradient-orb gradient-orb-2"></div>
-        <div class="gradient-orb gradient-orb-3"></div>
-        <canvas id="particles-canvas"></canvas>
-        
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="hero-badge-icon"></span>
-                    <span>Award-Winning Laundry Experience</span>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🚀</span>
+                <span>Best in Gachibowli</span>
+            </div>
+            <h1 class="hero-title">
+                Laundry Done<br>
+                <span class="hero-title-gradient">In 1 Hour</span>
+            </h1>
+            <p class="hero-subtitle">
+                Premium laundry service in Gachibowli, Madhapur & Hitech City. Free pickup in 20 minutes. Express iron from 1 hour. Professional care for your clothes.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup" target="_blank" class="btn-primary">
+                    <span>Book Free Pickup</span>
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                <a href="#pricing" class="btn-secondary">View Prices</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Happy Customers</div>
                 </div>
-                
-                <h1 class="hero-title">
-                    Premium Laundry
-                    <span class="hero-title-gradient">In Gachibowli</span>
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Experience the future of laundry care. Free pickup in 20 minutes. Express iron from 1 hour. Professional service near Madhapur & Hitech City.
-                </p>
-                
-                <div class="hero-cta-group">
-                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Gachibowli" target="_blank" class="btn-primary">
-                        <span>Book Free Pickup</span>
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                    <a href="#pricing" class="btn-secondary">View Prices</a>
+                <div class="stat">
+                    <div class="stat-number">20min</div>
+                    <div class="stat-label">Pickup Time</div>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">400+</div>
-                        <div class="stat-label">Happy Customers</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">20 min</div>
-                        <div class="stat-label">Pickup Time</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1 Hour</div>
-                        <div class="stat-label">Express Service</div>
-                    </div>
+                <div class="stat">
+                    <div class="stat-number">1hr</div>
+                    <div class="stat-label">Express Service</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-label">What We Offer</span>
-                <h2 class="section-title">Premium Services</h2>
-                <p class="section-subtitle">Professional wash, iron, and dry cleaning near IT offices in Madhapur, Hitech City, Kondapur. Express service from 1 hour.</p>
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <span class="section-label">What We Offer</span>
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional wash, iron, and dry cleaning with express options</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-icon">📋</span>
+                <h3 class="service-title">Iron Service</h3>
+                <p class="service-description">Sharp press for shirts, pants, kurtas, sarees. Free delivery in 24 hours.</p>
+                <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
+                    <span>Book Now</span>
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
             </div>
-            
-            <div class="bento-grid">
-                <div class="bento-item bento-item-large">
-                    <div class="service-icon">👔</div>
-                    <h3 class="service-title">Wash & Iron</h3>
-                    <p class="service-description">Complete laundry service near Madhapur. Professional wash and press for all clothes. Fast pickup from IT offices.</p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
-                        <span>Book Now</span>
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="bento-item bento-item-medium">
-                    <div class="service-icon">📋</div>
-                    <h3 class="service-title">Iron Service</h3>
-                    <p class="service-description">Best ironing service in Gachibowli. Sharp press for shirts, pants, kurtas, sarees.</p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-link">
-                        <span>Book Now</span>
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="bento-item bento-item-medium">
-                    <div class="service-icon">🛡️</div>
-                    <h3 class="service-title">Dry Cleaning</h3>
-                    <p class="service-description">Best dry cleaners in Hitech City. Safe cleaning for suits, designer wear, silk sarees.</p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
-                        <span>Book Now</span>
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-                
-                <div class="bento-item bento-item-large">
-                    <div class="service-icon">⚡</div>
-                    <h3 class="service-title">Express Iron</h3>
-                    <p class="service-description">Fastest iron service in Hyderabad. Get your clothes pressed in 1 hour, 3 hours, 6 hours, or 12 hours based on your need.</p>
-                    <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
-                        <span>Book Now</span>
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
+            <div class="service-card">
+                <span class="service-icon">👔</span>
+                <h3 class="service-title">Wash & Iron</h3>
+                <p class="service-description">Complete laundry service. Professional wash and press for all clothes.</p>
+                <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron" target="_blank" class="service-link">
+                    <span>Book Now</span>
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🛡️</span>
+                <h3 class="service-title">Dry Cleaning</h3>
+                <p class="service-description">Safe cleaning for suits, designer wear, silk sarees, wedding clothes.</p>
+                <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning" target="_blank" class="service-link">
+                    <span>Book Now</span>
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">⚡</span>
+                <h3 class="service-title">Express Iron</h3>
+                <p class="service-description">Get your clothes pressed in 1hr, 3hrs, 6hrs, or 12hrs based on your need.</p>
+                <a href="https://wa.me/918639103842?text=I%20need%20express%20iron" target="_blank" class="service-link">
+                    <span>Book Now</span>
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-label">Our Rates</span>
-                <h2 class="section-title">Transparent Pricing</h2>
-                <p class="section-subtitle">Clear pricing for wash, iron, and dry cleaning. No hidden charges. Free pickup above ₹100.</p>
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <span class="section-label">The Process</span>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Simple 5-step process to get your laundry done</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Schedule Your Order</h3>
+                    <p class="timeline-description">WhatsApp or call us from Gachibowli, Madhapur, or nearby areas</p>
+                </div>
+                <div class="timeline-dot">1</div>
+                <div></div>
+            </div>
+            <div class="timeline-item">
+                <div></div>
+                <div class="timeline-dot">2</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">We Pickup Your Clothes</h3>
+                    <p class="timeline-description">Our delivery person comes to your location in 20 minutes</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Handover to Local Dhobi</h3>
+                    <p class="timeline-description">We hand over to our trusted partner dhobi near you</p>
+                </div>
+                <div class="timeline-dot">3</div>
+                <div></div>
+            </div>
+            <div class="timeline-item">
+                <div></div>
+                <div class="timeline-dot">4</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Professional Service</h3>
+                    <p class="timeline-description">Expert wash, iron, or dry cleaning with care</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Delivered to You</h3>
+                    <p class="timeline-description">We collect from dhobi and deliver fresh clothes to your door</p>
+                </div>
+                <div class="timeline-dot">5</div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <span class="section-label">Our Rates</span>
+            <h2 class="section-title">Transparent Pricing</h2>
+            <p class="section-subtitle">Clear pricing. No hidden charges. Free pickup above ₹100.</p>
+        </div>
+
+        <div class="pricing-grid" id="pricingGrid"></div>
+
+        <div class="pricing-bottom">
+            <div class="delivery-card">
+                <h3>Choose Delivery Speed</h3>
+                <div id="deliveryOptions">
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
+                        <span class="radio-custom"></span>
+                        <div class="delivery-text">
+                            <p class="delivery-title">Standard Delivery</p>
+                            <p class="delivery-description">Free (24-72 hours)</p>
+                        </div>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery_speed" value="100" data-description="Express Iron (1 Hour)" data-limit="5">
+                        <span class="radio-custom"></span>
+                        <div class="delivery-text">
+                            <p class="delivery-title">Express Iron - 1 Hour</p>
+                            <p class="delivery-description">Add ₹100</p>
+                            <p class="delivery-limit">⚠️ Max 5 pieces</p>
+                        </div>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery_speed" value="70" data-description="Express Iron (3 Hours)" data-limit="10">
+                        <span class="radio-custom"></span>
+                        <div class="delivery-text">
+                            <p class="delivery-title">Express Iron - 3 Hours</p>
+                            <p class="delivery-description">Add ₹70</p>
+                            <p class="delivery-limit">⚠️ Max 10 pieces</p>
+                        </div>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery_speed" value="50" data-description="Express Iron (6 Hours)" data-limit="25">
+                        <span class="radio-custom"></span>
+                        <div class="delivery-text">
+                            <p class="delivery-title">Express Iron - 6 Hours</p>
+                            <p class="delivery-description">Add ₹50</p>
+                            <p class="delivery-limit">⚠️ Max 25 pieces</p>
+                        </div>
+                    </label>
+                    <label class="delivery-option">
+                        <input type="radio" name="delivery_speed" value="30" data-description="Express Iron (12 Hours)" data-limit="999">
+                        <span class="radio-custom"></span>
+                        <div class="delivery-text">
+                            <p class="delivery-title">Express Iron - 12 Hours</p>
+                            <p class="delivery-description">Add ₹30</p>
+                            <p class="delivery-limit">✓ No limit</p>
+                        </div>
+                    </label>
+                </div>
             </div>
 
-            <div class="pricing-cards-container" id="pricingCardsContainer"></div>
-
-            <div class="pricing-bottom">
-                <div class="delivery-card">
-                    <h3 style="font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--color-primary); margin-bottom: 2rem;">Choose Delivery Speed</h3>
-                    <div id="deliveryOptions">
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="0" data-description="Standard Delivery" data-limit="999" checked>
-                            <span class="radio-custom"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Standard Delivery</p>
-                                <p class="delivery-description">Free (24-72 hours depending on service)</p>
-                            </div>
-                        </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="100" data-description="Express Iron (1 Hour)" data-limit="5">
-                            <span class="radio-custom"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Iron - 1 Hour</p>
-                                <p class="delivery-description">Add ₹100</p>
-                                <p class="delivery-limit">⚠️ Max 5 pieces only</p>
-                            </div>
-                        </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="70" data-description="Express Iron (3 Hours)" data-limit="10">
-                            <span class="radio-custom"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Iron - 3 Hours</p>
-                                <p class="delivery-description">Add ₹70</p>
-                                <p class="delivery-limit">⚠️ Max 10 pieces only</p>
-                            </div>
-                        </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="50" data-description="Express Iron (6 Hours)" data-limit="25">
-                            <span class="radio-custom"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Iron - 6 Hours</p>
-                                <p class="delivery-description">Add ₹50</p>
-                                <p class="delivery-limit">⚠️ Max 25 pieces only</p>
-                            </div>
-                        </label>
-                        
-                        <label class="delivery-option">
-                            <input type="radio" name="delivery_speed" value="30" data-description="Express Iron (12 Hours)" data-limit="999">
-                            <span class="radio-custom"></span>
-                            <div class="delivery-text">
-                                <p class="delivery-title">Express Iron - 12 Hours</p>
-                                <p class="delivery-description">Add ₹30</p>
-                                <p class="delivery-limit">✓ No limit</p>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="total-card">
-                    <h3>Your Total Bill</h3>
-                    <div class="grand-total" id="grandTotal">₹0</div>
-                    <div class="pickup-note hidden" id="pickupNote"></div>
-                    <a id="checkoutBtn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="checkout-btn">
-                        Schedule Pickup Now
-                    </a>
-                    <button id="resetBtn" class="reset-btn">Clear All</button>
-                </div>
+            <div class="total-card">
+                <h3>Your Total Bill</h3>
+                <div class="grand-total" id="grandTotal">₹0</div>
+                <div class="pickup-note hidden" id="pickupNote"></div>
+                <a id="checkoutBtn" href="https://wa.me/918639103842?text=I'd%20like%20to%20schedule%20a%20pickup!" target="_blank" class="checkout-btn">
+                    Schedule Pickup Now
+                </a>
+                <button id="resetBtn" class="reset-btn">Clear All</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="section-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>Zapwash</h3>
-                    <p class="footer-tagline">
-                        Award-winning laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
-                    </p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Iron Service</a>
-                        <a href="#" class="footer-link">Wash & Iron</a>
-                        <a href="#" class="footer-link">Dry Cleaning</a>
-                        <a href="#" class="footer-link">Express Iron 1hr</a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Areas</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Gachibowli</a>
-                        <a href="#" class="footer-link">Madhapur</a>
-                        <a href="#" class="footer-link">Hitech City</a>
-                        <a href="#" class="footer-link">Kondapur</a>
-                    </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <div class="footer-links">
-                        <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
-                        <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
-                    </div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Zapwash</h3>
+                <p class="footer-tagline">
+                    Best online laundry service in Gachibowli, Madhapur, Hitech City. We organize local dhobis for fast pickup and delivery.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Iron Service</a>
+                    <a href="#" class="footer-link">Wash & Iron</a>
+                    <a href="#" class="footer-link">Dry Cleaning</a>
+                    <a href="#" class="footer-link">Express Iron</a>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2025 Zapwash | Gachibowli, Hyderabad</p>
-                <p style="color: var(--color-accent);">Trusted by 400+ customers ⚡</p>
+            <div class="footer-col">
+                <h4>Areas</h4>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Gachibowli</a>
+                    <a href="#" class="footer-link">Madhapur</a>
+                    <a href="#" class="footer-link">Hitech City</a>
+                    <a href="#" class="footer-link">Kondapur</a>
+                </div>
             </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="footer-links">
+                    <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
+                    <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Zapwash | Gachibowli, Hyderabad</p>
+            <p>Trusted by 400+ customers ⚡</p>
         </div>
     </footer>
 
@@ -1543,9 +1420,7 @@
     </a>
 
     <script>
-        // ============================================
-        // PRICING CALCULATOR
-        // ============================================
+        // PRICING DATA
         const allItemsData = {
             "Ironing Only": { 
                 subtitle: "Sharp press. Free delivery in 24 hours.", 
@@ -1561,7 +1436,7 @@
                 ]
             },
             "Wash & Iron": { 
-                subtitle: "Complete wash and press. Free delivery in 48 hours.", 
+                subtitle: "Complete wash and press. 48 hours.", 
                 items: [
                     { id: "wiShirt", name: "Shirt / Pant / T-shirt", price: 40 },
                     { id: "wiKurta", name: "Kurta + Pajama", price: 60 },
@@ -1575,7 +1450,7 @@
                 ]
             },
             "Dry Cleaning": { 
-                subtitle: "Premium care. Free delivery in 72 hours.", 
+                subtitle: "Premium care. 72 hours.", 
                 items: [
                     { id: "dcShirt", name: "Shirt / Pant / T-shirt", price: 80 },
                     { id: "dcKurta", name: "Kurta + Pajama", price: 80 },
@@ -1588,7 +1463,7 @@
                 ]
             },
             "Express Iron": { 
-                subtitle: "Super fast iron service. Choose your speed.", 
+                subtitle: "Super fast. Choose your speed.", 
                 items: [
                     { id: "exShirt", name: "Shirt / Pant / T-shirt", price: 20 },
                     { id: "exKurta", name: "Kurta + Pajama", price: 30 },
@@ -1606,76 +1481,67 @@
         let expressDescription = "Standard Delivery";
         let currentLimit = 999;
 
-        const pricingCardsContainer = document.getElementById('pricingCardsContainer');
-        const grandTotalEl = document.getElementById('grandTotal');
+        const pricingGrid = document.getElementById('pricingGrid');
+        const grandTotal = document.getElementById('grandTotal');
         const checkoutBtn = document.getElementById('checkoutBtn');
         const resetBtn = document.getElementById('resetBtn');
-        const pickupNoteEl = document.getElementById('pickupNote');
+        const pickupNote = document.getElementById('pickupNote');
         const deliveryOptions = document.getElementById('deliveryOptions');
         const warningModal = document.getElementById('warningModal');
         const warningMessage = document.getElementById('warningMessage');
-        const warningCancel = document.getElementById('warningCancel');
-        const warningOk = document.getElementById('warningOk');
 
         function renderCards() {
-            let cardsHtml = '';
-            for (const serviceType in allItemsData) {
+            let html = '';
+            for (const [serviceType, cardData] of Object.entries(allItemsData)) {
                 const isPopular = serviceType === "Wash & Iron";
-                const cardData = allItemsData[serviceType];
                 let itemsHtml = '';
                 
                 cardData.items.forEach(item => {
-                    const uniqueItemId = item.id;
-                    itemQuantities[uniqueItemId] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
+                    itemQuantities[item.id] = { quantity: 0, price: item.price, name: item.name, service: serviceType };
                     itemsHtml += `
                         <div class="price-item">
                             <span class="item-name">${item.name}</span>
-                            <div class="item-price-controls">
+                            <div class="item-controls">
                                 <span class="item-price">₹${item.price}</span>
                                 <div class="quantity-controls">
-                                    <button class="quantity-btn" data-action="decrement" data-item-id="${uniqueItemId}">−</button>
-                                    <span class="quantity-display" id="qty-${uniqueItemId}">0</span>
-                                    <button class="quantity-btn" data-action="increment" data-item-id="${uniqueItemId}">+</button>
+                                    <button class="qty-btn" data-action="dec" data-id="${item.id}">−</button>
+                                    <span class="qty-display" id="qty-${item.id}">0</span>
+                                    <button class="qty-btn" data-action="inc" data-id="${item.id}">+</button>
                                 </div>
                             </div>
                         </div>
                     `;
                 });
 
-                cardsHtml += `
+                html += `
                     <div class="pricing-card ${isPopular ? 'popular' : ''}">
                         ${isPopular ? '<div class="popular-badge">Most Popular</div>' : ''}
-                        <div class="pricing-card-header">
+                        <div class="pricing-header">
                             <h3>${serviceType}</h3>
-                            <p class="pricing-card-subtitle">${cardData.subtitle}</p>
+                            <p class="pricing-subtitle">${cardData.subtitle}</p>
                         </div>
                         <div class="pricing-list">${itemsHtml}</div>
-                        <div class="pricing-card-footer">
+                        <div class="pricing-footer">
                             <span class="subtotal-label">Subtotal:</span>
                             <span class="subtotal-value" data-subtotal="${serviceType}">₹0</span>
                         </div>
                     </div>
                 `;
             }
-            pricingCardsContainer.innerHTML = cardsHtml;
+            pricingGrid.innerHTML = html;
         }
 
         function getTotalPieces() {
-            let total = 0;
-            for (const id in itemQuantities) {
-                total += itemQuantities[id].quantity;
-            }
-            return total;
+            return Object.values(itemQuantities).reduce((sum, item) => sum + item.quantity, 0);
         }
 
         function showWarning(limit) {
-            if (limit === 5) {
-                warningMessage.textContent = `Express 1 Hour service allows maximum 5 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
-            } else if (limit === 10) {
-                warningMessage.textContent = `Express 3 Hours service allows maximum 10 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
-            } else if (limit === 25) {
-                warningMessage.textContent = `Express 6 Hours service allows maximum 25 pieces only. You currently have ${getTotalPieces()} pieces. Please reduce items or choose a different delivery option.`;
-            }
+            const msgs = {
+                5: `Express 1 Hour service allows max 5 pieces. You have ${getTotalPieces()} pieces.`,
+                10: `Express 3 Hours service allows max 10 pieces. You have ${getTotalPieces()} pieces.`,
+                25: `Express 6 Hours service allows max 25 pieces. You have ${getTotalPieces()} pieces.`
+            };
+            warningMessage.textContent = msgs[limit] || '';
             warningModal.classList.add('show');
         }
 
@@ -1683,8 +1549,8 @@
             warningModal.classList.remove('show');
         }
 
-        warningCancel.addEventListener('click', hideWarning);
-        warningOk.addEventListener('click', hideWarning);
+        document.getElementById('warningCancel').addEventListener('click', hideWarning);
+        document.getElementById('warningOk').addEventListener('click', hideWarning);
         warningModal.addEventListener('click', (e) => {
             if (e.target === warningModal) hideWarning();
         });
@@ -1692,20 +1558,19 @@
         function calculateTotals() {
             let itemTotal = 0;
             let subTotals = {};
-            let selectedItemsForWhatsApp = [];
+            let selectedItems = [];
             let totalPieces = 0;
 
             Object.keys(allItemsData).forEach(service => subTotals[service] = 0);
 
-            for (const id in itemQuantities) {
-                const item = itemQuantities[id];
+            for (const [id, item] of Object.entries(itemQuantities)) {
                 const itemPrice = item.quantity * item.price;
                 itemTotal += itemPrice;
                 subTotals[item.service] += itemPrice;
                 totalPieces += item.quantity;
 
                 if (item.quantity > 0) {
-                    selectedItemsForWhatsApp.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
+                    selectedItems.push(`${item.name} (${item.service}): ${item.quantity} pcs @ ₹${item.price}`);
                 }
             }
 
@@ -1718,65 +1583,60 @@
             if (itemTotal > 0 && itemTotal < 50) pickupCharge = 25;
             else if (itemTotal >= 50 && itemTotal < 100) pickupCharge = 15;
 
-            const grandTotal = itemTotal + pickupCharge + expressFee;
+            const total = itemTotal + pickupCharge + expressFee;
 
-            grandTotalEl.textContent = `₹${grandTotal}`;
-            grandTotalEl.parentElement.classList.add('highlight');
-            setTimeout(() => grandTotalEl.parentElement.classList.remove('highlight'), 600);
+            grandTotal.textContent = `₹${total}`;
 
             if (pickupCharge > 0) {
-                pickupNoteEl.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
-                pickupNoteEl.classList.remove('hidden');
+                pickupNote.textContent = `(Includes ₹${pickupCharge} pickup charge)`;
+                pickupNote.classList.remove('hidden');
             } else if (itemTotal >= 100) {
-                pickupNoteEl.textContent = `(Free pickup on orders ₹100+)`;
-                pickupNoteEl.classList.remove('hidden');
+                pickupNote.textContent = `(Free pickup on orders ₹100+)`;
+                pickupNote.classList.remove('hidden');
             } else {
-                pickupNoteEl.classList.add('hidden');
+                pickupNote.classList.add('hidden');
             }
 
-            let whatsappMessage = "Hi! I need laundry service in Gachibowli";
-            if (grandTotal > 0) {
-                whatsappMessage = `Hi Zapwash! I want to order laundry for ₹${grandTotal}\n\nMy items (${totalPieces} pieces):\n${selectedItemsForWhatsApp.join('\n')}`;
-                if (pickupCharge > 0) whatsappMessage += `\n\nPickup: ₹${pickupCharge}`;
-                if (expressFee > 0) whatsappMessage += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
-                
-                checkoutBtn.textContent = `Order for ₹${grandTotal}`;
+            let msg = "Hi! I need laundry service in Gachibowli";
+            if (total > 0) {
+                msg = `Hi Zapwash! I want to order laundry for ₹${total}\n\nMy items (${totalPieces} pieces):\n${selectedItems.join('\n')}`;
+                if (pickupCharge > 0) msg += `\n\nPickup: ₹${pickupCharge}`;
+                if (expressFee > 0) msg += `\nDelivery: ${expressDescription} (+₹${expressFee})`;
+                checkoutBtn.textContent = `Order for ₹${total}`;
             } else {
                 checkoutBtn.textContent = `Schedule Pickup Now`;
             }
-            checkoutBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(whatsappMessage)}`;
+            checkoutBtn.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
         }
 
-        pricingCardsContainer.addEventListener('click', function(e) {
-            const button = e.target.closest('button[data-action]');
-            if (!button) return;
+        pricingGrid.addEventListener('click', function(e) {
+            const btn = e.target.closest('button[data-action]');
+            if (!btn) return;
 
-            const action = button.dataset.action;
-            const itemId = button.dataset.itemId;
-            if (!itemId || !itemQuantities[itemId]) return;
-
+            const action = btn.dataset.action;
+            const itemId = btn.dataset.id;
             const qtyEl = document.getElementById(`qty-${itemId}`);
-            let currentQty = itemQuantities[itemId].quantity;
+            let qty = itemQuantities[itemId].quantity;
 
-            if (action === 'increment') {
+            if (action === 'inc') {
                 const newTotal = getTotalPieces() + 1;
                 if (newTotal > currentLimit) {
                     showWarning(currentLimit);
                     return;
                 }
-                currentQty++;
-            } else if (action === 'decrement' && currentQty > 0) {
-                currentQty--;
+                qty++;
+            } else if (action === 'dec' && qty > 0) {
+                qty--;
             }
 
-            itemQuantities[itemId].quantity = currentQty;
-            qtyEl.textContent = currentQty;
+            itemQuantities[itemId].quantity = qty;
+            qtyEl.textContent = qty;
             calculateTotals();
         });
 
         deliveryOptions.addEventListener('change', function(e) {
             if (e.target.name === 'delivery_speed') {
-                const newLimit = parseInt(e.target.dataset.limit, 10);
+                const newLimit = parseInt(e.target.dataset.limit);
                 const totalPieces = getTotalPieces();
                 
                 if (totalPieces > newLimit) {
@@ -1785,7 +1645,7 @@
                     return;
                 }
                 
-                expressFee = parseInt(e.target.value, 10);
+                expressFee = parseInt(e.target.value);
                 expressDescription = e.target.dataset.description;
                 currentLimit = newLimit;
                 calculateTotals();
@@ -1798,146 +1658,38 @@
                 const qtyEl = document.getElementById(`qty-${id}`);
                 if (qtyEl) qtyEl.textContent = '0';
             }
-            const defaultDelivery = document.querySelector('input[name="delivery_speed"][value="0"]');
-            if (defaultDelivery) defaultDelivery.checked = true;
+            document.querySelector('input[name="delivery_speed"][value="0"]').checked = true;
             expressFee = 0;
             expressDescription = "Standard Delivery";
             currentLimit = 999;
             calculateTotals();
         });
 
-        // ============================================
-        // PARTICLES ANIMATION
-        // ============================================
-        const canvas = document.getElementById('particles-canvas');
-        const ctx = canvas.getContext('2d');
-        
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const particles = [];
-        const particleCount = 50;
-
-        class Particle {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = Math.random() * 0.5 - 0.25;
-                this.speedY = Math.random() * 0.5 - 0.25;
-            }
-
-            update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
-            }
-
-            draw() {
-                ctx.fillStyle = 'rgba(0, 255, 163, 0.3)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function initParticles() {
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-        }
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            particles.forEach(particle => {
-                particle.update();
-                particle.draw();
-            });
-
-            requestAnimationFrame(animateParticles);
-        }
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // ============================================
-        // CUSTOM CURSOR
-        // ============================================
-        const cursor = document.querySelector('.cursor');
-        const cursorFollower = document.querySelector('.cursor-follower');
-        
-        let mouseX = 0, mouseY = 0;
-        let cursorX = 0, cursorY = 0;
-        let followerX = 0, followerY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCursor() {
-            cursorX += (mouseX - cursorX) * 0.2;
-            cursorY += (mouseY - cursorY) * 0.2;
-            
-            followerX += (mouseX - followerX) * 0.1;
-            followerY += (mouseY - followerY) * 0.1;
-
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-            
-            cursorFollower.style.left = followerX + 'px';
-            cursorFollower.style.top = followerY + 'px';
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
-
-        // ============================================
-        // PAGE LOADER
-        // ============================================
+        // Loader
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.getElementById('pageLoader').classList.add('hidden');
-            }, 1800);
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
         });
 
-        // ============================================
-        // SCROLL INDICATOR
-        // ============================================
-        const scrollIndicator = document.querySelector('.scroll-indicator');
+        // Scroll Indicator
         window.addEventListener('scroll', () => {
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrolled = (window.scrollY / scrollHeight) * 100;
-            scrollIndicator.style.width = scrolled + '%';
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
         });
 
-        // ============================================
-        // NAVBAR SCROLL
-        // ============================================
-        const mainNav = document.getElementById('mainNav');
+        // Nav Scroll
+        const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                mainNav.classList.add('scrolled');
+                nav.classList.add('scrolled');
             } else {
-                mainNav.classList.remove('scrolled');
+                nav.classList.remove('scrolled');
             }
         });
 
-        // ============================================
-        // SMOOTH SCROLL
-        // ============================================
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -1951,14 +1703,10 @@
             });
         });
 
-        // ============================================
-        // INITIALIZE
-        // ============================================
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderCards();
             calculateTotals();
-            initParticles();
-            animateParticles();
         });
     </script>
 </body>
