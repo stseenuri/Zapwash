@@ -20,27 +20,26 @@
       gtag('config', 'G-JYPST6NC81');
     </script>
 
-    <!-- SEO META - HYPER LOCAL -->
-    <title>Zapwash - Fastest Laundry Service in Hyderabad | 1 Hour Express | 20 Min Pickup</title>
-    <meta name="description" content="Hyderabad's fastest laundry service with 20-minute pickup. Express iron in 1 hour. Free pickup in Gachibowli, Madhapur, Hitech City, Kondapur. Transparent pricing from ₹15.">
-    <meta name="keywords" content="fastest laundry service Hyderabad, 1 hour laundry, 20 minute pickup, express laundry near me, laundry service Hyderabad, dry cleaning Hyderabad, laundry near me, wash and fold Hyderabad, ironing service Gachibowli, laundry Madhapur, dry cleaning Hitech City">
+    <!-- SEO META -->
+    <title>Zapwash - Hyderabad's Fastest Laundry Service | 20 Min Pickup | 1 Hour Express</title>
+    <meta name="description" content="Hyderabad's fastest laundry service with 20-minute pickup and 1-hour express iron. Free delivery above ₹100. Serving Gachibowli, Madhapur, Hitech City. Book now!">
+    <meta name="keywords" content="fastest laundry Hyderabad, 20 minute pickup laundry, 1 hour laundry service, express laundry Hyderabad, laundry near me">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Zapwash - Fastest Laundry Service in Hyderabad">
-    <meta property="og:description" content="20-minute pickup, 1-hour express service. Free delivery above ₹100.">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zapwash - Hyderabad's Fastest Laundry Service">
+    <meta property="og:description" content="20-minute pickup, 1-hour express. Free delivery above ₹100.">
     <meta property="og:url" content="https://thezapwash.com/">
-    <meta property="og:image" content="https://thezapwash.com/og-image.jpg">
+    <meta property="og:type" content="website">
     
-    <!-- Schema.org -->
+    <!-- Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Zapwash",
-      "description": "Hyderabad's fastest laundry and dry cleaning service with 20-minute pickup and 1-hour express service",
+      "description": "Hyderabad's fastest laundry service with 20-minute pickup",
       "telephone": "+918639103842",
       "url": "https://thezapwash.com",
       "priceRange": "₹15-₹200",
@@ -51,20 +50,6 @@
         "addressCountry": "IN"
       },
       "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Laundry Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Express Iron Service - 1 Hour",
-              "description": "Fastest laundry service in Hyderabad"
-            }
-          }
-        ]
-      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
@@ -103,7 +88,6 @@
             font-size: 16px;
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
@@ -219,7 +203,6 @@
                 left: 0;
                 right: 0;
                 background: var(--white);
-                border-top: 1px solid var(--black);
                 border-bottom: 1px solid var(--black);
                 flex-direction: column;
                 gap: 0;
@@ -396,8 +379,8 @@
             letter-spacing: 0.1em;
         }
 
-        /* SERVICES */
-        .services {
+        /* SERVICES PREVIEW */
+        .services-preview {
             padding: 6rem 2rem;
             border-bottom: 1px solid var(--black);
         }
@@ -409,6 +392,7 @@
 
         .section-header {
             margin-bottom: 4rem;
+            text-align: center;
         }
 
         .section-eyebrow {
@@ -431,6 +415,7 @@
             font-size: 1.125rem;
             color: var(--gray-600);
             max-width: 700px;
+            margin: 0 auto;
         }
 
         .services-grid {
@@ -439,6 +424,7 @@
             gap: 1px;
             background: var(--black);
             border: 1px solid var(--black);
+            margin-bottom: 3rem;
         }
 
         @media (max-width: 1024px) {
@@ -451,20 +437,20 @@
             background: var(--white);
             padding: 3rem;
             transition: background 0.3s;
+            text-align: center;
         }
 
         .service-card:hover {
             background: var(--gray-50);
         }
 
-        .service-number {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-title {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -472,479 +458,34 @@
         .service-description {
             color: var(--gray-600);
             line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .service-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .service-time {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray-600);
-        }
-
-        .service-arrow {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: var(--black);
-        }
-
-        .service-card:hover .service-arrow {
-            transform: translateX(5px);
-        }
-
-        /* PROCESS */
-        .process {
-            padding: 6rem 2rem;
-            background: var(--gray-900);
-            color: var(--white);
-            border-bottom: 1px solid var(--black);
-        }
-
-        .process .section-eyebrow {
-            color: var(--gray-400);
-        }
-
-        .process .section-title {
-            color: var(--white);
-        }
-
-        .process .section-subtitle {
-            color: var(--gray-400);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 1024px) {
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .process-step {
-            position: relative;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--white);
-            color: var(--black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
             margin-bottom: 1.5rem;
         }
 
-        .step-title {
+        .service-price {
+            font-weight: 700;
             font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .step-description {
-            font-size: 0.875rem;
-            color: var(--gray-400);
-            line-height: 1.6;
-        }
-
-        /* PRICING */
-        .pricing {
-            padding: 6rem 2rem;
-            border-bottom: 1px solid var(--black);
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1px;
-            background: var(--black);
-            border: 1px solid var(--black);
-            margin-bottom: 4rem;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            padding: 2rem;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            background: var(--gray-900);
-            color: var(--white);
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.25rem 0.75rem;
-            background: var(--black);
-            color: var(--white);
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .pricing-card.featured .pricing-badge {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-
-        .pricing-header h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-subtitle {
-            font-size: 0.875rem;
-            color: var(--gray-600);
-        }
-
-        .pricing-card.featured .pricing-subtitle {
-            color: var(--gray-400);
-        }
-
-        .price-list {
-            max-height: 400px;
-            overflow-y: auto;
-            margin-bottom: 2rem;
-        }
-
-        .price-list::-webkit-scrollbar {
-            width: 2px;
-        }
-
-        .price-list::-webkit-scrollbar-thumb {
-            background: var(--black);
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .pricing-card.featured .price-item {
-            border-bottom-color: var(--gray-700);
-        }
-
-        .item-name {
-            font-size: 0.875rem;
-        }
-
-        .item-right {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .item-price {
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .qty-group {
-            display: flex;
+        .service-link {
+            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-        }
-
-        .qty-btn {
-            width: 24px;
-            height: 24px;
-            background: var(--white);
-            border: 1px solid var(--black);
             color: var(--black);
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            line-height: 1;
-        }
-
-        .qty-btn:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .pricing-card.featured .qty-btn {
-            background: var(--gray-900);
-            border-color: var(--white);
-            color: var(--white);
-        }
-
-        .pricing-card.featured .qty-btn:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .qty-display {
-            min-width: 24px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .pricing-footer {
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--black);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .pricing-card.featured .pricing-footer {
-            border-top-color: var(--white);
-        }
-
-        .subtotal-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .subtotal-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .pricing-bottom {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1px;
-            background: var(--black);
-            border: 1px solid var(--black);
-        }
-
-        @media (max-width: 1024px) {
-            .pricing-bottom {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .delivery-card {
-            background: var(--white);
-            padding: 2rem;
-        }
-
-        .delivery-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
-
-        .delivery-option {
-            display: flex;
-            align-items: flex-start;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray-200);
-            cursor: pointer;
-        }
-
-        .delivery-option:last-child {
-            border-bottom: none;
-        }
-
-        .delivery-option input {
-            display: none;
-        }
-
-        .radio-box {
-            width: 20px;
-            height: 20px;
-            border: 1px solid var(--black);
-            margin-right: 1rem;
-            flex-shrink: 0;
-            margin-top: 2px;
-            position: relative;
-        }
-
-        .delivery-option input:checked + .radio-box::after {
-            content: '';
-            position: absolute;
-            inset: 3px;
-            background: var(--black);
-        }
-
-        .delivery-text {
-            flex: 1;
-        }
-
-        .delivery-title {
-            font-weight: 600;
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .delivery-desc {
-            font-size: 0.8rem;
-            color: var(--gray-600);
-        }
-
-        .delivery-limit {
-            font-size: 0.75rem;
-            color: var(--gray-600);
-            margin-top: 0.25rem;
-        }
-
-        .total-card {
-            background: var(--gray-900);
-            color: var(--white);
-            padding: 2rem;
-            position: sticky;
-            top: 80px;
-        }
-
-        .total-card h3 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
-        }
-
-        .grand-total {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 2rem;
-        }
-
-        .pickup-note {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-left: 2px solid var(--white);
-        }
-
-        .pickup-note.hidden {
-            display: none;
-        }
-
-        .checkout-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: var(--white);
-            color: var(--black);
-            border: 1px solid var(--white);
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
             text-decoration: none;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .checkout-btn:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .reset-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: transparent;
-            color: var(--white);
-            border: 1px solid var(--white);
-            font-weight: 700;
+            font-weight: 600;
             font-size: 0.875rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
+            letter-spacing: 0.1em;
+            transition: opacity 0.2s;
         }
 
-        .reset-btn:hover {
-            background: var(--white);
-            color: var(--black);
+        .service-link:hover {
+            opacity: 0.5;
         }
 
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.show {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--white);
-            padding: 3rem;
-            max-width: 400px;
-            margin: 0 2rem;
+        .cta-center {
             text-align: center;
-            border: 1px solid var(--black);
-        }
-
-        .modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .modal-message {
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-        }
-
-        .modal-btn {
-            padding: 1rem 2rem;
-            background: var(--black);
-            color: var(--white);
-            border: 1px solid var(--black);
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .modal-btn:hover {
-            background: var(--white);
-            color: var(--black);
         }
 
         /* FOOTER */
@@ -1072,19 +613,10 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Limit Reached</h3>
-            <p class="modal-message" id="modalMsg"></p>
-            <button class="modal-btn" id="modalClose">OK</button>
-        </div>
-    </div>
-
-    <!-- Nav with SEO-friendly anchor links -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service in Hyderabad with 20 Minute Pickup" class="nav-logo"></a>
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service in Hyderabad" class="nav-logo"></a>
             
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
@@ -1093,10 +625,12 @@
             </button>
             
             <div class="nav-links" id="navLinks">
-                <a href="#fastest-laundry-service-hyderabad" class="nav-link">Services</a>
-                <a href="#20-minute-pickup-hyderabad" class="nav-link">How It Works</a>
-                <a href="#laundry-prices-hyderabad" class="nav-link">Pricing</a>
-                <a href="stain-remover.html" class="nav-link">Stain Guide</a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/fastest-laundry-service-hyderabad.html" class="nav-link">Services</a>
+                <a href="/laundry-prices-hyderabad.html" class="nav-link">Pricing</a>
+                <a href="/20-minute-pickup-process.html" class="nav-link">How It Works</a>
+                <a href="/stain-remover.html" class="nav-link">Stain Guide</a>
+                <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
             <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="nav-cta">Book Now</a>
         </div>
@@ -1116,7 +650,7 @@
             
             <div class="hero-cta-group">
                 <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
-                <a href="#laundry-prices-hyderabad" class="btn btn-secondary">View Prices</a>
+                <a href="/laundry-prices-hyderabad.html" class="btn btn-secondary">View Prices</a>
             </div>
 
             <div class="hero-stats">
@@ -1162,166 +696,51 @@
         </div>
     </div>
 
-    <!-- Services - SEO URL -->
-    <section id="fastest-laundry-service-hyderabad" class="services">
+    <!-- Services Preview -->
+    <section class="services-preview">
         <div class="container">
             <div class="section-header">
-                <p class="section-eyebrow">Fastest Services in Hyderabad</p>
-                <h2 class="section-title">Professional Laundry & Dry Cleaning with Express Options</h2>
-                <p class="section-subtitle">Expert wash, iron, and dry cleaning delivered across all Hyderabad areas in 20 minutes pickup time</p>
+                <p class="section-eyebrow">Our Services</p>
+                <h2 class="section-title">What We Offer</h2>
+                <p class="section-subtitle">Professional laundry services delivered fast across all Hyderabad areas</p>
             </div>
 
             <div class="services-grid">
-                <article class="service-card">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">Wash & Iron</h3>
-                    <p class="service-description">Complete laundry service with professional wash and press. Ideal for daily wear including shirts, pants, kurtas, and more.</p>
-                    <div class="service-meta">
-                        <span class="service-time">48 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20service" target="_blank" class="service-arrow" aria-label="Book wash and iron laundry service in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Iron Only</h3>
-                    <p class="service-description">Sharp press for your clothes. Perfect for already clean garments that need crisp finishing.</p>
-                    <div class="service-meta">
-                        <span class="service-time">24 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-arrow" aria-label="Book ironing service in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Dry Cleaning</h3>
-                    <p class="service-description">Safe cleaning for delicate items like suits, wedding wear, silk sarees, and designer clothes.</p>
-                    <div class="service-meta">
-                        <span class="service-time">72 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning%20service" target="_blank" class="service-arrow" aria-label="Book dry cleaning in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">04</div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
                     <h3 class="service-title">Express Iron - 1 Hour</h3>
-                    <p class="service-description">Hyderabad's FASTEST! Super fast ironing in 1hr, 3hrs, 6hrs, or 12hrs. For urgent meetings and last-minute needs.</p>
-                    <div class="service-meta">
-                        <span class="service-time">From 1 Hour ⚡</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%201%20hour%20express%20iron" target="_blank" class="service-arrow" aria-label="Book 1 hour express ironing in Hyderabad">→</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+                    <p class="service-description">Hyderabad's FASTEST! Get your clothes pressed in just 1 hour. Perfect for urgent meetings and events.</p>
+                    <p class="service-price">From ₹20/piece</p>
+                    <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
+                </div>
 
-    <!-- Process - SEO URL -->
-    <section id="20-minute-pickup-hyderabad" class="process">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">20-Minute Pickup Process</p>
-                <h2 class="section-title">How Zapwash's Fast Pickup Works</h2>
-                <p class="section-subtitle">5 easy steps to get fresh clothes delivered with the fastest pickup in Hyderabad</p>
-            </div>
+                <div class="service-card">
+                    <div class="service-icon">🧺</div>
+                    <h3 class="service-title">Wash & Iron</h3>
+                    <p class="service-description">Complete laundry service with professional wash and crisp press. Ready in 48 hours.</p>
+                    <p class="service-price">From ₹40/piece</p>
+                    <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
+                </div>
 
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4 class="step-title">Schedule</h4>
-                    <p class="step-description">WhatsApp us - response in 5 minutes</p>
+                <div class="service-card">
+                    <div class="service-icon">👔</div>
+                    <h3 class="service-title">Dry Cleaning</h3>
+                    <p class="service-description">Safe cleaning for delicate fabrics, suits, silk sarees, and designer clothes.</p>
+                    <p class="service-price">From ₹80/piece</p>
+                    <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4 class="step-title">Fast Pickup</h4>
-                    <p class="step-description">We arrive in 20 minutes average</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4 class="step-title">Local Dhobi</h4>
-                    <p class="step-description">Trusted expert in your area</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4 class="step-title">Professional Care</h4>
-                    <p class="step-description">Wash, iron, or dry clean</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h4 class="step-title">Delivered Fresh</h4>
-                    <p class="step-description">Free delivery above ₹100</p>
+
+                <div class="service-card">
+                    <div class="service-icon">👕</div>
+                    <h3 class="service-title">Iron Only</h3>
+                    <p class="service-description">Sharp press for already clean clothes. Fast 24-hour turnaround.</p>
+                    <p class="service-price">From ₹15/piece</p>
+                    <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Pricing - SEO URL -->
-    <section id="laundry-prices-hyderabad" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Transparent Pricing</p>
-                <h2 class="section-title">Laundry Service Prices in Hyderabad</h2>
-                <p class="section-subtitle">Clear pricing from ₹15. No hidden charges. Free pickup above ₹100.</p>
-            </div>
-
-            <div class="pricing-cards" id="pricingCards"></div>
-
-            <div class="pricing-bottom">
-                <div class="delivery-card">
-                    <h3>Delivery Speed</h3>
-                    <div id="deliveryOpts">
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="0" data-desc="Standard" data-limit="999" checked>
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Standard Delivery</div>
-                                <div class="delivery-desc">Free (24-72 hours)</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="100" data-desc="Express 1hr" data-limit="5">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 1 Hour ⚡</div>
-                                <div class="delivery-desc">Add ₹100</div>
-                                <div class="delivery-limit">Max 5 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="70" data-desc="Express 3hrs" data-limit="10">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 3 Hours</div>
-                                <div class="delivery-desc">Add ₹70</div>
-                                <div class="delivery-limit">Max 10 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="50" data-desc="Express 6hrs" data-limit="25">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 6 Hours</div>
-                                <div class="delivery-desc">Add ₹50</div>
-                                <div class="delivery-limit">Max 25 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="30" data-desc="Express 12hrs" data-limit="999">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 12 Hours</div>
-                                <div class="delivery-desc">Add ₹30</div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="total-card">
-                    <h3>Your Total</h3>
-                    <div class="grand-total" id="total">₹0</div>
-                    <div class="pickup-note hidden" id="note"></div>
-                    <a id="checkout" href="https://wa.me/918639103842" target="_blank" class="checkout-btn">Schedule Pickup</a>
-                    <button id="reset" class="reset-btn">Clear All</button>
-                </div>
+            <div class="cta-center">
+                <a href="/fastest-laundry-service-hyderabad.html" class="btn btn-primary">View All Services</a>
             </div>
         </div>
     </section>
@@ -1342,20 +761,19 @@
                 <div class="footer-col">
                     <h4>Services</h4>
                     <div class="footer-links">
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Iron Service</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Wash & Iron</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Dry Cleaning</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">1 Hour Express</a>
-                        <a href="stain-remover.html" class="footer-link">Stain Removal Guide</a>
+                        <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Express Iron</a>
+                        <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Wash & Iron</a>
+                        <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
+                        <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Iron Only</a>
+                        <a href="/stain-remover.html" class="footer-link">Stain Guide</a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4>Company</h4>
                     <div class="footer-links">
-                        <a href="#" class="footer-link">Gachibowli</a>
-                        <a href="#" class="footer-link">Madhapur</a>
-                        <a href="#" class="footer-link">Hitech City</a>
-                        <a href="#" class="footer-link">Kondapur</a>
+                        <a href="/20-minute-pickup-process.html" class="footer-link">How It Works</a>
+                        <a href="/laundry-prices-hyderabad.html" class="footer-link">Pricing</a>
+                        <a href="/contact-zapwash-hyderabad.html" class="footer-link">Contact</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -1380,221 +798,6 @@
     </a>
 
     <script>
-        // PRICING DATA
-        const DATA = {
-            "Iron Only": {
-                sub: "Sharp press. 24 hours.",
-                items: [
-                    {id: "i1", name: "Shirt / Pant / T-shirt", price: 15},
-                    {id: "i2", name: "Kurta + Pajama", price: 25},
-                    {id: "i3", name: "Punjabi Dress (3-pc)", price: 35},
-                    {id: "i4", name: "Saree (Cotton)", price: 25},
-                    {id: "i5", name: "Saree (Silk/Heavy)", price: 40},
-                    {id: "i6", name: "Kid's Dress", price: 12},
-                    {id: "i7", name: "Bed Sheet", price: 20},
-                    {id: "i8", name: "Towel", price: 10}
-                ]
-            },
-            "Wash & Iron": {
-                sub: "Complete wash & press. 48 hours.",
-                featured: true,
-                items: [
-                    {id: "w1", name: "Shirt / Pant / T-shirt", price: 40},
-                    {id: "w2", name: "Kurta + Pajama", price: 60},
-                    {id: "w3", name: "Punjabi Dress (3-pc)", price: 70},
-                    {id: "w4", name: "Saree (Cotton)", price: 50},
-                    {id: "w5", name: "Saree (Silk/Heavy)", price: 80},
-                    {id: "w6", name: "Kids' Dress", price: 25},
-                    {id: "w7", name: "Bed Sheet", price: 40},
-                    {id: "w8", name: "Towel", price: 25},
-                    {id: "w9", name: "Blanket / Quilt", price: 120}
-                ]
-            },
-            "Dry Cleaning": {
-                sub: "Premium care. 72 hours.",
-                items: [
-                    {id: "d1", name: "Shirt / Pant / T-shirt", price: 80},
-                    {id: "d2", name: "Kurta + Pajama", price: 80},
-                    {id: "d3", name: "Punjabi Dress (3-pc)", price: 100},
-                    {id: "d4", name: "Saree (Cotton)", price: 80},
-                    {id: "d5", name: "Saree (Silk/Heavy)", price: 150},
-                    {id: "d6", name: "Kid's Dress", price: 50},
-                    {id: "d7", name: "Bed Sheet", price: 70},
-                    {id: "d8", name: "Blanket / Quilt", price: 200}
-                ]
-            },
-            "Express Iron": {
-                sub: "Super fast. From 1 hour.",
-                items: [
-                    {id: "e1", name: "Shirt / Pant / T-shirt", price: 20},
-                    {id: "e2", name: "Kurta + Pajama", price: 30},
-                    {id: "e3", name: "Punjabi Dress (3-pc)", price: 45},
-                    {id: "e4", name: "Saree (Cotton)", price: 30},
-                    {id: "e5", name: "Saree (Silk/Heavy)", price: 50},
-                    {id: "e6", name: "Kid's Dress", price: 15},
-                    {id: "e7", name: "Bed Sheet", price: 25}
-                ]
-            }
-        };
-
-        let qtys = {};
-        let express = 0;
-        let desc = "Standard";
-        let limit = 999;
-
-        const cards = document.getElementById('pricingCards');
-        const totalEl = document.getElementById('total');
-        const checkout = document.getElementById('checkout');
-        const reset = document.getElementById('reset');
-        const note = document.getElementById('note');
-        const modal = document.getElementById('modal');
-        const modalMsg = document.getElementById('modalMsg');
-        const modalClose = document.getElementById('modalClose');
-
-        function init() {
-            let html = '';
-            for (const [type, data] of Object.entries(DATA)) {
-                let items = '';
-                data.items.forEach(item => {
-                    qtys[item.id] = {qty: 0, price: item.price, name: item.name, type};
-                    items += `
-                        <div class="price-item">
-                            <span class="item-name">${item.name}</span>
-                            <div class="item-right">
-                                <span class="item-price">₹${item.price}</span>
-                                <div class="qty-group">
-                                    <button class="qty-btn" data-act="dec" data-id="${item.id}">−</button>
-                                    <span class="qty-display" id="q${item.id}">0</span>
-                                    <button class="qty-btn" data-act="inc" data-id="${item.id}">+</button>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-
-                html += `
-                    <div class="pricing-card ${data.featured ? 'featured' : ''}">
-                        ${data.featured ? '<span class="pricing-badge">Popular</span>' : ''}
-                        <div class="pricing-header">
-                            <h3>${type}</h3>
-                            <p class="pricing-subtitle">${data.sub}</p>
-                        </div>
-                        <div class="price-list">${items}</div>
-                        <div class="pricing-footer">
-                            <span class="subtotal-label">Subtotal</span>
-                            <span class="subtotal-value" data-sub="${type}">₹0</span>
-                        </div>
-                    </div>`;
-            }
-            cards.innerHTML = html;
-        }
-
-        function getPieces() {
-            return Object.values(qtys).reduce((s, i) => s + i.qty, 0);
-        }
-
-        function showModal(lim) {
-            modalMsg.textContent = `Express ${desc} allows max ${lim} pieces. You have ${getPieces()}.`;
-            modal.classList.add('show');
-        }
-
-        modalClose.onclick = () => modal.classList.remove('show');
-        modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('show'); };
-
-        function calc() {
-            let itemTotal = 0, subs = {}, sel = [], pc = 0;
-            Object.keys(DATA).forEach(t => subs[t] = 0);
-
-            for (const [id, item] of Object.entries(qtys)) {
-                const cost = item.qty * item.price;
-                itemTotal += cost;
-                subs[item.type] += cost;
-                pc += item.qty;
-                if (item.qty > 0) sel.push(`${item.name} (${item.type}): ${item.qty} @ ₹${item.price}`);
-            }
-
-            Object.keys(subs).forEach(t => {
-                const el = document.querySelector(`[data-sub="${t}"]`);
-                if (el) el.textContent = `₹${subs[t]}`;
-            });
-
-            let pickup = 0;
-            if (itemTotal > 0 && itemTotal < 50) pickup = 25;
-            else if (itemTotal >= 50 && itemTotal < 100) pickup = 15;
-
-            const grand = itemTotal + pickup + express;
-            totalEl.textContent = `₹${grand}`;
-
-            if (pickup > 0) {
-                note.textContent = `Includes ₹${pickup} pickup charge`;
-                note.classList.remove('hidden');
-            } else if (itemTotal >= 100) {
-                note.textContent = `Free pickup on orders ₹100+`;
-                note.classList.remove('hidden');
-            } else {
-                note.classList.add('hidden');
-            }
-
-            let msg = "Hi! I need fastest laundry pickup in Hyderabad";
-            if (grand > 0) {
-                msg = `Hi Zapwash! Order for ₹${grand}\n\n${pc} items:\n${sel.join('\n')}`;
-                if (pickup > 0) msg += `\n\nPickup: ₹${pickup}`;
-                if (express > 0) msg += `\nExpress: ${desc} (+₹${express})`;
-                checkout.textContent = `Order ₹${grand}`;
-            } else {
-                checkout.textContent = `Schedule Pickup`;
-            }
-            checkout.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
-        }
-
-        cards.addEventListener('click', (e) => {
-            const btn = e.target.closest('button[data-act]');
-            if (!btn) return;
-
-            const act = btn.dataset.act;
-            const id = btn.dataset.id;
-            const el = document.getElementById(`q${id}`);
-            let qty = qtys[id].qty;
-
-            if (act === 'inc') {
-                if (getPieces() + 1 > limit) { showModal(limit); return; }
-                qty++;
-            } else if (act === 'dec' && qty > 0) {
-                qty--;
-            }
-
-            qtys[id].qty = qty;
-            el.textContent = qty;
-            calc();
-        });
-
-        document.getElementById('deliveryOpts').addEventListener('change', (e) => {
-            if (e.target.name === 'speed') {
-                const newLimit = parseInt(e.target.dataset.limit);
-                if (getPieces() > newLimit) {
-                    showModal(newLimit);
-                    document.querySelector('input[name="speed"][value="0"]').checked = true;
-                    return;
-                }
-                express = parseInt(e.target.value);
-                desc = e.target.dataset.desc;
-                limit = newLimit;
-                calc();
-            }
-        });
-
-        reset.onclick = () => {
-            for (const id in qtys) {
-                qtys[id].qty = 0;
-                const el = document.getElementById(`q${id}`);
-                if (el) el.textContent = '0';
-            }
-            document.querySelector('input[name="speed"][value="0"]').checked = true;
-            express = 0;
-            desc = "Standard";
-            limit = 999;
-            calc();
-        };
-
         // Mobile Menu
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
@@ -1610,20 +813,6 @@
                 });
             });
         }
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', (e) => {
-                const href = a.getAttribute('href');
-                if (href !== '#' && href.startsWith('#')) {
-                    e.preventDefault();
-                    document.querySelector(href)?.scrollIntoView({behavior: 'smooth'});
-                }
-            });
-        });
-
-        init();
-        calc();
     </script>
 </body>
 </html>
