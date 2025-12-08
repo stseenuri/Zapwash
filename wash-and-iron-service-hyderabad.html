@@ -22,14 +22,14 @@
 
     <!-- SEO META -->
     <title>Wash and Iron Service Hyderabad | Complete Laundry Service | Zapwash</title>
-    <meta name="description" content="Complete wash and iron service in Hyderabad. Professional washing + crisp ironing across Gachibowli, Madhapur, Hitech City. ₹40/piece. FREE first order pickup & delivery!">
+    <meta name="description" content="Complete wash and iron service in Hyderabad. Professional washing + crisp ironing across Gachibowli, Madhapur, Hitech City. Rs.40/piece. FREE first order pickup & delivery!">
     <meta name="keywords" content="wash and iron Hyderabad, laundry service Hyderabad, wash iron Gachibowli, complete laundry Madhapur">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/wash-and-iron-service-hyderabad.html">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Wash & Iron Service Hyderabad | Zapwash">
-    <meta property="og:description" content="Complete laundry service with professional wash and iron. From ₹40/piece.">
+    <meta property="og:description" content="Complete laundry service with professional wash and iron. From Rs.40/piece.">
     <meta property="og:url" content="https://thezapwash.com/wash-and-iron-service-hyderabad.html">
     
     <!-- Service Schema -->
@@ -314,9 +314,10 @@
             color: var(--black);
         }
 
-        /* FEATURES */
-        .features-section {
+        /* COST CALCULATOR */
+        .calculator-section {
             padding: 5rem 2rem;
+            background: var(--white);
             border-bottom: 1px solid var(--black);
         }
 
@@ -328,7 +329,180 @@
         .section-title {
             font-size: clamp(2rem, 5vw, 3rem);
             text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
             margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+            .calculator-grid { grid-template-columns: 1fr; }
+        }
+
+        .calculator-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .calc-item {
+            background: var(--gray-50);
+            border: 2px solid var(--black);
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 140px;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (max-width: 640px) {
+            .calc-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        .item-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 1.125rem;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--black);
+            background: var(--white);
+        }
+
+        .qty-btn {
+            width: 44px;
+            height: 44px;
+            background: var(--white);
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .qty-btn:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .qty-btn:active {
+            transform: scale(0.95);
+        }
+
+        .qty-display {
+            min-width: 50px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            border-left: 2px solid var(--black);
+            border-right: 2px solid var(--black);
+            font-size: 1.125rem;
+        }
+
+        .calculator-summary {
+            background: var(--gray-50);
+            border: 3px solid var(--black);
+            padding: 2.5rem;
+            position: sticky;
+            top: 150px;
+            height: fit-content;
+        }
+
+        .summary-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--black);
+            text-transform: uppercase;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .summary-row.total {
+            border-bottom: none;
+            border-top: 2px solid var(--black);
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .summary-row .label {
+            font-weight: 600;
+        }
+
+        .summary-row .value {
+            font-weight: 700;
+        }
+
+        .summary-row.total .value {
+            color: var(--accent);
+        }
+
+        .summary-note {
+            background: var(--success);
+            color: var(--white);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .summary-cta {
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+            text-align: center;
+            display: block;
+            transition: all 0.3s;
+        }
+
+        .summary-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* FEATURES */
+        .features-section {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--black);
         }
 
         .features-grid {
@@ -348,11 +522,6 @@
             text-align: center;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
         .feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -361,50 +530,6 @@
         .feature-card p {
             color: var(--gray-600);
             line-height: 1.7;
-        }
-
-        /* PRICING */
-        .pricing-section {
-            padding: 5rem 2rem;
-            background: var(--gray-50);
-            border-bottom: 1px solid var(--black);
-        }
-
-        .pricing-table {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border: 2px solid var(--black);
-        }
-
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .pricing-table th {
-            background: var(--black);
-            color: var(--white);
-            padding: 1.5rem;
-            text-align: left;
-            font-size: 1.125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .pricing-table td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .pricing-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .price-value {
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-align: right;
         }
 
         /* HOW IT WORKS */
@@ -644,7 +769,7 @@
 
     <!-- Free Offer Banner -->
     <div class="offer-banner">
-        🎁 FIRST ORDER FREE! Free Pickup & Free Delivery • Limited Time
+        FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
     </div>
 
     <!-- Navigation -->
@@ -665,7 +790,7 @@
                 <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
-            <a href="#" class="nav-cta" id="navBookBtn">📞 Book Free</a>
+            <a href="#" class="nav-cta" id="navBookBtn">Book Free</a>
         </div>
     </nav>
 
@@ -679,7 +804,7 @@
     <!-- Service Hero -->
     <section class="service-hero">
         <div class="hero-container">
-            <span class="hero-badge" id="heroBadge">🧺 COMPLETE LAUNDRY SERVICE</span>
+            <span class="hero-badge">COMPLETE LAUNDRY SERVICE</span>
             <h1 class="hero-title">
                 <span class="highlight">Wash & Iron Service</span><br>
                 Complete Laundry Solution
@@ -687,8 +812,158 @@
             <p class="hero-subtitle">
                 Professional washing with high-quality detergents + crisp steam ironing. Perfect for everyday clothes, office wear, and family laundry. 48-hour turnaround across Hyderabad.
             </p>
-            <div class="hero-offer">🎁 FREE PICKUP & DELIVERY ON FIRST ORDER</div>
-            <a href="#" class="btn-primary" id="heroBookBtn">Book Wash & Iron Service →</a>
+            <div class="hero-offer">FREE PICKUP & DELIVERY ON FIRST ORDER</div>
+            <a href="#calculator" class="btn-primary">Calculate Your Cost</a>
+        </div>
+    </section>
+
+    <!-- Cost Calculator -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <h2 class="section-title">Calculate Wash & Iron Cost</h2>
+            <p class="section-subtitle">Select items and quantities to get instant price estimate</p>
+            
+            <div class="calculator-grid">
+                <div class="calculator-items">
+                    <!-- Item 1 -->
+                    <div class="calc-item">
+                        <div class="item-name">Shirt / T-Shirt</div>
+                        <div class="item-price">Rs.40</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('shirt', -1)">-</button>
+                            <div class="qty-display" id="qty-shirt">0</div>
+                            <button class="qty-btn" onclick="changeQty('shirt', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="calc-item">
+                        <div class="item-name">Trouser / Pants / Jeans</div>
+                        <div class="item-price">Rs.45</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('trouser', -1)">-</button>
+                            <div class="qty-display" id="qty-trouser">0</div>
+                            <button class="qty-btn" onclick="changeQty('trouser', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="calc-item">
+                        <div class="item-name">Kurta / Kameez</div>
+                        <div class="item-price">Rs.50</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('kurta', -1)">-</button>
+                            <div class="qty-display" id="qty-kurta">0</div>
+                            <button class="qty-btn" onclick="changeQty('kurta', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="calc-item">
+                        <div class="item-name">Saree (Cotton/Synthetic)</div>
+                        <div class="item-price">Rs.80</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('saree', -1)">-</button>
+                            <div class="qty-display" id="qty-saree">0</div>
+                            <button class="qty-btn" onclick="changeQty('saree', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="calc-item">
+                        <div class="item-name">Salwar Suit (3-Piece)</div>
+                        <div class="item-price">Rs.120</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('salwar', -1)">-</button>
+                            <div class="qty-display" id="qty-salwar">0</div>
+                            <button class="qty-btn" onclick="changeQty('salwar', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="calc-item">
+                        <div class="item-name">Bed Sheet (Single)</div>
+                        <div class="item-price">Rs.60</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('bedsheet', -1)">-</button>
+                            <div class="qty-display" id="qty-bedsheet">0</div>
+                            <button class="qty-btn" onclick="changeQty('bedsheet', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="calc-item">
+                        <div class="item-name">Bed Sheet (Double)</div>
+                        <div class="item-price">Rs.90</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('bedsheet-double', -1)">-</button>
+                            <div class="qty-display" id="qty-bedsheet-double">0</div>
+                            <button class="qty-btn" onclick="changeQty('bedsheet-double', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="calc-item">
+                        <div class="item-name">Blanket (Single)</div>
+                        <div class="item-price">Rs.100</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('blanket', -1)">-</button>
+                            <div class="qty-display" id="qty-blanket">0</div>
+                            <button class="qty-btn" onclick="changeQty('blanket', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="calc-item">
+                        <div class="item-name">Towel</div>
+                        <div class="item-price">Rs.30</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('towel', -1)">-</button>
+                            <div class="qty-display" id="qty-towel">0</div>
+                            <button class="qty-btn" onclick="changeQty('towel', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="calculator-summary">
+                    <h3 class="summary-title">Cost Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span class="label">Total Items:</span>
+                        <span class="value" id="totalItems">0</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span class="label">Subtotal:</span>
+                        <span class="value">Rs.<span id="subtotal">0</span></span>
+                    </div>
+
+                    <div class="summary-row" id="deliveryRow" style="display: none;">
+                        <span class="label">Delivery:</span>
+                        <span class="value">Rs.<span id="delivery">40</span></span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span class="label">Total:</span>
+                        <span class="value">Rs.<span id="total">0</span></span>
+                    </div>
+
+                    <div class="summary-note" id="freeDeliveryNote" style="display: none;">
+                        FREE DELIVERY ON ORDERS ABOVE Rs.300!
+                    </div>
+
+                    <div class="summary-note" style="background: var(--accent);">
+                        FIRST ORDER 100% FREE!
+                    </div>
+
+                    <a href="#" class="summary-cta" id="calcBookBtn">Book Now via WhatsApp</a>
+
+                    <p style="font-size: 0.75rem; margin-top: 1rem; color: var(--gray-600); text-align: center;">
+                        *Prices are indicative. Final cost confirmed on pickup.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -699,101 +974,34 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🧼</div>
                     <h3>Professional Washing</h3>
                     <p>Industrial washing machines with premium detergents. Separate wash for whites, colors, and delicates. Deep cleaning guaranteed.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌡️</div>
                     <h3>Hygienic & Safe</h3>
                     <p>Hot water wash for maximum hygiene. Separate loads to prevent color bleeding. Fabric-appropriate temperatures.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">👔</div>
                     <h3>Crisp Steam Iron</h3>
                     <p>After washing, clothes are professionally steam pressed for a sharp, wrinkle-free finish.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
                     <h3>48-Hour Service</h3>
                     <p>Complete wash and iron in 48 hours. Drop off today, pick up day after tomorrow.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
                     <h3>Affordable Pricing</h3>
-                    <p>Starting at ₹40 per piece. Best value for complete laundry service in Hyderabad.</p>
+                    <p>Starting at Rs.40 per piece. Best value for complete laundry service in Hyderabad.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
                     <h3>Free First Order</h3>
                     <p>New customers get FREE pickup and delivery on their first wash & iron order!</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">Wash & Iron Pricing Hyderabad</h2>
-            
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item Type</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Shirt / T-Shirt</td>
-                            <td class="price-value">₹40</td>
-                        </tr>
-                        <tr>
-                            <td>Trouser / Pants / Jeans</td>
-                            <td class="price-value">₹45</td>
-                        </tr>
-                        <tr>
-                            <td>Kurta / Kameez</td>
-                            <td class="price-value">₹50</td>
-                        </tr>
-                        <tr>
-                            <td>Saree (Cotton/Synthetic)</td>
-                            <td class="price-value">₹80</td>
-                        </tr>
-                        <tr>
-                            <td>Salwar Suit (3-Piece)</td>
-                            <td class="price-value">₹120</td>
-                        </tr>
-                        <tr>
-                            <td>Bed Sheet (Single)</td>
-                            <td class="price-value">₹60</td>
-                        </tr>
-                        <tr>
-                            <td>Bed Sheet (Double)</td>
-                            <td class="price-value">₹90</td>
-                        </tr>
-                        <tr>
-                            <td>Blanket (Single)</td>
-                            <td class="price-value">₹100</td>
-                        </tr>
-                        <tr>
-                            <td>Towel</td>
-                            <td class="price-value">₹30</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: var(--gray-600); margin-bottom: 1.5rem;">All prices inclusive. Free pickup & delivery on orders above ₹300.</p>
-                <a href="#" class="btn-primary" id="pricingBookBtn">Book Wash & Iron Now</a>
             </div>
         </div>
     </section>
@@ -838,42 +1046,42 @@
             <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book wash & iron service</p>
             
             <div class="areas-grid">
-                <a href="/wash-and-iron-gachibowli-hyderabad.html" class="area-card" data-location="Gachibowli">
+                <a href="#" class="area-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-madhapur-hyderabad.html" class="area-card" data-location="Madhapur">
+                <a href="#" class="area-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-hitech-city-hyderabad.html" class="area-card" data-location="Hitech City">
+                <a href="#" class="area-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-kondapur-hyderabad.html" class="area-card" data-location="Kondapur">
+                <a href="#" class="area-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-jubilee-hills-hyderabad.html" class="area-card" data-location="Jubilee Hills">
+                <a href="#" class="area-card" data-location="Jubilee Hills">
                     <h3>Jubilee Hills</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-banjara-hills-hyderabad.html" class="area-card" data-location="Banjara Hills">
+                <a href="#" class="area-card" data-location="Banjara Hills">
                     <h3>Banjara Hills</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-kukatpally-hyderabad.html" class="area-card" data-location="Kukatpally">
+                <a href="#" class="area-card" data-location="Kukatpally">
                     <h3>Kukatpally</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/wash-and-iron-ameerpet-hyderabad.html" class="area-card" data-location="Ameerpet">
+                <a href="#" class="area-card" data-location="Ameerpet">
                     <h3>Ameerpet</h3>
                     <span class="area-status">Available</span>
                 </a>
@@ -904,7 +1112,7 @@
 
                 <div class="faq-item">
                     <h3>Is pickup and delivery really free?</h3>
-                    <p>Yes! First-time customers get completely free pickup and delivery. For regular orders, free delivery on orders above ₹300. Below that, ₹40 delivery charge applies.</p>
+                    <p>Yes! First-time customers get completely free pickup and delivery. For regular orders, free delivery on orders above Rs.300. Below that, Rs.40 delivery charge applies.</p>
                 </div>
 
                 <div class="faq-item">
@@ -925,7 +1133,7 @@
         <div class="container">
             <h2>Ready for Complete Laundry Service?</h2>
             <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery on first order. Professional wash & iron in <span id="ctaLocation">Hyderabad</span>.</p>
-            <a href="#" class="btn-primary" id="ctaBookBtn">Book Wash & Iron Now →</a>
+            <a href="#" class="btn-primary" id="ctaBookBtn">Book Wash & Iron Now</a>
         </div>
     </section>
 
@@ -973,7 +1181,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2025 Zapwash • Wash & Iron Service Hyderabad • FREE First Order</p>
+                <p>&copy; 2025 Zapwash - Wash & Iron Service Hyderabad - FREE First Order</p>
             </div>
         </div>
     </footer>
@@ -984,6 +1192,95 @@
     </a>
 
     <script>
+        // PRICE CALCULATOR
+        const prices = {
+            'shirt': 40,
+            'trouser': 45,
+            'kurta': 50,
+            'saree': 80,
+            'salwar': 120,
+            'bedsheet': 60,
+            'bedsheet-double': 90,
+            'blanket': 100,
+            'towel': 30
+        };
+
+        const quantities = {
+            'shirt': 0,
+            'trouser': 0,
+            'kurta': 0,
+            'saree': 0,
+            'salwar': 0,
+            'bedsheet': 0,
+            'bedsheet-double': 0,
+            'blanket': 0,
+            'towel': 0
+        };
+
+        function changeQty(item, change) {
+            quantities[item] = Math.max(0, quantities[item] + change);
+            document.getElementById(`qty-${item}`).textContent = quantities[item];
+            updateSummary();
+        }
+
+        function updateSummary() {
+            let totalItems = 0;
+            let subtotal = 0;
+
+            for (const [item, qty] of Object.entries(quantities)) {
+                totalItems += qty;
+                subtotal += qty * prices[item];
+            }
+
+            const deliveryCharge = (subtotal > 0 && subtotal < 300) ? 40 : 0;
+            const total = subtotal + deliveryCharge;
+
+            document.getElementById('totalItems').textContent = totalItems;
+            document.getElementById('subtotal').textContent = subtotal;
+            document.getElementById('delivery').textContent = deliveryCharge;
+            document.getElementById('total').textContent = total;
+
+            document.getElementById('deliveryRow').style.display = deliveryCharge > 0 ? 'flex' : 'none';
+
+            if (subtotal >= 300 && subtotal > 0) {
+                document.getElementById('freeDeliveryNote').style.display = 'block';
+            } else {
+                document.getElementById('freeDeliveryNote').style.display = 'none';
+            }
+
+            updateCalcBookButton(totalItems, total);
+
+            if (typeof gtag !== 'undefined' && totalItems > 0) {
+                gtag('event', 'calculator_used', {
+                    'service': 'wash-and-iron',
+                    'total_items': totalItems,
+                    'estimated_cost': total
+                });
+            }
+        }
+
+        function updateCalcBookButton(items, total) {
+            const btn = document.getElementById('calcBookBtn');
+            if (items > 0) {
+                btn.onclick = function(e) {
+                    e.preventDefault();
+                    const itemsList = [];
+                    for (const [item, qty] of Object.entries(quantities)) {
+                        if (qty > 0) {
+                            itemsList.push(`${qty}x ${item}`);
+                        }
+                    }
+                    const message = `Hi! I want wash & iron service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
+                    window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
+                };
+            } else {
+                btn.onclick = function(e) {
+                    e.preventDefault();
+                    window.open(getWhatsAppLink(), '_blank');
+                };
+            }
+        }
+
         // GEOLOCATION
         let userLocation = 'Hyderabad';
 
@@ -1025,7 +1322,6 @@
                         document.getElementById('ctaLocation').textContent = nearestLocation;
                         updateAllCTAs();
                         
-                        // GA4 tracking
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'location_detected', {
                                 'page': 'wash-and-iron',
@@ -1048,10 +1344,9 @@
 
         function updateAllCTAs() {
             document.getElementById('navBookBtn').href = getWhatsAppLink();
-            document.getElementById('heroBookBtn').href = getWhatsAppLink();
-            document.getElementById('pricingBookBtn').href = getWhatsAppLink();
             document.getElementById('ctaBookBtn').href = getWhatsAppLink();
             document.getElementById('fabBtn').href = getWhatsAppLink();
+            updateCalcBookButton(0, 0);
         }
 
         // Area card clicks
