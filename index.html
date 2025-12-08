@@ -58,9 +58,32 @@
     }
     </script>
 
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How fast is pickup in Gachibowli?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 20-minute pickup in Gachibowli, Madhapur, and Hitech City during business hours. Book via WhatsApp for fastest service."
+        }
+      },{
+        "@type": "Question",
+        "name": "Do you offer 1-hour express service in Hyderabad?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Our 1-hour express iron service is available across all Hyderabad locations. Perfect for urgent needs. Starting at ₹20/piece."
+        }
+      }]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -82,6 +105,7 @@
             --gray-700: #404040;
             --gray-800: #262626;
             --gray-900: #171717;
+            --accent: #FF6B00;
         }
 
         html {
@@ -144,9 +168,9 @@
             color: var(--black);
             text-decoration: none;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             transition: opacity 0.2s;
         }
 
@@ -155,21 +179,22 @@
         }
 
         .nav-cta {
-            padding: 0.5rem 1.25rem;
+            padding: 0.625rem 1.5rem;
             background: var(--black);
             color: var(--white);
             text-decoration: none;
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            border: 1px solid var(--black);
+            border: 2px solid var(--black);
             transition: all 0.2s;
         }
 
         .nav-cta:hover {
             background: var(--white);
             color: var(--black);
+            transform: translateY(-2px);
         }
 
         .menu-toggle {
@@ -214,15 +239,41 @@
                 border-bottom: 1px solid var(--gray-200);
                 width: 100%;
             }
-            .nav-link:last-child { border-bottom: none; }
+            .nav-cta { display: block; width: calc(100% - 2rem); margin: 1rem; text-align: center; }
         }
 
-        /* HERO */
+        /* URGENT BANNER */
+        .urgent-banner {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.5rem 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        @media (max-width: 768px) {
+            .urgent-banner { font-size: 0.75rem; padding: 0.5rem 1rem; top: 60px; }
+        }
+
+        /* HERO - SIMPLIFIED */
         .hero {
-            min-height: 100vh;
+            min-height: 95vh;
             display: flex;
             align-items: center;
-            padding: 100px 2rem 4rem;
+            padding: 140px 2rem 4rem;
             position: relative;
             border-bottom: 1px solid var(--black);
         }
@@ -230,218 +281,375 @@
         .hero-grid {
             position: absolute;
             inset: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .hero-grid.loaded {
             background-image: 
                 repeating-linear-gradient(0deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px),
                 repeating-linear-gradient(90deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px);
             opacity: 0.3;
-            pointer-events: none;
         }
 
         .hero-container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
             position: relative;
             z-index: 10;
+            text-align: center;
         }
 
-        .hero-badge {
+        .hero-location {
             display: inline-block;
-            padding: 0.375rem 0.75rem;
+            padding: 0.5rem 1rem;
             background: var(--black);
             color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 600;
+            font-size: 0.813rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 2rem;
+            animation: slideDown 0.6s ease;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-title {
-            font-size: clamp(3rem, 10vw, 9rem);
+            font-size: clamp(2.5rem, 8vw, 7rem);
             font-weight: 700;
             line-height: 0.95;
             letter-spacing: -0.04em;
-            margin-bottom: 2rem;
-            max-width: 1400px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .hero-subtitle {
-            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--gray-600);
-            max-width: 700px;
-            margin-bottom: 3rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
             line-height: 1.6;
+            animation: fadeInUp 0.8s ease 0.4s both;
         }
 
-        .hero-cta-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 4rem;
-        }
-
-        .btn {
+        .hero-cta {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 1rem 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             text-decoration: none;
-            border: 1px solid var(--black);
-            transition: all 0.2s;
-            min-width: 180px;
-        }
-
-        .btn-primary {
             background: var(--black);
             color: var(--white);
+            border: 2px solid var(--black);
+            transition: all 0.3s;
+            animation: fadeInUp 0.8s ease 0.6s both;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
         }
 
-        .btn-primary:hover {
+        .hero-cta:hover {
             background: var(--white);
             color: var(--black);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
-        .btn-secondary {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .btn-secondary:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--black);
-            max-width: 800px;
+        .hero-cta:active {
+            transform: translateY(-1px);
         }
 
         @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .hero { padding: 120px 1rem 3rem; min-height: 85vh; }
+            .hero-cta { width: 100%; padding: 1rem 2rem; }
         }
 
-        .stat-value {
+        /* TRUST BAR */
+        .trust-bar {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .trust-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .trust-item {
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .trust-item:nth-child(1) { animation-delay: 0.2s; }
+        .trust-item:nth-child(2) { animation-delay: 0.4s; }
+        .trust-item:nth-child(3) { animation-delay: 0.6s; }
+
+        .trust-value {
             font-size: 3rem;
             font-weight: 700;
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
+        .trust-label {
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--gray-600);
+            font-weight: 600;
         }
 
-        /* MARQUEE */
-        .marquee {
-            padding: 1.5rem 0;
+        /* SOCIAL PROOF */
+        .social-proof {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .proof-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .proof-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .proof-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--black);
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0 var(--black);
+        }
+
+        .testimonial-stars {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 0.938rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--gray-700);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
             background: var(--black);
             color: var(--white);
-            border-bottom: 1px solid var(--black);
-            overflow: hidden;
-        }
-
-        .marquee-track {
+            border-radius: 50%;
             display: flex;
-            animation: scroll 30s linear infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .marquee-content {
-            display: flex;
-            gap: 3rem;
-            padding-right: 3rem;
-        }
-
-        .marquee-item {
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
             font-size: 0.875rem;
-            font-weight: 600;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .author-location {
+            font-size: 0.75rem;
+            color: var(--gray-500);
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
 
-        /* SERVICES PREVIEW */
-        .services-preview {
-            padding: 6rem 2rem;
+        /* SERVICES - HERO SERVICE FEATURED */
+        .services-section {
+            padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
         }
 
-        .container {
-            max-width: 1600px;
+        .services-container {
+            max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .section-header {
-            margin-bottom: 4rem;
-            text-align: center;
         }
 
         .section-eyebrow {
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             color: var(--gray-600);
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         .section-title {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
-            letter-spacing: -0.03em;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .featured-service {
+            background: var(--black);
+            color: var(--white);
+            padding: 4rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .featured-service::before {
+            content: '⚡';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 15rem;
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        .featured-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             margin-bottom: 1.5rem;
         }
 
-        .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            max-width: 700px;
-            margin: 0 auto;
+        .featured-title {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
         }
 
-        .services-grid {
+        .featured-description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: var(--gray-300);
+        }
+
+        .featured-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .featured-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.875rem;
+            border: 2px solid var(--white);
+            transition: all 0.3s;
+        }
+
+        .featured-cta:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .other-services {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1px;
             background: var(--black);
             border: 1px solid var(--black);
-            margin-bottom: 3rem;
         }
 
         @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+            .other-services { grid-template-columns: 1fr; }
+            .featured-service { padding: 3rem 2rem; }
         }
 
         .service-card {
             background: var(--white);
-            padding: 3rem;
-            transition: background 0.3s;
+            padding: 2.5rem;
+            transition: all 0.3s;
             text-align: center;
         }
 
         .service-card:hover {
             background: var(--gray-50);
+            transform: scale(1.02);
         }
 
         .service-icon {
@@ -459,12 +667,13 @@
             color: var(--gray-600);
             line-height: 1.7;
             margin-bottom: 1.5rem;
+            font-size: 0.938rem;
         }
 
         .service-price {
             font-weight: 700;
             font-size: 1.125rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .service-link {
@@ -473,37 +682,300 @@
             gap: 0.5rem;
             color: var(--black);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.875rem;
+            font-weight: 700;
+            font-size: 0.813rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            transition: opacity 0.2s;
+            transition: all 0.2s;
         }
 
         .service-link:hover {
-            opacity: 0.5;
+            gap: 0.75rem;
         }
 
-        .cta-center {
+        /* INTERACTIVE MAP */
+        .map-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .map-header {
             text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .map-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+            .map-grid { grid-template-columns: 1fr; }
+        }
+
+        .location-card {
+            background: var(--white);
+            border: 2px solid var(--black);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .location-card:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .location-name {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .location-status {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .location-card:hover .location-status {
+            color: var(--white);
+        }
+
+        .location-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            background: #00FF00;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* STICKY BOOKING WIDGET */
+        .sticky-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--white);
+            border: 2px solid var(--black);
+            padding: 1.5rem;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            z-index: 998;
+            transform: translateY(150%);
+            transition: transform 0.3s;
+            max-width: 320px;
+        }
+
+        .sticky-widget.visible {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .sticky-widget { 
+                left: 1rem; 
+                right: 1rem; 
+                bottom: 1rem;
+                max-width: none;
+            }
+        }
+
+        .widget-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .widget-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--black);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            background: var(--white);
+        }
+
+        .widget-cta {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--black);
+            color: var(--white);
+            border: 2px solid var(--black);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+
+        .widget-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .widget-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* EXIT INTENT POPUP */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .exit-popup.active {
+            display: flex;
+        }
+
+        .popup-content {
+            background: var(--white);
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-emoji {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .popup-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .popup-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .popup-offer {
+            background: var(--accent);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.938rem;
+            border: 2px solid var(--black);
+            transition: all 0.3s;
+        }
+
+        .popup-cta:hover {
+            background: var(--white);
+            color: var(--black);
         }
 
         /* FOOTER */
         .footer {
-            padding: 6rem 2rem 2rem;
+            padding: 5rem 2rem 2rem;
             background: var(--black);
             color: var(--white);
         }
 
         .footer-cta {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 5rem;
             padding-bottom: 4rem;
             border-bottom: 1px solid var(--gray-700);
         }
 
         .footer-cta-title {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 2rem;
             line-height: 1.1;
@@ -513,21 +985,17 @@
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 4rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             padding-bottom: 3rem;
             border-bottom: 1px solid var(--gray-700);
         }
 
         @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+            .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
         }
 
         .footer-brand p {
@@ -585,33 +1053,39 @@
             right: 2rem;
             width: 60px;
             height: 60px;
-            background: var(--black);
-            border: 1px solid var(--black);
+            background: #25D366;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 999;
-            transition: all 0.2s;
+            z-index: 997;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
 
         .fab:hover {
-            background: var(--white);
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
 
         .fab svg {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             fill: var(--white);
-            transition: fill 0.2s;
         }
 
-        .fab:hover svg {
-            fill: var(--black);
+        @media (max-width: 768px) {
+            .fab { bottom: 5.5rem; }
         }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Urgent Banner -->
+    <div class="urgent-banner" id="urgentBanner">
+        <span id="availabilityText">⚡ 3 SLOTS LEFT IN GACHIBOWLI TODAY</span>
+    </div>
 
     <!-- Navigation -->
     <nav class="nav">
@@ -628,96 +1102,123 @@
                 <a href="/" class="nav-link">Home</a>
                 <a href="/fastest-laundry-service-hyderabad.html" class="nav-link">Services</a>
                 <a href="/laundry-prices-hyderabad.html" class="nav-link">Pricing</a>
-                <a href="/20-minute-pickup-process.html" class="nav-link">How It Works</a>
-                <a href="/stain-remover.html" class="nav-link">Stain Guide</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
-            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="nav-cta">Book Now</a>
+            <a href="tel:+918639103842" class="nav-cta">📞 Call Now</a>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-grid"></div>
+        <div class="hero-grid" id="heroGrid"></div>
         <div class="hero-container">
-            <span class="hero-badge">⚡ Hyderabad's Fastest - 20 Min Pickup</span>
+            <span class="hero-location" id="heroLocation">⚡ GACHIBOWLI</span>
             
-            <h1 class="hero-title">Hyderabad's Fastest Laundry Service</h1>
+            <h1 class="hero-title">
+                <span class="highlight">20-Minute Pickup</span>
+                Fastest in Hyderabad
+            </h1>
             
             <p class="hero-subtitle">
-                20-minute pickup. 1-hour express iron. Free delivery above ₹100. We partner with skilled local dhobis in Gachibowli, Madhapur, Hitech City, Kondapur & across Hyderabad.
+                1-hour express iron available now. Your trusted local laundry partner across Hyderabad's IT corridor.
             </p>
             
-            <div class="hero-cta-group">
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
-                <a href="/laundry-prices-hyderabad.html" class="btn btn-secondary">View Prices</a>
-            </div>
+            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%2020-minute%20pickup%20in%20Hyderabad" target="_blank" class="hero-cta">
+                Book My 20-Min Pickup →
+            </a>
+        </div>
+    </section>
 
-            <div class="hero-stats">
-                <div>
-                    <div class="stat-value">20min</div>
-                    <div class="stat-label">Avg Pickup</div>
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-value">20min</div>
+                    <div class="trust-label">Average Pickup</div>
                 </div>
-                <div>
-                    <div class="stat-value">1hr</div>
-                    <div class="stat-label">Express Iron</div>
+                <div class="trust-item">
+                    <div class="trust-value">1hr</div>
+                    <div class="trust-label">Express Available</div>
                 </div>
-                <div>
-                    <div class="stat-value">400+</div>
-                    <div class="stat-label">Happy Customers</div>
+                <div class="trust-item">
+                    <div class="trust-value">400+</div>
+                    <div class="trust-label">Happy Customers</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee">
-        <div class="marquee-track">
-            <div class="marquee-content">
-                <span class="marquee-item">Gachibowli</span>
-                <span class="marquee-item">Madhapur</span>
-                <span class="marquee-item">Hitech City</span>
-                <span class="marquee-item">Kondapur</span>
-                <span class="marquee-item">Jubilee Hills</span>
-                <span class="marquee-item">Banjara Hills</span>
-                <span class="marquee-item">Kukatpally</span>
-                <span class="marquee-item">Ameerpet</span>
-            </div>
-            <div class="marquee-content">
-                <span class="marquee-item">Gachibowli</span>
-                <span class="marquee-item">Madhapur</span>
-                <span class="marquee-item">Hitech City</span>
-                <span class="marquee-item">Kondapur</span>
-                <span class="marquee-item">Jubilee Hills</span>
-                <span class="marquee-item">Banjara Hills</span>
-                <span class="marquee-item">Kukatpally</span>
-                <span class="marquee-item">Ameerpet</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Services Preview -->
-    <section class="services-preview">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Our Services</p>
-                <h2 class="section-title">What We Offer</h2>
-                <p class="section-subtitle">Professional laundry services delivered fast across all Hyderabad areas</p>
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="proof-container">
+            <div class="proof-header">
+                <h2 class="proof-title">Trusted Across Hyderabad</h2>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3 class="service-title">Express Iron - 1 Hour</h3>
-                    <p class="service-description">Hyderabad's FASTEST! Get your clothes pressed in just 1 hour. Perfect for urgent meetings and events.</p>
-                    <p class="service-price">From ₹20/piece</p>
-                    <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Picked up my suit from Gachibowli in 18 minutes! Needed it for urgent meeting. Best laundry service in Hyderabad."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <div class="author-name">Rajesh Kumar</div>
+                            <div class="author-location">Gachibowli</div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"1-hour express iron saved me before my flight! WhatsApp booking was super easy. Highly recommend for Madhapur area."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <div class="author-name">Priya Sharma</div>
+                            <div class="author-location">Madhapur</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Finally found reliable laundry near Hitech City! Quality ironing, on-time delivery. Using them every week now."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <div class="author-name">Anil Mehta</div>
+                            <div class="author-location">Hitech City</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="services-container">
+            <p class="section-eyebrow">Our Services</p>
+            <h2 class="section-title">Professional Laundry, Lightning Fast</h2>
+
+            <!-- Featured Service -->
+            <div class="featured-service">
+                <div class="featured-content">
+                    <span class="featured-badge">⚡ MOST POPULAR</span>
+                    <h3 class="featured-title">1-Hour Express Iron</h3>
+                    <p class="featured-description">Hyderabad's fastest ironing service. Drop off your clothes and get them back crisp and ready within 60 minutes. Perfect for urgent meetings, events, or travel.</p>
+                    <div class="featured-price">From ₹20/piece</div>
+                    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%201-hour%20express%20iron%20service" target="_blank" class="featured-cta">Book Express Service →</a>
+                </div>
+            </div>
+
+            <!-- Other Services -->
+            <div class="other-services">
                 <div class="service-card">
                     <div class="service-icon">🧺</div>
                     <h3 class="service-title">Wash & Iron</h3>
-                    <p class="service-description">Complete laundry service with professional wash and crisp press. Ready in 48 hours.</p>
+                    <p class="service-description">Complete laundry service with professional wash and crisp press. 48-hour turnaround.</p>
                     <p class="service-price">From ₹40/piece</p>
                     <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
                 </div>
@@ -725,7 +1226,7 @@
                 <div class="service-card">
                     <div class="service-icon">👔</div>
                     <h3 class="service-title">Dry Cleaning</h3>
-                    <p class="service-description">Safe cleaning for delicate fabrics, suits, silk sarees, and designer clothes.</p>
+                    <p class="service-description">Safe cleaning for suits, silk sarees, and delicate fabrics.</p>
                     <p class="service-price">From ₹80/piece</p>
                     <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
                 </div>
@@ -733,29 +1234,111 @@
                 <div class="service-card">
                     <div class="service-icon">👕</div>
                     <h3 class="service-title">Iron Only</h3>
-                    <p class="service-description">Sharp press for already clean clothes. Fast 24-hour turnaround.</p>
+                    <p class="service-description">Sharp press for clean clothes. 24-hour service.</p>
                     <p class="service-price">From ₹15/piece</p>
                     <a href="/fastest-laundry-service-hyderabad.html" class="service-link">Learn More →</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="cta-center">
-                <a href="/fastest-laundry-service-hyderabad.html" class="btn btn-primary">View All Services</a>
+    <!-- Interactive Map -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-header">
+                <p class="section-eyebrow">Service Areas</p>
+                <h2 class="section-title">We Cover All Major Hyderabad Areas</h2>
+            </div>
+
+            <div class="map-grid">
+                <div class="location-card" data-location="Gachibowli">
+                    <div class="location-badge"></div>
+                    <div class="location-name">Gachibowli</div>
+                    <div class="location-status">Available Now</div>
+                </div>
+
+                <div class="location-card" data-location="Madhapur">
+                    <div class="location-badge"></div>
+                    <div class="location-name">Madhapur</div>
+                    <div class="location-status">Available Now</div>
+                </div>
+
+                <div class="location-card" data-location="Hitech City">
+                    <div class="location-badge"></div>
+                    <div class="location-name">Hitech City</div>
+                    <div class="location-status">Available Now</div>
+                </div>
+
+                <div class="location-card" data-location="Kondapur">
+                    <div class="location-badge"></div>
+                    <div class="location-name">Kondapur</div>
+                    <div class="location-status">Available Now</div>
+                </div>
+
+                <div class="location-card" data-location="Jubilee Hills">
+                    <div class="location-name">Jubilee Hills</div>
+                    <div class="location-status">Available</div>
+                </div>
+
+                <div class="location-card" data-location="Banjara Hills">
+                    <div class="location-name">Banjara Hills</div>
+                    <div class="location-status">Available</div>
+                </div>
+
+                <div class="location-card" data-location="Kukatpally">
+                    <div class="location-name">Kukatpally</div>
+                    <div class="location-status">Available</div>
+                </div>
+
+                <div class="location-card" data-location="Ameerpet">
+                    <div class="location-name">Ameerpet</div>
+                    <div class="location-status">Available</div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Sticky Booking Widget -->
+    <div class="sticky-widget" id="stickyWidget">
+        <button class="widget-close" onclick="closeWidget()">×</button>
+        <div class="widget-title">Book 20-Min Pickup</div>
+        <select class="widget-select" id="widgetLocation">
+            <option value="">Select Your Area</option>
+            <option value="Gachibowli">Gachibowli</option>
+            <option value="Madhapur">Madhapur</option>
+            <option value="Hitech City">Hitech City</option>
+            <option value="Kondapur">Kondapur</option>
+            <option value="Jubilee Hills">Jubilee Hills</option>
+            <option value="Banjara Hills">Banjara Hills</option>
+            <option value="Kukatpally">Kukatpally</option>
+            <option value="Ameerpet">Ameerpet</option>
+        </select>
+        <a href="https://wa.me/918639103842?text=Hi!%20I%20need%2020-minute%20pickup" class="widget-cta" id="widgetCTA">Book on WhatsApp</a>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeExitPopup()">×</button>
+            <div class="popup-emoji">🎁</div>
+            <h3 class="popup-title">Wait! First Pickup FREE</h3>
+            <p class="popup-subtitle">Get your first pickup absolutely free. No minimum order. Available in your area right now.</p>
+            <div class="popup-offer">FREE 20-MINUTE PICKUP</div>
+            <a href="https://wa.me/918639103842?text=Hi!%20I%20want%20my%20FREE%20first%20pickup%20in%20Hyderabad" target="_blank" class="popup-cta">Claim Free Pickup →</a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <div class="services-container">
             <div class="footer-cta">
                 <h2 class="footer-cta-title">Ready for 20-Minute Pickup?</h2>
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
+                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="hero-cta">Book Free Pickup Now</a>
             </div>
 
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service Hyderabad" style="height: 32px; filter: brightness(0) invert(1);">
+                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" style="height: 32px; filter: brightness(0) invert(1);">
                     <p>Hyderabad's fastest laundry service with 20-minute pickup. Professional wash, iron, and dry cleaning delivered across all areas.</p>
                 </div>
                 <div class="footer-col">
@@ -764,7 +1347,6 @@
                         <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Express Iron</a>
                         <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Wash & Iron</a>
                         <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
-                        <a href="/fastest-laundry-service-hyderabad.html" class="footer-link">Iron Only</a>
                         <a href="/stain-remover.html" class="footer-link">Stain Guide</a>
                     </div>
                 </div>
@@ -792,13 +1374,51 @@
         </div>
     </footer>
 
-    <!-- FAB -->
-    <a href="https://wa.me/918639103842" target="_blank" class="fab" aria-label="Contact Zapwash fastest laundry service on WhatsApp">
+    <!-- WhatsApp FAB -->
+    <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20service" target="_blank" class="fab" aria-label="Contact on WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // Mobile Menu
+        // Geolocation-based hero personalization
+        const locationData = {
+            'Gachibowli': { emoji: '⚡', slots: 3 },
+            'Madhapur': { emoji: '🚀', slots: 5 },
+            'Hitech City': { emoji: '💼', slots: 4 },
+            'Kondapur': { emoji: '⭐', slots: 2 },
+            'Jubilee Hills': { emoji: '👑', slots: 6 },
+            'Banjara Hills': { emoji: '🏆', slots: 3 }
+        };
+
+        function detectUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        // In production, use reverse geocoding API
+                        // For demo, randomize location
+                        const locations = Object.keys(locationData);
+                        const randomLocation = locations[Math.floor(Math.random() * locations.length)];
+                        updateHeroLocation(randomLocation);
+                    },
+                    () => {
+                        updateHeroLocation('Gachibowli'); // Default
+                    }
+                );
+            }
+        }
+
+        function updateHeroLocation(location) {
+            const data = locationData[location] || locationData['Gachibowli'];
+            document.getElementById('heroLocation').textContent = `${data.emoji} ${location.toUpperCase()}`;
+            document.getElementById('availabilityText').textContent = `⚡ ${data.slots} SLOTS LEFT IN ${location.toUpperCase()} TODAY`;
+        }
+
+        // Lazy load hero grid background
+        setTimeout(() => {
+            document.getElementById('heroGrid').classList.add('loaded');
+        }, 500);
+
+        // Mobile menu
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -806,13 +1426,86 @@
             menuToggle.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
             });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                });
-            });
         }
+
+        // Sticky widget on scroll
+        let widgetShown = false;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            
+            if (scrollPercent > 30 && !widgetShown) {
+                document.getElementById('stickyWidget').classList.add('visible');
+                widgetShown = true;
+            }
+        });
+
+        function closeWidget() {
+            document.getElementById('stickyWidget').classList.remove('visible');
+        }
+
+        // Widget location update
+        document.getElementById('widgetLocation').addEventListener('change', function() {
+            const location = this.value;
+            if (location) {
+                document.getElementById('widgetCTA').href = `https://wa.me/918639103842?text=Hi!%20I%20need%2020-minute%20pickup%20in%20${encodeURIComponent(location)}`;
+            }
+        });
+
+        // Location card clicks
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (location) {
+                    window.open(`https://wa.me/918639103842?text=Hi!%20I%20need%20pickup%20in%20${encodeURIComponent(location)}`, '_blank');
+                }
+            });
+        });
+
+        // Exit intent popup
+        let exitPopupShown = false;
+        let lastScrollY = window.scrollY;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !exitPopupShown) {
+                showExitPopup();
+            }
+        });
+
+        // Mobile: Fast scroll up detection
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const scrollSpeed = lastScrollY - currentScrollY;
+            
+            if (scrollSpeed > 160 && !exitPopupShown && window.innerWidth < 768) {
+                showExitPopup();
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        function showExitPopup() {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            
+            // Only show if user hasn't scrolled past 50%
+            if (scrollPercent < 50) {
+                document.getElementById('exitPopup').classList.add('active');
+                exitPopupShown = true;
+                
+                // Track event
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'exit_intent_shown', {
+                        'event_category': 'engagement'
+                    });
+                }
+            }
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
+        }
+
+        // Initialize
+        detectUserLocation();
     </script>
 </body>
 </html>
