@@ -1,54 +1,35 @@
 # Zapwash - Hyderabad's Fastest Laundry Service
 # https://thezapwash.com/robots.txt
-# Last Updated: December 6, 2025
+# Last Updated: December 8, 2025
 
-# Allow all search engines to crawl everything
+# 1. GLOBAL RULES
+# Allow all bots to crawl everything by default
 User-agent: *
 Allow: /
 
-# Sitemap location (REQUIRED for Google)
+# 2. SITEMAP
 Sitemap: https://thezapwash.com/sitemap.xml
 
-# LLMs.txt for AI search engines
+# 3. AI & LLM PERMISSIONS
 Allow: /llms.txt
 
-# Allow all HTML pages
-Allow: /*.html$
-
-# Allow all CSS and JavaScript (important for SEO)
-Allow: /css/
-Allow: /js/
-Allow: /*.css$
-Allow: /*.js$
-
-# Allow images for Google Image Search
-Allow: /images/
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-
-# Block unwanted bot traffic (optional - saves crawl budget)
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
+# 4. BLOCK UNWANTED BOTS
+# These bots are often used for scraping/spam, not search ranking.
 User-agent: MJ12bot
 Disallow: /
 
 User-agent: DotBot
 Disallow: /
 
-# Google-specific (faster indexing)
-User-agent: Googlebot
+# 5. AUDIT TOOLS (Specific)
+# Explicitly allowing Ahrefs without delay so your audit works.
+User-agent: AhrefsBot
 Allow: /
-Crawl-delay: 0
+Crawl-delay: 1  # Standard fast delay (optional, can be removed entirely)
 
-# Bing-specific
-User-agent: Bingbot
+User-agent: SemrushBot
 Allow: /
-Crawl-delay: 0
+Crawl-delay: 1
+
+# Note: Googlebot ignores "Crawl-delay" in robots.txt, 
+# so we don't need to add it here.
