@@ -21,45 +21,12 @@
     </script>
 
     <!-- SEO META -->
-    <title>Zapwash - Hyderabad's Fastest Laundry Service | 20 Min Pickup | 1 Hour Express</title>
-    <meta name="description" content="Hyderabad's fastest laundry service with 20-minute pickup and 1-hour express iron. Free delivery above ₹100. Serving Gachibowli, Madhapur, Hitech City. Book now!">
-    <meta name="keywords" content="fastest laundry Hyderabad, 20 minute pickup laundry, 1 hour laundry service, express laundry Hyderabad, laundry near me">
+    <title>Zapwash - Free Pickup & Delivery | 20 Min Pickup | Hyderabad Laundry</title>
+    <meta name="description" content="FREE pickup & delivery on first order! Hyderabad's fastest laundry with 20-min pickup, 1-hour express iron. Serving Gachibowli, Madhapur, Hitech City.">
+    <meta name="keywords" content="free laundry pickup Hyderabad, fastest laundry Hyderabad, 20 minute pickup, free delivery laundry">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Zapwash - Hyderabad's Fastest Laundry Service">
-    <meta property="og:description" content="20-minute pickup, 1-hour express. Free delivery above ₹100.">
-    <meta property="og:url" content="https://thezapwash.com/">
-    <meta property="og:type" content="website">
-    
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Zapwash",
-      "description": "Hyderabad's fastest laundry service with 20-minute pickup",
-      "telephone": "+918639103842",
-      "url": "https://thezapwash.com",
-      "priceRange": "₹15-₹200",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "addressCountry": "IN"
-      },
-      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet"],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "400"
-      }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -75,14 +42,11 @@
             --gray-50: #FAFAFA;
             --gray-100: #F5F5F5;
             --gray-200: #E5E5E5;
-            --gray-300: #D4D4D4;
             --gray-400: #A3A3A3;
-            --gray-500: #737373;
             --gray-600: #525252;
             --gray-700: #404040;
-            --gray-800: #262626;
-            --gray-900: #171717;
             --accent: #FF6B00;
+            --success: #00C853;
         }
 
         html {
@@ -99,13 +63,8 @@
             overflow-x: hidden;
         }
 
-        ::selection {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
+        h1, h2, h3, h4 {
+            font-weight: 700;
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
@@ -148,11 +107,6 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            transition: opacity 0.2s;
-        }
-
-        .nav-link:hover {
-            opacity: 0.5;
         }
 
         .nav-cta {
@@ -163,7 +117,6 @@
             font-size: 0.875rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
             border: 2px solid var(--black);
             transition: all 0.2s;
         }
@@ -187,16 +140,13 @@
         }
 
         .menu-toggle span {
-            display: block;
             width: 20px;
             height: 2px;
             background: var(--black);
-            transition: all 0.3s;
         }
 
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
-            .nav-inner { padding: 0 1rem; }
             .nav-links {
                 display: none;
                 position: absolute;
@@ -210,11 +160,29 @@
                 padding: 0;
             }
             .nav-links.active { display: flex; }
-            .nav-link {
-                padding: 1rem 2rem;
-                border-bottom: 1px solid var(--gray-200);
-                width: 100%;
-            }
+            .nav-link { padding: 1rem 2rem; border-bottom: 1px solid var(--gray-200); width: 100%; }
+        }
+
+        /* FREE OFFER BANNER */
+        .offer-banner {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 999;
+            letter-spacing: 0.05em;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
 
         /* HERO */
@@ -222,7 +190,7 @@
             min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 100px 2rem 4rem;
+            padding: 150px 2rem 4rem;
             position: relative;
             border-bottom: 1px solid var(--black);
         }
@@ -234,7 +202,6 @@
                 repeating-linear-gradient(0deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px),
                 repeating-linear-gradient(90deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px);
             opacity: 0.3;
-            pointer-events: none;
         }
 
         .hero-container {
@@ -261,7 +228,6 @@
             font-size: clamp(2.5rem, 8vw, 6rem);
             font-weight: 700;
             line-height: 0.95;
-            letter-spacing: -0.04em;
             margin-bottom: 1.5rem;
         }
 
@@ -273,8 +239,20 @@
             font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--gray-600);
             max-width: 700px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 1rem;
             line-height: 1.6;
+        }
+
+        .hero-offer {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .btn-primary {
@@ -285,7 +263,6 @@
             font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
             text-decoration: none;
             background: var(--black);
             color: var(--white);
@@ -334,7 +311,7 @@
             font-weight: 600;
         }
 
-        /* SERVICES OVERVIEW */
+        /* SERVICES */
         .services-overview {
             padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
@@ -347,7 +324,6 @@
 
         .section-title {
             font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
             text-align: center;
             margin-bottom: 3rem;
         }
@@ -391,7 +367,6 @@
             font-size: 0.688rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
         .service-icon {
@@ -417,16 +392,9 @@
         }
 
         .link-arrow {
-            display: inline-block;
             font-weight: 700;
             font-size: 0.875rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover .link-arrow {
-            transform: translateX(5px);
         }
 
         /* LOCATIONS */
@@ -434,13 +402,6 @@
             padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
             background: var(--gray-50);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray-600);
-            margin-bottom: 3rem;
-            font-size: 1.125rem;
         }
 
         .locations-grid {
@@ -470,24 +431,14 @@
         .location-card:hover {
             background: var(--black);
             color: var(--white);
-            transform: scale(1.05);
-        }
-
-        .location-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
         }
 
         .location-status {
             font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
             color: var(--accent);
             font-weight: 700;
-        }
-
-        .location-card:hover .location-status {
-            color: var(--white);
+            margin-top: 0.5rem;
         }
 
         /* TESTIMONIALS */
@@ -518,15 +469,96 @@
             margin-bottom: 1rem;
         }
 
-        .testimonial-card p {
-            color: var(--gray-700);
-            line-height: 1.7;
+        /* EXIT INTENT POPUP */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .exit-popup.active {
+            display: flex;
+        }
+
+        .popup-content {
+            background: var(--white);
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+        }
+
+        .popup-emoji {
+            font-size: 4rem;
             margin-bottom: 1.5rem;
         }
 
-        .author {
+        .popup-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 700;
-            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .popup-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .popup-offer {
+            background: var(--success);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+        }
+
+        .popup-cta:hover {
+            background: var(--white);
+            color: var(--black);
         }
 
         /* FOOTER */
@@ -569,8 +601,7 @@
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gray-500);
+            color: var(--gray-400);
             margin-bottom: 1.5rem;
         }
 
@@ -584,7 +615,6 @@
             color: var(--gray-400);
             text-decoration: none;
             font-size: 0.875rem;
-            transition: color 0.2s;
         }
 
         .footer-link:hover {
@@ -593,7 +623,7 @@
 
         .footer-bottom {
             text-align: center;
-            color: var(--gray-500);
+            color: var(--gray-400);
             font-size: 0.875rem;
         }
 
@@ -628,6 +658,11 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <!-- Free Offer Banner -->
+    <div class="offer-banner">
+        🎁 FIRST ORDER FREE! Free Pickup & Free Delivery • Limited Time
+    </div>
+
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
@@ -646,7 +681,7 @@
                 <a href="/pricing.html" class="nav-link">Pricing</a>
                 <a href="/contact.html" class="nav-link">Contact</a>
             </div>
-            <a href="tel:+918639103842" class="nav-cta">📞 Call Now</a>
+            <a href="#" class="nav-cta" id="navBookBtn">📞 Book Free Pickup</a>
         </div>
     </nav>
 
@@ -654,15 +689,16 @@
     <section class="hero">
         <div class="hero-grid"></div>
         <div class="hero-container">
-            <span class="hero-badge">⚡ HYDERABAD'S FASTEST</span>
+            <span class="hero-badge" id="heroBadge">⚡ GACHIBOWLI</span>
             <h1 class="hero-title">
-                <span class="highlight">20-Minute Pickup</span><br>
-                1-Hour Express Laundry
+                <span class="highlight">FREE Pickup & Delivery</span><br>
+                On Your First Order
             </h1>
             <p class="hero-subtitle">
-                Professional laundry service across Gachibowli, Madhapur, Hitech City & 5+ areas. Free delivery above ₹100.
+                20-minute pickup. 1-hour express iron. Professional laundry across Hyderabad. No minimum order for first-time customers!
             </p>
-            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%2020-minute%20pickup" class="btn-primary">Book Free Pickup</a>
+            <div class="hero-offer">🎁 100% FREE FIRST ORDER PICKUP & DELIVERY</div>
+            <a href="#" class="btn-primary" id="heroBookBtn">Claim Free Pickup Now →</a>
         </div>
     </section>
 
@@ -674,8 +710,8 @@
                 <div class="trust-label">Average Pickup</div>
             </div>
             <div>
-                <div class="trust-value">1hr</div>
-                <div class="trust-label">Express Available</div>
+                <div class="trust-value">FREE</div>
+                <div class="trust-label">First Order P&D</div>
             </div>
             <div>
                 <div class="trust-value">400+</div>
@@ -691,41 +727,41 @@
             
             <div class="services-grid">
                 <a href="/1-hour-express-iron.html" class="service-card-link">
-                    <div class="service-card">
+                    <div class="service-card" data-service="1-hour-express-iron">
                         <span class="service-badge">⚡ Most Popular</span>
                         <div class="service-icon">⚡</div>
                         <h3>1-Hour Express Iron</h3>
-                        <p>Fastest ironing in Hyderabad. Drop off, ready in 60 minutes.</p>
+                        <p>Fastest ironing in Hyderabad. Ready in 60 minutes.</p>
                         <span class="service-price">From ₹20/piece</span>
                         <span class="link-arrow">View Details →</span>
                     </div>
                 </a>
 
                 <a href="/wash-and-iron.html" class="service-card-link">
-                    <div class="service-card">
+                    <div class="service-card" data-service="wash-and-iron">
                         <div class="service-icon">🧺</div>
                         <h3>Wash & Iron</h3>
-                        <p>Complete laundry service. Professional wash and crisp press.</p>
+                        <p>Complete laundry service. 48-hour turnaround.</p>
                         <span class="service-price">From ₹40/piece</span>
                         <span class="link-arrow">View Details →</span>
                     </div>
                 </a>
 
                 <a href="/dry-cleaning.html" class="service-card-link">
-                    <div class="service-card">
+                    <div class="service-card" data-service="dry-cleaning">
                         <div class="service-icon">👔</div>
                         <h3>Dry Cleaning</h3>
-                        <p>Safe cleaning for suits, sarees, and delicate fabrics.</p>
+                        <p>Safe for suits, sarees, delicate fabrics.</p>
                         <span class="service-price">From ₹80/piece</span>
                         <span class="link-arrow">View Details →</span>
                     </div>
                 </a>
 
                 <a href="/iron-only.html" class="service-card-link">
-                    <div class="service-card">
+                    <div class="service-card" data-service="iron-only">
                         <div class="service-icon">👕</div>
                         <h3>Iron Only</h3>
-                        <p>Sharp press for already clean clothes. 24-hour service.</p>
+                        <p>Sharp press for clean clothes. 24-hour service.</p>
                         <span class="service-price">From ₹15/piece</span>
                         <span class="link-arrow">View Details →</span>
                     </div>
@@ -738,45 +774,44 @@
     <section class="locations-section">
         <div class="container">
             <h2 class="section-title">Areas We Serve</h2>
-            <p class="section-subtitle">20-minute pickup available across Hyderabad</p>
             
             <div class="locations-grid">
-                <a href="/gachibowli-laundry.html" class="location-card">
+                <a href="/gachibowli-laundry.html" class="location-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
                     <span class="location-status">⚡ Available Now</span>
                 </a>
 
-                <a href="/madhapur-laundry.html" class="location-card">
+                <a href="/madhapur-laundry.html" class="location-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
                     <span class="location-status">⚡ Available Now</span>
                 </a>
 
-                <a href="/hitech-city-laundry.html" class="location-card">
+                <a href="/hitech-city-laundry.html" class="location-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
                     <span class="location-status">⚡ Available Now</span>
                 </a>
 
-                <a href="/kondapur-laundry.html" class="location-card">
+                <a href="/kondapur-laundry.html" class="location-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
                     <span class="location-status">⚡ Available Now</span>
                 </a>
 
-                <a href="/jubilee-hills-laundry.html" class="location-card">
+                <a href="/jubilee-hills-laundry.html" class="location-card" data-location="Jubilee Hills">
                     <h3>Jubilee Hills</h3>
                     <span class="location-status">Available</span>
                 </a>
 
-                <a href="/banjara-hills-laundry.html" class="location-card">
+                <a href="/banjara-hills-laundry.html" class="location-card" data-location="Banjara Hills">
                     <h3>Banjara Hills</h3>
                     <span class="location-status">Available</span>
                 </a>
 
-                <a href="/kukatpally-laundry.html" class="location-card">
+                <a href="/kukatpally-laundry.html" class="location-card" data-location="Kukatpally">
                     <h3>Kukatpally</h3>
                     <span class="location-status">Available</span>
                 </a>
 
-                <a href="/ameerpet-laundry.html" class="location-card">
+                <a href="/ameerpet-laundry.html" class="location-card" data-location="Ameerpet">
                     <h3>Ameerpet</h3>
                     <span class="location-status">Available</span>
                 </a>
@@ -792,31 +827,43 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Picked up from Gachibowli in 18 minutes! Needed urgent press before meeting. Best laundry service in Hyderabad."</p>
+                    <p>"Free first order got me hooked! Now I use them weekly. Pickup in Gachibowli in 18 minutes!"</p>
                     <div class="author">Rajesh K. - Gachibowli</div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"1-hour express saved me before my flight! WhatsApp booking was super easy. Highly recommend."</p>
+                    <p>"Can't believe first pickup was totally free! 1-hour express saved me before my flight."</p>
                     <div class="author">Priya S. - Madhapur</div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Finally reliable laundry near Hitech City! Quality ironing, on-time delivery. Using them every week."</p>
+                    <p>"Quality service at great prices. The free first order deal made it risk-free to try!"</p>
                     <div class="author">Anil M. - Hitech City</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeExitPopup()">×</button>
+            <div class="popup-emoji">🎁</div>
+            <h3 class="popup-title">Wait! Don't Miss This</h3>
+            <p class="popup-subtitle" id="popupLocation">Get FREE pickup & delivery on your first order in <strong id="popupLocationName">your area</strong>!</p>
+            <div class="popup-offer">FREE PICKUP & FREE DELIVERY</div>
+            <a href="#" class="popup-cta" id="popupCTA">Claim Free Offer Now →</a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-cta">
-                <h2>Ready for 20-Minute Pickup?</h2>
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20pickup" class="btn-primary">Book Free Pickup</a>
+                <h2>Ready for FREE Pickup & Delivery?</h2>
+                <a href="#" class="btn-primary" id="footerBookBtn">Claim Free First Order</a>
             </div>
 
             <div class="footer-grid">
@@ -860,18 +907,202 @@
             </div>
 
             <div class="footer-bottom">
-                <p>© 2025 Zapwash • Hyderabad's Fastest Laundry • 20-min pickup • 400+ customers</p>
+                <p>© 2025 Zapwash • FREE First Order Pickup & Delivery • 400+ Happy Customers</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp FAB -->
-    <a href="https://wa.me/918639103842" class="fab" aria-label="WhatsApp">
+    <a href="#" class="fab" id="fabBtn" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // Mobile menu
+        // GEOLOCATION TRACKING
+        let userLocation = 'Hyderabad';
+        let userCoords = null;
+
+        // Location mapping with coordinates
+        const locations = {
+            'Gachibowli': { lat: 17.4400, lon: 78.3489, emoji: '⚡' },
+            'Madhapur': { lat: 17.4485, lon: 78.3908, emoji: '🚀' },
+            'Hitech City': { lat: 17.4483, lon: 78.3808, emoji: '💼' },
+            'Kondapur': { lat: 17.4648, lon: 78.3630, emoji: '⭐' },
+            'Jubilee Hills': { lat: 17.4321, lon: 78.4095, emoji: '👑' },
+            'Banjara Hills': { lat: 17.4171, lon: 78.4500, emoji: '🏆' },
+            'Kukatpally': { lat: 17.4849, lon: 78.4138, emoji: '✨' },
+            'Ameerpet': { lat: 17.4375, lon: 78.4482, emoji: '🎯' }
+        };
+
+        function detectUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        userCoords = {
+                            lat: position.coords.latitude,
+                            lon: position.coords.longitude
+                        };
+                        
+                        // Find nearest location
+                        let nearestLocation = 'Gachibowli';
+                        let minDistance = Infinity;
+                        
+                        for (const [name, coords] of Object.entries(locations)) {
+                            const distance = Math.sqrt(
+                                Math.pow(coords.lat - userCoords.lat, 2) + 
+                                Math.pow(coords.lon - userCoords.lon, 2)
+                            );
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                nearestLocation = name;
+                            }
+                        }
+                        
+                        userLocation = nearestLocation;
+                        updateLocationUI(nearestLocation);
+                        
+                        // Track in GA4
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'location_detected', {
+                                'location': nearestLocation
+                            });
+                        }
+                    },
+                    () => {
+                        userLocation = 'Gachibowli'; // Default
+                        updateLocationUI('Gachibowli');
+                    }
+                );
+            } else {
+                userLocation = 'Gachibowli';
+                updateLocationUI('Gachibowli');
+            }
+        }
+
+        function updateLocationUI(location) {
+            const emoji = locations[location]?.emoji || '⚡';
+            document.getElementById('heroBadge').textContent = `${emoji} ${location.toUpperCase()}`;
+            document.getElementById('popupLocationName').textContent = location;
+        }
+
+        // DYNAMIC WHATSAPP MESSAGES
+        function getWhatsAppLink(service = null, location = null) {
+            const loc = location || userLocation;
+            let message = '';
+            
+            if (service) {
+                const serviceNames = {
+                    '1-hour-express-iron': '1-hour express iron',
+                    'wash-and-iron': 'wash & iron',
+                    'dry-cleaning': 'dry cleaning',
+                    'iron-only': 'iron only'
+                };
+                message = `Hi! I want to claim FREE PICKUP & DELIVERY for ${serviceNames[service]} service in ${loc}`;
+            } else {
+                message = `Hi! I want to claim FREE PICKUP & DELIVERY on my first order in ${loc}`;
+            }
+            
+            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
+        }
+
+        // UPDATE ALL CTA BUTTONS
+        function updateAllCTAs() {
+            // Hero button
+            document.getElementById('heroBookBtn').href = getWhatsAppLink();
+            
+            // Nav button
+            document.getElementById('navBookBtn').href = getWhatsAppLink();
+            
+            // Footer button
+            document.getElementById('footerBookBtn').href = getWhatsAppLink();
+            
+            // FAB button
+            document.getElementById('fabBtn').href = getWhatsAppLink();
+            
+            // Popup button
+            document.getElementById('popupCTA').href = getWhatsAppLink();
+        }
+
+        // SERVICE CARD CLICKS - Dynamic WhatsApp per service
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('.link-arrow')) {
+                    const service = this.getAttribute('data-service');
+                    window.open(getWhatsAppLink(service), '_blank');
+                    
+                    // Track in GA4
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'service_click', {
+                            'service': service,
+                            'location': userLocation
+                        });
+                    }
+                }
+            });
+        });
+
+        // LOCATION CARD CLICKS - Dynamic WhatsApp per location
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                e.preventDefault();
+                const location = this.getAttribute('data-location');
+                window.open(getWhatsAppLink(null, location), '_blank');
+                
+                // Track in GA4
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', {
+                        'selected_location': location,
+                        'user_location': userLocation
+                    });
+                }
+            });
+        });
+
+        // EXIT INTENT POPUP
+        let exitPopupShown = false;
+        let mouseLeaveCount = 0;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !exitPopupShown && mouseLeaveCount < 1) {
+                showExitPopup();
+                mouseLeaveCount++;
+            }
+        });
+
+        // Mobile: Fast scroll up detection
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const scrollSpeed = lastScrollY - currentScrollY;
+            
+            // Fast upward scroll on mobile
+            if (scrollSpeed > 150 && !exitPopupShown && window.innerWidth < 768) {
+                const scrollPercent = (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent < 50) {
+                    showExitPopup();
+                }
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        function showExitPopup() {
+            document.getElementById('exitPopup').classList.add('active');
+            exitPopupShown = true;
+            
+            // Track in GA4
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exit_intent_shown', {
+                    'location': userLocation
+                });
+            }
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
+        }
+
+        // MOBILE MENU
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -880,6 +1111,19 @@
                 navLinks.classList.toggle('active');
             });
         }
+
+        // INITIALIZE
+        detectUserLocation();
+        
+        // Update CTAs after location detection (with delay to ensure location is set)
+        setTimeout(updateAllCTAs, 1000);
+
+        // Close popup on outside click
+        document.getElementById('exitPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeExitPopup();
+            }
+        });
     </script>
 </body>
 </html>
