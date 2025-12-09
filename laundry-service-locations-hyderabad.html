@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FSZX5XC');</script>
+    
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYPST6NC81"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYPST6NC81');
+    </script>
+
+    <!-- SEO META -->
+    <title>Laundry Service Locations in Hyderabad | Gachibowli, Madhapur & More | Zapwash</title>
+    <meta name="description" content="Zapwash laundry service available across Hyderabad. FREE pickup & delivery in Gachibowli, Madhapur, Hitech City, Kondapur, and 4 more locations. Find your area!">
+    <meta name="keywords" content="laundry service locations Hyderabad, Gachibowli laundry, Madhapur laundry, Hitech City laundry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thezapwash.com/laundry-service-locations-hyderabad.html">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Laundry Service",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Zapwash",
+        "telephone": "+918639103842",
+        "url": "https://thezapwash.com"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Gachibowli, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Madhapur, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Hitech City, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Kondapur, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Nanakramguda, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Manikonda, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Puppalaguda, Hyderabad"
+        },
+        {
+          "@type": "City",
+          "name": "Khajaguda, Hyderabad"
+        }
+      ]
+    }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-400: #A3A3A3;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --accent: #FF6B00;
+            --success: #00C853;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.5;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        /* NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--black);
+        }
+
+        .nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-logo {
+            height: 32px;
+            z-index: 1001;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-cta {
+            padding: 0.625rem 1.5rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+        }
+
+        .nav-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid var(--black);
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--black);
+            transition: all 0.3s;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem;
+                overflow-y: auto;
+            }
+            .nav-links.active { display: flex; }
+            .nav-link { padding: 1rem 0; border-bottom: 1px solid var(--gray-200); width: 100%; }
+            .nav-cta { margin-top: 1rem; width: 100%; text-align: center; padding: 1rem; }
+        }
+
+        /* BANNER */
+        .offer-banner {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 999;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 140px 2rem 4rem;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--black);
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.813rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--gray-600);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* LOCATIONS GRID */
+        .locations-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            font-size: 1.125rem;
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .locations-grid { grid-template-columns: 1fr; }
+        }
+
+        .location-card {
+            background: var(--white);
+            border: 3px solid var(--black);
+            padding: 3rem 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--black);
+            transition: all 0.3s;
+            z-index: 0;
+        }
+
+        .location-card:hover::before {
+            left: 0;
+        }
+
+        .location-card:hover {
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .location-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .location-name {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .location-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--success);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .location-card:hover .location-badge {
+            background: var(--accent);
+        }
+
+        .location-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .location-card:hover .location-features li {
+            border-bottom-color: var(--gray-600);
+        }
+
+        .location-cta {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: var(--black);
+            color: var(--white);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            border: 2px solid var(--black);
+            transition: all 0.3s;
+        }
+
+        .location-card:hover .location-cta {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* COVERAGE MAP */
+        .coverage-section {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--black);
+        }
+
+        .coverage-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .coverage-content { grid-template-columns: 1fr; }
+        }
+
+        .coverage-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .coverage-text p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .coverage-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 2rem;
+            background: var(--white);
+            border: 2px solid var(--black);
+        }
+
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--gray-600);
+            font-weight: 600;
+        }
+
+        /* SERVICES PREVIEW */
+        .services-preview {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+            .services-list { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+            .services-list { grid-template-columns: 1fr; }
+        }
+
+        .service-item {
+            background: var(--white);
+            border: 2px solid var(--black);
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: var(--black);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-item h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-price {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .service-item:hover .service-price {
+            color: var(--success);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--white);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--white);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 5rem 2rem 2rem;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-link {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-link:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+
+        /* FAB */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Banner -->
+    <div class="offer-banner">
+        🎁 FREE PICKUP & DELIVERY for First-Time Customers | Available in 8 Locations
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo"></a>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/laundry-services-hyderabad.html" class="nav-link">Services</a>
+                <a href="/laundry-service-locations-hyderabad.html" class="nav-link">Locations</a>
+                <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
+                <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
+                <a href="#" class="nav-cta" id="navBookBtn">📞 Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <span class="hero-badge">8 LOCATIONS & GROWING</span>
+            <h1 class="hero-title">
+                <span class="highlight">Laundry Service</span><br>
+                Across Hyderabad
+            </h1>
+            <p class="hero-subtitle">
+                Professional laundry with 20-minute pickup across Gachibowli, Madhapur, Hitech City, Kondapur, Nanakramguda, Manikonda, Puppalaguda, and Khajaguda.
+            </p>
+        </div>
+    </section>
+
+    <!-- Locations Grid -->
+    <section class="locations-section">
+        <div class="container">
+            <h2 class="section-title">Choose Your Location</h2>
+            <p class="section-subtitle">Click on your area to see service details and pricing</p>
+            
+            <div class="locations-grid">
+                <!-- Gachibowli -->
+                <a href="/laundry-service-gachibowli.html" class="location-card" data-location="Gachibowli">
+                    <div class="location-content">
+                        <h3 class="location-name">Gachibowli</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Madhapur -->
+                <a href="/laundry-service-madhapur.html" class="location-card" data-location="Madhapur">
+                    <div class="location-content">
+                        <h3 class="location-name">Madhapur</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Hitech City -->
+                <a href="/laundry-service-hitech-city.html" class="location-card" data-location="Hitech City">
+                    <div class="location-content">
+                        <h3 class="location-name">Hitech City</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Kondapur -->
+                <a href="/laundry-service-kondapur.html" class="location-card" data-location="Kondapur">
+                    <div class="location-content">
+                        <h3 class="location-name">Kondapur</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Nanakramguda -->
+                <a href="/laundry-service-nanakramguda.html" class="location-card" data-location="Nanakramguda">
+                    <div class="location-content">
+                        <h3 class="location-name">Nanakramguda</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Manikonda -->
+                <a href="/laundry-service-manikonda.html" class="location-card" data-location="Manikonda">
+                    <div class="location-content">
+                        <h3 class="location-name">Manikonda</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Puppalaguda -->
+                <a href="/laundry-service-puppalaguda.html" class="location-card" data-location="Puppalaguda">
+                    <div class="location-content">
+                        <h3 class="location-name">Puppalaguda</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+
+                <!-- Khajaguda -->
+                <a href="/laundry-service-khajaguda.html" class="location-card" data-location="Khajaguda">
+                    <div class="location-content">
+                        <h3 class="location-name">Khajaguda</h3>
+                        <span class="location-badge">Available Now</span>
+                        <ul class="location-features">
+                            <li>⚡ 20-min average pickup</li>
+                            <li>🔥 1-hour express iron</li>
+                            <li>🎁 FREE first pickup & delivery</li>
+                        </ul>
+                        <span class="location-cta">View Details →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Stats -->
+    <section class="coverage-section">
+        <div class="container">
+            <div class="coverage-content">
+                <div class="coverage-text">
+                    <h2>Growing Coverage Across Hyderabad</h2>
+                    <p>We started in Gachibowli and have rapidly expanded to serve 8 major areas across Hyderabad's tech corridor and residential neighborhoods.</p>
+                    <p>Our goal is to provide fast, reliable, and professional laundry service to every household and professional in Hyderabad.</p>
+                </div>
+                
+                <div class="coverage-stats">
+                    <div class="stat">
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Locations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">20min</div>
+                        <div class="stat-label">Avg Pickup</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">400+</div>
+                        <div class="stat-label">Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">FREE</div>
+                        <div class="stat-label">First P&D</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Available Services</h2>
+            <p class="section-subtitle">All services available across all 8 locations</p>
+            
+            <div class="services-list">
+                <a href="/express-iron-service-hyderabad.html" class="service-item">
+                    <div class="service-icon">⚡</div>
+                    <h3>Express Iron</h3>
+                    <p class="service-price">From Rs.15/pc</p>
+                </a>
+
+                <a href="/wash-and-iron-service-hyderabad.html" class="service-item">
+                    <div class="service-icon">🧺</div>
+                    <h3>Wash & Iron</h3>
+                    <p class="service-price">From Rs.40/pc</p>
+                </a>
+
+                <a href="/dry-cleaning-service-hyderabad.html" class="service-item">
+                    <div class="service-icon">✨</div>
+                    <h3>Dry Cleaning</h3>
+                    <p class="service-price">From Rs.150/pc</p>
+                </a>
+
+                <a href="/iron-only-service-hyderabad.html" class="service-item">
+                    <div class="service-icon">👔</div>
+                    <h3>Iron Only</h3>
+                    <p class="service-price">From Rs.10/pc</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery for first-time customers in all locations</p>
+            <a href="#" class="btn-primary" id="ctaBookBtn">Book Pickup Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <div class="footer-links">
+                        <a href="/express-iron-service-hyderabad.html" class="footer-link">Express Iron</a>
+                        <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
+                        <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
+                        <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Top Locations</h4>
+                    <div class="footer-links">
+                        <a href="/laundry-service-gachibowli.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-nanakramguda.html" class="footer-link">Nanakramguda</a>
+                        <a href="/laundry-service-manikonda.html" class="footer-link">Manikonda</a>
+                        <a href="/laundry-service-puppalaguda.html" class="footer-link">Puppalaguda</a>
+                        <a href="/laundry-service-khajaguda.html" class="footer-link">Khajaguda</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="/laundry-pricing-hyderabad.html" class="footer-link">Pricing</a>
+                        <a href="/laundry-services-hyderabad.html" class="footer-link">All Services</a>
+                        <a href="/about-zapwash-hyderabad.html" class="footer-link">About</a>
+                        <a href="/contact-zapwash-hyderabad.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/918639103842" class="footer-link">WhatsApp</a>
+                        <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zapwash - Laundry Service in 8 Locations | FREE First Pickup & Delivery</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a href="#" class="fab" id="fabBtn">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        function getWhatsAppLink() {
+            return `https://wa.me/918639103842?text=${encodeURIComponent('Hi! I want to book laundry service in Hyderabad')}`;
+        }
+
+        function updateAllCTAs() {
+            document.getElementById('navBookBtn').href = getWhatsAppLink();
+            document.getElementById('ctaBookBtn').href = getWhatsAppLink();
+            document.getElementById('fabBtn').href = getWhatsAppLink();
+        }
+
+        // MOBILE MENU
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            const links = navLinks.querySelectorAll('.nav-link, .nav-cta');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // LOCATION TRACKING
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_page_click', { 'location': location });
+                }
+            });
+        });
+
+        // INITIALIZE
+        updateAllCTAs();
+
+        // GA4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': 'Locations Overview',
+                'page_location': window.location.href
+            });
+        }
+    </script>
+</body>
+</html>
