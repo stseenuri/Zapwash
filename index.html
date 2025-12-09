@@ -27,7 +27,7 @@
 
     <!-- SEO META -->
     <title>Zapwash - Free Pickup & Delivery | 20-Min Pickup | Hyderabad Laundry</title>
-    <meta name="description" content="First-time customers get FREE pickup and delivery! 20-minute pickup, 1-hour express iron. Professional laundry service across Gachibowli, Madhapur, Hitech City.">
+    <meta name="description" content="First-time customers get FREE pickup and delivery! 20-minute pickup, 1-hour express iron available. Professional laundry service across Gachibowli, Madhapur, Hitech City & more.">
     <meta name="keywords" content="free pickup delivery laundry, fastest laundry Hyderabad, 20 minute pickup, express laundry">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/">
@@ -332,10 +332,179 @@
             font-weight: 600;
         }
 
-        /* SERVICES */
-        .services-overview {
+        /* ABOUT ZAPWASH SECTION */
+        .about-zapwash-section {
             padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
+            background: var(--white);
+        }
+
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent);
+            color: var(--white);
+            font-size: 0.813rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title-left {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text {
+            font-size: 1.063rem;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text strong {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 2.5rem 0;
+            padding: 2rem 0;
+            border-top: 2px solid var(--gray-200);
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        @media (max-width: 640px) {
+            .about-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--gray-600);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-size: 0.938rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--white);
+            color: var(--black);
+            border: 2px solid var(--black);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .about-image {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .image-card {
+            background: var(--gray-50);
+            border: 2px solid var(--black);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .image-card:hover {
+            transform: translateX(5px);
+            background: var(--white);
+            box-shadow: 8px 8px 0 var(--gray-200);
+        }
+
+        .image-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .image-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .image-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            font-size: 0.938rem;
+        }
+
+        /* HOW IT WORKS SECTION */
+        .how-it-works-section {
+            padding: 5rem 2rem;
+            background: var(--gray-50);
+            border-bottom: 1px solid var(--black);
+        }
+
+        .section-badge-center {
+            display: block;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-badge-center span {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--black);
+            color: var(--white);
+            font-size: 0.813rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto 4rem;
         }
 
         .container {
@@ -343,10 +512,115 @@
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 1280px) {
+            .steps-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+
+        .step-card {
+            background: var(--white);
+            border: 3px solid var(--black);
+            padding: 2rem 1.5rem;
             text-align: center;
-            margin-bottom: 3rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 8px 8px 0 var(--black);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 35px;
+            background: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.125rem;
+            border: 3px solid var(--white);
+        }
+
+        .step-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-card p {
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 0.938rem;
+        }
+
+        .step-detail {
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.813rem;
+            color: var(--gray-600);
+        }
+
+        .step-detail strong {
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .works-footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--white);
+            border: 3px solid var(--black);
+        }
+
+        .works-highlight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .highlight-icon {
+            font-size: 2.5rem;
+        }
+
+        .highlight-text {
+            font-size: 1.125rem;
+        }
+
+        .highlight-text strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* SERVICES */
+        .services-overview {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
         }
 
         .services-grid {
@@ -751,6 +1025,138 @@
         </div>
     </section>
 
+    <!-- About Zapwash Section -->
+    <section class="about-zapwash-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-badge">🧺 OUR STORY</span>
+                    <h2 class="section-title-left">Bringing Organization to Hyderabad's Laundry</h2>
+                    <p class="about-text">
+                        We saw a problem: Hyderabad's local dhobis had incredible skills but lacked organization, quality standards, and access to modern techniques. Meanwhile, customers struggled with inconsistent service and long turnaround times.
+                    </p>
+                    <p class="about-text">
+                        <strong>So we built Zapwash.</strong> We're not replacing dhobis—we're empowering them. We train local laundry experts in professional techniques, quality control, and time management. We provide them with better equipment, eco-friendly products, and a steady stream of customers.
+                    </p>
+                    <p class="about-text">
+                        Today, we've partnered with <strong>70+ skilled dhobis</strong> across Hyderabad. Each one is trained, vetted, and committed to delivering professional-quality laundry. They get fair pay and regular work. You get fast, reliable, high-quality service.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">70+</div>
+                            <div class="stat-label">Partner Dhobis</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">400+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Locations</div>
+                        </div>
+                    </div>
+                    <a href="#how-it-works" class="btn-secondary">See How It Works →</a>
+                </div>
+                
+                <div class="about-image">
+                    <div class="image-card">
+                        <div class="image-icon">🤝</div>
+                        <h3>Empowering Local Dhobis</h3>
+                        <p>We train, equip, and support local laundry experts with professional techniques and quality standards.</p>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-icon">⚡</div>
+                        <h3>Delivering Excellence</h3>
+                        <p>You get professional-quality laundry with the speed and convenience of modern service.</p>
+                    </div>
+                    <div class="image-card">
+                        <div class="image-icon">🌱</div>
+                        <h3>Building Community</h3>
+                        <p>Every order supports local businesses and creates sustainable livelihoods in Hyderabad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+            <div class="section-badge-center">
+                <span>⚙️ SIMPLE PROCESS</span>
+            </div>
+            <h2 class="section-title">How Zapwash Works</h2>
+            <p class="section-subtitle">From your doorstep to our partner dhobis and back—all in a few simple steps</p>
+            
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📱</div>
+                    <h3>You Book</h3>
+                    <p>Send us a WhatsApp message or call. Tell us what you need and when. It takes less than a minute.</p>
+                    <div class="step-detail">
+                        <strong>Via:</strong> WhatsApp, Phone, or Online
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🚗</div>
+                    <h3>We Pickup</h3>
+                    <p>Our pickup partner reaches your doorstep in 20 minutes. Hand over your laundry, get a receipt, and relax.</p>
+                    <div class="step-detail">
+                        <strong>Average time:</strong> 20 minutes
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">🧺</div>
+                    <h3>Expert Processing</h3>
+                    <p>Your laundry goes to our nearest trained dhobi partner. They wash, dry, and iron with professional care using quality products.</p>
+                    <div class="step-detail">
+                        <strong>Quality checked</strong> at every stage
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">✨</div>
+                    <h3>Final Quality Check</h3>
+                    <p>Before delivery, we inspect every item. Proper folding, perfect pressing, fresh fragrance—everything must meet our standards.</p>
+                    <div class="step-detail">
+                        <strong>100%</strong> satisfaction guaranteed
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-icon">🏠</div>
+                    <h3>We Deliver</h3>
+                    <p>Your fresh, clean laundry arrives at your doorstep on time. Pay on delivery via cash, UPI, or card. Done!</p>
+                    <div class="step-detail">
+                        <strong>Track</strong> via WhatsApp updates
+                    </div>
+                </div>
+            </div>
+
+            <div class="works-footer">
+                <div class="works-highlight">
+                    <div class="highlight-icon">🎁</div>
+                    <div class="highlight-text">
+                        <strong>First Order Special:</strong> FREE pickup & delivery for new customers!
+                    </div>
+                </div>
+                <a href="#" class="btn-primary" id="worksBookBtn">Book Your First Order →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services -->
     <section class="services-overview" id="services">
         <div class="container">
@@ -1006,6 +1412,7 @@
             document.getElementById('footerBookBtn').href = getWhatsAppLink();
             document.getElementById('fabBtn').href = getWhatsAppLink();
             document.getElementById('popupCTA').href = getWhatsAppLink();
+            document.getElementById('worksBookBtn').href = getWhatsAppLink();
         }
 
         // EXIT INTENT POPUP
