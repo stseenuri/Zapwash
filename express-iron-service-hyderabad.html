@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    
     <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -637,7 +642,7 @@
         }
 
         .area-card:hover .area-status {
-            color: var(--white);
+            color: var(--success);
         }
 
         /* FAQ */
@@ -761,6 +766,7 @@
             justify-content: center;
             z-index: 999;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
         }
 
         .fab:hover {
@@ -779,7 +785,7 @@
 
     <!-- Free Offer Banner -->
     <div class="offer-banner">
-        FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
+        🎁 FIRST ORDER FREE! Free Pickup & Delivery - Express Iron Service
     </div>
 
     <!-- Navigation -->
@@ -800,7 +806,7 @@
                 <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
-            <a href="#" class="nav-cta" id="navBookBtn">Book Free</a>
+            <a href="#" class="nav-cta" id="navBookBtn">📞 Book Now</a>
         </div>
     </nav>
 
@@ -814,13 +820,13 @@
     <!-- Service Hero -->
     <section class="service-hero">
         <div class="hero-container">
-            <span class="hero-badge">FASTEST IN HYDERABAD</span>
+            <span class="hero-badge">⚡ FASTEST IRON SERVICE</span>
             <h1 class="hero-title">
                 <span class="highlight">Express Iron Service</span><br>
-                Choose Your Speed
+                1-Hour to 12-Hour Delivery
             </h1>
             <p class="hero-subtitle">
-                Flexible express ironing with 4 time slot options. From 1-hour to 12-hour delivery. Professional steam pressing for all fabrics. Perfect for urgent needs, events, or regular laundry.
+                Choose your speed: 1-hour, 3-hour, 6-hour, or 12-hour delivery slots. Professional steam ironing across Hyderabad. Perfect for urgent needs and last-minute requirements.
             </p>
             <div class="hero-offer">FREE PICKUP & DELIVERY ON FIRST ORDER</div>
             <a href="#calculator" class="btn-primary">Calculate Your Cost</a>
@@ -831,29 +837,29 @@
     <section class="calculator-section" id="calculator">
         <div class="container">
             <h2 class="section-title">Calculate Express Iron Cost</h2>
-            <p class="section-subtitle">Choose your time slot, then select items and quantities</p>
+            <p class="section-subtitle">Choose time slot, select items and get instant price</p>
             
-            <!-- TIME SLOT SELECTOR -->
+            <!-- Time Slot Selector -->
             <div class="time-slots">
-                <div class="time-slot active" data-slot="1" onclick="selectTimeSlot(1, 100, 10)">
+                <div class="time-slot active" onclick="selectTimeSlot(1, 100, 10)" data-slot="1hour">
                     <div class="time">1 Hour</div>
                     <div class="fee">+Rs.100</div>
                     <div class="limit">Max 10 pieces</div>
                 </div>
-                
-                <div class="time-slot" data-slot="3" onclick="selectTimeSlot(3, 100, 20)">
+
+                <div class="time-slot" onclick="selectTimeSlot(3, 100, 20)" data-slot="3hour">
                     <div class="time">3 Hours</div>
                     <div class="fee">+Rs.100</div>
                     <div class="limit">Max 20 pieces</div>
                 </div>
-                
-                <div class="time-slot" data-slot="6" onclick="selectTimeSlot(6, 70, 40)">
+
+                <div class="time-slot" onclick="selectTimeSlot(6, 70, 40)" data-slot="6hour">
                     <div class="time">6 Hours</div>
                     <div class="fee">+Rs.70</div>
                     <div class="limit">Max 40 pieces</div>
                 </div>
-                
-                <div class="time-slot" data-slot="12" onclick="selectTimeSlot(12, 50, 999)">
+
+                <div class="time-slot" onclick="selectTimeSlot(12, 50, 999)" data-slot="12hour">
                     <div class="time">12 Hours</div>
                     <div class="fee">+Rs.50</div>
                     <div class="limit">Unlimited</div>
@@ -908,29 +914,18 @@
 
                     <!-- Item 5 -->
                     <div class="calc-item">
-                        <div class="item-name">Saree (With Pleats)</div>
+                        <div class="item-name">Saree (with Pleats/Border)</div>
                         <div class="item-price">Rs.60</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('saree-pleat', -1)">-</button>
-                            <div class="qty-display" id="qty-saree-pleat">0</div>
-                            <button class="qty-btn" onclick="changeQty('saree-pleat', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('sareeWork', -1)">-</button>
+                            <div class="qty-display" id="qty-sareeWork">0</div>
+                            <button class="qty-btn" onclick="changeQty('sareeWork', 1)">+</button>
                         </div>
                     </div>
 
                     <!-- Item 6 -->
                     <div class="calc-item">
-                        <div class="item-name">Salwar Suit (3-Piece)</div>
-                        <div class="item-price">Rs.70</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('salwar', -1)">-</button>
-                            <div class="qty-display" id="qty-salwar">0</div>
-                            <button class="qty-btn" onclick="changeQty('salwar', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 7 -->
-                    <div class="calc-item">
-                        <div class="item-name">Bed Sheet (Single)</div>
+                        <div class="item-name">Bedsheet (Single)</div>
                         <div class="item-price">Rs.30</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('bedsheet', -1)">-</button>
@@ -938,91 +933,51 @@
                             <button class="qty-btn" onclick="changeQty('bedsheet', 1)">+</button>
                         </div>
                     </div>
-
-                    <!-- Item 8 -->
-                    <div class="calc-item">
-                        <div class="item-name">Bed Sheet (Double)</div>
-                        <div class="item-price">Rs.50</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('bedsheet-double', -1)">-</button>
-                            <div class="qty-display" id="qty-bedsheet-double">0</div>
-                            <button class="qty-btn" onclick="changeQty('bedsheet-double', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 9 -->
-                    <div class="calc-item">
-                        <div class="item-name">Blanket Cover</div>
-                        <div class="item-price">Rs.40</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('blanket', -1)">-</button>
-                            <div class="qty-display" id="qty-blanket">0</div>
-                            <button class="qty-btn" onclick="changeQty('blanket', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 10 -->
-                    <div class="calc-item">
-                        <div class="item-name">Towel</div>
-                        <div class="item-price">Rs.15</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('towel', -1)">-</button>
-                            <div class="qty-display" id="qty-towel">0</div>
-                            <button class="qty-btn" onclick="changeQty('towel', 1)">+</button>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Summary -->
                 <div class="calculator-summary">
-                    <h3 class="summary-title">Cost Summary</h3>
+                    <div class="summary-title">Cost Summary</div>
                     
                     <div class="summary-row">
                         <span class="label">Time Slot:</span>
-                        <span class="value" id="timeSlotDisplay">1 Hour</span>
+                        <span class="value" id="selectedSlot">1 Hour</span>
                     </div>
-
+                    
                     <div class="summary-row">
                         <span class="label">Total Items:</span>
                         <span class="value" id="totalItems">0</span>
                     </div>
-
+                    
                     <div class="summary-row">
-                        <span class="label">Subtotal:</span>
-                        <span class="value">Rs.<span id="subtotal">0</span></span>
+                        <span class="label">Items Cost:</span>
+                        <span class="value" id="itemsCost">Rs.0</span>
                     </div>
-
+                    
                     <div class="summary-row">
                         <span class="label">Express Fee:</span>
-                        <span class="value">Rs.<span id="expressFee">100</span></span>
+                        <span class="value" id="expressFee">Rs.100</span>
                     </div>
-
-                    <div class="summary-row" id="deliveryRow" style="display: none;">
+                    
+                    <div class="summary-row">
                         <span class="label">Delivery:</span>
-                        <span class="value">Rs.<span id="delivery">30</span></span>
+                        <span class="value" id="deliveryFee">FREE</span>
                     </div>
-
+                    
                     <div class="summary-row total">
-                        <span class="label">Total:</span>
-                        <span class="value">Rs.<span id="total">0</span></span>
+                        <span class="label">TOTAL:</span>
+                        <span class="value" id="grandTotal">Rs.100</span>
                     </div>
-
-                    <div class="summary-note" id="limitNote" style="display: none;">
+                    
+                    <div class="summary-note" id="freeNote">
+                        🎁 FIRST ORDER FREE!
                     </div>
-
-                    <div class="summary-note" id="freeDeliveryNote" style="display: none;">
-                        FREE DELIVERY ON ORDERS ABOVE Rs.200!
+                    
+                    <div class="summary-note warning" id="limitWarning" style="display:none;">
+                        ⚠️ PIECE LIMIT EXCEEDED
                     </div>
-
-                    <div class="summary-note" style="background: var(--accent);">
-                        FIRST ORDER 100% FREE!
-                    </div>
-
-                    <a href="#" class="summary-cta" id="calcBookBtn">Book Now via WhatsApp</a>
-
-                    <p style="font-size: 0.75rem; margin-top: 1rem; color: var(--gray-600); text-align: center;">
-                        *Prices are indicative. Final cost confirmed on pickup.
-                    </p>
+                    
+                    <a href="#" class="summary-cta" id="whatsappBookBtn">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1031,37 +986,22 @@
     <!-- Features -->
     <section class="features-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Our Express Service?</h2>
+            <h2 class="section-title">Why Choose Express Iron?</h2>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Flexible Time Slots</h3>
-                    <p>Choose from 1-hour, 3-hour, 6-hour or 12-hour delivery based on your urgency. Same-day service available.</p>
+                    <h3>⚡ Lightning Fast</h3>
+                    <p>Choose 1-hour, 3-hour, 6-hour, or 12-hour delivery. Perfect for urgent meetings, events, or last-minute travel plans.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>Professional Steam Press</h3>
-                    <p>Commercial-grade steam ironing for crisp, wrinkle-free results. Perfect finish every time.</p>
+                    <h3>🔥 Professional Steam</h3>
+                    <p>Industrial-grade steam irons for crisp, wrinkle-free results. Fabric-specific heat settings for safe ironing.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>All Fabric Types</h3>
-                    <p>Shirts, pants, sarees, suits, kurtas. We handle all fabrics with care using appropriate heat settings.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>No Minimum Order</h3>
-                    <p>Iron just 1 piece or up to 40 pieces. Flexible service for all your needs.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Affordable Pricing</h3>
-                    <p>Starting at Rs.15 per piece + express fee. Transparent pricing with no hidden charges.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Free First Order</h3>
-                    <p>New customers get FREE pickup and delivery on their first order!</p>
+                    <h3>📦 Free Pickup & Delivery</h3>
+                    <p>First-time customers get completely free pickup and delivery. Regular orders: free above Rs.200.</p>
                 </div>
             </div>
         </div>
@@ -1076,13 +1016,13 @@
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Choose Time Slot</h3>
-                    <p>Select from 1-hour, 3-hour, 6-hour or 12-hour express delivery based on your urgency.</p>
+                    <p>Select 1-hour, 3-hour, 6-hour, or 12-hour delivery. Book via WhatsApp with your location and preferred slot.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Free Pickup</h3>
-                    <p>We collect your clothes from your doorstep. Available 7 AM - 9 PM daily across Hyderabad.</p>
+                    <h3>Fast Pickup</h3>
+                    <p>Our delivery partner arrives within 20-30 minutes to collect your clothes. Count pieces, get receipt.</p>
                 </div>
 
                 <div class="step">
@@ -1101,43 +1041,43 @@
             <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book express service</p>
             
             <div class="areas-grid">
-                <a href="#" class="area-card" data-location="Gachibowli">
+                <a href="/laundry-service-gachibowli.html" class="area-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Madhapur">
+                <a href="/laundry-service-madhapur.html" class="area-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Hitech City">
+                <a href="/laundry-service-hitech-city.html" class="area-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kondapur">
+                <a href="/laundry-service-kondapur.html" class="area-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Jubilee Hills">
-                    <h3>Jubilee Hills</h3>
+                <a href="/laundry-service-nanakramguda.html" class="area-card" data-location="Nanakramguda">
+                    <h3>Nanakramguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Banjara Hills">
-                    <h3>Banjara Hills</h3>
+                <a href="/laundry-service-manikonda.html" class="area-card" data-location="Manikonda">
+                    <h3>Manikonda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kukatpally">
-                    <h3>Kukatpally</h3>
+                <a href="/laundry-service-puppalaguda.html" class="area-card" data-location="Puppalaguda">
+                    <h3>Puppalaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Ameerpet">
-                    <h3>Ameerpet</h3>
+                <a href="/laundry-service-khajaguda.html" class="area-card" data-location="Khajaguda">
+                    <h3>Khajaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
             </div>
@@ -1209,10 +1149,14 @@
                 <div class="footer-col">
                     <h4>Top Locations</h4>
                     <div class="footer-links">
-                        <a href="/laundry-service-gachibowli-hyderabad.html" class="footer-link">Gachibowli</a>
-                        <a href="/laundry-service-madhapur-hyderabad.html" class="footer-link">Madhapur</a>
-                        <a href="/laundry-service-hitech-city-hyderabad.html" class="footer-link">Hitech City</a>
-                        <a href="/laundry-service-kondapur-hyderabad.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-gachibowli.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-nanakramguda.html" class="footer-link">Nanakramguda</a>
+                        <a href="/laundry-service-manikonda.html" class="footer-link">Manikonda</a>
+                        <a href="/laundry-service-puppalaguda.html" class="footer-link">Puppalaguda</a>
+                        <a href="/laundry-service-khajaguda.html" class="footer-link">Khajaguda</a>
                     </div>
                 </div>
 
@@ -1247,226 +1191,108 @@
     </a>
 
     <script>
-        // TIME SLOT CONFIG
-        let currentSlot = 1;
-        let currentFee = 100;
-        let currentLimit = 10;
-
-        // PRICE CALCULATOR
+        // PRICING DATA
         const prices = {
-            'shirt': 15,
-            'trouser': 20,
-            'kurta': 25,
-            'saree': 40,
-            'saree-pleat': 60,
-            'salwar': 70,
-            'bedsheet': 30,
-            'bedsheet-double': 50,
-            'blanket': 40,
-            'towel': 15
+            shirt: 15,
+            trouser: 20,
+            kurta: 25,
+            saree: 40,
+            sareeWork: 60,
+            bedsheet: 30
         };
 
-        const quantities = {
-            'shirt': 0,
-            'trouser': 0,
-            'kurta': 0,
-            'saree': 0,
-            'saree-pleat': 0,
-            'salwar': 0,
-            'bedsheet': 0,
-            'bedsheet-double': 0,
-            'blanket': 0,
-            'towel': 0
+        let quantities = {
+            shirt: 0,
+            trouser: 0,
+            kurta: 0,
+            saree: 0,
+            sareeWork: 0,
+            bedsheet: 0
         };
 
+        let currentSlot = {
+            hours: 1,
+            fee: 100,
+            limit: 10
+        };
+
+        // TIME SLOT SELECTION
         function selectTimeSlot(hours, fee, limit) {
-            currentSlot = hours;
-            currentFee = fee;
-            currentLimit = limit;
-
+            currentSlot = { hours, fee, limit };
+            
             // Update active state
             document.querySelectorAll('.time-slot').forEach(slot => {
                 slot.classList.remove('active');
             });
-            document.querySelector(`[data-slot="${hours}"]`).classList.add('active');
-
+            event.currentTarget.classList.add('active');
+            
             // Update display
-            document.getElementById('timeSlotDisplay').textContent = `${hours} Hour${hours > 1 ? 's' : ''}`;
-            document.getElementById('expressFee').textContent = fee;
-
-            updateSummary();
+            document.getElementById('selectedSlot').textContent = `${hours} Hour${hours > 1 ? 's' : ''}`;
+            document.getElementById('expressFee').textContent = `Rs.${fee}`;
+            
+            calculateTotal();
         }
 
-        function changeQty(item, change) {
-            const newQty = quantities[item] + change;
-            
-            // Check limit
-            const totalItems = Object.values(quantities).reduce((a, b) => a + b, 0) + change;
-            
-            if (newQty < 0) return;
-            if (totalItems > currentLimit) {
-                const limitNote = document.getElementById('limitNote');
-                limitNote.textContent = `${currentSlot}-hour slot limited to ${currentLimit} pieces!`;
-                limitNote.style.display = 'block';
-                limitNote.classList.add('warning');
-                setTimeout(() => {
-                    limitNote.style.display = 'none';
-                }, 3000);
-                return;
-            }
-
-            quantities[item] = newQty;
+        // QUANTITY CHANGE
+        function changeQty(item, delta) {
+            quantities[item] = Math.max(0, quantities[item] + delta);
             document.getElementById(`qty-${item}`).textContent = quantities[item];
-            updateSummary();
+            calculateTotal();
         }
 
-        function updateSummary() {
-            let totalItems = 0;
-            let subtotal = 0;
-
-            for (const [item, qty] of Object.entries(quantities)) {
-                totalItems += qty;
-                subtotal += qty * prices[item];
+        // CALCULATE TOTAL
+        function calculateTotal() {
+            let itemsTotal = 0;
+            let totalPieces = 0;
+            
+            for (let item in quantities) {
+                itemsTotal += quantities[item] * prices[item];
+                totalPieces += quantities[item];
             }
-
-            const deliveryCharge = (subtotal > 0 && subtotal < 200) ? 30 : 0;
-            const expressFeeAmount = totalItems > 0 ? currentFee : 0;
-            const total = subtotal + expressFeeAmount + deliveryCharge;
-
-            document.getElementById('totalItems').textContent = totalItems;
-            document.getElementById('subtotal').textContent = subtotal;
-            document.getElementById('expressFee').textContent = expressFeeAmount;
-            document.getElementById('delivery').textContent = deliveryCharge;
-            document.getElementById('total').textContent = total;
-
-            document.getElementById('deliveryRow').style.display = deliveryCharge > 0 ? 'flex' : 'none';
-
-            if (subtotal >= 200 && subtotal > 0) {
-                document.getElementById('freeDeliveryNote').style.display = 'block';
+            
+            const deliveryFee = itemsTotal >= 200 ? 0 : (itemsTotal > 0 ? 30 : 0);
+            const grandTotal = itemsTotal + currentSlot.fee + deliveryFee;
+            
+            // Update display
+            document.getElementById('totalItems').textContent = totalPieces;
+            document.getElementById('itemsCost').textContent = `Rs.${itemsTotal}`;
+            document.getElementById('deliveryFee').textContent = deliveryFee === 0 ? 'FREE' : `Rs.${deliveryFee}`;
+            document.getElementById('grandTotal').textContent = `Rs.${grandTotal}`;
+            
+            // Check piece limit
+            const limitWarning = document.getElementById('limitWarning');
+            if (totalPieces > currentSlot.limit && currentSlot.limit < 999) {
+                limitWarning.style.display = 'block';
             } else {
-                document.getElementById('freeDeliveryNote').style.display = 'none';
+                limitWarning.style.display = 'none';
             }
-
-            updateCalcBookButton(totalItems, total);
-
-            if (typeof gtag !== 'undefined' && totalItems > 0) {
-                gtag('event', 'calculator_used', {
-                    'service': 'express-iron',
-                    'time_slot': currentSlot,
-                    'total_items': totalItems,
-                    'estimated_cost': total
-                });
-            }
+            
+            // Update WhatsApp link
+            updateWhatsAppLink(itemsTotal, currentSlot.fee, deliveryFee, grandTotal, totalPieces);
         }
 
-        function updateCalcBookButton(items, total) {
-            const btn = document.getElementById('calcBookBtn');
-            if (items > 0) {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    const itemsList = [];
-                    for (const [item, qty] of Object.entries(quantities)) {
-                        if (qty > 0) {
-                            itemsList.push(`${qty}x ${item}`);
-                        }
-                    }
-                    const message = `Hi! I want ${currentSlot}-hour express iron service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
-                    window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                };
-            } else {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    window.open(getWhatsAppLink(), '_blank');
-                };
-            }
+        // WHATSAPP LINK
+        function updateWhatsAppLink(items, express, delivery, total, pieces) {
+            const message = `Hi! I want to book EXPRESS IRON service:
+            
+Time Slot: ${currentSlot.hours} Hour${currentSlot.hours > 1 ? 's' : ''}
+Total Pieces: ${pieces}
+Items Cost: Rs.${items}
+Express Fee: Rs.${express}
+Delivery: ${delivery === 0 ? 'FREE' : `Rs.${delivery}`}
+TOTAL: Rs.${total}
+
+Location: [Your Location]
+Pickup Time: [Preferred Time]`;
+            
+            const link = `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
+            document.getElementById('whatsappBookBtn').href = link;
+            document.getElementById('navBookBtn').href = link;
+            document.getElementById('ctaBookBtn').href = link;
+            document.getElementById('fabBtn').href = link;
         }
 
-        // GEOLOCATION
-        let userLocation = 'Hyderabad';
-
-        const locations = {
-            'Gachibowli': { lat: 17.4400, lon: 78.3489 },
-            'Madhapur': { lat: 17.4485, lon: 78.3908 },
-            'Hitech City': { lat: 17.4483, lon: 78.3808 },
-            'Kondapur': { lat: 17.4648, lon: 78.3630 },
-            'Jubilee Hills': { lat: 17.4321, lon: 78.4095 },
-            'Banjara Hills': { lat: 17.4171, lon: 78.4500 },
-            'Kukatpally': { lat: 17.4849, lon: 78.4138 },
-            'Ameerpet': { lat: 17.4375, lon: 78.4482 }
-        };
-
-        function detectUserLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const userCoords = {
-                            lat: position.coords.latitude,
-                            lon: position.coords.longitude
-                        };
-                        
-                        let nearestLocation = 'Hyderabad';
-                        let minDistance = Infinity;
-                        
-                        for (const [name, coords] of Object.entries(locations)) {
-                            const distance = Math.sqrt(
-                                Math.pow(coords.lat - userCoords.lat, 2) + 
-                                Math.pow(coords.lon - userCoords.lon, 2)
-                            );
-                            if (distance < minDistance) {
-                                minDistance = distance;
-                                nearestLocation = name;
-                            }
-                        }
-                        
-                        userLocation = nearestLocation;
-                        document.getElementById('ctaLocation').textContent = nearestLocation;
-                        updateAllCTAs();
-                        
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'location_detected', {
-                                'page': 'express-iron',
-                                'location': nearestLocation
-                            });
-                        }
-                    },
-                    () => {
-                        userLocation = 'Hyderabad';
-                        updateAllCTAs();
-                    }
-                );
-            }
-        }
-
-        function getWhatsAppLink() {
-            const message = `Hi! I want FREE PICKUP & DELIVERY for express iron service in ${userLocation}`;
-            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
-        }
-
-        function updateAllCTAs() {
-            document.getElementById('navBookBtn').href = getWhatsAppLink();
-            document.getElementById('ctaBookBtn').href = getWhatsAppLink();
-            document.getElementById('fabBtn').href = getWhatsAppLink();
-            updateCalcBookButton(0, 0);
-        }
-
-        // Area card clicks
-        document.querySelectorAll('.area-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                const location = this.getAttribute('data-location');
-                const message = `Hi! I need express iron service in ${location}`;
-                window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'area_click', {
-                        'service': 'express-iron',
-                        'selected_location': location
-                    });
-                }
-            });
-        });
-
-        // Mobile menu
+        // MOBILE MENU
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         if (menuToggle) {
@@ -1475,9 +1301,30 @@
             });
         }
 
-        // Initialize
-        detectUserLocation();
-        setTimeout(updateAllCTAs, 1000);
+        // AREA CLICK TRACKING
+        document.querySelectorAll('.area-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', { 
+                        'service': 'express-iron',
+                        'location': location 
+                    });
+                }
+            });
+        });
+
+        // GA4 PAGE VIEW
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': 'Express Iron Service',
+                'page_location': window.location.href,
+                'service': 'express-iron'
+            });
+        }
+
+        // INITIALIZE
+        calculateTotal();
     </script>
 </body>
 </html>
