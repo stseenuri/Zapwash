@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    
     <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -22,65 +27,11 @@
 
     <!-- SEO META -->
     <title>Dry Cleaning Service Hyderabad | Suits, Sarees, Designer Wear | Zapwash</title>
-    <meta name="description" content="Professional dry cleaning in Hyderabad for suits, silk sarees, designer clothes, delicate fabrics. Safe eco-friendly cleaning. Rs.80+. FREE first order pickup & delivery!">
-    <meta name="keywords" content="dry cleaning Hyderabad, suit dry clean Gachibowli, silk saree cleaning Madhapur, dry cleaners Hitech City">
+    <meta name="description" content="Premium dry cleaning in Hyderabad for suits, sarees, jackets, designer wear. International standard equipment. Rs.150/piece. FREE first order pickup & delivery!">
+    <meta name="keywords" content="dry cleaning Hyderabad, suit dry clean Gachibowli, saree dry cleaning Madhapur, designer wear cleaning">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/dry-cleaning-service-hyderabad.html">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Dry Cleaning Service Hyderabad | Zapwash">
-    <meta property="og:description" content="Professional dry cleaning for suits, sarees, delicate fabrics. From Rs.80.">
-    <meta property="og:url" content="https://thezapwash.com/dry-cleaning-service-hyderabad.html">
-    
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Dry Cleaning Service",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Zapwash",
-        "telephone": "+918639103842",
-        "url": "https://thezapwash.com"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Hyderabad"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "80",
-        "priceCurrency": "INR"
-      },
-      "description": "Professional dry cleaning service for suits, sarees, and delicate fabrics in Hyderabad"
-    }
-    </script>
-
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://thezapwash.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://thezapwash.com/laundry-services-hyderabad.html"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Dry Cleaning",
-        "item": "https://thezapwash.com/dry-cleaning-service-hyderabad.html"
-      }]
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -532,45 +483,49 @@
             line-height: 1.7;
         }
 
-        /* SUITABLE ITEMS */
-        .suitable-section {
+        /* HOW IT WORKS */
+        .process-section {
             padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
         }
 
-        .suitable-grid {
+        .steps-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
             margin-top: 3rem;
         }
 
-        @media (max-width: 768px) {
-            .suitable-grid { grid-template-columns: 1fr; }
+        @media (max-width: 1024px) {
+            .steps-grid { grid-template-columns: 1fr; }
         }
 
-        .suitable-col h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--accent);
+        .step {
+            text-align: center;
         }
 
-        .suitable-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .suitable-col li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--gray-200);
-            font-size: 1rem;
-        }
-
-        .suitable-col li:before {
-            content: "✓ ";
-            color: var(--success);
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--black);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-right: 0.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .step p {
+            color: var(--gray-600);
+            line-height: 1.7;
         }
 
         /* AREAS SERVED */
@@ -623,7 +578,7 @@
         }
 
         .area-card:hover .area-status {
-            color: var(--white);
+            color: var(--success);
         }
 
         /* FAQ */
@@ -747,6 +702,7 @@
             justify-content: center;
             z-index: 999;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
         }
 
         .fab:hover {
@@ -765,13 +721,13 @@
 
     <!-- Free Offer Banner -->
     <div class="offer-banner">
-        FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
+        🎁 FIRST ORDER FREE! Premium Dry Cleaning with Free Pickup & Delivery
     </div>
 
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Hyderabad Laundry Service Logo" class="nav-logo"></a>
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo"></a>
             
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -786,7 +742,7 @@
                 <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
-            <a href="#" class="nav-cta" id="navBookBtn">Book Free</a>
+            <a href="#" class="nav-cta" id="navBookBtn">📞 Book Now</a>
         </div>
     </nav>
 
@@ -800,13 +756,13 @@
     <!-- Service Hero -->
     <section class="service-hero">
         <div class="hero-container">
-            <span class="hero-badge">PREMIUM DRY CLEANING</span>
+            <span class="hero-badge">✨ PREMIUM DRY CLEANING</span>
             <h1 class="hero-title">
-                <span class="highlight">Professional Dry Cleaning</span><br>
-                For Delicate Fabrics
+                <span class="highlight">Dry Cleaning Service</span><br>
+                Suits, Sarees, Designer Wear
             </h1>
             <p class="hero-subtitle">
-                Safe, eco-friendly dry cleaning for suits, silk sarees, designer wear, and delicate fabrics. Expert handling by trained professionals. Stain removal included. 72-hour service across Hyderabad.
+                International standard dry cleaning for delicate fabrics. Safe for suits, silk sarees, jackets, wedding wear, designer clothing. Expert stain removal. 72-hour turnaround across Hyderabad.
             </p>
             <div class="hero-offer">FREE PICKUP & DELIVERY ON FIRST ORDER</div>
             <a href="#calculator" class="btn-primary">Calculate Your Cost</a>
@@ -817,14 +773,14 @@
     <section class="calculator-section" id="calculator">
         <div class="container">
             <h2 class="section-title">Calculate Dry Cleaning Cost</h2>
-            <p class="section-subtitle">Select items and quantities to get instant price estimate</p>
+            <p class="section-subtitle">Select items for instant price estimate</p>
             
             <div class="calculator-grid">
                 <div class="calculator-items">
                     <!-- Item 1 -->
                     <div class="calc-item">
-                        <div class="item-name">Suit 2-Piece (Coat + Pant)</div>
-                        <div class="item-price">Rs.350</div>
+                        <div class="item-name">Suit (2-Piece)</div>
+                        <div class="item-price">Rs.300</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('suit2', -1)">-</button>
                             <div class="qty-display" id="qty-suit2">0</div>
@@ -834,8 +790,8 @@
 
                     <!-- Item 2 -->
                     <div class="calc-item">
-                        <div class="item-name">Suit 3-Piece (Coat + Pant + Waistcoat)</div>
-                        <div class="item-price">Rs.450</div>
+                        <div class="item-name">Suit (3-Piece)</div>
+                        <div class="item-price">Rs.400</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('suit3', -1)">-</button>
                             <div class="qty-display" id="qty-suit3">0</div>
@@ -845,60 +801,27 @@
 
                     <!-- Item 3 -->
                     <div class="calc-item">
-                        <div class="item-name">Blazer / Sports Coat</div>
+                        <div class="item-name">Saree (Silk)</div>
                         <div class="item-price">Rs.200</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('blazer', -1)">-</button>
-                            <div class="qty-display" id="qty-blazer">0</div>
-                            <button class="qty-btn" onclick="changeQty('blazer', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('sareeSilk', -1)">-</button>
+                            <div class="qty-display" id="qty-sareeSilk">0</div>
+                            <button class="qty-btn" onclick="changeQty('sareeSilk', 1)">+</button>
                         </div>
                     </div>
 
                     <!-- Item 4 -->
                     <div class="calc-item">
-                        <div class="item-name">Coat / Overcoat</div>
-                        <div class="item-price">Rs.300</div>
+                        <div class="item-name">Jacket / Blazer</div>
+                        <div class="item-price">Rs.150</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('coat', -1)">-</button>
-                            <div class="qty-display" id="qty-coat">0</div>
-                            <button class="qty-btn" onclick="changeQty('coat', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('jacket', -1)">-</button>
+                            <div class="qty-display" id="qty-jacket">0</div>
+                            <button class="qty-btn" onclick="changeQty('jacket', 1)">+</button>
                         </div>
                     </div>
 
                     <!-- Item 5 -->
-                    <div class="calc-item">
-                        <div class="item-name">Silk Saree (Plain)</div>
-                        <div class="item-price">Rs.150</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('saree', -1)">-</button>
-                            <div class="qty-display" id="qty-saree">0</div>
-                            <button class="qty-btn" onclick="changeQty('saree', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="calc-item">
-                        <div class="item-name">Silk Saree (Designer/Embroidered)</div>
-                        <div class="item-price">Rs.250</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('saree-designer', -1)">-</button>
-                            <div class="qty-display" id="qty-saree-designer">0</div>
-                            <button class="qty-btn" onclick="changeQty('saree-designer', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 7 -->
-                    <div class="calc-item">
-                        <div class="item-name">Designer Lehenga</div>
-                        <div class="item-price">Rs.500</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('lehenga', -1)">-</button>
-                            <div class="qty-display" id="qty-lehenga">0</div>
-                            <button class="qty-btn" onclick="changeQty('lehenga', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 8 -->
                     <div class="calc-item">
                         <div class="item-name">Sherwani</div>
                         <div class="item-price">Rs.400</div>
@@ -909,88 +832,47 @@
                         </div>
                     </div>
 
-                    <!-- Item 9 -->
+                    <!-- Item 6 -->
                     <div class="calc-item">
-                        <div class="item-name">Wedding Gown / Bridal Wear</div>
-                        <div class="item-price">Rs.800</div>
+                        <div class="item-name">Designer Dress</div>
+                        <div class="item-price">Rs.250</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('bridal', -1)">-</button>
-                            <div class="qty-display" id="qty-bridal">0</div>
-                            <button class="qty-btn" onclick="changeQty('bridal', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 10 -->
-                    <div class="calc-item">
-                        <div class="item-name">Leather Jacket</div>
-                        <div class="item-price">Rs.500</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('leather', -1)">-</button>
-                            <div class="qty-display" id="qty-leather">0</div>
-                            <button class="qty-btn" onclick="changeQty('leather', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 11 -->
-                    <div class="calc-item">
-                        <div class="item-name">Woolen Blanket</div>
-                        <div class="item-price">Rs.200</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('blanket', -1)">-</button>
-                            <div class="qty-display" id="qty-blanket">0</div>
-                            <button class="qty-btn" onclick="changeQty('blanket', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 12 -->
-                    <div class="calc-item">
-                        <div class="item-name">Curtain (per kg)</div>
-                        <div class="item-price">Rs.80</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('curtain', -1)">-</button>
-                            <div class="qty-display" id="qty-curtain">0</div>
-                            <button class="qty-btn" onclick="changeQty('curtain', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('dress', -1)">-</button>
+                            <div class="qty-display" id="qty-dress">0</div>
+                            <button class="qty-btn" onclick="changeQty('dress', 1)">+</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Summary -->
                 <div class="calculator-summary">
-                    <h3 class="summary-title">Cost Summary</h3>
+                    <div class="summary-title">Cost Summary</div>
                     
                     <div class="summary-row">
                         <span class="label">Total Items:</span>
                         <span class="value" id="totalItems">0</span>
                     </div>
-
+                    
                     <div class="summary-row">
-                        <span class="label">Subtotal:</span>
-                        <span class="value">Rs.<span id="subtotal">0</span></span>
+                        <span class="label">Items Cost:</span>
+                        <span class="value" id="itemsCost">Rs.0</span>
                     </div>
-
-                    <div class="summary-row" id="deliveryRow" style="display: none;">
+                    
+                    <div class="summary-row">
                         <span class="label">Delivery:</span>
-                        <span class="value">Rs.<span id="delivery">50</span></span>
+                        <span class="value" id="deliveryFee">FREE</span>
                     </div>
-
+                    
                     <div class="summary-row total">
-                        <span class="label">Total:</span>
-                        <span class="value">Rs.<span id="total">0</span></span>
+                        <span class="label">TOTAL:</span>
+                        <span class="value" id="grandTotal">Rs.0</span>
                     </div>
-
-                    <div class="summary-note" id="freeDeliveryNote" style="display: none;">
-                        FREE DELIVERY ON ORDERS ABOVE Rs.500!
+                    
+                    <div class="summary-note" id="freeNote">
+                        🎁 FIRST ORDER FREE!
                     </div>
-
-                    <div class="summary-note" style="background: var(--accent);">
-                        FIRST ORDER 100% FREE!
-                    </div>
-
-                    <a href="#" class="summary-cta" id="calcBookBtn">Book Now via WhatsApp</a>
-
-                    <p style="font-size: 0.75rem; margin-top: 1rem; color: var(--gray-600); text-align: center;">
-                        *Prices are indicative. Final cost confirmed on pickup.
-                    </p>
+                    
+                    <a href="#" class="summary-cta" id="whatsappBookBtn">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1003,86 +885,51 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Eco-Friendly Solvents</h3>
-                    <p>We use gentle, biodegradable dry cleaning solvents safe for delicate fabrics and the environment. No harsh chemicals.</p>
+                    <h3>✨ Premium Equipment</h3>
+                    <p>International standard dry cleaning machines. Chemical-free for sensitive fabrics. Safe for silk, wool, leather, and designer wear.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>Expert Handling</h3>
-                    <p>Trained professionals handle each garment with care. Special attention to suits, sarees, designer wear, and embellished fabrics.</p>
+                    <h3>🎯 Expert Stain Removal</h3>
+                    <p>Specialized treatment for oil, wine, ink, and stubborn stains. Pre-treatment before dry cleaning. 95% stain removal success rate.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>Stain Treatment</h3>
-                    <p>Pre-treatment for tough stains like oil, grease, wine, ink. Advanced stain removal techniques included at no extra cost.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Fabric Preservation</h3>
-                    <p>Maintains fabric texture, color, and shape. Safe for silk, wool, cashmere, leather, suede, and embroidered materials.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Professional Finishing</h3>
-                    <p>After cleaning, garments are pressed and finished to perfection. Suits returned on hangers, sarees properly folded.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Free First Order</h3>
-                    <p>New customers get FREE pickup and delivery on their first dry cleaning order!</p>
+                    <h3>👔 Fabric Care Experts</h3>
+                    <p>Trained professionals handle each garment. Separate processing for different fabric types. Your expensive clothing is safe with us.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Suitable Items -->
-    <section class="suitable-section">
+    <!-- How It Works -->
+    <section class="process-section">
         <div class="container">
-            <h2 class="section-title">What Should You Dry Clean?</h2>
+            <h2 class="section-title">How Dry Cleaning Works</h2>
             
-            <div class="suitable-grid">
-                <div class="suitable-col">
-                    <h3>Formal & Professional Wear</h3>
-                    <ul>
-                        <li>Suits (2-piece, 3-piece)</li>
-                        <li>Blazers & Sports Coats</li>
-                        <li>Dress Pants & Trousers</li>
-                        <li>Formal Shirts (silk, satin)</li>
-                        <li>Ties & Pocket Squares</li>
-                    </ul>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Inspection</h3>
+                    <p>Thorough check for stains, tears, missing buttons. Tagged for special treatment if needed.</p>
                 </div>
 
-                <div class="suitable-col">
-                    <h3>Traditional & Ethnic Wear</h3>
-                    <ul>
-                        <li>Silk Sarees (Kanjeevaram, Banarasi)</li>
-                        <li>Designer Lehengas</li>
-                        <li>Sherwanis & Kurta Sets</li>
-                        <li>Embroidered Salwar Suits</li>
-                        <li>Wedding & Bridal Wear</li>
-                    </ul>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pre-Treatment</h3>
+                    <p>Stains treated with specialized solutions. Delicate areas protected. Buttons secured.</p>
                 </div>
 
-                <div class="suitable-col">
-                    <h3>Delicate Fabrics</h3>
-                    <ul>
-                        <li>Silk, Satin, Chiffon</li>
-                        <li>Wool & Cashmere</li>
-                        <li>Velvet & Suede</li>
-                        <li>Leather & Faux Leather</li>
-                        <li>Embellished/Beaded Garments</li>
-                    </ul>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Cleaned using chemical solvents. Safe for fabrics that can't be washed with water. Maintains fabric quality.</p>
                 </div>
 
-                <div class="suitable-col">
-                    <h3>Home Furnishings</h3>
-                    <ul>
-                        <li>Heavy Curtains & Drapes</li>
-                        <li>Woolen Blankets</li>
-                        <li>Comforters & Duvets</li>
-                        <li>Upholstery Fabrics</li>
-                        <li>Decorative Cushion Covers</li>
-                    </ul>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Finishing</h3>
+                    <p>Professional pressing and steaming. Quality check. Packaged properly and delivered fresh in 72 hours.</p>
                 </div>
             </div>
         </div>
@@ -1091,47 +938,47 @@
     <!-- Areas Served -->
     <section class="areas-section">
         <div class="container">
-            <h2 class="section-title">Dry Cleaning Service Across Hyderabad</h2>
-            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book dry cleaning service</p>
+            <h2 class="section-title">Dry Cleaning Across Hyderabad</h2>
+            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Premium dry cleaning in your area</p>
             
             <div class="areas-grid">
-                <a href="#" class="area-card" data-location="Gachibowli">
+                <a href="/laundry-service-gachibowli.html" class="area-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Madhapur">
+                <a href="/laundry-service-madhapur.html" class="area-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Hitech City">
+                <a href="/laundry-service-hitech-city.html" class="area-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kondapur">
+                <a href="/laundry-service-kondapur.html" class="area-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Jubilee Hills">
-                    <h3>Jubilee Hills</h3>
+                <a href="/laundry-service-nanakramguda.html" class="area-card" data-location="Nanakramguda">
+                    <h3>Nanakramguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Banjara Hills">
-                    <h3>Banjara Hills</h3>
+                <a href="/laundry-service-manikonda.html" class="area-card" data-location="Manikonda">
+                    <h3>Manikonda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kukatpally">
-                    <h3>Kukatpally</h3>
+                <a href="/laundry-service-puppalaguda.html" class="area-card" data-location="Puppalaguda">
+                    <h3>Puppalaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Ameerpet">
-                    <h3>Ameerpet</h3>
+                <a href="/laundry-service-khajaguda.html" class="area-card" data-location="Khajaguda">
+                    <h3>Khajaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
             </div>
@@ -1141,37 +988,37 @@
     <!-- FAQ -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title">Dry Cleaning FAQs</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>What is dry cleaning and how is it different from washing?</h3>
-                    <p>Dry cleaning uses chemical solvents instead of water to clean delicate fabrics. It's ideal for materials like silk, wool, and suits that can shrink or get damaged with water washing.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Is dry cleaning safe for silk sarees?</h3>
-                    <p>Yes! Dry cleaning is the safest method for silk sarees, especially Kanjeevaram and Banarasi sarees. It preserves the fabric texture, color vibrancy, and zari work without damage.</p>
+                    <h3>What is dry cleaning?</h3>
+                    <p>Dry cleaning uses chemical solvents instead of water to clean delicate fabrics. Safe for silk, wool, suits, and designer wear that can't be machine washed.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>How long does dry cleaning take?</h3>
-                    <p>Our standard dry cleaning service takes 72 hours (3 days). For urgent needs, we offer 48-hour express dry cleaning at 1.5x pricing. Available for most items.</p>
+                    <p>Standard turnaround is 72 hours (3 days). Pickup today = delivery in 3 days. Rush service available for urgent needs at additional charge.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Do you remove stains during dry cleaning?</h3>
-                    <p>Yes! Pre-treatment for stains like oil, wine, ink, and grease is included at no extra cost. We inform you if any stain cannot be completely removed before processing.</p>
+                    <h3>Can you remove all types of stains?</h3>
+                    <p>We successfully remove 95% of stains. Oil, wine, ink, grease, food - most come out. Some old or set stains may lighten but not fully disappear.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can you dry clean leather jackets?</h3>
-                    <p>Absolutely. We specialize in leather and suede dry cleaning using specialized techniques that preserve the material's texture and appearance.</p>
+                    <h3>Is dry cleaning safe for silk sarees?</h3>
+                    <p>Yes! Dry cleaning is the safest method for silk sarees. Maintains color, sheen, and fabric quality. We specialize in wedding and designer sarees.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Is pickup and delivery free for dry cleaning?</h3>
-                    <p>Yes! First-time customers get completely free pickup and delivery. For regular orders, free delivery on orders above Rs.500. Below that, Rs.50 delivery charge applies.</p>
+                    <h3>Do you dry clean wedding wear?</h3>
+                    <p>Absolutely! We handle sherwanis, wedding sarees, designer lehengas, bridal gowns. Expert care for expensive and delicate wedding outfits.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is pickup and delivery free?</h3>
+                    <p>Yes! First order completely free. Regular orders: free delivery above Rs.200. Below that, Rs.30 charge applies.</p>
                 </div>
             </div>
         </div>
@@ -1180,8 +1027,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Need Expert Dry Cleaning?</h2>
-            <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery on first order. Safe dry cleaning in <span id="ctaLocation">Hyderabad</span>.</p>
+            <h2>Need Premium Dry Cleaning?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery on first order. Expert care for your premium clothing in <span id="ctaLocation">Hyderabad</span>.</p>
             <a href="#" class="btn-primary" id="ctaBookBtn">Book Dry Cleaning Now</a>
         </div>
     </section>
@@ -1193,7 +1040,7 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="/1-hour-express-iron-hyderabad.html" class="footer-link">1-Hour Express Iron</a>
+                        <a href="/express-iron-service-hyderabad.html" class="footer-link">Express Iron</a>
                         <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
                         <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
                         <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
@@ -1203,10 +1050,14 @@
                 <div class="footer-col">
                     <h4>Top Locations</h4>
                     <div class="footer-links">
-                        <a href="/laundry-service-gachibowli-hyderabad.html" class="footer-link">Gachibowli</a>
-                        <a href="/laundry-service-madhapur-hyderabad.html" class="footer-link">Madhapur</a>
-                        <a href="/laundry-service-hitech-city-hyderabad.html" class="footer-link">Hitech City</a>
-                        <a href="/laundry-service-kondapur-hyderabad.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-gachibowli.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-nanakramguda.html" class="footer-link">Nanakramguda</a>
+                        <a href="/laundry-service-manikonda.html" class="footer-link">Manikonda</a>
+                        <a href="/laundry-service-puppalaguda.html" class="footer-link">Puppalaguda</a>
+                        <a href="/laundry-service-khajaguda.html" class="footer-link">Khajaguda</a>
                     </div>
                 </div>
 
@@ -1241,187 +1092,75 @@
     </a>
 
     <script>
-        // PRICE CALCULATOR
+        // PRICING DATA
         const prices = {
-            'suit2': 350,
-            'suit3': 450,
-            'blazer': 200,
-            'coat': 300,
-            'saree': 150,
-            'saree-designer': 250,
-            'lehenga': 500,
-            'sherwani': 400,
-            'bridal': 800,
-            'leather': 500,
-            'blanket': 200,
-            'curtain': 80
+            suit2: 300,
+            suit3: 400,
+            sareeSilk: 200,
+            jacket: 150,
+            sherwani: 400,
+            dress: 250
         };
 
-        const quantities = {
-            'suit2': 0,
-            'suit3': 0,
-            'blazer': 0,
-            'coat': 0,
-            'saree': 0,
-            'saree-designer': 0,
-            'lehenga': 0,
-            'sherwani': 0,
-            'bridal': 0,
-            'leather': 0,
-            'blanket': 0,
-            'curtain': 0
+        let quantities = {
+            suit2: 0,
+            suit3: 0,
+            sareeSilk: 0,
+            jacket: 0,
+            sherwani: 0,
+            dress: 0
         };
 
-        function changeQty(item, change) {
-            quantities[item] = Math.max(0, quantities[item] + change);
+        // QUANTITY CHANGE
+        function changeQty(item, delta) {
+            quantities[item] = Math.max(0, quantities[item] + delta);
             document.getElementById(`qty-${item}`).textContent = quantities[item];
-            updateSummary();
+            calculateTotal();
         }
 
-        function updateSummary() {
-            let totalItems = 0;
-            let subtotal = 0;
-
-            for (const [item, qty] of Object.entries(quantities)) {
-                totalItems += qty;
-                subtotal += qty * prices[item];
+        // CALCULATE TOTAL
+        function calculateTotal() {
+            let itemsTotal = 0;
+            let totalPieces = 0;
+            
+            for (let item in quantities) {
+                itemsTotal += quantities[item] * prices[item];
+                totalPieces += quantities[item];
             }
-
-            const deliveryCharge = (subtotal > 0 && subtotal < 500) ? 50 : 0;
-            const total = subtotal + deliveryCharge;
-
-            document.getElementById('totalItems').textContent = totalItems;
-            document.getElementById('subtotal').textContent = subtotal;
-            document.getElementById('delivery').textContent = deliveryCharge;
-            document.getElementById('total').textContent = total;
-
-            document.getElementById('deliveryRow').style.display = deliveryCharge > 0 ? 'flex' : 'none';
-
-            if (subtotal >= 500 && subtotal > 0) {
-                document.getElementById('freeDeliveryNote').style.display = 'block';
-            } else {
-                document.getElementById('freeDeliveryNote').style.display = 'none';
-            }
-
-            updateCalcBookButton(totalItems, total);
-
-            if (typeof gtag !== 'undefined' && totalItems > 0) {
-                gtag('event', 'calculator_used', {
-                    'service': 'dry-cleaning',
-                    'total_items': totalItems,
-                    'estimated_cost': total
-                });
-            }
+            
+            const deliveryFee = itemsTotal >= 200 ? 0 : (itemsTotal > 0 ? 30 : 0);
+            const grandTotal = itemsTotal + deliveryFee;
+            
+            // Update display
+            document.getElementById('totalItems').textContent = totalPieces;
+            document.getElementById('itemsCost').textContent = `Rs.${itemsTotal}`;
+            document.getElementById('deliveryFee').textContent = deliveryFee === 0 ? 'FREE' : `Rs.${deliveryFee}`;
+            document.getElementById('grandTotal').textContent = `Rs.${grandTotal}`;
+            
+            // Update WhatsApp link
+            updateWhatsAppLink(itemsTotal, deliveryFee, grandTotal, totalPieces);
         }
 
-        function updateCalcBookButton(items, total) {
-            const btn = document.getElementById('calcBookBtn');
-            if (items > 0) {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    const itemsList = [];
-                    for (const [item, qty] of Object.entries(quantities)) {
-                        if (qty > 0) {
-                            itemsList.push(`${qty}x ${item}`);
-                        }
-                    }
-                    const message = `Hi! I want dry cleaning service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
-                    window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                };
-            } else {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    window.open(getWhatsAppLink(), '_blank');
-                };
-            }
+        // WHATSAPP LINK
+        function updateWhatsAppLink(items, delivery, total, pieces) {
+            const message = `Hi! I want to book DRY CLEANING service:
+            
+Total Pieces: ${pieces}
+Items Cost: Rs.${items}
+Delivery: ${delivery === 0 ? 'FREE' : `Rs.${delivery}`}
+TOTAL: Rs.${total}
+
+Location: [Your Location]
+Pickup Time: [Preferred Time]`;
+            
+            const link = `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
+            document.getElementById('whatsappBookBtn').href = link;
+            document.getElementById('navBookBtn').href = link;
+            document.getElementById('ctaBookBtn').href = link;
+            document.getElementById('fabBtn').href = link;
         }
 
-        // GEOLOCATION
-        let userLocation = 'Hyderabad';
-
-        const locations = {
-            'Gachibowli': { lat: 17.4400, lon: 78.3489 },
-            'Madhapur': { lat: 17.4485, lon: 78.3908 },
-            'Hitech City': { lat: 17.4483, lon: 78.3808 },
-            'Kondapur': { lat: 17.4648, lon: 78.3630 },
-            'Jubilee Hills': { lat: 17.4321, lon: 78.4095 },
-            'Banjara Hills': { lat: 17.4171, lon: 78.4500 },
-            'Kukatpally': { lat: 17.4849, lon: 78.4138 },
-            'Ameerpet': { lat: 17.4375, lon: 78.4482 }
-        };
-
-        function detectUserLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const userCoords = {
-                            lat: position.coords.latitude,
-                            lon: position.coords.longitude
-                        };
-                        
-                        let nearestLocation = 'Hyderabad';
-                        let minDistance = Infinity;
-                        
-                        for (const [name, coords] of Object.entries(locations)) {
-                            const distance = Math.sqrt(
-                                Math.pow(coords.lat - userCoords.lat, 2) + 
-                                Math.pow(coords.lon - userCoords.lon, 2)
-                            );
-                            if (distance < minDistance) {
-                                minDistance = distance;
-                                nearestLocation = name;
-                            }
-                        }
-                        
-                        userLocation = nearestLocation;
-                        document.getElementById('ctaLocation').textContent = nearestLocation;
-                        updateAllCTAs();
-                        
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'location_detected', {
-                                'page': 'dry-cleaning',
-                                'location': nearestLocation
-                            });
-                        }
-                    },
-                    () => {
-                        userLocation = 'Hyderabad';
-                        updateAllCTAs();
-                    }
-                );
-            }
-        }
-
-        function getWhatsAppLink() {
-            const message = `Hi! I want FREE PICKUP & DELIVERY for dry cleaning service in ${userLocation}`;
-            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
-        }
-
-        function updateAllCTAs() {
-            document.getElementById('navBookBtn').href = getWhatsAppLink();
-            document.getElementById('ctaBookBtn').href = getWhatsAppLink();
-            document.getElementById('fabBtn').href = getWhatsAppLink();
-            updateCalcBookButton(0, 0);
-        }
-
-        // Area card clicks
-        document.querySelectorAll('.area-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                const location = this.getAttribute('data-location');
-                const message = `Hi! I need dry cleaning service in ${location}`;
-                window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'area_click', {
-                        'service': 'dry-cleaning',
-                        'selected_location': location
-                    });
-                }
-            });
-        });
-
-        // Mobile menu
+        // MOBILE MENU
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         if (menuToggle) {
@@ -1430,9 +1169,30 @@
             });
         }
 
-        // Initialize
-        detectUserLocation();
-        setTimeout(updateAllCTAs, 1000);
+        // AREA CLICK TRACKING
+        document.querySelectorAll('.area-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', { 
+                        'service': 'dry-cleaning',
+                        'location': location 
+                    });
+                }
+            });
+        });
+
+        // GA4 PAGE VIEW
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': 'Dry Cleaning Service',
+                'page_location': window.location.href,
+                'service': 'dry-cleaning'
+            });
+        }
+
+        // INITIALIZE
+        calculateTotal();
     </script>
 </body>
 </html>
