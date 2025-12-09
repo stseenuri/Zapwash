@@ -1,0 +1,73 @@
+# Zapwash Robots.txt
+# Updated: December 10, 2025
+
+# Sitemap Location
+Sitemap: https://thezapwash.com/sitemap.xml
+
+# ==========================================
+# Allow All Search Engine Crawlers
+# ==========================================
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /*.php$
+Crawl-delay: 1
+
+# ==========================================
+# AI Crawlers - Allow Access
+# ==========================================
+
+# OpenAI GPT (ChatGPT)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+# Anthropic Claude
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+
+# Google Gemini/Bard
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Allow: /llms.txt
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Allow: /
+Allow: /llms.txt
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+
+# ==========================================
+# Block Bad Bots & Scrapers
+# ==========================================
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
