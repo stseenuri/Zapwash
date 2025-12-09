@@ -21,71 +21,12 @@
     </script>
 
     <!-- SEO META -->
-    <title>1-Hour Express Iron Service Hyderabad | Fastest Ironing | Zapwash</title>
-    <meta name="description" content="1-hour express iron service in Hyderabad. Fastest ironing across Gachibowli, Madhapur, Hitech City. Rs.20/piece. FREE first order pickup & delivery!">
-    <meta name="keywords" content="1 hour iron service Hyderabad, express iron Hyderabad, fast ironing Gachibowli, 60 minute press service">
+    <title>Express Iron Service Hyderabad | 1-Hour to 12-Hour Slots | Zapwash</title>
+    <meta name="description" content="Express iron service in Hyderabad with flexible time slots. Choose 1-hour, 3-hour, 6-hour or 12-hour delivery. Rs.15/piece. FREE first order!">
+    <meta name="keywords" content="express iron Hyderabad, fast ironing service, 1 hour iron Gachibowli, quick press Madhapur">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://thezapwash.com/1-hour-express-iron-hyderabad.html">
+    <link rel="canonical" href="https://thezapwash.com/express-iron-service-hyderabad.html">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="1-Hour Express Iron Service Hyderabad | Zapwash">
-    <meta property="og:description" content="Get clothes ironed in 60 minutes. Available across Hyderabad. From Rs.20/piece.">
-    <meta property="og:url" content="https://thezapwash.com/1-hour-express-iron-hyderabad.html">
-    
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "1-Hour Express Iron Service",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Zapwash",
-        "telephone": "+918639103842",
-        "url": "https://thezapwash.com"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Hyderabad"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "20",
-        "priceCurrency": "INR",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "20.00",
-          "priceCurrency": "INR"
-        }
-      },
-      "description": "Fastest 1-hour express iron service in Hyderabad"
-    }
-    </script>
-
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://thezapwash.com/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://thezapwash.com/laundry-services-hyderabad.html"
-      },{
-        "@type": "ListItem",
-        "position": 3,
-        "name": "1-Hour Express Iron",
-        "item": "https://thezapwash.com/1-hour-express-iron-hyderabad.html"
-      }]
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -344,6 +285,66 @@
             font-size: 1.125rem;
         }
 
+        /* TIME SLOT SELECTOR */
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .time-slots { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .time-slot {
+            background: var(--gray-50);
+            border: 3px solid var(--gray-200);
+            padding: 1.5rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .time-slot:hover {
+            border-color: var(--gray-400);
+        }
+
+        .time-slot.active {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .time-slot .time {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .time-slot .fee {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .time-slot.active .fee {
+            color: var(--white);
+        }
+
+        .time-slot .limit {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        .time-slot.active .limit {
+            color: var(--gray-400);
+        }
+
         .calculator-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr;
@@ -483,6 +484,10 @@
             text-transform: uppercase;
         }
 
+        .summary-note.warning {
+            background: var(--accent);
+        }
+
         .summary-cta {
             width: 100%;
             padding: 1.25rem;
@@ -506,6 +511,7 @@
         /* FEATURES */
         .features-section {
             padding: 5rem 2rem;
+            background: var(--gray-50);
             border-bottom: 1px solid var(--black);
         }
 
@@ -526,11 +532,6 @@
             text-align: center;
         }
 
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-
         .feature-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -539,50 +540,6 @@
         .feature-card p {
             color: var(--gray-600);
             line-height: 1.7;
-        }
-
-        /* PRICING */
-        .pricing-section {
-            padding: 5rem 2rem;
-            background: var(--gray-50);
-            border-bottom: 1px solid var(--black);
-        }
-
-        .pricing-table {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--white);
-            border: 2px solid var(--black);
-        }
-
-        .pricing-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .pricing-table th {
-            background: var(--black);
-            color: var(--white);
-            padding: 1.5rem;
-            text-align: left;
-            font-size: 1.125rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .pricing-table td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .pricing-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .price-value {
-            font-weight: 700;
-            font-size: 1.25rem;
-            text-align: right;
         }
 
         /* HOW IT WORKS */
@@ -828,7 +785,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Hyderabad Laundry Service Logo" class="nav-logo"></a>
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash" class="nav-logo"></a>
             
             <button class="menu-toggle" id="menuToggle">
                 <span></span>
@@ -850,7 +807,7 @@
     <!-- Breadcrumbs -->
     <div class="breadcrumbs">
         <div class="breadcrumbs-inner">
-            <a href="/">Home</a> / <a href="/laundry-services-hyderabad.html">Services</a> / <strong>1-Hour Express Iron</strong>
+            <a href="/">Home</a> / <a href="/laundry-services-hyderabad.html">Services</a> / <strong>Express Iron</strong>
         </div>
     </div>
 
@@ -859,29 +816,56 @@
         <div class="hero-container">
             <span class="hero-badge">FASTEST IN HYDERABAD</span>
             <h1 class="hero-title">
-                <span class="highlight">1-Hour Express Iron</span><br>
-                Ready in 60 Minutes
+                <span class="highlight">Express Iron Service</span><br>
+                Choose Your Speed
             </h1>
             <p class="hero-subtitle">
-                Hyderabad's fastest ironing service. Drop off your clothes and get them back crisp and perfectly pressed in just 1 hour. Perfect for urgent meetings, events, or travel.
+                Flexible express ironing with 4 time slot options. From 1-hour to 12-hour delivery. Professional steam pressing for all fabrics. Perfect for urgent needs, events, or regular laundry.
             </p>
             <div class="hero-offer">FREE PICKUP & DELIVERY ON FIRST ORDER</div>
-            <a href="#" class="btn-primary" id="heroBookBtn">Book 1-Hour Express</a>
+            <a href="#calculator" class="btn-primary">Calculate Your Cost</a>
         </div>
     </section>
 
     <!-- Cost Calculator -->
     <section class="calculator-section" id="calculator">
         <div class="container">
-            <h2 class="section-title">Calculate Your Cost</h2>
-            <p class="section-subtitle">Select items and quantities to get instant price estimate</p>
+            <h2 class="section-title">Calculate Express Iron Cost</h2>
+            <p class="section-subtitle">Choose your time slot, then select items and quantities</p>
             
+            <!-- TIME SLOT SELECTOR -->
+            <div class="time-slots">
+                <div class="time-slot active" data-slot="1" onclick="selectTimeSlot(1, 100, 10)">
+                    <div class="time">1 Hour</div>
+                    <div class="fee">+Rs.100</div>
+                    <div class="limit">Max 10 pieces</div>
+                </div>
+                
+                <div class="time-slot" data-slot="3" onclick="selectTimeSlot(3, 100, 20)">
+                    <div class="time">3 Hours</div>
+                    <div class="fee">+Rs.100</div>
+                    <div class="limit">Max 20 pieces</div>
+                </div>
+                
+                <div class="time-slot" data-slot="6" onclick="selectTimeSlot(6, 70, 40)">
+                    <div class="time">6 Hours</div>
+                    <div class="fee">+Rs.70</div>
+                    <div class="limit">Max 40 pieces</div>
+                </div>
+                
+                <div class="time-slot" data-slot="12" onclick="selectTimeSlot(12, 50, 999)">
+                    <div class="time">12 Hours</div>
+                    <div class="fee">+Rs.50</div>
+                    <div class="limit">Unlimited</div>
+                </div>
+            </div>
+
             <div class="calculator-grid">
                 <div class="calculator-items">
                     <!-- Item 1 -->
                     <div class="calc-item">
                         <div class="item-name">Shirt / T-Shirt</div>
-                        <div class="item-price">Rs.20</div>
+                        <div class="item-price">Rs.15</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('shirt', -1)">-</button>
                             <div class="qty-display" id="qty-shirt">0</div>
@@ -892,7 +876,7 @@
                     <!-- Item 2 -->
                     <div class="calc-item">
                         <div class="item-name">Trouser / Pants / Jeans</div>
-                        <div class="item-price">Rs.25</div>
+                        <div class="item-price">Rs.20</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('trouser', -1)">-</button>
                             <div class="qty-display" id="qty-trouser">0</div>
@@ -903,7 +887,7 @@
                     <!-- Item 3 -->
                     <div class="calc-item">
                         <div class="item-name">Kurta / Kameez</div>
-                        <div class="item-price">Rs.30</div>
+                        <div class="item-price">Rs.25</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('kurta', -1)">-</button>
                             <div class="qty-display" id="qty-kurta">0</div>
@@ -914,7 +898,7 @@
                     <!-- Item 4 -->
                     <div class="calc-item">
                         <div class="item-name">Saree (Plain)</div>
-                        <div class="item-price">Rs.50</div>
+                        <div class="item-price">Rs.40</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('saree', -1)">-</button>
                             <div class="qty-display" id="qty-saree">0</div>
@@ -924,41 +908,30 @@
 
                     <!-- Item 5 -->
                     <div class="calc-item">
-                        <div class="item-name">Saree (With Border Work)</div>
-                        <div class="item-price">Rs.70</div>
+                        <div class="item-name">Saree (With Pleats)</div>
+                        <div class="item-price">Rs.60</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('saree-border', -1)">-</button>
-                            <div class="qty-display" id="qty-saree-border">0</div>
-                            <button class="qty-btn" onclick="changeQty('saree-border', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('saree-pleat', -1)">-</button>
+                            <div class="qty-display" id="qty-saree-pleat">0</div>
+                            <button class="qty-btn" onclick="changeQty('saree-pleat', 1)">+</button>
                         </div>
                     </div>
 
                     <!-- Item 6 -->
                     <div class="calc-item">
-                        <div class="item-name">Suit 2-Piece (Coat + Pant)</div>
-                        <div class="item-price">Rs.80</div>
+                        <div class="item-name">Salwar Suit (3-Piece)</div>
+                        <div class="item-price">Rs.70</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('suit2', -1)">-</button>
-                            <div class="qty-display" id="qty-suit2">0</div>
-                            <button class="qty-btn" onclick="changeQty('suit2', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('salwar', -1)">-</button>
+                            <div class="qty-display" id="qty-salwar">0</div>
+                            <button class="qty-btn" onclick="changeQty('salwar', 1)">+</button>
                         </div>
                     </div>
 
                     <!-- Item 7 -->
                     <div class="calc-item">
-                        <div class="item-name">Suit 3-Piece (Coat + Pant + Waistcoat)</div>
-                        <div class="item-price">Rs.100</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('suit3', -1)">-</button>
-                            <div class="qty-display" id="qty-suit3">0</div>
-                            <button class="qty-btn" onclick="changeQty('suit3', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 8 -->
-                    <div class="calc-item">
                         <div class="item-name">Bed Sheet (Single)</div>
-                        <div class="item-price">Rs.40</div>
+                        <div class="item-price">Rs.30</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('bedsheet', -1)">-</button>
                             <div class="qty-display" id="qty-bedsheet">0</div>
@@ -966,14 +939,36 @@
                         </div>
                     </div>
 
-                    <!-- Item 9 -->
+                    <!-- Item 8 -->
                     <div class="calc-item">
                         <div class="item-name">Bed Sheet (Double)</div>
-                        <div class="item-price">Rs.60</div>
+                        <div class="item-price">Rs.50</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('bedsheet-double', -1)">-</button>
                             <div class="qty-display" id="qty-bedsheet-double">0</div>
                             <button class="qty-btn" onclick="changeQty('bedsheet-double', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="calc-item">
+                        <div class="item-name">Blanket Cover</div>
+                        <div class="item-price">Rs.40</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('blanket', -1)">-</button>
+                            <div class="qty-display" id="qty-blanket">0</div>
+                            <button class="qty-btn" onclick="changeQty('blanket', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="calc-item">
+                        <div class="item-name">Towel</div>
+                        <div class="item-price">Rs.15</div>
+                        <div class="quantity-control">
+                            <button class="qty-btn" onclick="changeQty('towel', -1)">-</button>
+                            <div class="qty-display" id="qty-towel">0</div>
+                            <button class="qty-btn" onclick="changeQty('towel', 1)">+</button>
                         </div>
                     </div>
                 </div>
@@ -982,6 +977,11 @@
                 <div class="calculator-summary">
                     <h3 class="summary-title">Cost Summary</h3>
                     
+                    <div class="summary-row">
+                        <span class="label">Time Slot:</span>
+                        <span class="value" id="timeSlotDisplay">1 Hour</span>
+                    </div>
+
                     <div class="summary-row">
                         <span class="label">Total Items:</span>
                         <span class="value" id="totalItems">0</span>
@@ -992,6 +992,11 @@
                         <span class="value">Rs.<span id="subtotal">0</span></span>
                     </div>
 
+                    <div class="summary-row">
+                        <span class="label">Express Fee:</span>
+                        <span class="value">Rs.<span id="expressFee">100</span></span>
+                    </div>
+
                     <div class="summary-row" id="deliveryRow" style="display: none;">
                         <span class="label">Delivery:</span>
                         <span class="value">Rs.<span id="delivery">30</span></span>
@@ -1000,6 +1005,9 @@
                     <div class="summary-row total">
                         <span class="label">Total:</span>
                         <span class="value">Rs.<span id="total">0</span></span>
+                    </div>
+
+                    <div class="summary-note" id="limitNote" style="display: none;">
                     </div>
 
                     <div class="summary-note" id="freeDeliveryNote" style="display: none;">
@@ -1023,105 +1031,38 @@
     <!-- Features -->
     <section class="features-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Our 1-Hour Express?</h2>
+            <h2 class="section-title">Why Choose Our Express Service?</h2>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>60-Minute Turnaround</h3>
-                    <p>Guaranteed 1-hour service. Drop off and pick up within the same hour. Fastest ironing service in Hyderabad.</p>
+                    <h3>Flexible Time Slots</h3>
+                    <p>Choose from 1-hour, 3-hour, 6-hour or 12-hour delivery based on your urgency. Same-day service available.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">👔</div>
                     <h3>Professional Steam Press</h3>
                     <p>Commercial-grade steam ironing for crisp, wrinkle-free results. Perfect finish every time.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
                     <h3>All Fabric Types</h3>
                     <p>Shirts, pants, sarees, suits, kurtas. We handle all fabrics with care using appropriate heat settings.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Multiple Locations</h3>
-                    <p>Available across Gachibowli, Madhapur, Hitech City, Kondapur and 4+ areas in Hyderabad.</p>
+                    <h3>No Minimum Order</h3>
+                    <p>Iron just 1 piece or up to 40 pieces. Flexible service for all your needs.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
                     <h3>Affordable Pricing</h3>
-                    <p>Starting at just Rs.20 per piece. Transparent pricing with no hidden charges.</p>
+                    <p>Starting at Rs.15 per piece + express fee. Transparent pricing with no hidden charges.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🆓</div>
                     <h3>Free First Order</h3>
-                    <p>New customers get FREE pickup and delivery on their first order. No minimum required!</p>
+                    <p>New customers get FREE pickup and delivery on their first order!</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">1-Hour Express Iron Pricing</h2>
-            
-            <div class="pricing-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item Type</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Shirt / T-Shirt</td>
-                            <td class="price-value">Rs.20</td>
-                        </tr>
-                        <tr>
-                            <td>Trouser / Pants / Jeans</td>
-                            <td class="price-value">Rs.25</td>
-                        </tr>
-                        <tr>
-                            <td>Kurta / Kameez</td>
-                            <td class="price-value">Rs.30</td>
-                        </tr>
-                        <tr>
-                            <td>Saree (Plain)</td>
-                            <td class="price-value">Rs.50</td>
-                        </tr>
-                        <tr>
-                            <td>Saree (With Border Work)</td>
-                            <td class="price-value">Rs.70</td>
-                        </tr>
-                        <tr>
-                            <td>Suit 2-Piece (Coat + Pant)</td>
-                            <td class="price-value">Rs.80</td>
-                        </tr>
-                        <tr>
-                            <td>Suit 3-Piece (Coat + Pant + Waistcoat)</td>
-                            <td class="price-value">Rs.100</td>
-                        </tr>
-                        <tr>
-                            <td>Bed Sheet (Single)</td>
-                            <td class="price-value">Rs.40</td>
-                        </tr>
-                        <tr>
-                            <td>Bed Sheet (Double)</td>
-                            <td class="price-value">Rs.60</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <p style="color: var(--gray-600); margin-bottom: 1.5rem;">All prices inclusive of taxes. Free pickup & delivery on orders above Rs.200.</p>
-                <a href="#" class="btn-primary" id="pricingBookBtn">Book Express Iron Now</a>
             </div>
         </div>
     </section>
@@ -1129,25 +1070,25 @@
     <!-- How It Works -->
     <section class="process-section">
         <div class="container">
-            <h2 class="section-title">How 1-Hour Express Works</h2>
+            <h2 class="section-title">How Express Iron Works</h2>
             
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Drop Off or Request Pickup</h3>
-                    <p>Visit our partner location near you or request free pickup via WhatsApp. Available 7 AM - 9 PM daily.</p>
+                    <h3>Choose Time Slot</h3>
+                    <p>Select from 1-hour, 3-hour, 6-hour or 12-hour express delivery based on your urgency.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Professional Steam Iron</h3>
-                    <p>Your clothes are steam pressed by trained professionals using commercial equipment. Takes 45-60 minutes.</p>
+                    <h3>Free Pickup</h3>
+                    <p>We collect your clothes from your doorstep. Available 7 AM - 9 PM daily across Hyderabad.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Pick Up in 1 Hour</h3>
-                    <p>Clothes ready for pickup within 60 minutes or delivered to your doorstep. Perfectly pressed and ready to wear!</p>
+                    <h3>Express Delivery</h3>
+                    <p>Professionally ironed clothes delivered within your chosen time slot. Ready to wear!</p>
                 </div>
             </div>
         </div>
@@ -1156,46 +1097,46 @@
     <!-- Areas Served -->
     <section class="areas-section">
         <div class="container">
-            <h2 class="section-title">1-Hour Express Available Across Hyderabad</h2>
-            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book express iron service</p>
+            <h2 class="section-title">Express Iron Across Hyderabad</h2>
+            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book express service</p>
             
             <div class="areas-grid">
-                <a href="/1-hour-express-iron-gachibowli-hyderabad.html" class="area-card" data-location="Gachibowli">
+                <a href="#" class="area-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
-                    <span class="area-status">Available Now</span>
+                    <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-madhapur-hyderabad.html" class="area-card" data-location="Madhapur">
+                <a href="#" class="area-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
-                    <span class="area-status">Available Now</span>
+                    <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-hitech-city-hyderabad.html" class="area-card" data-location="Hitech City">
+                <a href="#" class="area-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
-                    <span class="area-status">Available Now</span>
+                    <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-kondapur-hyderabad.html" class="area-card" data-location="Kondapur">
+                <a href="#" class="area-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
-                    <span class="area-status">Available Now</span>
+                    <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-jubilee-hills-hyderabad.html" class="area-card" data-location="Jubilee Hills">
+                <a href="#" class="area-card" data-location="Jubilee Hills">
                     <h3>Jubilee Hills</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-banjara-hills-hyderabad.html" class="area-card" data-location="Banjara Hills">
+                <a href="#" class="area-card" data-location="Banjara Hills">
                     <h3>Banjara Hills</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-kukatpally-hyderabad.html" class="area-card" data-location="Kukatpally">
+                <a href="#" class="area-card" data-location="Kukatpally">
                     <h3>Kukatpally</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="/1-hour-express-iron-ameerpet-hyderabad.html" class="area-card" data-location="Ameerpet">
+                <a href="#" class="area-card" data-location="Ameerpet">
                     <h3>Ameerpet</h3>
                     <span class="area-status">Available</span>
                 </a>
@@ -1210,13 +1151,8 @@
             
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>Is it really ready in 1 hour?</h3>
-                    <p>Yes! Our 1-hour express iron service guarantees your clothes will be ready within 60 minutes of drop-off during business hours (7 AM - 9 PM).</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>What areas do you serve for 1-hour express?</h3>
-                    <p>We offer 1-hour express iron across Gachibowli, Madhapur, Hitech City, Kondapur, Jubilee Hills, Banjara Hills, Kukatpally, and Ameerpet in Hyderabad.</p>
+                    <h3>What are the time slot options?</h3>
+                    <p>We offer 4 express slots: 1-hour (max 10 pieces, +Rs.100), 3-hour (max 20 pieces, +Rs.100), 6-hour (max 40 pieces, +Rs.70), and 12-hour (unlimited, +Rs.50).</p>
                 </div>
 
                 <div class="faq-item">
@@ -1225,18 +1161,23 @@
                 </div>
 
                 <div class="faq-item">
-                    <h3>Can I book for same-day service?</h3>
-                    <p>Absolutely! Book via WhatsApp and we'll confirm the nearest available slot. Most areas get pickup within 20-30 minutes during business hours.</p>
+                    <h3>Can I book same-day service?</h3>
+                    <p>Yes! Book via WhatsApp and choose your preferred time slot. Most areas get pickup within 20-30 minutes during business hours (7 AM - 9 PM).</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>What fabrics can you iron in 1 hour?</h3>
-                    <p>We handle all fabric types - cotton, linen, silk, polyester, wool, rayon. Our team uses appropriate heat settings for each fabric to ensure safe, professional results.</p>
+                    <h3>What if I exceed the piece limit?</h3>
+                    <p>For 1-hour slot (max 10), 3-hour (max 20), or 6-hour (max 40), please select the next slower slot if you have more pieces. 12-hour slot has no limit.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Do you offer express service for sarees?</h3>
-                    <p>Yes! Plain sarees take 1 hour (Rs.50), designer/border work sarees may take 90 minutes (Rs.70). We specialize in silk saree pressing with proper pleating.</p>
+                    <h3>What fabrics can you iron?</h3>
+                    <p>We handle all fabric types - cotton, linen, silk, polyester, wool, rayon. Our team uses appropriate heat settings for each fabric to ensure safe results.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you iron sarees?</h3>
+                    <p>Yes! Plain sarees (Rs.40) and sarees with pleats/border work (Rs.60). We specialize in silk saree pressing with proper pleating.</p>
                 </div>
             </div>
         </div>
@@ -1245,9 +1186,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Need Iron in 1 Hour? We've Got You!</h2>
-            <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery on first order. Book now for fastest service in <span id="ctaLocation">Hyderabad</span>.</p>
-            <a href="#" class="btn-primary" id="ctaBookBtn">Book 1-Hour Express Now</a>
+            <h2>Need Express Iron Service?</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem;">FREE pickup & delivery on first order. Choose your speed in <span id="ctaLocation">Hyderabad</span>.</p>
+            <a href="#" class="btn-primary" id="ctaBookBtn">Book Express Iron Now</a>
         </div>
     </section>
 
@@ -1256,9 +1197,9 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Express Services</h4>
+                    <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="/1-hour-express-iron-hyderabad.html" class="footer-link">1-Hour Express Iron</a>
+                        <a href="/express-iron-service-hyderabad.html" class="footer-link">Express Iron</a>
                         <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
                         <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
                         <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
@@ -1295,7 +1236,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Zapwash - 1-Hour Express Iron Service Hyderabad - FREE First Order</p>
+                <p>&copy; 2025 Zapwash - Express Iron Service Hyderabad - FREE First Order</p>
             </div>
         </div>
     </footer>
@@ -1306,17 +1247,23 @@
     </a>
 
     <script>
+        // TIME SLOT CONFIG
+        let currentSlot = 1;
+        let currentFee = 100;
+        let currentLimit = 10;
+
         // PRICE CALCULATOR
         const prices = {
-            'shirt': 20,
-            'trouser': 25,
-            'kurta': 30,
-            'saree': 50,
-            'saree-border': 70,
-            'suit2': 80,
-            'suit3': 100,
-            'bedsheet': 40,
-            'bedsheet-double': 60
+            'shirt': 15,
+            'trouser': 20,
+            'kurta': 25,
+            'saree': 40,
+            'saree-pleat': 60,
+            'salwar': 70,
+            'bedsheet': 30,
+            'bedsheet-double': 50,
+            'blanket': 40,
+            'towel': 15
         };
 
         const quantities = {
@@ -1324,15 +1271,51 @@
             'trouser': 0,
             'kurta': 0,
             'saree': 0,
-            'saree-border': 0,
-            'suit2': 0,
-            'suit3': 0,
+            'saree-pleat': 0,
+            'salwar': 0,
             'bedsheet': 0,
-            'bedsheet-double': 0
+            'bedsheet-double': 0,
+            'blanket': 0,
+            'towel': 0
         };
 
+        function selectTimeSlot(hours, fee, limit) {
+            currentSlot = hours;
+            currentFee = fee;
+            currentLimit = limit;
+
+            // Update active state
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                slot.classList.remove('active');
+            });
+            document.querySelector(`[data-slot="${hours}"]`).classList.add('active');
+
+            // Update display
+            document.getElementById('timeSlotDisplay').textContent = `${hours} Hour${hours > 1 ? 's' : ''}`;
+            document.getElementById('expressFee').textContent = fee;
+
+            updateSummary();
+        }
+
         function changeQty(item, change) {
-            quantities[item] = Math.max(0, quantities[item] + change);
+            const newQty = quantities[item] + change;
+            
+            // Check limit
+            const totalItems = Object.values(quantities).reduce((a, b) => a + b, 0) + change;
+            
+            if (newQty < 0) return;
+            if (totalItems > currentLimit) {
+                const limitNote = document.getElementById('limitNote');
+                limitNote.textContent = `${currentSlot}-hour slot limited to ${currentLimit} pieces!`;
+                limitNote.style.display = 'block';
+                limitNote.classList.add('warning');
+                setTimeout(() => {
+                    limitNote.style.display = 'none';
+                }, 3000);
+                return;
+            }
+
+            quantities[item] = newQty;
             document.getElementById(`qty-${item}`).textContent = quantities[item];
             updateSummary();
         }
@@ -1347,30 +1330,29 @@
             }
 
             const deliveryCharge = (subtotal > 0 && subtotal < 200) ? 30 : 0;
-            const total = subtotal + deliveryCharge;
+            const expressFeeAmount = totalItems > 0 ? currentFee : 0;
+            const total = subtotal + expressFeeAmount + deliveryCharge;
 
             document.getElementById('totalItems').textContent = totalItems;
             document.getElementById('subtotal').textContent = subtotal;
+            document.getElementById('expressFee').textContent = expressFeeAmount;
             document.getElementById('delivery').textContent = deliveryCharge;
             document.getElementById('total').textContent = total;
 
-            // Show/hide delivery row
             document.getElementById('deliveryRow').style.display = deliveryCharge > 0 ? 'flex' : 'none';
 
-            // Show/hide free delivery note
             if (subtotal >= 200 && subtotal > 0) {
                 document.getElementById('freeDeliveryNote').style.display = 'block';
             } else {
                 document.getElementById('freeDeliveryNote').style.display = 'none';
             }
 
-            // Update calc book button
             updateCalcBookButton(totalItems, total);
 
-            // GA4 tracking
             if (typeof gtag !== 'undefined' && totalItems > 0) {
                 gtag('event', 'calculator_used', {
-                    'service': '1-hour-express-iron',
+                    'service': 'express-iron',
+                    'time_slot': currentSlot,
                     'total_items': totalItems,
                     'estimated_cost': total
                 });
@@ -1388,7 +1370,7 @@
                             itemsList.push(`${qty}x ${item}`);
                         }
                     }
-                    const message = `Hi! I want 1-hour express iron service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
+                    const message = `Hi! I want ${currentSlot}-hour express iron service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
                     window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
                 };
             } else {
@@ -1442,7 +1424,7 @@
                         
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'location_detected', {
-                                'page': '1-hour-express-iron',
+                                'page': 'express-iron',
                                 'location': nearestLocation
                             });
                         }
@@ -1456,14 +1438,12 @@
         }
 
         function getWhatsAppLink() {
-            const message = `Hi! I want FREE PICKUP & DELIVERY for 1-hour express iron service in ${userLocation}`;
+            const message = `Hi! I want FREE PICKUP & DELIVERY for express iron service in ${userLocation}`;
             return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
         }
 
         function updateAllCTAs() {
             document.getElementById('navBookBtn').href = getWhatsAppLink();
-            document.getElementById('heroBookBtn').href = getWhatsAppLink();
-            document.getElementById('pricingBookBtn').href = getWhatsAppLink();
             document.getElementById('ctaBookBtn').href = getWhatsAppLink();
             document.getElementById('fabBtn').href = getWhatsAppLink();
             updateCalcBookButton(0, 0);
@@ -1474,12 +1454,12 @@
             card.addEventListener('click', function(e) {
                 e.preventDefault();
                 const location = this.getAttribute('data-location');
-                const message = `Hi! I need 1-hour express iron service in ${location}`;
+                const message = `Hi! I need express iron service in ${location}`;
                 window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
                 
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'area_click', {
-                        'service': '1-hour-express-iron',
+                        'service': 'express-iron',
                         'selected_location': location
                     });
                 }
