@@ -26,9 +26,9 @@
     </script>
 
     <!-- SEO META -->
-    <title>Zapwash - 20-Min Pickup | 1-Hour Express Iron | Hyderabad Laundry</title>
-    <meta name="description" content="Hyderabad's fastest laundry service with 20-min pickup and 1-hour express iron. Professional quality across Gachibowli, Madhapur, Hitech City.">
-    <meta name="keywords" content="fastest laundry Hyderabad, 20 minute pickup, 1 hour iron, express laundry service">
+    <title>Zapwash - Free Pickup & Delivery | 20-Min Pickup | Hyderabad Laundry</title>
+    <meta name="description" content="First-time customers get FREE pickup and delivery! 20-minute pickup, 1-hour express iron. Professional laundry service across Gachibowli, Madhapur, Hitech City.">
+    <meta name="keywords" content="free pickup delivery laundry, fastest laundry Hyderabad, 20 minute pickup, express laundry">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/">
     
@@ -260,8 +260,20 @@
             font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--gray-600);
             max-width: 700px;
-            margin: 0 auto 3rem;
+            margin: 0 auto 1rem;
             line-height: 1.6;
+        }
+
+        .hero-offer {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .btn-primary {
@@ -486,6 +498,100 @@
             font-size: 0.875rem;
         }
 
+        /* EXIT INTENT POPUP */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .exit-popup.active {
+            display: flex;
+        }
+
+        .popup-content {
+            background: var(--white);
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+        }
+
+        .popup-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .popup-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+
+        .popup-offer {
+            background: var(--success);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .popup-note {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+        }
+
+        .popup-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
         /* FOOTER */
         .footer {
             padding: 5rem 2rem 2rem;
@@ -586,7 +692,7 @@
 
     <!-- Banner -->
     <div class="offer-banner">
-        ⚡ 20-MINUTE PICKUP | 1-HOUR EXPRESS IRON | Professional Quality
+        🎁 FREE PICKUP & DELIVERY for First-Time Customers | Pay Only for Laundry
     </div>
 
     <!-- Navigation -->
@@ -606,7 +712,7 @@
                 <a href="/laundry-service-locations-hyderabad.html" class="nav-link">Locations</a>
                 <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
-                <a href="#" class="nav-cta" id="navBookBtn">📞 Book Now</a>
+                <a href="#" class="nav-cta" id="navBookBtn">📞 Book Free Pickup</a>
             </div>
         </div>
     </nav>
@@ -616,13 +722,14 @@
         <div class="hero-grid"></div>
         <div class="hero-container">
             <h1 class="hero-title">
-                <span class="highlight">Hyderabad's Fastest</span><br>
-                Laundry Service
+                <span class="highlight">FREE Pickup & Delivery</span><br>
+                For First-Time Customers
             </h1>
             <p class="hero-subtitle">
-                20-minute pickup. 1-hour express iron. Professional quality across Gachibowli, Madhapur, Hitech City & more.
+                20-minute pickup. 1-hour express iron available. Professional quality across Gachibowli, Madhapur, Hitech City & more.
             </p>
-            <a href="#" class="btn-primary" id="heroBookBtn">Book Pickup Now</a>
+            <div class="hero-offer">FREE PICKUP & FREE DELIVERY - You Pay Only for Laundry</div>
+            <a href="#" class="btn-primary" id="heroBookBtn">Claim Free Pickup Now</a>
         </div>
     </section>
 
@@ -634,8 +741,8 @@
                 <div class="trust-label">Average Pickup</div>
             </div>
             <div>
-                <div class="trust-value">1 Hour</div>
-                <div class="trust-label">Express Iron</div>
+                <div class="trust-value">FREE</div>
+                <div class="trust-label">First Pickup & Delivery</div>
             </div>
             <div>
                 <div class="trust-value">400+</div>
@@ -743,31 +850,43 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Incredibly fast pickup - exactly 18 minutes! The quality of ironing is excellent. Perfect for my weekly work shirts."</p>
+                    <p>"Super fast pickup - came in 18 minutes! Quality is excellent and no hidden charges. Very transparent pricing."</p>
                     <div class="author">Rajesh K. - Gachibowli</div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"1-hour express iron saved me before an important client meeting. Professional quality, super fast turnaround!"</p>
+                    <p>"1-hour express iron saved me before an important meeting. Professional quality and lightning fast turnaround!"</p>
                     <div class="author">Priya S. - Madhapur</div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Best laundry service in Hyderabad. They handle my suits with great care. Reliable, fast, and high quality!"</p>
+                    <p>"Best laundry service in Hyderabad. They handle my designer suits with great care. Reliable and high quality!"</p>
                     <div class="author">Anil M. - Hitech City</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeExitPopup()">×</button>
+            <h3 class="popup-title">Wait! Don't Miss This 🎁</h3>
+            <p class="popup-subtitle">First-time customers in <strong id="popupLocationName">Hyderabad</strong> get:</p>
+            <div class="popup-offer">FREE PICKUP + FREE DELIVERY</div>
+            <p class="popup-note">*You pay only for the laundry service. Pickup & delivery charges waived for your first order!</p>
+            <a href="#" class="popup-cta" id="popupCTA">Claim Free Offer Now</a>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-cta">
-                <h2>Ready for Fast Pickup?</h2>
-                <a href="#" class="btn-primary" id="footerBookBtn">Book Now</a>
+                <h2>Ready for Free Pickup & Delivery?</h2>
+                <a href="#" class="btn-primary" id="footerBookBtn">Book Free Pickup Now</a>
             </div>
 
             <div class="footer-grid">
@@ -815,7 +934,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Zapwash - 20-Min Pickup | 1-Hour Express Iron | 400+ Happy Customers</p>
+                <p>&copy; 2025 Zapwash - FREE Pickup & Delivery for First-Time Customers | 400+ Happy Customers</p>
             </div>
         </div>
     </footer>
@@ -863,6 +982,7 @@
                         }
                         
                         userLocation = nearestLocation;
+                        document.getElementById('popupLocationName').textContent = nearestLocation;
                         
                         if (typeof gtag !== 'undefined') {
                             gtag('event', 'location_detected', { 'location': nearestLocation });
@@ -874,8 +994,8 @@
 
         function getWhatsAppLink(service = null) {
             let message = service 
-                ? `Hi! I want to book ${service} service in ${userLocation}`
-                : `Hi! I want to book laundry pickup in ${userLocation}`;
+                ? `Hi! I want FREE pickup & delivery for ${service} in ${userLocation}`
+                : `Hi! I want FREE pickup & delivery for my first order in ${userLocation}`;
             
             return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
         }
@@ -885,6 +1005,46 @@
             document.getElementById('navBookBtn').href = getWhatsAppLink();
             document.getElementById('footerBookBtn').href = getWhatsAppLink();
             document.getElementById('fabBtn').href = getWhatsAppLink();
+            document.getElementById('popupCTA').href = getWhatsAppLink();
+        }
+
+        // EXIT INTENT POPUP
+        let exitPopupShown = false;
+        let mouseLeaveCount = 0;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !exitPopupShown && mouseLeaveCount < 1) {
+                showExitPopup();
+                mouseLeaveCount++;
+            }
+        });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const scrollSpeed = lastScrollY - currentScrollY;
+            
+            if (scrollSpeed > 150 && !exitPopupShown && window.innerWidth < 768) {
+                const scrollPercent = (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent < 50) {
+                    showExitPopup();
+                }
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        function showExitPopup() {
+            document.getElementById('exitPopup').classList.add('active');
+            exitPopupShown = true;
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exit_intent_shown', { 'location': userLocation });
+            }
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
         }
 
         // MOBILE MENU FIX
@@ -897,7 +1057,6 @@
                 navLinks.classList.toggle('active');
             });
 
-            // Close menu when clicking a link
             const links = navLinks.querySelectorAll('.nav-link, .nav-cta');
             links.forEach(link => {
                 link.addEventListener('click', function() {
@@ -906,7 +1065,6 @@
                 });
             });
 
-            // Close menu when clicking outside
             document.addEventListener('click', function(event) {
                 if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
                     menuToggle.classList.remove('active');
@@ -915,6 +1073,13 @@
             });
         }
 
+        // Close popup on outside click
+        document.getElementById('exitPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeExitPopup();
+            }
+        });
+
         // INITIALIZE
         detectUserLocation();
         setTimeout(updateAllCTAs, 1000);
@@ -922,7 +1087,7 @@
         // GA4
         if (typeof gtag !== 'undefined') {
             gtag('event', 'page_view', {
-                'page_title': 'Home',
+                'page_title': 'Home - Free Pickup & Delivery',
                 'page_location': window.location.href
             });
         }
