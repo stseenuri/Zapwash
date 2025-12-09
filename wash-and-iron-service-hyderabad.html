@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    
     <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -627,7 +632,7 @@
         }
 
         .area-card:hover .area-status {
-            color: var(--white);
+            color: var(--success);
         }
 
         /* FAQ */
@@ -751,6 +756,7 @@
             justify-content: center;
             z-index: 999;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
         }
 
         .fab:hover {
@@ -769,7 +775,7 @@
 
     <!-- Free Offer Banner -->
     <div class="offer-banner">
-        FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
+        🎁 FIRST ORDER FREE! Complete Wash & Iron Service with Free Pickup & Delivery
     </div>
 
     <!-- Navigation -->
@@ -790,7 +796,7 @@
                 <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
                 <a href="/contact-zapwash-hyderabad.html" class="nav-link">Contact</a>
             </div>
-            <a href="#" class="nav-cta" id="navBookBtn">Book Free</a>
+            <a href="#" class="nav-cta" id="navBookBtn">📞 Book Now</a>
         </div>
     </nav>
 
@@ -871,19 +877,8 @@
 
                     <!-- Item 5 -->
                     <div class="calc-item">
-                        <div class="item-name">Salwar Suit (3-Piece)</div>
-                        <div class="item-price">Rs.120</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('salwar', -1)">-</button>
-                            <div class="qty-display" id="qty-salwar">0</div>
-                            <button class="qty-btn" onclick="changeQty('salwar', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 6 -->
-                    <div class="calc-item">
-                        <div class="item-name">Bed Sheet (Single)</div>
-                        <div class="item-price">Rs.60</div>
+                        <div class="item-name">Bedsheet (Single)</div>
+                        <div class="item-price">Rs.50</div>
                         <div class="quantity-control">
                             <button class="qty-btn" onclick="changeQty('bedsheet', -1)">-</button>
                             <div class="qty-display" id="qty-bedsheet">0</div>
@@ -891,77 +886,47 @@
                         </div>
                     </div>
 
-                    <!-- Item 7 -->
+                    <!-- Item 6 -->
                     <div class="calc-item">
-                        <div class="item-name">Bed Sheet (Double)</div>
-                        <div class="item-price">Rs.90</div>
+                        <div class="item-name">Bedsheet (Double)</div>
+                        <div class="item-price">Rs.70</div>
                         <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('bedsheet-double', -1)">-</button>
-                            <div class="qty-display" id="qty-bedsheet-double">0</div>
-                            <button class="qty-btn" onclick="changeQty('bedsheet-double', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 8 -->
-                    <div class="calc-item">
-                        <div class="item-name">Blanket (Single)</div>
-                        <div class="item-price">Rs.100</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('blanket', -1)">-</button>
-                            <div class="qty-display" id="qty-blanket">0</div>
-                            <button class="qty-btn" onclick="changeQty('blanket', 1)">+</button>
-                        </div>
-                    </div>
-
-                    <!-- Item 9 -->
-                    <div class="calc-item">
-                        <div class="item-name">Towel</div>
-                        <div class="item-price">Rs.30</div>
-                        <div class="quantity-control">
-                            <button class="qty-btn" onclick="changeQty('towel', -1)">-</button>
-                            <div class="qty-display" id="qty-towel">0</div>
-                            <button class="qty-btn" onclick="changeQty('towel', 1)">+</button>
+                            <button class="qty-btn" onclick="changeQty('bedsheetDouble', -1)">-</button>
+                            <div class="qty-display" id="qty-bedsheetDouble">0</div>
+                            <button class="qty-btn" onclick="changeQty('bedsheetDouble', 1)">+</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- Summary -->
                 <div class="calculator-summary">
-                    <h3 class="summary-title">Cost Summary</h3>
+                    <div class="summary-title">Cost Summary</div>
                     
                     <div class="summary-row">
                         <span class="label">Total Items:</span>
                         <span class="value" id="totalItems">0</span>
                     </div>
-
+                    
                     <div class="summary-row">
-                        <span class="label">Subtotal:</span>
-                        <span class="value">Rs.<span id="subtotal">0</span></span>
+                        <span class="label">Items Cost:</span>
+                        <span class="value" id="itemsCost">Rs.0</span>
                     </div>
-
-                    <div class="summary-row" id="deliveryRow" style="display: none;">
+                    
+                    <div class="summary-row">
                         <span class="label">Delivery:</span>
-                        <span class="value">Rs.<span id="delivery">40</span></span>
+                        <span class="value" id="deliveryFee">FREE</span>
                     </div>
-
+                    
                     <div class="summary-row total">
-                        <span class="label">Total:</span>
-                        <span class="value">Rs.<span id="total">0</span></span>
+                        <span class="label">TOTAL:</span>
+                        <span class="value" id="grandTotal">Rs.0</span>
                     </div>
-
-                    <div class="summary-note" id="freeDeliveryNote" style="display: none;">
-                        FREE DELIVERY ON ORDERS ABOVE Rs.300!
+                    
+                    <div class="summary-note" id="freeNote">
+                        🎁 FIRST ORDER FREE!
                     </div>
-
-                    <div class="summary-note" style="background: var(--accent);">
-                        FIRST ORDER 100% FREE!
-                    </div>
-
-                    <a href="#" class="summary-cta" id="calcBookBtn">Book Now via WhatsApp</a>
-
-                    <p style="font-size: 0.75rem; margin-top: 1rem; color: var(--gray-600); text-align: center;">
-                        *Prices are indicative. Final cost confirmed on pickup.
-                    </p>
+                    
+                    <a href="#" class="summary-cta" id="whatsappBookBtn">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -970,37 +935,22 @@
     <!-- Features -->
     <section class="features-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Our Wash & Iron Service?</h2>
+            <h2 class="section-title">Why Choose Wash & Iron?</h2>
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>Professional Washing</h3>
-                    <p>Industrial washing machines with premium detergents. Separate wash for whites, colors, and delicates. Deep cleaning guaranteed.</p>
+                    <h3>🧺 Complete Cleaning</h3>
+                    <p>Professional washing with premium detergents. Removes dirt, stains, and odors. Safe for all fabrics including cotton, linen, and synthetics.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>Hygienic & Safe</h3>
-                    <p>Hot water wash for maximum hygiene. Separate loads to prevent color bleeding. Fabric-appropriate temperatures.</p>
+                    <h3>🔥 Crisp Ironing</h3>
+                    <p>Steam iron finishing for wrinkle-free results. Fabric-specific heat settings. Your clothes look and feel brand new.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h3>Crisp Steam Iron</h3>
-                    <p>After washing, clothes are professionally steam pressed for a sharp, wrinkle-free finish.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>48-Hour Service</h3>
-                    <p>Complete wash and iron in 48 hours. Drop off today, pick up day after tomorrow.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Affordable Pricing</h3>
-                    <p>Starting at Rs.40 per piece. Best value for complete laundry service in Hyderabad.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h3>Free First Order</h3>
-                    <p>New customers get FREE pickup and delivery on their first wash & iron order!</p>
+                    <h3>⏰ 48-Hour Service</h3>
+                    <p>Standard turnaround of 48 hours. Pickup today, delivered in 2 days. Perfect for weekly family laundry routines.</p>
                 </div>
             </div>
         </div>
@@ -1014,26 +964,26 @@
             <div class="steps-grid">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Free Pickup</h3>
-                    <p>Schedule pickup via WhatsApp. We collect your clothes from your doorstep.</p>
+                    <h3>Book Pickup</h3>
+                    <p>WhatsApp us with your location. We'll schedule pickup within 20-30 minutes or at your preferred time.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Professional Wash</h3>
-                    <p>Industrial washing with quality detergents. Separate loads for colors, whites, delicates.</p>
+                    <p>Clothes sorted by fabric type. Washed with premium detergents. Hygienic process with quality control.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Steam Iron</h3>
-                    <p>After drying, clothes are professionally steam pressed for crisp finish.</p>
+                    <p>Each piece individually ironed. Fabric-appropriate heat settings. Crisp, wrinkle-free finish.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Free Delivery</h3>
-                    <p>Delivered back to your home in 48 hours, fresh and ready to wear!</p>
+                    <h3>Fresh Delivery</h3>
+                    <p>Clean, ironed clothes delivered to your door in 48 hours. Neatly folded and packed.</p>
                 </div>
             </div>
         </div>
@@ -1042,47 +992,47 @@
     <!-- Areas Served -->
     <section class="areas-section">
         <div class="container">
-            <h2 class="section-title">Wash & Iron Service Across Hyderabad</h2>
-            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area to book wash & iron service</p>
+            <h2 class="section-title">Wash & Iron Across Hyderabad</h2>
+            <p style="text-align: center; color: var(--gray-600); margin-bottom: 1rem;">Click your area for service</p>
             
             <div class="areas-grid">
-                <a href="#" class="area-card" data-location="Gachibowli">
+                <a href="/laundry-service-gachibowli.html" class="area-card" data-location="Gachibowli">
                     <h3>Gachibowli</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Madhapur">
+                <a href="/laundry-service-madhapur.html" class="area-card" data-location="Madhapur">
                     <h3>Madhapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Hitech City">
+                <a href="/laundry-service-hitech-city.html" class="area-card" data-location="Hitech City">
                     <h3>Hitech City</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kondapur">
+                <a href="/laundry-service-kondapur.html" class="area-card" data-location="Kondapur">
                     <h3>Kondapur</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Jubilee Hills">
-                    <h3>Jubilee Hills</h3>
+                <a href="/laundry-service-nanakramguda.html" class="area-card" data-location="Nanakramguda">
+                    <h3>Nanakramguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Banjara Hills">
-                    <h3>Banjara Hills</h3>
+                <a href="/laundry-service-manikonda.html" class="area-card" data-location="Manikonda">
+                    <h3>Manikonda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Kukatpally">
-                    <h3>Kukatpally</h3>
+                <a href="/laundry-service-puppalaguda.html" class="area-card" data-location="Puppalaguda">
+                    <h3>Puppalaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
 
-                <a href="#" class="area-card" data-location="Ameerpet">
-                    <h3>Ameerpet</h3>
+                <a href="/laundry-service-khajaguda.html" class="area-card" data-location="Khajaguda">
+                    <h3>Khajaguda</h3>
                     <span class="area-status">Available</span>
                 </a>
             </div>
@@ -1092,37 +1042,37 @@
     <!-- FAQ -->
     <section class="faq-section">
         <div class="container">
-            <h2 class="section-title">Wash & Iron FAQs</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>How long does wash & iron take?</h3>
-                    <p>Our standard wash & iron service takes 48 hours. Drop off today, get delivery day after tomorrow. For urgent needs, we offer 24-hour express service at 1.5x pricing.</p>
+                    <h3>What's included in wash & iron service?</h3>
+                    <p>Complete package: sorting, professional washing with premium detergent, drying, steam ironing, folding, and packing. Your clothes returned fresh and ready to wear.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How long does it take?</h3>
+                    <p>Standard turnaround is 48 hours. Pickup today at 2 PM = delivery day after tomorrow at 2 PM. Need faster? Check our Express Iron service.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is pickup and delivery free?</h3>
+                    <p>Yes! First-time customers get completely free pickup and delivery. Regular orders: free above Rs.200. Below that, Rs.30 delivery charge applies.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3>What detergents do you use?</h3>
-                    <p>We use premium-quality commercial detergents suitable for all fabric types. Separate detergents for whites and colors. For sensitive skin, inform us and we'll use hypoallergenic options.</p>
+                    <p>Premium quality detergents suitable for all fabrics. Gentle on clothes, tough on stains. Hypoallergenic options available for sensitive skin on request.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Do you wash whites and colors separately?</h3>
-                    <p>Yes! We always separate whites, colors, and delicates into different loads to prevent color bleeding and ensure best results.</p>
+                    <h3>Can you handle large family loads?</h3>
+                    <p>Absolutely! We specialize in bulk family laundry. No maximum limit. Volume discounts available for regular customers with large orders.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3>Is pickup and delivery really free?</h3>
-                    <p>Yes! First-time customers get completely free pickup and delivery. For regular orders, free delivery on orders above Rs.300. Below that, Rs.40 delivery charge applies.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>Can you wash sarees?</h3>
-                    <p>Absolutely! We wash cotton, synthetic, and georgette sarees. For silk sarees, we recommend our dry cleaning service to preserve the fabric quality.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3>What if clothes get damaged?</h3>
-                    <p>We handle all clothes with extreme care. In the rare event of damage, we offer compensation up to 10x the service cost of that item.</p>
+                    <h3>Do you separate whites and colors?</h3>
+                    <p>Yes! Professional sorting by color and fabric type. Whites, lights, darks, and delicates washed separately to prevent color bleeding and damage.</p>
                 </div>
             </div>
         </div>
@@ -1144,7 +1094,7 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <div class="footer-links">
-                        <a href="/1-hour-express-iron-hyderabad.html" class="footer-link">1-Hour Express Iron</a>
+                        <a href="/express-iron-service-hyderabad.html" class="footer-link">Express Iron</a>
                         <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
                         <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
                         <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
@@ -1154,10 +1104,14 @@
                 <div class="footer-col">
                     <h4>Top Locations</h4>
                     <div class="footer-links">
-                        <a href="/laundry-service-gachibowli-hyderabad.html" class="footer-link">Gachibowli</a>
-                        <a href="/laundry-service-madhapur-hyderabad.html" class="footer-link">Madhapur</a>
-                        <a href="/laundry-service-hitech-city-hyderabad.html" class="footer-link">Hitech City</a>
-                        <a href="/laundry-service-kondapur-hyderabad.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-gachibowli.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-nanakramguda.html" class="footer-link">Nanakramguda</a>
+                        <a href="/laundry-service-manikonda.html" class="footer-link">Manikonda</a>
+                        <a href="/laundry-service-puppalaguda.html" class="footer-link">Puppalaguda</a>
+                        <a href="/laundry-service-khajaguda.html" class="footer-link">Khajaguda</a>
                     </div>
                 </div>
 
@@ -1192,181 +1146,75 @@
     </a>
 
     <script>
-        // PRICE CALCULATOR
+        // PRICING DATA
         const prices = {
-            'shirt': 40,
-            'trouser': 45,
-            'kurta': 50,
-            'saree': 80,
-            'salwar': 120,
-            'bedsheet': 60,
-            'bedsheet-double': 90,
-            'blanket': 100,
-            'towel': 30
+            shirt: 40,
+            trouser: 45,
+            kurta: 50,
+            saree: 80,
+            bedsheet: 50,
+            bedsheetDouble: 70
         };
 
-        const quantities = {
-            'shirt': 0,
-            'trouser': 0,
-            'kurta': 0,
-            'saree': 0,
-            'salwar': 0,
-            'bedsheet': 0,
-            'bedsheet-double': 0,
-            'blanket': 0,
-            'towel': 0
+        let quantities = {
+            shirt: 0,
+            trouser: 0,
+            kurta: 0,
+            saree: 0,
+            bedsheet: 0,
+            bedsheetDouble: 0
         };
 
-        function changeQty(item, change) {
-            quantities[item] = Math.max(0, quantities[item] + change);
+        // QUANTITY CHANGE
+        function changeQty(item, delta) {
+            quantities[item] = Math.max(0, quantities[item] + delta);
             document.getElementById(`qty-${item}`).textContent = quantities[item];
-            updateSummary();
+            calculateTotal();
         }
 
-        function updateSummary() {
-            let totalItems = 0;
-            let subtotal = 0;
-
-            for (const [item, qty] of Object.entries(quantities)) {
-                totalItems += qty;
-                subtotal += qty * prices[item];
+        // CALCULATE TOTAL
+        function calculateTotal() {
+            let itemsTotal = 0;
+            let totalPieces = 0;
+            
+            for (let item in quantities) {
+                itemsTotal += quantities[item] * prices[item];
+                totalPieces += quantities[item];
             }
-
-            const deliveryCharge = (subtotal > 0 && subtotal < 300) ? 40 : 0;
-            const total = subtotal + deliveryCharge;
-
-            document.getElementById('totalItems').textContent = totalItems;
-            document.getElementById('subtotal').textContent = subtotal;
-            document.getElementById('delivery').textContent = deliveryCharge;
-            document.getElementById('total').textContent = total;
-
-            document.getElementById('deliveryRow').style.display = deliveryCharge > 0 ? 'flex' : 'none';
-
-            if (subtotal >= 300 && subtotal > 0) {
-                document.getElementById('freeDeliveryNote').style.display = 'block';
-            } else {
-                document.getElementById('freeDeliveryNote').style.display = 'none';
-            }
-
-            updateCalcBookButton(totalItems, total);
-
-            if (typeof gtag !== 'undefined' && totalItems > 0) {
-                gtag('event', 'calculator_used', {
-                    'service': 'wash-and-iron',
-                    'total_items': totalItems,
-                    'estimated_cost': total
-                });
-            }
+            
+            const deliveryFee = itemsTotal >= 200 ? 0 : (itemsTotal > 0 ? 30 : 0);
+            const grandTotal = itemsTotal + deliveryFee;
+            
+            // Update display
+            document.getElementById('totalItems').textContent = totalPieces;
+            document.getElementById('itemsCost').textContent = `Rs.${itemsTotal}`;
+            document.getElementById('deliveryFee').textContent = deliveryFee === 0 ? 'FREE' : `Rs.${deliveryFee}`;
+            document.getElementById('grandTotal').textContent = `Rs.${grandTotal}`;
+            
+            // Update WhatsApp link
+            updateWhatsAppLink(itemsTotal, deliveryFee, grandTotal, totalPieces);
         }
 
-        function updateCalcBookButton(items, total) {
-            const btn = document.getElementById('calcBookBtn');
-            if (items > 0) {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    const itemsList = [];
-                    for (const [item, qty] of Object.entries(quantities)) {
-                        if (qty > 0) {
-                            itemsList.push(`${qty}x ${item}`);
-                        }
-                    }
-                    const message = `Hi! I want wash & iron service in ${userLocation}.\n\nItems: ${itemsList.join(', ')}\nEstimated Cost: Rs.${total}\n\nPlease confirm FREE pickup!`;
-                    window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                };
-            } else {
-                btn.onclick = function(e) {
-                    e.preventDefault();
-                    window.open(getWhatsAppLink(), '_blank');
-                };
-            }
+        // WHATSAPP LINK
+        function updateWhatsAppLink(items, delivery, total, pieces) {
+            const message = `Hi! I want to book WASH & IRON service:
+            
+Total Pieces: ${pieces}
+Items Cost: Rs.${items}
+Delivery: ${delivery === 0 ? 'FREE' : `Rs.${delivery}`}
+TOTAL: Rs.${total}
+
+Location: [Your Location]
+Pickup Time: [Preferred Time]`;
+            
+            const link = `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
+            document.getElementById('whatsappBookBtn').href = link;
+            document.getElementById('navBookBtn').href = link;
+            document.getElementById('ctaBookBtn').href = link;
+            document.getElementById('fabBtn').href = link;
         }
 
-        // GEOLOCATION
-        let userLocation = 'Hyderabad';
-
-        const locations = {
-            'Gachibowli': { lat: 17.4400, lon: 78.3489 },
-            'Madhapur': { lat: 17.4485, lon: 78.3908 },
-            'Hitech City': { lat: 17.4483, lon: 78.3808 },
-            'Kondapur': { lat: 17.4648, lon: 78.3630 },
-            'Jubilee Hills': { lat: 17.4321, lon: 78.4095 },
-            'Banjara Hills': { lat: 17.4171, lon: 78.4500 },
-            'Kukatpally': { lat: 17.4849, lon: 78.4138 },
-            'Ameerpet': { lat: 17.4375, lon: 78.4482 }
-        };
-
-        function detectUserLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const userCoords = {
-                            lat: position.coords.latitude,
-                            lon: position.coords.longitude
-                        };
-                        
-                        let nearestLocation = 'Hyderabad';
-                        let minDistance = Infinity;
-                        
-                        for (const [name, coords] of Object.entries(locations)) {
-                            const distance = Math.sqrt(
-                                Math.pow(coords.lat - userCoords.lat, 2) + 
-                                Math.pow(coords.lon - userCoords.lon, 2)
-                            );
-                            if (distance < minDistance) {
-                                minDistance = distance;
-                                nearestLocation = name;
-                            }
-                        }
-                        
-                        userLocation = nearestLocation;
-                        document.getElementById('ctaLocation').textContent = nearestLocation;
-                        updateAllCTAs();
-                        
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'location_detected', {
-                                'page': 'wash-and-iron',
-                                'location': nearestLocation
-                            });
-                        }
-                    },
-                    () => {
-                        userLocation = 'Hyderabad';
-                        updateAllCTAs();
-                    }
-                );
-            }
-        }
-
-        function getWhatsAppLink() {
-            const message = `Hi! I want FREE PICKUP & DELIVERY for wash & iron service in ${userLocation}`;
-            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
-        }
-
-        function updateAllCTAs() {
-            document.getElementById('navBookBtn').href = getWhatsAppLink();
-            document.getElementById('ctaBookBtn').href = getWhatsAppLink();
-            document.getElementById('fabBtn').href = getWhatsAppLink();
-            updateCalcBookButton(0, 0);
-        }
-
-        // Area card clicks
-        document.querySelectorAll('.area-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                e.preventDefault();
-                const location = this.getAttribute('data-location');
-                const message = `Hi! I need wash & iron service in ${location}`;
-                window.open(`https://wa.me/918639103842?text=${encodeURIComponent(message)}`, '_blank');
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'area_click', {
-                        'service': 'wash-and-iron',
-                        'selected_location': location
-                    });
-                }
-            });
-        });
-
-        // Mobile menu
+        // MOBILE MENU
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         if (menuToggle) {
@@ -1375,9 +1223,30 @@
             });
         }
 
-        // Initialize
-        detectUserLocation();
-        setTimeout(updateAllCTAs, 1000);
+        // AREA CLICK TRACKING
+        document.querySelectorAll('.area-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', { 
+                        'service': 'wash-iron',
+                        'location': location 
+                    });
+                }
+            });
+        });
+
+        // GA4 PAGE VIEW
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': 'Wash & Iron Service',
+                'page_location': window.location.href,
+                'service': 'wash-iron'
+            });
+        }
+
+        // INITIALIZE
+        calculateTotal();
     </script>
 </body>
 </html>
