@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="shortcut icon" type="image/png" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png">
+    
     <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,62 +25,14 @@
       gtag('config', 'G-JYPST6NC81');
     </script>
 
-    <!-- SEO META - HYPER LOCAL -->
-    <title>Zapwash - Fastest Laundry Service in Hyderabad | 1 Hour Express | 20 Min Pickup</title>
-    <meta name="description" content="Hyderabad's fastest laundry service with 20-minute pickup. Express iron in 1 hour. Free pickup in Gachibowli, Madhapur, Hitech City, Kondapur. Transparent pricing from ₹15.">
-    <meta name="keywords" content="fastest laundry service Hyderabad, 1 hour laundry, 20 minute pickup, express laundry near me, laundry service Hyderabad, dry cleaning Hyderabad, laundry near me, wash and fold Hyderabad, ironing service Gachibowli, laundry Madhapur, dry cleaning Hitech City">
+    <!-- SEO META -->
+    <title>Zapwash - Free Pickup & Delivery | 20 Min Pickup | Hyderabad Laundry</title>
+    <meta name="description" content="FREE pickup & delivery on first order! Hyderabad's fastest laundry with 20-min pickup, 1-hour express iron. Serving Gachibowli, Madhapur, Hitech City.">
+    <meta name="keywords" content="free laundry pickup Hyderabad, fastest laundry Hyderabad, 20 minute pickup, free delivery laundry">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://thezapwash.com/">
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Zapwash - Fastest Laundry Service in Hyderabad">
-    <meta property="og:description" content="20-minute pickup, 1-hour express service. Free delivery above ₹100.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thezapwash.com/">
-    <meta property="og:image" content="https://thezapwash.com/og-image.jpg">
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Zapwash",
-      "description": "Hyderabad's fastest laundry and dry cleaning service with 20-minute pickup and 1-hour express service",
-      "telephone": "+918639103842",
-      "url": "https://thezapwash.com",
-      "priceRange": "₹15-₹200",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "addressCountry": "IN"
-      },
-      "areaServed": ["Gachibowli", "Madhapur", "Hitech City", "Kondapur", "Jubilee Hills", "Banjara Hills", "Kukatpally", "Ameerpet"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Laundry Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Express Iron Service - 1 Hour",
-              "description": "Fastest laundry service in Hyderabad"
-            }
-          }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "400"
-      }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -90,20 +47,17 @@
             --gray-50: #FAFAFA;
             --gray-100: #F5F5F5;
             --gray-200: #E5E5E5;
-            --gray-300: #D4D4D4;
             --gray-400: #A3A3A3;
-            --gray-500: #737373;
             --gray-600: #525252;
             --gray-700: #404040;
-            --gray-800: #262626;
-            --gray-900: #171717;
+            --accent: #FF6B00;
+            --success: #00C853;
         }
 
         html {
             font-size: 16px;
             scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
@@ -114,13 +68,8 @@
             overflow-x: hidden;
         }
 
-        ::selection {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
+        h1, h2, h3, h4 {
+            font-weight: 700;
             letter-spacing: -0.03em;
             line-height: 1.1;
         }
@@ -160,26 +109,20 @@
             color: var(--black);
             text-decoration: none;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: opacity 0.2s;
-        }
-
-        .nav-link:hover {
-            opacity: 0.5;
+            letter-spacing: 0.05em;
         }
 
         .nav-cta {
-            padding: 0.5rem 1.25rem;
+            padding: 0.625rem 1.5rem;
             background: var(--black);
             color: var(--white);
             text-decoration: none;
             font-size: 0.875rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border: 1px solid var(--black);
+            border: 2px solid var(--black);
             transition: all 0.2s;
         }
 
@@ -202,16 +145,13 @@
         }
 
         .menu-toggle span {
-            display: block;
             width: 20px;
             height: 2px;
             background: var(--black);
-            transition: all 0.3s;
         }
 
         @media (max-width: 768px) {
             .menu-toggle { display: flex; }
-            .nav-inner { padding: 0 1rem; }
             .nav-links {
                 display: none;
                 position: absolute;
@@ -219,27 +159,44 @@
                 left: 0;
                 right: 0;
                 background: var(--white);
-                border-top: 1px solid var(--black);
                 border-bottom: 1px solid var(--black);
                 flex-direction: column;
                 gap: 0;
                 padding: 0;
             }
             .nav-links.active { display: flex; }
-            .nav-link {
-                padding: 1rem 2rem;
-                border-bottom: 1px solid var(--gray-200);
-                width: 100%;
-            }
-            .nav-link:last-child { border-bottom: none; }
+            .nav-link { padding: 1rem 2rem; border-bottom: 1px solid var(--gray-200); width: 100%; }
+            .nav-cta { margin: 1rem 2rem; }
+        }
+
+        /* FREE OFFER BANNER */
+        .offer-banner {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 999;
+            letter-spacing: 0.05em;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
         }
 
         /* HERO */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            padding: 100px 2rem 4rem;
+            padding: 140px 2rem 4rem;
             position: relative;
             border-bottom: 1px solid var(--black);
         }
@@ -251,756 +208,391 @@
                 repeating-linear-gradient(0deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px),
                 repeating-linear-gradient(90deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px);
             opacity: 0.3;
-            pointer-events: none;
         }
 
         .hero-container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
             position: relative;
             z-index: 10;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 0.375rem 0.75rem;
-            background: var(--black);
-            color: var(--white);
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .hero-title {
-            font-size: clamp(3rem, 10vw, 9rem);
+            font-size: clamp(2.5rem, 8vw, 6rem);
             font-weight: 700;
             line-height: 0.95;
-            letter-spacing: -0.04em;
-            margin-bottom: 2rem;
-            max-width: 1400px;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
         }
 
         .hero-subtitle {
-            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            font-size: clamp(1rem, 2vw, 1.25rem);
             color: var(--gray-600);
             max-width: 700px;
-            margin-bottom: 3rem;
+            margin: 0 auto 1rem;
             line-height: 1.6;
         }
 
-        .hero-cta-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 4rem;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
+        .hero-offer {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 3rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            text-decoration: none;
-            border: 1px solid var(--black);
-            transition: all 0.2s;
-            min-width: 180px;
         }
 
         .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
             background: var(--black);
             color: var(--white);
+            border: 2px solid var(--black);
+            transition: all 0.3s;
         }
 
         .btn-primary:hover {
             background: var(--white);
             color: var(--black);
+            transform: translateY(-3px);
         }
 
-        .btn-secondary {
-            background: var(--white);
-            color: var(--black);
+        /* TRUST BAR */
+        .trust-bar {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
         }
 
-        .btn-secondary:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .hero-stats {
+        .trust-grid {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--black);
-            max-width: 800px;
+            text-align: center;
         }
 
         @media (max-width: 768px) {
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
+            .trust-grid { grid-template-columns: 1fr; gap: 2rem; }
         }
 
-        .stat-value {
+        .trust-value {
             font-size: 3rem;
             font-weight: 700;
             line-height: 1;
             margin-bottom: 0.5rem;
         }
 
-        .stat-label {
+        .trust-label {
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: var(--gray-600);
-        }
-
-        /* MARQUEE */
-        .marquee {
-            padding: 1.5rem 0;
-            background: var(--black);
-            color: var(--white);
-            border-bottom: 1px solid var(--black);
-            overflow: hidden;
-        }
-
-        .marquee-track {
-            display: flex;
-            animation: scroll 30s linear infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .marquee-content {
-            display: flex;
-            gap: 3rem;
-            padding-right: 3rem;
-        }
-
-        .marquee-item {
-            font-size: 0.875rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
         /* SERVICES */
-        .services {
-            padding: 6rem 2rem;
+        .services-overview {
+            padding: 5rem 2rem;
             border-bottom: 1px solid var(--black);
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-eyebrow {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gray-600);
-            margin-bottom: 1rem;
-        }
-
         .section-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--gray-600);
-            max-width: 700px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-            background: var(--black);
-            border: 1px solid var(--black);
+            gap: 2rem;
         }
 
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
         }
 
         .service-card {
             background: var(--white);
-            padding: 3rem;
-            transition: background 0.3s;
+            border: 2px solid var(--black);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .service-card:hover {
-            background: var(--gray-50);
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0 var(--black);
         }
 
-        .service-number {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
-
-        .service-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .service-description {
-            color: var(--gray-600);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .service-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .service-time {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray-600);
-        }
-
-        .service-arrow {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-            text-decoration: none;
-            color: var(--black);
-        }
-
-        .service-card:hover .service-arrow {
-            transform: translateX(5px);
-        }
-
-        /* PROCESS */
-        .process {
-            padding: 6rem 2rem;
-            background: var(--gray-900);
-            color: var(--white);
-            border-bottom: 1px solid var(--black);
-        }
-
-        .process .section-eyebrow {
-            color: var(--gray-400);
-        }
-
-        .process .section-title {
-            color: var(--white);
-        }
-
-        .process .section-subtitle {
-            color: var(--gray-400);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 1024px) {
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .process-step {
-            position: relative;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--white);
-            color: var(--black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .step-title {
-            font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .step-description {
-            font-size: 0.875rem;
-            color: var(--gray-400);
-            line-height: 1.6;
-        }
-
-        /* PRICING */
-        .pricing {
-            padding: 6rem 2rem;
-            border-bottom: 1px solid var(--black);
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1px;
-            background: var(--black);
-            border: 1px solid var(--black);
-            margin-bottom: 4rem;
-        }
-
-        .pricing-card {
-            background: var(--white);
-            padding: 2rem;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            background: var(--gray-900);
-            color: var(--white);
-        }
-
-        .pricing-badge {
+        .service-badge {
             position: absolute;
             top: 1rem;
             right: 1rem;
-            padding: 0.25rem 0.75rem;
-            background: var(--black);
+            background: var(--accent);
             color: var(--white);
-            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.688rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
         }
 
-        .pricing-card.featured .pricing-badge {
-            background: var(--white);
-            color: var(--black);
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
         }
 
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-
-        .pricing-header h3 {
+        .service-card h3 {
             font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
-        .pricing-subtitle {
-            font-size: 0.875rem;
+        .service-card p {
             color: var(--gray-600);
+            margin-bottom: 1.5rem;
         }
 
-        .pricing-card.featured .pricing-subtitle {
-            color: var(--gray-400);
+        .service-price {
+            display: block;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
         }
 
-        .price-list {
-            max-height: 400px;
-            overflow-y: auto;
-            margin-bottom: 2rem;
-        }
-
-        .price-list::-webkit-scrollbar {
-            width: 2px;
-        }
-
-        .price-list::-webkit-scrollbar-thumb {
-            background: var(--black);
-        }
-
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .pricing-card.featured .price-item {
-            border-bottom-color: var(--gray-700);
-        }
-
-        .item-name {
+        .link-arrow {
+            font-weight: 700;
             font-size: 0.875rem;
+            text-transform: uppercase;
         }
 
-        .item-right {
-            display: flex;
-            align-items: center;
+        /* LOCATIONS */
+        .locations-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
         }
 
-        .item-price {
-            font-weight: 700;
-            font-size: 0.875rem;
+        @media (max-width: 1024px) {
+            .locations-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .qty-group {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        @media (max-width: 640px) {
+            .locations-grid { grid-template-columns: 1fr; }
         }
 
-        .qty-btn {
-            width: 24px;
-            height: 24px;
+        .location-card {
             background: var(--white);
-            border: 1px solid var(--black);
-            color: var(--black);
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            line-height: 1;
-        }
-
-        .qty-btn:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .pricing-card.featured .qty-btn {
-            background: var(--gray-900);
-            border-color: var(--white);
-            color: var(--white);
-        }
-
-        .pricing-card.featured .qty-btn:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .qty-display {
-            min-width: 24px;
+            border: 2px solid var(--black);
+            padding: 2rem 1.5rem;
             text-align: center;
-            font-weight: 700;
-            font-size: 0.875rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
         }
 
-        .pricing-footer {
-            padding-top: 1.5rem;
-            border-top: 2px solid var(--black);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .pricing-card.featured .pricing-footer {
-            border-top-color: var(--white);
-        }
-
-        .subtotal-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .subtotal-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-
-        .pricing-bottom {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1px;
+        .location-card:hover {
             background: var(--black);
-            border: 1px solid var(--black);
+            color: var(--white);
+        }
+
+        .location-status {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .location-card:hover .location-status {
+            color: var(--success);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
         }
 
         @media (max-width: 1024px) {
-            .pricing-bottom {
-                grid-template-columns: 1fr;
-            }
+            .testimonials-grid { grid-template-columns: 1fr; }
         }
 
-        .delivery-card {
+        .testimonial-card {
             background: var(--white);
-            padding: 2rem;
-        }
-
-        .delivery-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
-
-        .delivery-option {
-            display: flex;
-            align-items: flex-start;
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--gray-200);
-            cursor: pointer;
-        }
-
-        .delivery-option:last-child {
-            border-bottom: none;
-        }
-
-        .delivery-option input {
-            display: none;
-        }
-
-        .radio-box {
-            width: 20px;
-            height: 20px;
             border: 1px solid var(--black);
-            margin-right: 1rem;
-            flex-shrink: 0;
-            margin-top: 2px;
-            position: relative;
-        }
-
-        .delivery-option input:checked + .radio-box::after {
-            content: '';
-            position: absolute;
-            inset: 3px;
-            background: var(--black);
-        }
-
-        .delivery-text {
-            flex: 1;
-        }
-
-        .delivery-title {
-            font-weight: 600;
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .delivery-desc {
-            font-size: 0.8rem;
-            color: var(--gray-600);
-        }
-
-        .delivery-limit {
-            font-size: 0.75rem;
-            color: var(--gray-600);
-            margin-top: 0.25rem;
-        }
-
-        .total-card {
-            background: var(--gray-900);
-            color: var(--white);
             padding: 2rem;
-            position: sticky;
-            top: 80px;
         }
 
-        .total-card h3 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--gray-400);
+        .stars {
+            color: var(--accent);
+            font-size: 1.25rem;
             margin-bottom: 1rem;
         }
 
-        .grand-total {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 700;
-            line-height: 1;
-            margin-bottom: 2rem;
-        }
-
-        .pickup-note {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-left: 2px solid var(--white);
-        }
-
-        .pickup-note.hidden {
-            display: none;
-        }
-
-        .checkout-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: var(--white);
-            color: var(--black);
-            border: 1px solid var(--white);
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .checkout-btn:hover {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .reset-btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            background: transparent;
-            color: var(--white);
-            border: 1px solid var(--white);
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .reset-btn:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        /* Modal */
-        .modal {
+        /* EXIT INTENT POPUP */
+        .exit-popup {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
             align-items: center;
             justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
         }
 
-        .modal.show {
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .exit-popup.active {
             display: flex;
         }
 
-        .modal-content {
+        .popup-content {
             background: var(--white);
             padding: 3rem;
-            max-width: 400px;
-            margin: 0 2rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
             text-align: center;
-            border: 1px solid var(--black);
+            animation: slideUp 0.4s ease;
         }
 
-        .modal-title {
-            font-size: 1.5rem;
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+        }
+
+        .popup-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        .modal-message {
+        .popup-subtitle {
+            font-size: 1.125rem;
             color: var(--gray-600);
             margin-bottom: 2rem;
         }
 
-        .modal-btn {
-            padding: 1rem 2rem;
-            background: var(--black);
+        .popup-offer {
+            background: var(--success);
             color: var(--white);
-            border: 1px solid var(--black);
+            padding: 1rem;
             font-weight: 700;
-            font-size: 0.875rem;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            transition: all 0.2s;
         }
 
-        .modal-btn:hover {
+        .popup-cta {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+        }
+
+        .popup-cta:hover {
             background: var(--white);
             color: var(--black);
         }
 
         /* FOOTER */
         .footer {
-            padding: 6rem 2rem 2rem;
+            padding: 5rem 2rem 2rem;
             background: var(--black);
             color: var(--white);
         }
 
         .footer-cta {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 5rem;
             padding-bottom: 4rem;
             border-bottom: 1px solid var(--gray-700);
         }
 
-        .footer-cta-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 700;
+        .footer-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 2rem;
-            line-height: 1.1;
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
             padding-bottom: 3rem;
             border-bottom: 1px solid var(--gray-700);
         }
 
         @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 640px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .footer-brand p {
-            color: var(--gray-400);
-            line-height: 1.7;
-            margin-top: 1rem;
+            .footer-grid { grid-template-columns: 1fr; }
         }
 
         .footer-col h4 {
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gray-500);
+            color: var(--gray-400);
             margin-bottom: 1.5rem;
         }
 
@@ -1014,7 +606,6 @@
             color: var(--gray-400);
             text-decoration: none;
             font-size: 0.875rem;
-            transition: color 0.2s;
         }
 
         .footer-link:hover {
@@ -1022,19 +613,9 @@
         }
 
         .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--gray-500);
+            text-align: center;
+            color: var(--gray-400);
             font-size: 0.875rem;
-        }
-
-        @media (max-width: 640px) {
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
         }
 
         /* FAB */
@@ -1044,47 +625,39 @@
             right: 2rem;
             width: 60px;
             height: 60px;
-            background: var(--black);
-            border: 1px solid var(--black);
+            background: #25D366;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 999;
-            transition: all 0.2s;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
 
         .fab:hover {
-            background: var(--white);
+            transform: scale(1.1);
         }
 
         .fab svg {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
             fill: var(--white);
-            transition: fill 0.2s;
-        }
-
-        .fab:hover svg {
-            fill: var(--black);
         }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <h3 class="modal-title">Limit Reached</h3>
-            <p class="modal-message" id="modalMsg"></p>
-            <button class="modal-btn" id="modalClose">OK</button>
-        </div>
+    <!-- Free Offer Banner -->
+    <div class="offer-banner">
+        🎁 FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
     </div>
 
-    <!-- Nav with SEO-friendly anchor links -->
+    <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service in Hyderabad with 20 Minute Pickup" class="nav-logo"></a>
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Hyderabad Laundry Service Logo" class="nav-logo"></a>
             
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                 <span></span>
@@ -1093,12 +666,13 @@
             </button>
             
             <div class="nav-links" id="navLinks">
-                <a href="#fastest-laundry-service-hyderabad" class="nav-link">Services</a>
-                <a href="#20-minute-pickup-hyderabad" class="nav-link">How It Works</a>
-                <a href="#laundry-prices-hyderabad" class="nav-link">Pricing</a>
-                <a href="stain-remover.html" class="nav-link">Stain Guide</a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/laundry-services-hyderabad.html" class="nav-link">Services</a>
+                <a href="/laundry-service-locations-hyderabad.html" class="nav-link">Locations</a>
+                <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="#" class="nav-cta" id="navBookBtn">Book Free Pickup</a>
             </div>
-            <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="nav-cta">Book Now</a>
         </div>
     </nav>
 
@@ -1106,496 +680,357 @@
     <section class="hero">
         <div class="hero-grid"></div>
         <div class="hero-container">
-            <span class="hero-badge">⚡ Hyderabad's Fastest - 20 Min Pickup</span>
-            
-            <h1 class="hero-title">Hyderabad's Fastest Laundry Service</h1>
-            
+            <h1 class="hero-title">
+                <span class="highlight">FREE Pickup & Delivery</span><br>
+                On Your First Order
+            </h1>
             <p class="hero-subtitle">
-                20-minute pickup. 1-hour express iron. Free delivery above ₹100. We partner with skilled local dhobis in Gachibowli, Madhapur, Hitech City, Kondapur & across Hyderabad.
+                20-minute pickup. 1-hour express iron. Professional laundry across Hyderabad. No minimum order for first-time customers!
             </p>
-            
-            <div class="hero-cta-group">
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
-                <a href="#laundry-prices-hyderabad" class="btn btn-secondary">View Prices</a>
-            </div>
+            <div class="hero-offer">100% FREE FIRST ORDER PICKUP & DELIVERY</div>
+            <a href="#" class="btn-primary" id="heroBookBtn">Claim Free Pickup Now</a>
+        </div>
+    </section>
 
-            <div class="hero-stats">
-                <div>
-                    <div class="stat-value">20min</div>
-                    <div class="stat-label">Avg Pickup</div>
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-grid">
+            <div>
+                <div class="trust-value">20min</div>
+                <div class="trust-label">Average Pickup</div>
+            </div>
+            <div>
+                <div class="trust-value">FREE</div>
+                <div class="trust-label">First Order P&D</div>
+            </div>
+            <div>
+                <div class="trust-value">400+</div>
+                <div class="trust-label">Happy Customers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Laundry Services</h2>
+            
+            <div class="services-grid">
+                <!-- 1-Hour Express Iron -->
+                <a href="/express-iron-service-hyderabad.html" class="service-card" data-service="express-iron">
+                    <span class="service-badge">Most Popular</span>
+                    <div class="service-icon">⚡</div>
+                    <h3>Express Iron Service</h3>
+                    <p>1-hour, 3-hour, 6-hour, 12-hour options. Fastest ironing in Hyderabad.</p>
+                    <span class="service-price">From Rs.15/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Wash & Iron -->
+                <a href="/wash-and-iron-service-hyderabad.html" class="service-card" data-service="wash-iron">
+                    <div class="service-icon">🧺</div>
+                    <h3>Wash & Iron</h3>
+                    <p>Complete laundry service. 48-hour turnaround.</p>
+                    <span class="service-price">From Rs.40/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Dry Cleaning -->
+                <a href="/dry-cleaning-service-hyderabad.html" class="service-card" data-service="dry-cleaning">
+                    <div class="service-icon">✨</div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Safe for suits, sarees, delicate fabrics.</p>
+                    <span class="service-price">From Rs.150/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Iron Only -->
+                <a href="/iron-only-service-hyderabad.html" class="service-card" data-service="iron-only">
+                    <div class="service-icon">👔</div>
+                    <h3>Iron Only</h3>
+                    <p>Sharp press for clean clothes. 24-hour service.</p>
+                    <span class="service-price">From Rs.10/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations-section" id="locations">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            
+            <div class="locations-grid">
+                <a href="/laundry-service-gachibowli.html" class="location-card" data-location="Gachibowli">
+                    <h3>Gachibowli</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-madhapur.html" class="location-card" data-location="Madhapur">
+                    <h3>Madhapur</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-hitech-city.html" class="location-card" data-location="Hitech City">
+                    <h3>Hitech City</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-kondapur.html" class="location-card" data-location="Kondapur">
+                    <h3>Kondapur</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-nanakramguda.html" class="location-card" data-location="Nanakramguda">
+                    <h3>Nanakramguda</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-manikonda.html" class="location-card" data-location="Manikonda">
+                    <h3>Manikonda</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-puppalaguda.html" class="location-card" data-location="Puppalaguda">
+                    <h3>Puppalaguda</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-khajaguda.html" class="location-card" data-location="Khajaguda">
+                    <h3>Khajaguda</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Free first order got me hooked! Now I use them weekly. Pickup in Gachibowli in 18 minutes!"</p>
+                    <div class="author">Rajesh K. - Gachibowli</div>
                 </div>
-                <div>
-                    <div class="stat-value">1hr</div>
-                    <div class="stat-label">Express Iron</div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Can't believe first pickup was totally free! 1-hour express saved me before my flight."</p>
+                    <div class="author">Priya S. - Madhapur</div>
                 </div>
-                <div>
-                    <div class="stat-value">400+</div>
-                    <div class="stat-label">Happy Customers</div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Quality service at great prices. The free first order deal made it risk-free to try!"</p>
+                    <div class="author">Anil M. - Hitech City</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee">
-        <div class="marquee-track">
-            <div class="marquee-content">
-                <span class="marquee-item">Gachibowli</span>
-                <span class="marquee-item">Madhapur</span>
-                <span class="marquee-item">Hitech City</span>
-                <span class="marquee-item">Kondapur</span>
-                <span class="marquee-item">Jubilee Hills</span>
-                <span class="marquee-item">Banjara Hills</span>
-                <span class="marquee-item">Kukatpally</span>
-                <span class="marquee-item">Ameerpet</span>
-            </div>
-            <div class="marquee-content">
-                <span class="marquee-item">Gachibowli</span>
-                <span class="marquee-item">Madhapur</span>
-                <span class="marquee-item">Hitech City</span>
-                <span class="marquee-item">Kondapur</span>
-                <span class="marquee-item">Jubilee Hills</span>
-                <span class="marquee-item">Banjara Hills</span>
-                <span class="marquee-item">Kukatpally</span>
-                <span class="marquee-item">Ameerpet</span>
-            </div>
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeExitPopup()">×</button>
+            <h3 class="popup-title">Wait! Don't Miss This</h3>
+            <p class="popup-subtitle">Get FREE pickup & delivery on your first order in <strong id="popupLocationName">Hyderabad</strong>!</p>
+            <div class="popup-offer">FREE PICKUP & FREE DELIVERY</div>
+            <a href="#" class="popup-cta" id="popupCTA">Claim Free Offer Now</a>
         </div>
     </div>
-
-    <!-- Services - SEO URL -->
-    <section id="fastest-laundry-service-hyderabad" class="services">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Fastest Services in Hyderabad</p>
-                <h2 class="section-title">Professional Laundry & Dry Cleaning with Express Options</h2>
-                <p class="section-subtitle">Expert wash, iron, and dry cleaning delivered across all Hyderabad areas in 20 minutes pickup time</p>
-            </div>
-
-            <div class="services-grid">
-                <article class="service-card">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">Wash & Iron</h3>
-                    <p class="service-description">Complete laundry service with professional wash and press. Ideal for daily wear including shirts, pants, kurtas, and more.</p>
-                    <div class="service-meta">
-                        <span class="service-time">48 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20wash%20and%20iron%20service" target="_blank" class="service-arrow" aria-label="Book wash and iron laundry service in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Iron Only</h3>
-                    <p class="service-description">Sharp press for your clothes. Perfect for already clean garments that need crisp finishing.</p>
-                    <div class="service-meta">
-                        <span class="service-time">24 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20iron%20service" target="_blank" class="service-arrow" aria-label="Book ironing service in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Dry Cleaning</h3>
-                    <p class="service-description">Safe cleaning for delicate items like suits, wedding wear, silk sarees, and designer clothes.</p>
-                    <div class="service-meta">
-                        <span class="service-time">72 Hours</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%20dry%20cleaning%20service" target="_blank" class="service-arrow" aria-label="Book dry cleaning in Hyderabad">→</a>
-                    </div>
-                </article>
-
-                <article class="service-card">
-                    <div class="service-number">04</div>
-                    <h3 class="service-title">Express Iron - 1 Hour</h3>
-                    <p class="service-description">Hyderabad's FASTEST! Super fast ironing in 1hr, 3hrs, 6hrs, or 12hrs. For urgent meetings and last-minute needs.</p>
-                    <div class="service-meta">
-                        <span class="service-time">From 1 Hour ⚡</span>
-                        <a href="https://wa.me/918639103842?text=I%20need%201%20hour%20express%20iron" target="_blank" class="service-arrow" aria-label="Book 1 hour express ironing in Hyderabad">→</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process - SEO URL -->
-    <section id="20-minute-pickup-hyderabad" class="process">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">20-Minute Pickup Process</p>
-                <h2 class="section-title">How Zapwash's Fast Pickup Works</h2>
-                <p class="section-subtitle">5 easy steps to get fresh clothes delivered with the fastest pickup in Hyderabad</p>
-            </div>
-
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h4 class="step-title">Schedule</h4>
-                    <p class="step-description">WhatsApp us - response in 5 minutes</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h4 class="step-title">Fast Pickup</h4>
-                    <p class="step-description">We arrive in 20 minutes average</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h4 class="step-title">Local Dhobi</h4>
-                    <p class="step-description">Trusted expert in your area</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h4 class="step-title">Professional Care</h4>
-                    <p class="step-description">Wash, iron, or dry clean</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h4 class="step-title">Delivered Fresh</h4>
-                    <p class="step-description">Free delivery above ₹100</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing - SEO URL -->
-    <section id="laundry-prices-hyderabad" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-eyebrow">Transparent Pricing</p>
-                <h2 class="section-title">Laundry Service Prices in Hyderabad</h2>
-                <p class="section-subtitle">Clear pricing from ₹15. No hidden charges. Free pickup above ₹100.</p>
-            </div>
-
-            <div class="pricing-cards" id="pricingCards"></div>
-
-            <div class="pricing-bottom">
-                <div class="delivery-card">
-                    <h3>Delivery Speed</h3>
-                    <div id="deliveryOpts">
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="0" data-desc="Standard" data-limit="999" checked>
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Standard Delivery</div>
-                                <div class="delivery-desc">Free (24-72 hours)</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="100" data-desc="Express 1hr" data-limit="5">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 1 Hour ⚡</div>
-                                <div class="delivery-desc">Add ₹100</div>
-                                <div class="delivery-limit">Max 5 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="70" data-desc="Express 3hrs" data-limit="10">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 3 Hours</div>
-                                <div class="delivery-desc">Add ₹70</div>
-                                <div class="delivery-limit">Max 10 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="50" data-desc="Express 6hrs" data-limit="25">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 6 Hours</div>
-                                <div class="delivery-desc">Add ₹50</div>
-                                <div class="delivery-limit">Max 25 pieces</div>
-                            </div>
-                        </label>
-                        <label class="delivery-option">
-                            <input type="radio" name="speed" value="30" data-desc="Express 12hrs" data-limit="999">
-                            <span class="radio-box"></span>
-                            <div class="delivery-text">
-                                <div class="delivery-title">Express Iron - 12 Hours</div>
-                                <div class="delivery-desc">Add ₹30</div>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="total-card">
-                    <h3>Your Total</h3>
-                    <div class="grand-total" id="total">₹0</div>
-                    <div class="pickup-note hidden" id="note"></div>
-                    <a id="checkout" href="https://wa.me/918639103842" target="_blank" class="checkout-btn">Schedule Pickup</a>
-                    <button id="reset" class="reset-btn">Clear All</button>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-cta">
-                <h2 class="footer-cta-title">Ready for 20-Minute Pickup?</h2>
-                <a href="https://wa.me/918639103842?text=Hi!%20I%20need%20fastest%20laundry%20pickup%20in%20Hyderabad" target="_blank" class="btn btn-primary">Book Free Pickup</a>
+                <h2>Ready for FREE Pickup & Delivery?</h2>
+                <a href="#" class="btn-primary" id="footerBookBtn">Claim Free First Order</a>
             </div>
 
             <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash - Fastest Laundry Service Hyderabad" style="height: 32px; filter: brightness(0) invert(1);">
-                    <p>Hyderabad's fastest laundry service with 20-minute pickup. Professional wash, iron, and dry cleaning delivered across all areas.</p>
-                </div>
                 <div class="footer-col">
                     <h4>Services</h4>
                     <div class="footer-links">
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Iron Service</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Wash & Iron</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">Dry Cleaning</a>
-                        <a href="#fastest-laundry-service-hyderabad" class="footer-link">1 Hour Express</a>
-                        <a href="stain-remover.html" class="footer-link">Stain Removal Guide</a>
+                        <a href="/express-iron-service-hyderabad.html" class="footer-link">Express Iron</a>
+                        <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
+                        <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
+                        <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
                     </div>
                 </div>
+
                 <div class="footer-col">
-                    <h4>Areas</h4>
+                    <h4>Top Locations</h4>
                     <div class="footer-links">
-                        <a href="#" class="footer-link">Gachibowli</a>
-                        <a href="#" class="footer-link">Madhapur</a>
-                        <a href="#" class="footer-link">Hitech City</a>
-                        <a href="#" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-gachibowli.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur.html" class="footer-link">Kondapur</a>
+                        <a href="/laundry-service-nanakramguda.html" class="footer-link">Nanakramguda</a>
+                        <a href="/laundry-service-manikonda.html" class="footer-link">Manikonda</a>
+                        <a href="/laundry-service-puppalaguda.html" class="footer-link">Puppalaguda</a>
+                        <a href="/laundry-service-khajaguda.html" class="footer-link">Khajaguda</a>
                     </div>
                 </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="/laundry-pricing-hyderabad.html" class="footer-link">Pricing</a>
+                        <a href="/laundry-services-hyderabad.html" class="footer-link">All Services</a>
+                        <a href="/about.html" class="footer-link">About</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <div class="footer-links">
-                        <a href="https://wa.me/918639103842" target="_blank" class="footer-link">WhatsApp</a>
+                        <a href="https://wa.me/918639103842" class="footer-link">WhatsApp</a>
                         <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2025 Zapwash • Hyderabad's Fastest Laundry</p>
-                <p>20-min pickup • 1-hour express • 400+ customers</p>
+                <p>&copy; 2025 Zapwash - FREE First Order Pickup & Delivery - 400+ Happy Customers</p>
             </div>
         </div>
     </footer>
 
-    <!-- FAB -->
-    <a href="https://wa.me/918639103842" target="_blank" class="fab" aria-label="Contact Zapwash fastest laundry service on WhatsApp">
+    <!-- WhatsApp FAB -->
+    <a href="#" class="fab" id="fabBtn" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <script>
-        // PRICING DATA
-        const DATA = {
-            "Iron Only": {
-                sub: "Sharp press. 24 hours.",
-                items: [
-                    {id: "i1", name: "Shirt / Pant / T-shirt", price: 15},
-                    {id: "i2", name: "Kurta + Pajama", price: 25},
-                    {id: "i3", name: "Punjabi Dress (3-pc)", price: 35},
-                    {id: "i4", name: "Saree (Cotton)", price: 25},
-                    {id: "i5", name: "Saree (Silk/Heavy)", price: 40},
-                    {id: "i6", name: "Kid's Dress", price: 12},
-                    {id: "i7", name: "Bed Sheet", price: 20},
-                    {id: "i8", name: "Towel", price: 10}
-                ]
-            },
-            "Wash & Iron": {
-                sub: "Complete wash & press. 48 hours.",
-                featured: true,
-                items: [
-                    {id: "w1", name: "Shirt / Pant / T-shirt", price: 40},
-                    {id: "w2", name: "Kurta + Pajama", price: 60},
-                    {id: "w3", name: "Punjabi Dress (3-pc)", price: 70},
-                    {id: "w4", name: "Saree (Cotton)", price: 50},
-                    {id: "w5", name: "Saree (Silk/Heavy)", price: 80},
-                    {id: "w6", name: "Kids' Dress", price: 25},
-                    {id: "w7", name: "Bed Sheet", price: 40},
-                    {id: "w8", name: "Towel", price: 25},
-                    {id: "w9", name: "Blanket / Quilt", price: 120}
-                ]
-            },
-            "Dry Cleaning": {
-                sub: "Premium care. 72 hours.",
-                items: [
-                    {id: "d1", name: "Shirt / Pant / T-shirt", price: 80},
-                    {id: "d2", name: "Kurta + Pajama", price: 80},
-                    {id: "d3", name: "Punjabi Dress (3-pc)", price: 100},
-                    {id: "d4", name: "Saree (Cotton)", price: 80},
-                    {id: "d5", name: "Saree (Silk/Heavy)", price: 150},
-                    {id: "d6", name: "Kid's Dress", price: 50},
-                    {id: "d7", name: "Bed Sheet", price: 70},
-                    {id: "d8", name: "Blanket / Quilt", price: 200}
-                ]
-            },
-            "Express Iron": {
-                sub: "Super fast. From 1 hour.",
-                items: [
-                    {id: "e1", name: "Shirt / Pant / T-shirt", price: 20},
-                    {id: "e2", name: "Kurta + Pajama", price: 30},
-                    {id: "e3", name: "Punjabi Dress (3-pc)", price: 45},
-                    {id: "e4", name: "Saree (Cotton)", price: 30},
-                    {id: "e5", name: "Saree (Silk/Heavy)", price: 50},
-                    {id: "e6", name: "Kid's Dress", price: 15},
-                    {id: "e7", name: "Bed Sheet", price: 25}
-                ]
-            }
+        // GEOLOCATION TRACKING
+        let userLocation = 'Hyderabad';
+
+        const locations = {
+            'Gachibowli': { lat: 17.4400, lon: 78.3489 },
+            'Madhapur': { lat: 17.4485, lon: 78.3908 },
+            'Hitech City': { lat: 17.4483, lon: 78.3808 },
+            'Kondapur': { lat: 17.4648, lon: 78.3630 },
+            'Nanakramguda': { lat: 17.4239, lon: 78.3428 },
+            'Manikonda': { lat: 17.4039, lon: 78.3810 },
+            'Puppalaguda': { lat: 17.3867, lon: 78.3667 },
+            'Khajaguda': { lat: 17.4167, lon: 78.3500 }
         };
 
-        let qtys = {};
-        let express = 0;
-        let desc = "Standard";
-        let limit = 999;
-
-        const cards = document.getElementById('pricingCards');
-        const totalEl = document.getElementById('total');
-        const checkout = document.getElementById('checkout');
-        const reset = document.getElementById('reset');
-        const note = document.getElementById('note');
-        const modal = document.getElementById('modal');
-        const modalMsg = document.getElementById('modalMsg');
-        const modalClose = document.getElementById('modalClose');
-
-        function init() {
-            let html = '';
-            for (const [type, data] of Object.entries(DATA)) {
-                let items = '';
-                data.items.forEach(item => {
-                    qtys[item.id] = {qty: 0, price: item.price, name: item.name, type};
-                    items += `
-                        <div class="price-item">
-                            <span class="item-name">${item.name}</span>
-                            <div class="item-right">
-                                <span class="item-price">₹${item.price}</span>
-                                <div class="qty-group">
-                                    <button class="qty-btn" data-act="dec" data-id="${item.id}">−</button>
-                                    <span class="qty-display" id="q${item.id}">0</span>
-                                    <button class="qty-btn" data-act="inc" data-id="${item.id}">+</button>
-                                </div>
-                            </div>
-                        </div>`;
-                });
-
-                html += `
-                    <div class="pricing-card ${data.featured ? 'featured' : ''}">
-                        ${data.featured ? '<span class="pricing-badge">Popular</span>' : ''}
-                        <div class="pricing-header">
-                            <h3>${type}</h3>
-                            <p class="pricing-subtitle">${data.sub}</p>
-                        </div>
-                        <div class="price-list">${items}</div>
-                        <div class="pricing-footer">
-                            <span class="subtotal-label">Subtotal</span>
-                            <span class="subtotal-value" data-sub="${type}">₹0</span>
-                        </div>
-                    </div>`;
+        function detectUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userCoords = {
+                            lat: position.coords.latitude,
+                            lon: position.coords.longitude
+                        };
+                        
+                        let nearestLocation = 'Hyderabad';
+                        let minDistance = Infinity;
+                        
+                        for (const [name, coords] of Object.entries(locations)) {
+                            const distance = Math.sqrt(
+                                Math.pow(coords.lat - userCoords.lat, 2) + 
+                                Math.pow(coords.lon - userCoords.lon, 2)
+                            );
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                nearestLocation = name;
+                            }
+                        }
+                        
+                        userLocation = nearestLocation;
+                        document.getElementById('popupLocationName').textContent = nearestLocation;
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'location_detected', { 'location': nearestLocation });
+                        }
+                    }
+                );
             }
-            cards.innerHTML = html;
         }
 
-        function getPieces() {
-            return Object.values(qtys).reduce((s, i) => s + i.qty, 0);
+        function getWhatsAppLink(service = null) {
+            let message = service 
+                ? `Hi! I want to claim FREE PICKUP & DELIVERY for ${service} service in ${userLocation}`
+                : `Hi! I want to claim FREE PICKUP & DELIVERY on my first order in ${userLocation}`;
+            
+            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
         }
 
-        function showModal(lim) {
-            modalMsg.textContent = `Express ${desc} allows max ${lim} pieces. You have ${getPieces()}.`;
-            modal.classList.add('show');
+        function updateAllCTAs() {
+            document.getElementById('heroBookBtn').href = getWhatsAppLink();
+            document.getElementById('navBookBtn').href = getWhatsAppLink();
+            document.getElementById('footerBookBtn').href = getWhatsAppLink();
+            document.getElementById('fabBtn').href = getWhatsAppLink();
+            document.getElementById('popupCTA').href = getWhatsAppLink();
         }
 
-        modalClose.onclick = () => modal.classList.remove('show');
-        modal.onclick = (e) => { if (e.target === modal) modal.classList.remove('show'); };
-
-        function calc() {
-            let itemTotal = 0, subs = {}, sel = [], pc = 0;
-            Object.keys(DATA).forEach(t => subs[t] = 0);
-
-            for (const [id, item] of Object.entries(qtys)) {
-                const cost = item.qty * item.price;
-                itemTotal += cost;
-                subs[item.type] += cost;
-                pc += item.qty;
-                if (item.qty > 0) sel.push(`${item.name} (${item.type}): ${item.qty} @ ₹${item.price}`);
-            }
-
-            Object.keys(subs).forEach(t => {
-                const el = document.querySelector(`[data-sub="${t}"]`);
-                if (el) el.textContent = `₹${subs[t]}`;
-            });
-
-            let pickup = 0;
-            if (itemTotal > 0 && itemTotal < 50) pickup = 25;
-            else if (itemTotal >= 50 && itemTotal < 100) pickup = 15;
-
-            const grand = itemTotal + pickup + express;
-            totalEl.textContent = `₹${grand}`;
-
-            if (pickup > 0) {
-                note.textContent = `Includes ₹${pickup} pickup charge`;
-                note.classList.remove('hidden');
-            } else if (itemTotal >= 100) {
-                note.textContent = `Free pickup on orders ₹100+`;
-                note.classList.remove('hidden');
-            } else {
-                note.classList.add('hidden');
-            }
-
-            let msg = "Hi! I need fastest laundry pickup in Hyderabad";
-            if (grand > 0) {
-                msg = `Hi Zapwash! Order for ₹${grand}\n\n${pc} items:\n${sel.join('\n')}`;
-                if (pickup > 0) msg += `\n\nPickup: ₹${pickup}`;
-                if (express > 0) msg += `\nExpress: ${desc} (+₹${express})`;
-                checkout.textContent = `Order ₹${grand}`;
-            } else {
-                checkout.textContent = `Schedule Pickup`;
-            }
-            checkout.href = `https://wa.me/918639103842?text=${encodeURIComponent(msg)}`;
-        }
-
-        cards.addEventListener('click', (e) => {
-            const btn = e.target.closest('button[data-act]');
-            if (!btn) return;
-
-            const act = btn.dataset.act;
-            const id = btn.dataset.id;
-            const el = document.getElementById(`q${id}`);
-            let qty = qtys[id].qty;
-
-            if (act === 'inc') {
-                if (getPieces() + 1 > limit) { showModal(limit); return; }
-                qty++;
-            } else if (act === 'dec' && qty > 0) {
-                qty--;
-            }
-
-            qtys[id].qty = qty;
-            el.textContent = qty;
-            calc();
-        });
-
-        document.getElementById('deliveryOpts').addEventListener('change', (e) => {
-            if (e.target.name === 'speed') {
-                const newLimit = parseInt(e.target.dataset.limit);
-                if (getPieces() > newLimit) {
-                    showModal(newLimit);
-                    document.querySelector('input[name="speed"][value="0"]').checked = true;
-                    return;
+        // SERVICE CARD TRACKING
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'service_click', { 'service': service, 'location': userLocation });
                 }
-                express = parseInt(e.target.value);
-                desc = e.target.dataset.desc;
-                limit = newLimit;
-                calc();
+            });
+        });
+
+        // LOCATION CARD CLICKS
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', { 'selected_location': location, 'user_location': userLocation });
+                }
+            });
+        });
+
+        // EXIT INTENT POPUP
+        let exitPopupShown = false;
+        let mouseLeaveCount = 0;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !exitPopupShown && mouseLeaveCount < 1) {
+                showExitPopup();
+                mouseLeaveCount++;
             }
         });
 
-        reset.onclick = () => {
-            for (const id in qtys) {
-                qtys[id].qty = 0;
-                const el = document.getElementById(`q${id}`);
-                if (el) el.textContent = '0';
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const scrollSpeed = lastScrollY - currentScrollY;
+            
+            if (scrollSpeed > 150 && !exitPopupShown && window.innerWidth < 768) {
+                const scrollPercent = (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent < 50) {
+                    showExitPopup();
+                }
             }
-            document.querySelector('input[name="speed"][value="0"]').checked = true;
-            express = 0;
-            desc = "Standard";
-            limit = 999;
-            calc();
-        };
+            
+            lastScrollY = currentScrollY;
+        });
 
-        // Mobile Menu
+        function showExitPopup() {
+            document.getElementById('exitPopup').classList.add('active');
+            exitPopupShown = true;
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exit_intent_shown', { 'location': userLocation });
+            }
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
+        }
+
+        // MOBILE MENU
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1603,27 +1038,1071 @@
             menuToggle.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
             });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                });
-            });
         }
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', (e) => {
-                const href = a.getAttribute('href');
-                if (href !== '#' && href.startsWith('#')) {
-                    e.preventDefault();
-                    document.querySelector(href)?.scrollIntoView({behavior: 'smooth'});
+        // INITIALIZE
+        detectUserLocation();
+        setTimeout(updateAllCTAs, 1000);
+
+        document.getElementById('exitPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeExitPopup();
+            }
+        });
+
+        // GA4 Page View
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'page_view', {
+                'page_title': 'Home - Free First Order',
+                'page_location': window.location.href
+            });
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5FSZX5XC');</script>
+    
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYPST6NC81"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JYPST6NC81');
+    </script>
+
+    <!-- SEO META -->
+    <title>Zapwash - Free Pickup & Delivery | 20 Min Pickup | Hyderabad Laundry</title>
+    <meta name="description" content="FREE pickup & delivery on first order! Hyderabad's fastest laundry with 20-min pickup, 1-hour express iron. Serving Gachibowli, Madhapur, Hitech City.">
+    <meta name="keywords" content="free laundry pickup Hyderabad, fastest laundry Hyderabad, 20 minute pickup, free delivery laundry">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thezapwash.com/">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --gray-50: #FAFAFA;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-400: #A3A3A3;
+            --gray-600: #525252;
+            --gray-700: #404040;
+            --accent: #FF6B00;
+            --success: #00C853;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--black);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        /* NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--black);
+        }
+
+        .nav-inner {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-cta {
+            padding: 0.625rem 1.5rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid var(--black);
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--black);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--black);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+            }
+            .nav-links.active { display: flex; }
+            .nav-link { padding: 1rem 2rem; border-bottom: 1px solid var(--gray-200); width: 100%; }
+            .nav-cta { margin: 1rem 2rem; }
+        }
+
+        /* FREE OFFER BANNER */
+        .offer-banner {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            z-index: 999;
+            letter-spacing: 0.05em;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 2rem 4rem;
+            position: relative;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px),
+                repeating-linear-gradient(90deg, transparent, transparent 99px, var(--gray-200) 99px, var(--gray-200) 100px);
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 700;
+            line-height: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--accent);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--gray-600);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+            line-height: 1.6;
+        }
+
+        .hero-offer {
+            display: inline-block;
+            background: var(--success);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 3rem;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--black);
+            color: var(--white);
+            border: 2px solid var(--black);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--white);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
+        /* TRUST BAR */
+        .trust-bar {
+            padding: 3rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
+        }
+
+        .trust-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .trust-grid { grid-template-columns: 1fr; gap: 2rem; }
+        }
+
+        .trust-value {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-600);
+            font-weight: 600;
+        }
+
+        /* SERVICES */
+        .services-overview {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--black);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0 var(--black);
+        }
+
+        .service-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            font-size: 0.688rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-price {
+            display: block;
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .link-arrow {
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+
+        /* LOCATIONS */
+        .locations-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-50);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 1024px) {
+            .locations-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 640px) {
+            .locations-grid { grid-template-columns: 1fr; }
+        }
+
+        .location-card {
+            background: var(--white);
+            border: 2px solid var(--black);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .location-card:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .location-status {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .location-card:hover .location-status {
+            color: var(--success);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-section {
+            padding: 5rem 2rem;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--black);
+            padding: 2rem;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        /* EXIT INTENT POPUP */
+        .exit-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .exit-popup.active {
+            display: flex;
+        }
+
+        .popup-content {
+            background: var(--white);
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            text-align: center;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+        }
+
+        .popup-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .popup-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        .popup-offer {
+            background: var(--success);
+            color: var(--white);
+            padding: 1rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .popup-cta {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+        }
+
+        .popup-cta:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 5rem 2rem 2rem;
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-cta {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .footer-cta h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-link {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-link:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.875rem;
+        }
+
+        /* FAB */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+        }
+
+        .fab svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FSZX5XC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Free Offer Banner -->
+    <div class="offer-banner">
+        FIRST ORDER FREE! Free Pickup & Free Delivery - Limited Time
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/"><img src="https://raw.githubusercontent.com/stseenuri/Zapwash/main/zapwash.png" alt="Zapwash Hyderabad Laundry Service Logo" class="nav-logo"></a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/laundry-services-hyderabad.html" class="nav-link">Services</a>
+                <a href="/laundry-service-locations-hyderabad.html" class="nav-link">Locations</a>
+                <a href="/laundry-pricing-hyderabad.html" class="nav-link">Pricing</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="#" class="nav-cta" id="navBookBtn">Book Free Pickup</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-container">
+            <h1 class="hero-title">
+                <span class="highlight">FREE Pickup & Delivery</span><br>
+                On Your First Order
+            </h1>
+            <p class="hero-subtitle">
+                20-minute pickup. 1-hour express iron. Professional laundry across Hyderabad. No minimum order for first-time customers!
+            </p>
+            <div class="hero-offer">100% FREE FIRST ORDER PICKUP & DELIVERY</div>
+            <a href="#" class="btn-primary" id="heroBookBtn">Claim Free Pickup Now</a>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="trust-grid">
+            <div>
+                <div class="trust-value">20min</div>
+                <div class="trust-label">Average Pickup</div>
+            </div>
+            <div>
+                <div class="trust-value">FREE</div>
+                <div class="trust-label">First Order P&D</div>
+            </div>
+            <div>
+                <div class="trust-value">400+</div>
+                <div class="trust-label">Happy Customers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Laundry Services</h2>
+            
+            <div class="services-grid">
+                <!-- 1-Hour Express Iron -->
+                <a href="/1-hour-express-iron-hyderabad.html" class="service-card" data-service="express-iron">
+                    <span class="service-badge">Most Popular</span>
+                    <div class="service-icon">⚡</div>
+                    <h3>1-Hour Express Iron</h3>
+                    <p>Fastest ironing in Hyderabad. Ready in 60 minutes.</p>
+                    <span class="service-price">From Rs.20/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Wash & Iron -->
+                <a href="/wash-and-iron-service-hyderabad.html" class="service-card" data-service="wash-iron">
+                    <div class="service-icon">🧺</div>
+                    <h3>Wash & Iron</h3>
+                    <p>Complete laundry service. 48-hour turnaround.</p>
+                    <span class="service-price">From Rs.40/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Dry Cleaning -->
+                <a href="/dry-cleaning-service-hyderabad.html" class="service-card" data-service="dry-cleaning">
+                    <div class="service-icon">👔</div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Safe for suits, sarees, delicate fabrics.</p>
+                    <span class="service-price">From Rs.80/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+
+                <!-- Iron Only -->
+                <a href="/iron-only-service-hyderabad.html" class="service-card" data-service="iron-only">
+                    <div class="service-icon">👕</div>
+                    <h3>Iron Only</h3>
+                    <p>Sharp press for clean clothes. 24-hour service.</p>
+                    <span class="service-price">From Rs.15/piece</span>
+                    <span class="link-arrow">View Details & Calculate</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations-section" id="locations">
+        <div class="container">
+            <h2 class="section-title">Areas We Serve</h2>
+            
+            <div class="locations-grid">
+                <a href="/laundry-service-gachibowli-hyderabad.html" class="location-card" data-location="Gachibowli">
+                    <h3>Gachibowli</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-madhapur-hyderabad.html" class="location-card" data-location="Madhapur">
+                    <h3>Madhapur</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-hitech-city-hyderabad.html" class="location-card" data-location="Hitech City">
+                    <h3>Hitech City</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-kondapur-hyderabad.html" class="location-card" data-location="Kondapur">
+                    <h3>Kondapur</h3>
+                    <span class="location-status">Available Now</span>
+                </a>
+
+                <a href="/laundry-service-jubilee-hills-hyderabad.html" class="location-card" data-location="Jubilee Hills">
+                    <h3>Jubilee Hills</h3>
+                    <span class="location-status">Available</span>
+                </a>
+
+                <a href="/laundry-service-banjara-hills-hyderabad.html" class="location-card" data-location="Banjara Hills">
+                    <h3>Banjara Hills</h3>
+                    <span class="location-status">Available</span>
+                </a>
+
+                <a href="/laundry-service-kukatpally-hyderabad.html" class="location-card" data-location="Kukatpally">
+                    <h3>Kukatpally</h3>
+                    <span class="location-status">Available</span>
+                </a>
+
+                <a href="/laundry-service-ameerpet-hyderabad.html" class="location-card" data-location="Ameerpet">
+                    <h3>Ameerpet</h3>
+                    <span class="location-status">Available</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Really impressed with the quality. Shirts came back perfectly pressed. Using them weekly now!"</p>
+                    <div class="author">Rajesh K. - Gachibowli</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"1-hour express iron saved me before an important meeting. Quick pickup and delivery!"</p>
+                    <div class="author">Priya S. - Madhapur</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Very professional service. They handle my suits and formal wear with care. Highly recommend!"</p>
+                    <div class="author">Anil M. - Hitech City</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closeExitPopup()">×</button>
+            <h3 class="popup-title">Wait! Don't Miss This</h3>
+            <p class="popup-subtitle">Get FREE pickup & delivery on your first order in <strong id="popupLocationName">Hyderabad</strong>!</p>
+            <div class="popup-offer">FREE PICKUP & FREE DELIVERY</div>
+            <a href="#" class="popup-cta" id="popupCTA">Claim Free Offer Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cta">
+                <h2>Ready for FREE Pickup & Delivery?</h2>
+                <a href="#" class="btn-primary" id="footerBookBtn">Claim Free First Order</a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="/1-hour-express-iron-hyderabad.html" class="footer-link">1-Hour Express Iron</a>
+                        <a href="/wash-and-iron-service-hyderabad.html" class="footer-link">Wash & Iron</a>
+                        <a href="/dry-cleaning-service-hyderabad.html" class="footer-link">Dry Cleaning</a>
+                        <a href="/iron-only-service-hyderabad.html" class="footer-link">Iron Only</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Top Locations</h4>
+                    <div class="footer-links">
+                        <a href="/laundry-service-gachibowli-hyderabad.html" class="footer-link">Gachibowli</a>
+                        <a href="/laundry-service-madhapur-hyderabad.html" class="footer-link">Madhapur</a>
+                        <a href="/laundry-service-hitech-city-hyderabad.html" class="footer-link">Hitech City</a>
+                        <a href="/laundry-service-kondapur-hyderabad.html" class="footer-link">Kondapur</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <div class="footer-links">
+                        <a href="/laundry-pricing-hyderabad.html" class="footer-link">Pricing</a>
+                        <a href="/laundry-services-hyderabad.html" class="footer-link">All Services</a>
+                        <a href="/about.html" class="footer-link">About</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="footer-links">
+                        <a href="https://wa.me/918639103842" class="footer-link">WhatsApp</a>
+                        <a href="tel:+918639103842" class="footer-link">+91 86391 03842</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zapwash - FREE First Order Pickup & Delivery - 400+ Happy Customers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a href="#" class="fab" id="fabBtn" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <script>
+        // GEOLOCATION TRACKING
+        let userLocation = 'Hyderabad';
+
+        const locations = {
+            'Gachibowli': { lat: 17.4400, lon: 78.3489 },
+            'Madhapur': { lat: 17.4485, lon: 78.3908 },
+            'Hitech City': { lat: 17.4483, lon: 78.3808 },
+            'Kondapur': { lat: 17.4648, lon: 78.3630 },
+            'Jubilee Hills': { lat: 17.4321, lon: 78.4095 },
+            'Banjara Hills': { lat: 17.4171, lon: 78.4500 },
+            'Kukatpally': { lat: 17.4849, lon: 78.4138 },
+            'Ameerpet': { lat: 17.4375, lon: 78.4482 }
+        };
+
+        function detectUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userCoords = {
+                            lat: position.coords.latitude,
+                            lon: position.coords.longitude
+                        };
+                        
+                        let nearestLocation = 'Hyderabad';
+                        let minDistance = Infinity;
+                        
+                        for (const [name, coords] of Object.entries(locations)) {
+                            const distance = Math.sqrt(
+                                Math.pow(coords.lat - userCoords.lat, 2) + 
+                                Math.pow(coords.lon - userCoords.lon, 2)
+                            );
+                            if (distance < minDistance) {
+                                minDistance = distance;
+                                nearestLocation = name;
+                            }
+                        }
+                        
+                        userLocation = nearestLocation;
+                        document.getElementById('popupLocationName').textContent = nearestLocation;
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'location_detected', { 'location': nearestLocation });
+                        }
+                    }
+                );
+            }
+        }
+
+        function getWhatsAppLink(service = null) {
+            let message = service 
+                ? `Hi! I want to claim FREE PICKUP & DELIVERY for ${service} service in ${userLocation}`
+                : `Hi! I want to claim FREE PICKUP & DELIVERY on my first order in ${userLocation}`;
+            
+            return `https://wa.me/918639103842?text=${encodeURIComponent(message)}`;
+        }
+
+        function updateAllCTAs() {
+            document.getElementById('heroBookBtn').href = getWhatsAppLink();
+            document.getElementById('navBookBtn').href = getWhatsAppLink();
+            document.getElementById('footerBookBtn').href = getWhatsAppLink();
+            document.getElementById('fabBtn').href = getWhatsAppLink();
+            document.getElementById('popupCTA').href = getWhatsAppLink();
+        }
+
+        // SERVICE CARD TRACKING
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'service_click', { 'service': service, 'location': userLocation });
                 }
             });
         });
 
-        init();
-        calc();
+        // LOCATION CARD CLICKS
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.getAttribute('data-location');
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'location_click', { 'selected_location': location, 'user_location': userLocation });
+                }
+            });
+        });
+
+        // EXIT INTENT POPUP
+        let exitPopupShown = false;
+        let mouseLeaveCount = 0;
+
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0 && !exitPopupShown && mouseLeaveCount < 1) {
+                showExitPopup();
+                mouseLeaveCount++;
+            }
+        });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            const scrollSpeed = lastScrollY - currentScrollY;
+            
+            if (scrollSpeed > 150 && !exitPopupShown && window.innerWidth < 768) {
+                const scrollPercent = (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent < 50) {
+                    showExitPopup();
+                }
+            }
+            
+            lastScrollY = currentScrollY;
+        });
+
+        function showExitPopup() {
+            document.getElementById('exitPopup').classList.add('active');
+            exitPopupShown = true;
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'exit_intent_shown', { 'location': userLocation });
+            }
+        }
+
+        function closeExitPopup() {
+            document.getElementById('exitPopup').classList.remove('active');
+        }
+
+        // MOBILE MENU
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // INITIALIZE
+        detectUserLocation();
+        setTimeout(updateAllCTAs, 1000);
+
+        document.getElementById('exitPopup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeExitPopup();
+            }
+        });
     </script>
 </body>
 </html>
